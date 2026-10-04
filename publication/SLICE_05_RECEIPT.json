@@ -1,0 +1,29 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-DISTRIBUTION-RECEIPT/0.5",
+  "result": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+  "validated_head": "53764e6bfd4686028ce8fc09c4dcd104cc8dbb66",
+  "branch": "public-omega-distribution-05",
+  "pull_request": 5,
+  "ci_run": 37209776759,
+  "tests": "27 PASS",
+  "semantic_parent_fingerprint": "eb43face6ab49b0eab112b5c9ddc6308a5dc0444c3d140622365c61976138719",
+  "parity_fingerprint": "7ebb3332e2596fc53a2f956bbe26bf558fa96a93c159d0190625d10993d3dcd1",
+  "repository_semantic_fingerprint": "dfeef3f1572b2422f07c4d0f0339abb80bfeb07c0cfc8401c702eec0d0145c83",
+  "registry_sha256": "2509697bef478e2679b4a3b1c94cfdc3c69be68abb7643a63a049e97f9af4e0f",
+  "parity_counts": {
+    "objects": 12,
+    "skills": 12,
+    "theorematic_objects": 7,
+    "negative_hold_classes": 4,
+    "anchors": 7
+  },
+  "chatgpt_codex": "COMPILED_CANDIDATE",
+  "gemini_notebook": "COMPILED_CANDIDATE",
+  "live_provider_execution": "NOT_EXECUTED",
+  "nb00_live_conformance": "OPEN",
+  "rgt04_clean_chat": "OPEN",
+  "license_ip_review": "OPEN",
+  "release_eligible": false,
+  "authority_delta": "NONE",
+  "next_target": "PUBLIC_OMEGA_DEPLOYMENT_PACKAGING_SLICE_06"
+}
