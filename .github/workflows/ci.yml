@@ -24,3 +24,5 @@ jobs:
         run: python tools/validate_publication.py --mode bootstrap
       - name: Semantic registry validation
         run: python tools/validate_registry.py
+      - name: Objectization slice validation
+        run: python tools/validate_objectization04.py

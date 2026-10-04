@@ -1,0 +1,390 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-DEEP-SKILL-SPINDLE/0.4",
+  "authority_delta": "NONE",
+  "lifecycle": [
+    "DISCOVERED",
+    "EXTRACTED",
+    "ABSTRACTED",
+    "REFABRICATED",
+    "TESTED",
+    "QUALIFIED",
+    "CANONICAL"
+  ],
+  "terminal_states": [
+    "REJECTED",
+    "SUPERSEDED",
+    "CONTEXT_BOUND",
+    "UNSAFE",
+    "ARCHIVED"
+  ],
+  "skills": [
+    {
+      "id": "cs.skill::source-audit::v0.4",
+      "intent": "Audit source identity, version, authority, provenance and exact support before integration.",
+      "accepts": [
+        "source",
+        "claim-set"
+      ],
+      "preconditions": [
+        "source-readable"
+      ],
+      "method": [
+        "identify source and version",
+        "classify direct/paraphrased/derived support",
+        "record uncertainty and transformations",
+        "separate source-reported status from independent status"
+      ],
+      "emits": [
+        "source-audit-receipt"
+      ],
+      "guards": [
+        "SOURCE != AUTHORITY",
+        "SOURCE_REPORTED_STATUS != INDEPENDENT_STATUS"
+      ],
+      "required_capabilities": [
+        "source-read"
+      ],
+      "authority_ceiling": "METHOD"
+    },
+    {
+      "id": "cs.skill::claim-evidence-gate::v0.4",
+      "intent": "Compile a claim into typed claim/evidence/gate/closure objects.",
+      "accepts": [
+        "claim",
+        "evidence-set"
+      ],
+      "preconditions": [
+        "scope-declared"
+      ],
+      "method": [
+        "type claim",
+        "attach assumptions/dependencies",
+        "attach supporting and contradicting evidence",
+        "compile blocking gate",
+        "define closure and hold conditions"
+      ],
+      "emits": [
+        "claim-object",
+        "evidence-objects",
+        "gate-object"
+      ],
+      "guards": [
+        "CLAIM != EVIDENCE",
+        "UNKNOWN != PASS"
+      ],
+      "required_capabilities": [
+        "source-read"
+      ],
+      "authority_ceiling": "METHOD_AND_STATUS"
+    },
+    {
+      "id": "cs.skill::formal-proof-program::v0.4",
+      "intent": "Construct and audit a formal proof program without silently promoting proof status.",
+      "accepts": [
+        "theorematic-object"
+      ],
+      "preconditions": [
+        "definitions-explicit",
+        "assumptions-explicit"
+      ],
+      "method": [
+        "build dependency graph",
+        "generate proof obligations",
+        "select proof strategy",
+        "search counterexamples",
+        "bind checker when available",
+        "issue proof receipt"
+      ],
+      "emits": [
+        "proof-program",
+        "proof-receipt"
+      ],
+      "guards": [
+        "PROOF_IDEA != MACHINE_CHECKED",
+        "NO_COUNTEREXAMPLE_FOUND != PROOF",
+        "FORMAL_PROOF != EMPIRICAL_CONFIRMATION"
+      ],
+      "required_capabilities": [
+        "formal-reasoning"
+      ],
+      "authority_ceiling": "FORMAL_METHOD"
+    },
+    {
+      "id": "cs.skill::research-program-compile::v0.4",
+      "intent": "Compile a research question into a bounded closure-first research program.",
+      "accepts": [
+        "research-question"
+      ],
+      "preconditions": [
+        "claim-or-object-scope"
+      ],
+      "method": [
+        "source audit",
+        "hypothesis comparison",
+        "falsification design",
+        "measurement/experiment/simulation route",
+        "uncertainty/statistics",
+        "reproducibility plan",
+        "closure/HOLD decision"
+      ],
+      "emits": [
+        "research-program",
+        "evidence-plan",
+        "closure-receipt"
+      ],
+      "guards": [
+        "BRANCHES_BOUNDED",
+        "HOLD is valid",
+        "SIMULATION != EXPERIMENT"
+      ],
+      "required_capabilities": [
+        "source-read"
+      ],
+      "authority_ceiling": "RESEARCH_METHOD"
+    },
+    {
+      "id": "cs.skill::capability-probe-route::v0.4",
+      "intent": "Resolve actual host capability state and route only admissible actions.",
+      "accepts": [
+        "mission",
+        "capability-requirements"
+      ],
+      "preconditions": [
+        "host-context-known"
+      ],
+      "method": [
+        "inspect available tools",
+        "classify described/observed/authorized/executed states",
+        "select admissible operator",
+        "route fallback or HOLD if missing"
+      ],
+      "emits": [
+        "capability-receipt",
+        "route-decision"
+      ],
+      "guards": [
+        "CAPABILITY_CATALOG != CAPABILITY_OBSERVED",
+        "CAPABILITY != AUTHORITY",
+        "PLAN != EXECUTION"
+      ],
+      "required_capabilities": [
+        "host-inspection"
+      ],
+      "authority_ceiling": "OBSERVATION_SCOPED"
+    },
+    {
+      "id": "cs.skill::observer-bridge-audit::v0.4",
+      "intent": "Audit observer/instrument semantics and formal-to-empirical bridge obligations.",
+      "accepts": [
+        "model",
+        "observer-definition",
+        "claim"
+      ],
+      "preconditions": [
+        "target-domain-declared"
+      ],
+      "method": [
+        "classify observer role",
+        "separate model/theory/reality",
+        "identify observables and correspondence map",
+        "identify measurement path",
+        "list falsification and replication obligations"
+      ],
+      "emits": [
+        "observer-bridge-receipt"
+      ],
+      "guards": [
+        "OBSERVER != CONSCIOUSNESS",
+        "MODEL != REALITY",
+        "FORMAL_PROOF != EMPIRICAL_CONFIRMATION"
+      ],
+      "required_capabilities": [
+        "source-read"
+      ],
+      "authority_ceiling": "METHOD_AND_DOMAIN_ROUTING"
+    },
+    {
+      "id": "cs.skill::theory-namespace-route::v0.4",
+      "intent": "Route theory objects to formal, research, engineering and domain obligations without cross-theory status leakage.",
+      "accepts": [
+        "theory-object"
+      ],
+      "preconditions": [
+        "namespace-declared"
+      ],
+      "method": [
+        "separate definitions/rules/models/hypotheses/predictions/experiments/observations/no-go/contradictions",
+        "route formal obligations",
+        "route empirical obligations",
+        "record open bridges"
+      ],
+      "emits": [
+        "theory-route-map"
+      ],
+      "guards": [
+        "MODEL != THEORY",
+        "AUTHORIAL_CANON != ESTABLISHED_EXTERNAL_SCIENCE"
+      ],
+      "required_capabilities": [
+        "source-read"
+      ],
+      "authority_ceiling": "AUTHORIAL_ROUTING"
+    },
+    {
+      "id": "cs.skill::visible-continuity-pack::v0.4",
+      "intent": "Compress and transport state without dropping open semantic debt.",
+      "accepts": [
+        "governed-state"
+      ],
+      "preconditions": [
+        "state-visible"
+      ],
+      "method": [
+        "preserve object IDs",
+        "preserve definitions and critical assumptions",
+        "preserve evidence status",
+        "preserve contradictions/gates/no-go/next frontier",
+        "compress repetitive prose only",
+        "hash/package"
+      ],
+      "emits": [
+        "portable-capsule",
+        "continuity-receipt"
+      ],
+      "guards": [
+        "CHAT_MEMORY != CANONICAL_MEMORY",
+        "SUMMARY_COMPRESSION != PERMISSION_TO_DROP_OPEN_DEBT"
+      ],
+      "required_capabilities": [
+        "artifact-write"
+      ],
+      "authority_ceiling": "CANONICAL_STATE_METHOD"
+    },
+    {
+      "id": "cs.skill::artifact-release-compile::v0.4",
+      "intent": "Compile provider-specific artifacts and releases from admitted state without semantic promotion.",
+      "accepts": [
+        "admitted-public-state",
+        "platform-profile"
+      ],
+      "preconditions": [
+        "publication-gates-known"
+      ],
+      "method": [
+        "compile artifact",
+        "embed hashes/manifests",
+        "run structural and claim firewall checks",
+        "apply platform packaging",
+        "verify integrity",
+        "emit release receipt"
+      ],
+      "emits": [
+        "artifact",
+        "release-manifest",
+        "release-receipt"
+      ],
+      "guards": [
+        "ARTIFACT != EVIDENCE",
+        "PLATFORM_PROFILE != CANON_FORK",
+        "TEST != PROOF"
+      ],
+      "required_capabilities": [
+        "artifact-write"
+      ],
+      "authority_ceiling": "ENGINEERING_AND_RELEASE_METHOD"
+    },
+    {
+      "id": "cs.skill::contradiction-no-go-route::v0.4",
+      "intent": "Classify contradictions, negative results and no-go findings without averaging them away.",
+      "accepts": [
+        "conflicting-objects"
+      ],
+      "preconditions": [
+        "scope-and-assumptions-visible"
+      ],
+      "method": [
+        "classify contradiction",
+        "compare versions/assumptions/scopes",
+        "attempt disambiguate/split/refute/supersede",
+        "retain competing models or HOLD when unresolved",
+        "emit no-go with does-not-exclude boundary"
+      ],
+      "emits": [
+        "contradiction-object",
+        "no-go-object",
+        "closure-receipt"
+      ],
+      "guards": [
+        "CONTRADICTION != AUTOMATIC_AVERAGING",
+        "NO_GO_UNDER_ASSUMPTIONS != UNIVERSAL_IMPOSSIBILITY"
+      ],
+      "required_capabilities": [
+        "source-read"
+      ],
+      "authority_ceiling": "METHOD_AND_CLOSURE"
+    },
+    {
+      "id": "cs.skill::skill-metabolize::v0.4",
+      "intent": "Transform an external or internal technique into a typed candidate skill with lineage and qualification evidence.",
+      "accepts": [
+        "method-source"
+      ],
+      "preconditions": [
+        "source-audited"
+      ],
+      "method": [
+        "acquire",
+        "map",
+        "extract",
+        "abstract",
+        "refabricate",
+        "criticize",
+        "test",
+        "qualify",
+        "integrate"
+      ],
+      "emits": [
+        "skill-object",
+        "qualification-receipt"
+      ],
+      "guards": [
+        "EXTERNAL_TECHNIQUE != AUTHORITY",
+        "DISCOVERED != QUALIFIED",
+        "SKILL != HOST_CAPABILITY"
+      ],
+      "required_capabilities": [
+        "source-read"
+      ],
+      "authority_ceiling": "METHOD"
+    },
+    {
+      "id": "cs.skill::next-frontier-select::v0.4",
+      "intent": "Select the highest-value admissible bounded frontier while preserving authorization and truth boundaries.",
+      "accepts": [
+        "governed-state",
+        "open-gates"
+      ],
+      "preconditions": [
+        "frontier-current"
+      ],
+      "method": [
+        "score blocking/dependency/evidence/formal/reproduction/implementation/publication gains",
+        "penalize resource/speculation risk",
+        "select bounded candidate or HOLD",
+        "compile mission separately"
+      ],
+      "emits": [
+        "frontier-selection"
+      ],
+      "guards": [
+        "PRIORITY != TRUTH",
+        "SELECTION != AUTHORIZATION",
+        "HOLD is valid"
+      ],
+      "required_capabilities": [
+        "state-read"
+      ],
+      "authority_ceiling": "PRIORITY_SELECTION"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-OBJECT-RELATIONS/0.4",
+  "authority_delta": "NONE",
+  "relations": [
+    {
+      "id": "r04-001",
+      "type": "CONSTRAINS",
+      "from": "cs.object::authority-provenance::v0.4",
+      "to": "cs.object::claim-evidence-gate::v0.4",
+      "scope": "authority and provenance constrain status promotion"
+    },
+    {
+      "id": "r04-002",
+      "type": "IMPLEMENTS",
+      "from": "cs.object::formal-verification-program::v0.4",
+      "to": "cs.object::claim-evidence-gate::v0.4",
+      "scope": "formal program may discharge formal obligations only"
+    },
+    {
+      "id": "r04-003",
+      "type": "USES",
+      "from": "cs.object::research-program-fabric::v0.4",
+      "to": "cs.object::claim-evidence-gate::v0.4",
+      "scope": "research program evaluates evidence against gates"
+    },
+    {
+      "id": "r04-004",
+      "type": "USES",
+      "from": "cs.object::research-program-fabric::v0.4",
+      "to": "cs.object::capability-routing::v0.4",
+      "scope": "research execution depends on observed and authorized capabilities"
+    },
+    {
+      "id": "r04-005",
+      "type": "CONSTRAINS",
+      "from": "cs.object::observer-constitution::v0.4",
+      "to": "cs.object::research-program-fabric::v0.4",
+      "scope": "observer and instrument semantics constrain observation claims"
+    },
+    {
+      "id": "r04-006",
+      "type": "ROUTES_TO",
+      "from": "cs.object::theory-namespace-routing::v0.4",
+      "to": "cs.object::formal-verification-program::v0.4",
+      "scope": "formal theory obligations route to formal verification"
+    },
+    {
+      "id": "r04-007",
+      "type": "ROUTES_TO",
+      "from": "cs.object::theory-namespace-routing::v0.4",
+      "to": "cs.object::research-program-fabric::v0.4",
+      "scope": "empirical theory obligations route to research"
+    },
+    {
+      "id": "r04-008",
+      "type": "CONSTRAINS",
+      "from": "cs.object::visible-memory-continuity::v0.4",
+      "to": "cs.object::claim-evidence-gate::v0.4",
+      "scope": "open gates and evidence debt persist through memory compression"
+    },
+    {
+      "id": "r04-009",
+      "type": "COMPILES_TO",
+      "from": "cs.object::visible-memory-continuity::v0.4",
+      "to": "cs.object::artifact-release-fabric::v0.4",
+      "scope": "admitted state compiles to artifacts and release projections"
+    },
+    {
+      "id": "r04-010",
+      "type": "CONSTRAINS",
+      "from": "cs.object::failure-hold-semantics::v0.4",
+      "to": "cs.object::research-program-fabric::v0.4",
+      "scope": "closure outcomes retain unresolved debt"
+    },
+    {
+      "id": "r04-011",
+      "type": "CONSTRAINS",
+      "from": "cs.object::failure-hold-semantics::v0.4",
+      "to": "cs.object::formal-verification-program::v0.4",
+      "scope": "no-go and countermodel outcomes block silent proof promotion"
+    },
+    {
+      "id": "r04-012",
+      "type": "BINDS",
+      "from": "cs.object::skill-object-promotion::v0.4",
+      "to": "cs.object::capability-routing::v0.4",
+      "scope": "skill requirements bind to capability observations without inheriting authority"
+    },
+    {
+      "id": "r04-013",
+      "type": "USES",
+      "from": "cs.object::skill-object-promotion::v0.4",
+      "to": "cs.object::authority-provenance::v0.4",
+      "scope": "skill qualification carries provenance and authority ceiling"
+    },
+    {
+      "id": "r04-014",
+      "type": "USES",
+      "from": "cs.object::universal-vocabulary::v0.4",
+      "to": "cs.object::claim-evidence-gate::v0.4",
+      "scope": "shared vocabulary types claim, evidence and gate records"
+    },
+    {
+      "id": "r04-015",
+      "type": "USES",
+      "from": "cs.object::universal-vocabulary::v0.4",
+      "to": "cs.object::theory-namespace-routing::v0.4",
+      "scope": "shared vocabulary types domain and theory records"
+    }
+  ]
+}
