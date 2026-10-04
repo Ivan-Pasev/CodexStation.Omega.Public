@@ -1,0 +1,24 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-PARENT/0.5",
+  "semantic_parent_id": "cs.semantic-parent::public-objectization-04::v0.5",
+  "semantic_parent_kind": "PUBLIC_OBJECTIZATION_04",
+  "semantic_parent_fingerprint": "eb43face6ab49b0eab112b5c9ddc6308a5dc0444c3d140622365c61976138719",
+  "source_receipt": "publication/SLICE_04_RECEIPT.json",
+  "source_branch": "public-omega-objectization-04",
+  "authority_delta": "NONE",
+  "semantic_scope": {
+    "objects": 12,
+    "provenance_mappings": 12,
+    "relations": 15,
+    "negative_hold_classes": 4,
+    "skills": 12,
+    "theorem_dependencies": 7
+  },
+  "excluded_from_semantic_root": [
+    "provider-specific boot instructions",
+    "provider-specific packaging metadata",
+    "transport archive layout",
+    "UI instructions"
+  ],
+  "invariant": "SEMANTIC_ROOT(CHATGPT_CODEX_DIST) == SEMANTIC_ROOT(GEMINI_NOTEBOOK_DIST)"
+}
