@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.6",
+  "version": "0.7",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -934,5 +934,14 @@
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
     "package_index": "packaging06/PACKAGE_INDEX.json",
     "archive_hashes": "EXTERNAL_PACKAGE_INDEX_TO_AVOID_SELF_REFERENCE"
+  },
+  "aggregation_slice_07a": {
+    "schema_bundle": "registry/aggregation07a/OMEGA_AGGREGATION_SCHEMA_BUNDLE.json",
+    "harvest_capsule": "registry/aggregation07a/FAB_SYS_PROJECT_HARVEST_CAPSULE.json",
+    "kernel_registry": "registry/aggregation07a/KERNEL_REGISTRY_SEED.json",
+    "holotope": "registry/aggregation07a/HOLOTOPE_SOVEREIGN_DIGITAL_RUNTIME_CORE.json",
+    "archetonic_plate": "registry/aggregation07a/PLATE_CODEXSTATION_EXECUTION_KNOWLEDGE_FABRIC.json",
+    "deep_map_skill": "skills/omega-project-deep-map/SKILL.md",
+    "status": "IMPLEMENTED_PENDING_VALIDATION"
   }
 }
