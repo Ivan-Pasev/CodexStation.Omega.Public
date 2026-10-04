@@ -1,0 +1,46 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-PACKAGING-RECEIPT/0.6",
+  "receipt_id": "cs.public.receipt::deployment-packaging-slice-06::v0.6",
+  "result": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+  "branch": "public-omega-packaging-06",
+  "pull_request": 6,
+  "build_witness": {
+    "head": "98e298c249ba65773cebdc73d457b2c0abbb1c82",
+    "workflow": "public-omega-ci",
+    "run_id": 37210931722,
+    "artifact_id": 11305963821,
+    "artifact_digest": "sha256:bd6120bf884941b5a5e6e04f4dbe50673ca527ed915784d33d963789f75b136b",
+    "matrix": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    },
+    "tests": "30 PASS"
+  },
+  "packages": [
+    {
+      "package_id": "cs.package::chatgpt-plugin::v0.6",
+      "sha256": "f5bca8051c8d760e69a55dd55c4b9af98807113b3e14123b1253eba09d040714",
+      "bytes": 31239,
+      "file_count": 17,
+      "drive_file_id": "19uI9__0uwumrbrQWzCaz1L-XPdR8m99i",
+      "live_conformance": "OPEN"
+    },
+    {
+      "package_id": "cs.package::gemini-notebook::v0.6",
+      "sha256": "60d90cd81e2d9186aaeae89268137d99e48adcb935af9e7434e5e6c05bf1c2c4",
+      "bytes": 28728,
+      "file_count": 17,
+      "drive_file_id": "19hwU0vgcRzrAOVZxLvUI7uaj5ejZzy5B",
+      "live_conformance": "OPEN"
+    }
+  ],
+  "semantic_parent_fingerprint": "eb43face6ab49b0eab112b5c9ddc6308a5dc0444c3d140622365c61976138719",
+  "parity_fingerprint": "7ebb3332e2596fc53a2f956bbe26bf558fa96a93c159d0190625d10993d3dcd1",
+  "release_eligible": false,
+  "license_ip_review": "OPEN",
+  "nb00_live_conformance": "OPEN",
+  "rgt04_clean_chat": "OPEN",
+  "authority_delta": "NONE",
+  "next_target": "PUBLIC_OMEGA_LIVE_CONFORMANCE_SLICE_07"
+}
