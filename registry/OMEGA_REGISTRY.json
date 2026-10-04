@@ -933,7 +933,6 @@
     "parity_fingerprint": "7ebb3332e2596fc53a2f956bbe26bf558fa96a93c159d0190625d10993d3dcd1",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
     "package_index": "packaging06/PACKAGE_INDEX.json",
-    "chatgpt_plugin_sha256": "f5bca8051c8d760e69a55dd55c4b9af98807113b3e14123b1253eba09d040714",
-    "gemini_notebook_sha256": "60d90cd81e2d9186aaeae89268137d99e48adcb935af9e7434e5e6c05bf1c2c4"
+    "archive_hashes": "EXTERNAL_PACKAGE_INDEX_TO_AVOID_SELF_REFERENCE"
   }
 }
