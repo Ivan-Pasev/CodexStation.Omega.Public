@@ -1,0 +1,105 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-THEOREM-DEPENDENCIES/0.4",
+  "authority_delta": "NONE",
+  "dependencies": [
+    {
+      "theorem_id": "cs.thm::omega-public::host-transport-non-promotion::v0.1",
+      "depends_on": [
+        "cs.object::authority-provenance::v0.4",
+        "cs.object::visible-memory-continuity::v0.4",
+        "cs.object::artifact-release-fabric::v0.4"
+      ],
+      "open_obligations": [
+        "formalize allowed transport class",
+        "formalize status partial order",
+        "prove transport without new evidence cannot increase status"
+      ],
+      "evidence_ceiling": "FORMAL_TARGET"
+    },
+    {
+      "theorem_id": "cs.thm::omega-public::non-escalation-by-orchestration::v0.1",
+      "depends_on": [
+        "cs.object::authority-provenance::v0.4",
+        "cs.object::capability-routing::v0.4",
+        "cs.object::skill-object-promotion::v0.4"
+      ],
+      "open_obligations": [
+        "define authority composition",
+        "define orchestration composition",
+        "prove no implicit authority join"
+      ],
+      "evidence_ceiling": "FORMAL_TARGET"
+    },
+    {
+      "theorem_id": "cs.thm::omega-public::provenance-conservation::v0.1",
+      "depends_on": [
+        "cs.object::authority-provenance::v0.4",
+        "cs.object::visible-memory-continuity::v0.4",
+        "cs.object::artifact-release-fabric::v0.4"
+      ],
+      "open_obligations": [
+        "define reconstructible lineage",
+        "define admissible information loss",
+        "prove transport receipt sufficiency conditions"
+      ],
+      "evidence_ceiling": "FORMAL_TARGET"
+    },
+    {
+      "theorem_id": "cs.thm::omega-public::no-silent-identity-substitution::v0.1",
+      "depends_on": [
+        "cs.object::visible-memory-continuity::v0.4",
+        "cs.object::capability-routing::v0.4",
+        "cs.object::authority-provenance::v0.4"
+      ],
+      "open_obligations": [
+        "define Station identity roots",
+        "define provider/model substitution relation",
+        "define migration witness obligations"
+      ],
+      "evidence_ceiling": "DERIVED_LAW_FORMALIZATION_TARGET"
+    },
+    {
+      "theorem_id": "cs.thm::omega-public::reinstantiation-sufficiency::v0.1",
+      "depends_on": [
+        "cs.object::visible-memory-continuity::v0.4",
+        "cs.object::artifact-release-fabric::v0.4",
+        "cs.object::universal-vocabulary::v0.4"
+      ],
+      "open_obligations": [
+        "define minimal portable state",
+        "define conformant replay predicate",
+        "prove sufficiency under explicit host assumptions"
+      ],
+      "evidence_ceiling": "FORMAL_TARGET"
+    },
+    {
+      "theorem_id": "cs.thm::omega-public::witnessed-cross-level-promotion::v0.1",
+      "depends_on": [
+        "cs.object::claim-evidence-gate::v0.4",
+        "cs.object::authority-provenance::v0.4",
+        "cs.object::failure-hold-semantics::v0.4"
+      ],
+      "open_obligations": [
+        "define promotion transition",
+        "define witness schema",
+        "prove missing witness blocks authority-bearing promotion"
+      ],
+      "evidence_ceiling": "FORMAL_TARGET"
+    },
+    {
+      "theorem_id": "cs.thm::omega-public::effect-receipt-soundness::v0.1",
+      "depends_on": [
+        "cs.object::observer-constitution::v0.4",
+        "cs.object::claim-evidence-gate::v0.4",
+        "cs.object::capability-routing::v0.4"
+      ],
+      "open_obligations": [
+        "define external effect predicate",
+        "define admissible observation channel",
+        "separate API success from observed effect"
+      ],
+      "evidence_ceiling": "FORMAL_AND_EMPIRICAL_BRIDGE_TARGET"
+    }
+  ],
+  "invariant": "Dependencies structure the proof program but do not promote theorem status."
+}
