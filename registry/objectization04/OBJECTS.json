@@ -1,0 +1,350 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-OBJECTIZATION/0.4",
+  "version": "0.4",
+  "status": "PUBLICATION_STAGING",
+  "authority_delta": "NONE",
+  "objects": [
+    {
+      "id": "cs.object::universal-vocabulary::v0.4",
+      "family": "Universal Object Vocabulary",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Canonical primitive classes and envelopes used to type objects, states, relations, processes, boundaries, evidence-bearing records, capabilities and artifacts across domains.",
+      "provenance": [
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.domain.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "authority_ceiling": "METHOD_AND_SCHEMA",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "OBJECT != DESCRIPTION_OF_OBJECT",
+        "MODEL != REALITY",
+        "REPRESENTATION != REFERENT"
+      ],
+      "organ_deltas": {
+        "knowledge": "primitive classes and universal envelopes",
+        "research": "research-program object typing",
+        "engineering": "system and capability object typing",
+        "domain": "domain namespace typing",
+        "continuity": "capsule/artifact/release typing"
+      }
+    },
+    {
+      "id": "cs.object::authority-provenance::v0.4",
+      "family": "Authority and Provenance",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Typed calculus separating authorial, external, formal, empirical and operational status from source lineage and transformations.",
+      "provenance": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.domain.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "authority_ceiling": "META_METHOD",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "SOURCE != AUTHORITY",
+        "SOURCE_REPORTED_STATUS != INDEPENDENT_STATUS",
+        "PUBLICATION_VENUE != CLAIM_VALIDITY"
+      ],
+      "organ_deltas": {
+        "formal": "proof/formal status",
+        "research": "evidence independence",
+        "engineering": "operational maturity",
+        "continuity": "lineage and release receipts"
+      }
+    },
+    {
+      "id": "cs.object::claim-evidence-gate::v0.4",
+      "family": "Claim Evidence Gate Fabric",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Separate claim, evidence, gate and closure objects linked by typed support, contradiction, blocking and discharge relations.",
+      "provenance": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "authority_ceiling": "METHOD_AND_STATUS",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "CLAIM != EVIDENCE",
+        "NEXT acts on gates not vibes",
+        "UNKNOWN is not PASS"
+      ],
+      "organ_deltas": {
+        "formal": "proof obligations and closure",
+        "research": "evidence ladder and falsifiers",
+        "engineering": "implementation/release gates",
+        "continuity": "portable gate/closure state"
+      }
+    },
+    {
+      "id": "cs.object::formal-verification-program::v0.4",
+      "family": "Formal Verification Program",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Program object separating definitions, assumptions, lemmas, proof strategy, formalization target, checker state, counterexample search and open obligations.",
+      "provenance": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "authority_ceiling": "FORMAL_METHOD",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "PROOF_IDEA != MACHINE_CHECKED",
+        "NO_COUNTEREXAMPLE_FOUND != PROOF",
+        "FORMAL_PROOF != EMPIRICAL_CONFIRMATION"
+      ],
+      "organ_deltas": {
+        "formal": "proof program and theorematic object",
+        "knowledge": "status/provenance binding",
+        "continuity": "proof receipt and release state"
+      }
+    },
+    {
+      "id": "cs.object::research-program-fabric::v0.4",
+      "family": "Research Program Fabric",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Closure-first research program model covering source audit, hypothesis comparison, falsification, causal inference, measurement, experiment design, simulation, statistics, reproducibility, benchmarking and review.",
+      "provenance": [
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.domain.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "authority_ceiling": "RESEARCH_METHOD",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "RESEARCH_BRANCHES are bounded",
+        "NO_COUNTEREXAMPLE_FOUND != PROOF",
+        "HOLD is a valid closure state"
+      ],
+      "organ_deltas": {
+        "research": "primary method organ",
+        "knowledge": "research object model",
+        "engineering": "execution/capability constraints",
+        "domain": "domain routing",
+        "continuity": "campaign memory and receipts"
+      }
+    },
+    {
+      "id": "cs.object::capability-routing::v0.4",
+      "family": "Capability Routing",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Capability ABI, probe and router distinguishing cataloged, observed, authorized, executed and verified capability states.",
+      "provenance": [
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "authority_ceiling": "RUNTIME_METHOD",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "CAPABILITY_CATALOG != CAPABILITY_OBSERVED",
+        "CAPABILITY != AUTHORITY",
+        "PLAN != EXECUTION"
+      ],
+      "organ_deltas": {
+        "engineering": "ABI/probe/router",
+        "knowledge": "capability primitive",
+        "research": "tool-aware research routing",
+        "continuity": "observed capability state in capsules"
+      }
+    },
+    {
+      "id": "cs.object::observer-constitution::v0.4",
+      "family": "Observer Constitution",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Operational observer semantics covering instruments, estimators, information recipients, frames, observation maps, analysts and agents without silently importing consciousness claims.",
+      "provenance": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.domain.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "authority_ceiling": "METHOD_AND_DOMAIN_ROUTING",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "OBSERVER != CONSCIOUSNESS",
+        "OBSERVATION != INTERPRETATION",
+        "MODEL != REALITY"
+      ],
+      "organ_deltas": {
+        "formal": "observation maps",
+        "research": "observer-instrument tests",
+        "domain": "domain-specific observer meaning",
+        "continuity": "observer-state memory/witness objects"
+      }
+    },
+    {
+      "id": "cs.object::theory-namespace-routing::v0.4",
+      "family": "Theory Namespace Routing",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Typed theory/domain namespace router that keeps definitions, formal consequences, models, correspondence maps, hypotheses, predictions, experiments, observations, no-go results and contradictions separate.",
+      "provenance": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.domain.rc0_37"
+      ],
+      "authority_ceiling": "AUTHORIAL_ROUTING",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "MODEL != THEORY",
+        "MODEL != REALITY",
+        "AUTHORIAL_CANON != ESTABLISHED_EXTERNAL_SCIENCE"
+      ],
+      "organ_deltas": {
+        "domain": "primary namespace router",
+        "formal": "theory theorematic obligations",
+        "research": "empirical bridge state",
+        "engineering": "implementation state"
+      }
+    },
+    {
+      "id": "cs.object::visible-memory-continuity::v0.4",
+      "family": "Visible Memory and Continuity",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Explicit versioned state and continuity fabric preserving object IDs, assumptions, evidence status, contradictions, gates, no-go results and next frontier while allowing repetitive prose compression.",
+      "provenance": [
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "authority_ceiling": "CANONICAL_STATE_METHOD",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "CHAT_MEMORY != CANONICAL_MEMORY",
+        "SUMMARY_COMPRESSION != PERMISSION_TO_DROP_OPEN_DEBT",
+        "CAPSULE != AUTOMATIC_CROSS_LLM_SYNCHRONIZATION"
+      ],
+      "organ_deltas": {
+        "knowledge": "memory compression law",
+        "research": "research program memory",
+        "engineering": "runtime state",
+        "continuity": "portable capsules and recovery"
+      }
+    },
+    {
+      "id": "cs.object::artifact-release-fabric::v0.4",
+      "family": "Artifact and Release Fabric",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Artifact and release pipeline separating specification, implementation, testing, qualification, deployment, publication, provider projection, integrity and recovery.",
+      "provenance": [
+        "src.engineering.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "authority_ceiling": "ENGINEERING_AND_RELEASE_METHOD",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "ARTIFACT != EVIDENCE",
+        "PLATFORM_PROFILE != CANON_FORK",
+        "TEST != PROOF"
+      ],
+      "organ_deltas": {
+        "engineering": "artifact pipeline",
+        "continuity": "release manifest, platform profiles, release gates and recovery"
+      }
+    },
+    {
+      "id": "cs.object::failure-hold-semantics::v0.4",
+      "family": "Failure and Hold Semantics",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Durable closure vocabulary for insufficient evidence, missing bridges, contradiction, capability/resource limits, refutation, no-go and competing models.",
+      "provenance": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "authority_ceiling": "METHOD_AND_CLOSURE",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "NO_GO_UNDER_ASSUMPTIONS != UNIVERSAL_IMPOSSIBILITY",
+        "CONTRADICTION != AUTOMATIC_AVERAGING",
+        "HOLD is not failure"
+      ],
+      "organ_deltas": {
+        "formal": "no-go and contradiction classes",
+        "research": "failure-to-close",
+        "engineering": "capability/resource holds",
+        "continuity": "open debt persistence"
+      }
+    },
+    {
+      "id": "cs.object::skill-object-promotion::v0.4",
+      "family": "Skill Object and Promotion",
+      "kind": "SEMANTIC_FAMILY",
+      "definition": "Reusable method object with intent, inputs, preconditions, method, outputs, capabilities, guards, evidence, failures, provenance and promotion lifecycle.",
+      "provenance": [
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.domain.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "authority_ceiling": "METHOD",
+      "status": {
+        "canon": "CANON_CANDIDATE",
+        "publication": "DRAFT"
+      },
+      "invariants": [
+        "SKILL != HOST_CAPABILITY",
+        "DISCOVERED != QUALIFIED",
+        "EXTERNAL_TECHNIQUE != AUTHORITY"
+      ],
+      "organ_deltas": {
+        "knowledge": "skill object/lifecycle",
+        "research": "method extraction",
+        "engineering": "runtime binding",
+        "domain": "domain-specialized skill families",
+        "continuity": "qualification receipts"
+      }
+    }
+  ]
+}
