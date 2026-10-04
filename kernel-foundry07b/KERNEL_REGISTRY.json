@@ -1,0 +1,562 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-KERNEL-REGISTRY/0.7b",
+  "status": "INTEGRATION_CANDIDATE",
+  "authority_delta": "NONE",
+  "design_law": "Adapter-first federation. Native source semantics remain authoritative; shared kernels normalize interfaces, not source authority.",
+  "evidence_boundary": "SOURCE_GROUNDED_COMPOSITE_CANDIDATE. Registry presence does not establish cross-repository integration, theorem proof, production readiness, or live deployment.",
+  "kernels": [
+    {
+      "kernel_id": "cs.kernel::canonical-serialization::v0.7b",
+      "alias": "K0",
+      "name": "Canonical Serialization",
+      "domain": "identity",
+      "purpose": "Produce stable host-independent semantic bytes/normalized state representation.",
+      "source_refs": [
+        "src.dfpl.encoding",
+        "src.dfpl.lawir",
+        "src.dfab.canon.fir"
+      ],
+      "inputs": [
+        "typed canonical object"
+      ],
+      "outputs": [
+        "canonical bytes or normalized representation"
+      ],
+      "determinism": "REQUIRED",
+      "stateful": false,
+      "side_effects": [],
+      "authority_ceiling": "METHOD",
+      "required_capabilities": [
+        "source-read",
+        "local-compute"
+      ],
+      "test_evidence": [
+        "DFPL conformance source",
+        "Digital Fabrica FIR determinism contract"
+      ],
+      "status": "SOURCE_GROUNDED_ADAPTER_CANDIDATE",
+      "known_failures": [
+        "serializer-default dependence",
+        "Unicode/order drift",
+        "self-referential identity fields"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::digest-identity::v0.7b",
+      "alias": "K1",
+      "name": "Digest / Identity",
+      "domain": "identity",
+      "purpose": "Bind canonical semantic objects/state to versioned content identities.",
+      "source_refs": [
+        "src.dfpl.encoding",
+        "src.dfab.canon.fir",
+        "src.irp1.spec"
+      ],
+      "inputs": [
+        "canonical bytes",
+        "domain/version"
+      ],
+      "outputs": [
+        "content identity"
+      ],
+      "determinism": "REQUIRED",
+      "stateful": false,
+      "side_effects": [],
+      "authority_ceiling": "METHOD",
+      "required_capabilities": [
+        "local-compute"
+      ],
+      "test_evidence": [
+        "DFPL SHA-256/domain-separation specification",
+        "IRP-1 canonical receipt hashing"
+      ],
+      "status": "SOURCE_GROUNDED_ADAPTER_CANDIDATE",
+      "known_failures": [
+        "hash treated as proof",
+        "domain separation omitted",
+        "identity confused with behavioral equivalence"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::transition-validator::v0.7b",
+      "alias": "K2",
+      "name": "Transition Validator",
+      "domain": "state-transition",
+      "purpose": "Evaluate a candidate transition against exact parent state, schema, policy/evidence and protected invariants.",
+      "source_refs": [
+        "src.dfab.canon.transition",
+        "src.dfab.core.admission",
+        "src.dfpl.architecture",
+        "src.refnode.transition"
+      ],
+      "inputs": [
+        "current state",
+        "candidate transition",
+        "evidence/policy"
+      ],
+      "outputs": [
+        "admit|hold|reject with reasons"
+      ],
+      "determinism": "REQUIRED_FOR_DECLARED_PROFILE",
+      "stateful": false,
+      "side_effects": [],
+      "authority_ceiling": "SEMANTIC_ADMISSION",
+      "required_capabilities": [
+        "state-read"
+      ],
+      "test_evidence": [
+        "Digital Fabrica admission implementation",
+        "Reference Node durable transition schema"
+      ],
+      "status": "SOURCE_GROUNDED_ADAPTER_CANDIDATE",
+      "known_failures": [
+        "stale parent accepted",
+        "semantic verdict mistaken for execution authorization"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::authority-capability-gate::v0.7b",
+      "alias": "K3",
+      "name": "Authority / Capability Gate",
+      "domain": "authorization",
+      "purpose": "Separate semantic permission, principal authentication, scoped capabilities, approvals and runtime authorization.",
+      "source_refs": [
+        "src.dfab.canon.constitution",
+        "src.dfpl.authorization",
+        "src.nl.authority",
+        "src.nl.execution",
+        "src.codex.authority",
+        "src.ief.policy"
+      ],
+      "inputs": [
+        "principal",
+        "requested effect",
+        "capabilities",
+        "approvals",
+        "runtime context"
+      ],
+      "outputs": [
+        "authorized|rejected|hold with bounded artifact"
+      ],
+      "determinism": "PROFILE_BOUND",
+      "stateful": false,
+      "side_effects": [],
+      "authority_ceiling": "AUTHORIZATION_AS_GRANTED",
+      "required_capabilities": [
+        "authority-state-read"
+      ],
+      "test_evidence": [
+        "Neural Lattice delegation/revocation implementation",
+        "GILC CodexStation authority check",
+        "IEF policy schema"
+      ],
+      "status": "SOURCE_GROUNDED_ADAPTER_CANDIDATE",
+      "known_failures": [
+        "capability widening",
+        "stale revocation state",
+        "semantic permit treated as authority"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::invariant-gate::v0.7b",
+      "alias": "K4",
+      "name": "Invariant Gate",
+      "domain": "verification",
+      "purpose": "Evaluate protected invariants before/after candidate state transitions and block unsafe promotion.",
+      "source_refs": [
+        "src.dfab.canon.constitution",
+        "src.dfab.canon.fir",
+        "src.dfpl.lawir",
+        "src.nl.invariants"
+      ],
+      "inputs": [
+        "state",
+        "candidate transition",
+        "invariant set"
+      ],
+      "outputs": [
+        "invariant result vector"
+      ],
+      "determinism": "PER_INVARIANT_CLASS",
+      "stateful": false,
+      "side_effects": [],
+      "authority_ceiling": "VERIFICATION",
+      "required_capabilities": [
+        "state-read",
+        "local-compute"
+      ],
+      "test_evidence": [
+        "Digital Fabrica invariant classes",
+        "Neural Lattice normative invariants"
+      ],
+      "status": "SOURCE_GROUNDED_ADAPTER_CANDIDATE",
+      "known_failures": [
+        "semantic invariant reported as deterministic proof",
+        "protected invariant changed by ordinary transition"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::event-fold-replay::v0.7b",
+      "alias": "K5",
+      "name": "Event Fold / Replay",
+      "domain": "continuity",
+      "purpose": "Reconstruct effective state from ordered event history while retaining immutable history.",
+      "source_refs": [
+        "src.dfab.core.events",
+        "src.refnode.architecture",
+        "src.refnode.runtime",
+        "src.highestone.recovery"
+      ],
+      "inputs": [
+        "genesis state",
+        "ordered events"
+      ],
+      "outputs": [
+        "reconstructed effective state",
+        "history root"
+      ],
+      "determinism": "REQUIRED_WITH_PINNED_EVENTS",
+      "stateful": true,
+      "side_effects": [
+        "state-materialization"
+      ],
+      "authority_ceiling": "STATE_RECONSTRUCTION",
+      "required_capabilities": [
+        "event-read",
+        "local-compute"
+      ],
+      "test_evidence": [
+        "Digital Fabrica event sequencing",
+        "Reference Node append-hash history",
+        "HighestOne recovery source"
+      ],
+      "status": "SOURCE_GROUNDED_ADAPTER_CANDIDATE",
+      "known_failures": [
+        "event order drift",
+        "history erased by rollback",
+        "recovery invents semantic transition"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::witness-receipt::v0.7b",
+      "alias": "K6",
+      "name": "Witness / Receipt",
+      "domain": "evidence",
+      "purpose": "Bind intent, authorization, before/after state and observed outcome into reconstructable evidence objects.",
+      "source_refs": [
+        "src.dfab.canon.witness",
+        "src.dfab.core.witness",
+        "src.irp1.spec",
+        "src.irp1.receipt",
+        "src.nl.receipt",
+        "src.refnode.transition"
+      ],
+      "inputs": [
+        "intent",
+        "authorization",
+        "execution/outcome",
+        "state identities"
+      ],
+      "outputs": [
+        "typed witness/receipt"
+      ],
+      "determinism": "CANONICAL_FIELDS_REQUIRED",
+      "stateful": false,
+      "side_effects": [
+        "receipt-write"
+      ],
+      "authority_ceiling": "OBSERVATION_SCOPED",
+      "required_capabilities": [
+        "artifact-write"
+      ],
+      "test_evidence": [
+        "Digital Fabrica witness verifier",
+        "IRP-1 receipt protocol",
+        "Neural Lattice transition receipt"
+      ],
+      "status": "SOURCE_GROUNDED_ADAPTER_CANDIDATE",
+      "known_failures": [
+        "receipt treated as semantic truth",
+        "before/after mismatch",
+        "approval identity overclaimed"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::retraction-rollback::v0.7b",
+      "alias": "K7",
+      "name": "Retraction / Rollback",
+      "domain": "recovery",
+      "purpose": "Restore effective predecessor state or retract claims while preserving causal/audit history.",
+      "source_refs": [
+        "src.refnode.architecture",
+        "src.refnode.transition",
+        "src.refnode.runtime",
+        "src.dfab.core.events",
+        "src.highestone.recovery"
+      ],
+      "inputs": [
+        "current effective state",
+        "target event/claim",
+        "defeating evidence"
+      ],
+      "outputs": [
+        "retracted/restored effective state",
+        "new history event/receipt"
+      ],
+      "determinism": "REQUIRED_FOR_PINNED_HISTORY",
+      "stateful": true,
+      "side_effects": [
+        "governance-state-mutation"
+      ],
+      "authority_ceiling": "AUTHORIZED_RECOVERY",
+      "required_capabilities": [
+        "state-write",
+        "history-write"
+      ],
+      "test_evidence": [
+        "Reference Node rollback/retraction runtime and schema",
+        "HighestOne recovery cases"
+      ],
+      "status": "SOURCE_GROUNDED_ADAPTER_CANDIDATE",
+      "known_failures": [
+        "base claims mutated",
+        "history erased",
+        "unverified recovery advanced"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::knowledge-admission::v0.7b",
+      "alias": "K8",
+      "name": "Knowledge Admission",
+      "domain": "knowledge",
+      "purpose": "Admit, quarantine or reject candidate memory/knowledge based on provenance, integrity, status and policy.",
+      "source_refs": [
+        "src.codex.memory",
+        "src.nl.invariants",
+        "src.omega.aggregation07a"
+      ],
+      "inputs": [
+        "candidate object",
+        "provenance",
+        "evidence/status"
+      ],
+      "outputs": [
+        "admitted candidate|quarantine|reject"
+      ],
+      "determinism": "POLICY_BOUND",
+      "stateful": true,
+      "side_effects": [
+        "knowledge-state-write"
+      ],
+      "authority_ceiling": "CANON_ADMISSION_AS_GRANTED",
+      "required_capabilities": [
+        "knowledge-read",
+        "knowledge-write"
+      ],
+      "test_evidence": [
+        "GILC CodexStation memory admission implementation",
+        "Ω aggregation protocol"
+      ],
+      "status": "SOURCE_GROUNDED_ADAPTER_CANDIDATE",
+      "known_failures": [
+        "chat memory treated as canon",
+        "missing provenance inferred",
+        "publication treated as authority"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::conflict-contradiction::v0.7b",
+      "alias": "K9",
+      "name": "Conflict / Contradiction",
+      "domain": "knowledge",
+      "purpose": "Represent incompatible state/claims explicitly and route reconciliation without silent harmonization.",
+      "source_refs": [
+        "src.nl.invariants",
+        "src.nl.conflict",
+        "src.nl.receipt",
+        "src.refnode.architecture"
+      ],
+      "inputs": [
+        "incompatible claims/state",
+        "evidence"
+      ],
+      "outputs": [
+        "conflict object",
+        "resolution|hold"
+      ],
+      "determinism": "CLASSIFIER_POLICY_BOUND",
+      "stateful": true,
+      "side_effects": [
+        "conflict-registry-write"
+      ],
+      "authority_ceiling": "METHOD_AND_CLOSURE",
+      "required_capabilities": [
+        "knowledge-read",
+        "knowledge-write"
+      ],
+      "test_evidence": [
+        "Neural Lattice conflict schema/invariants"
+      ],
+      "status": "SOURCE_GROUNDED_ADAPTER_CANDIDATE",
+      "known_failures": [
+        "consensus interpreted as truth",
+        "conflict averaged away",
+        "unresolved marked resolved"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::context-holotope-compiler::v0.7b",
+      "alias": "K10",
+      "name": "Context / Holotope Compiler",
+      "domain": "context",
+      "purpose": "Compile a bounded mission-relevant graph slice from a larger provenance-bearing lattice.",
+      "source_refs": [
+        "src.omega.aggregation07a",
+        "src.omega.schema07a",
+        "src.dfab.canon.fir"
+      ],
+      "inputs": [
+        "mission",
+        "knowledge lattice",
+        "context budget"
+      ],
+      "outputs": [
+        "Holotope/context capsule"
+      ],
+      "determinism": "SELECTION_POLICY_BOUND",
+      "stateful": false,
+      "side_effects": [],
+      "authority_ceiling": "CONTEXT_PROJECTION",
+      "required_capabilities": [
+        "knowledge-read"
+      ],
+      "test_evidence": [
+        "Ω Holotope schema",
+        "Digital Fabrica observer projection law"
+      ],
+      "status": "SPECIFIED_COMPOSITE_CANDIDATE",
+      "known_failures": [
+        "context centrality treated as authority",
+        "provenance dropped during compression",
+        "hidden cross-project state assumed"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::isolated-execution-cell::v0.7b",
+      "alias": "K11",
+      "name": "Isolated Execution Cell",
+      "domain": "execution",
+      "purpose": "Execute an authorized bounded specification behind a provider-neutral isolation ABI and emit evidence.",
+      "source_refs": [
+        "src.ief.architecture",
+        "src.ief.cellprofile",
+        "src.ief.policy",
+        "src.nl.execution"
+      ],
+      "inputs": [
+        "ExecutionSpec",
+        "policy decision",
+        "qualified provider"
+      ],
+      "outputs": [
+        "ExecutionReceipt",
+        "evidence/witness"
+      ],
+      "determinism": "PROFILE_BOUND",
+      "stateful": true,
+      "side_effects": [
+        "declared-external-effects"
+      ],
+      "authority_ceiling": "EXECUTION_AS_AUTHORIZED",
+      "required_capabilities": [
+        "execution-provider"
+      ],
+      "test_evidence": [
+        "IEF architecture/schemas",
+        "Neural Lattice commit-time authority revalidation"
+      ],
+      "status": "SOURCE_GROUNDED_ADAPTER_CANDIDATE",
+      "known_failures": [
+        "provider-specific type leaks into kernel",
+        "assurance overreported",
+        "authority not revalidated at commit"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::projection-compiler::v0.7b",
+      "alias": "K12",
+      "name": "Projection Compiler",
+      "domain": "distribution",
+      "purpose": "Compile provider/human/machine-specific views from one governed semantic parent without semantic drift.",
+      "source_refs": [
+        "src.dfab.canon.constitution",
+        "src.omega.aggregation07a"
+      ],
+      "inputs": [
+        "canonical public/admitted state",
+        "platform profile"
+      ],
+      "outputs": [
+        "projection",
+        "projection receipt"
+      ],
+      "determinism": "REQUIRED_FOR_DECLARED_PROFILE",
+      "stateful": false,
+      "side_effects": [
+        "artifact-write"
+      ],
+      "authority_ceiling": "PROJECTION_ONLY",
+      "required_capabilities": [
+        "artifact-write"
+      ],
+      "test_evidence": [
+        "CodexStation Ω public cross-provider distribution parity CI"
+      ],
+      "status": "IMPLEMENTED_IN_OMEGA_PUBLIC",
+      "known_failures": [
+        "platform profile becomes canon fork",
+        "projection changes claim/evidence semantics"
+      ]
+    },
+    {
+      "kernel_id": "cs.kernel::release-packager::v0.7b",
+      "alias": "K13",
+      "name": "Release Packager",
+      "domain": "release",
+      "purpose": "Build deterministic provider packages with manifests, checksums, claim boundaries and open-gate state.",
+      "source_refs": [
+        "src.omega.packager07a",
+        "src.ief.architecture"
+      ],
+      "inputs": [
+        "frozen candidate",
+        "package profile"
+      ],
+      "outputs": [
+        "deterministic archive",
+        "manifest",
+        "checksum",
+        "receipt"
+      ],
+      "determinism": "REQUIRED",
+      "stateful": false,
+      "side_effects": [
+        "artifact-write"
+      ],
+      "authority_ceiling": "PACKAGING_ONLY",
+      "required_capabilities": [
+        "artifact-write"
+      ],
+      "test_evidence": [
+        "Ω v0.6/v0.7a deterministic dual-package CI",
+        "IEF release/evidence architecture"
+      ],
+      "status": "IMPLEMENTED_IN_OMEGA_PUBLIC",
+      "known_failures": [
+        "package pass treated as live conformance",
+        "archive self-hash cycle",
+        "release promoted with open gates"
+      ]
+    }
+  ]
+}
