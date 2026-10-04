@@ -1,0 +1,122 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-KERNEL-REGISTRY/0.7",
+  "status": "QUALIFICATION_STAGING",
+  "authority_delta": "NONE",
+  "kernels": [
+    {
+      "id": "cs://kernel/core/identity/canonical-digest@0.1",
+      "priority": "P0",
+      "sources": [
+        "Ivan-Pasev/Digital.Fabrica.Core",
+        "Ivan-Pasev/CodexStation.HighestOne"
+      ],
+      "role": "canonical state identity and deterministic digest",
+      "boundary": "digest != proof; identity != authority",
+      "status": "SOURCE_BOUND_CANDIDATE"
+    },
+    {
+      "id": "cs://kernel/core/authority/admission@0.1",
+      "priority": "P0",
+      "sources": [
+        "Ivan-Pasev/Digital.Fabrica.Core",
+        "Ivan-Pasev/CodexStation.HighestOne",
+        "Ivan-Pasev/fabric-reference-node"
+      ],
+      "role": "authority/admission/invariant gate",
+      "boundary": "machine PASS != approval or truth",
+      "status": "SOURCE_BOUND_CANDIDATE"
+    },
+    {
+      "id": "cs://kernel/core/transition/validate-commit@0.1",
+      "priority": "P0",
+      "sources": [
+        "Ivan-Pasev/Digital.Fabrica.Core",
+        "Ivan-Pasev/DFPL"
+      ],
+      "role": "candidate transition semantic validation before effects",
+      "boundary": "semantic permit != authorization != execution",
+      "status": "SOURCE_BOUND_CANDIDATE"
+    },
+    {
+      "id": "cs://kernel/core/receipt/witness-binding@0.1",
+      "priority": "P0",
+      "sources": [
+        "Ivan-Pasev/AI-WITNESS",
+        "Ivan-Pasev/fabric-reference-node"
+      ],
+      "role": "observation/intent/authorization/outcome receipt chain",
+      "boundary": "receipt integrity != semantic truth",
+      "status": "SOURCE_BOUND_CANDIDATE"
+    },
+    {
+      "id": "cs://kernel/core/recovery/certified-head@0.1",
+      "priority": "P0",
+      "sources": [
+        "Ivan-Pasev/CodexStation.HighestOne"
+      ],
+      "role": "certified head advancement, quarantine and recovery",
+      "boundary": "formal scope remains encoded-model scoped; release reseal separate",
+      "status": "SOURCE_BOUND_FORMAL_CANDIDATE"
+    },
+    {
+      "id": "cs://kernel/core/retraction/rollback-overlay@0.1",
+      "priority": "P0",
+      "sources": [
+        "Ivan-Pasev/fabric-reference-node"
+      ],
+      "role": "rollback/retraction without history erasure",
+      "boundary": "effective-state rollback != provenance deletion",
+      "status": "SOURCE_BOUND_CANDIDATE"
+    },
+    {
+      "id": "cs://kernel/execution/isolation/provider-abi@0.1",
+      "priority": "P1",
+      "sources": [
+        "Ivan-Pasev/codexstation-ief"
+      ],
+      "role": "provider-neutral bounded execution cell and capability negotiation",
+      "boundary": "isolation != authorization",
+      "status": "SOURCE_BOUND_CANDIDATE"
+    },
+    {
+      "id": "cs://kernel/knowledge/conflict-reconciliation@0.1",
+      "priority": "P2",
+      "sources": [
+        "Ivan-Pasev/neural-lattice"
+      ],
+      "role": "typed state, provenance, explicit conflict and closure",
+      "boundary": "architecture proposal != empirical superiority",
+      "status": "SOURCE_BOUND_PRIVATE_CANDIDATE"
+    }
+  ],
+  "source_observations": [
+    {
+      "source": "Ivan-Pasev/Digital.Fabrica.Core",
+      "observed": "README: trusted executable kernel owns state hashing, transition schema, admission, authority, invariant, event and witness interfaces."
+    },
+    {
+      "source": "Ivan-Pasev/DFPL",
+      "observed": "README: DFPL-K pure semantic kernel; PRIMA effectful plane; Law != Effect; Semantic Permit != Authorization."
+    },
+    {
+      "source": "Ivan-Pasev/CodexStation.HighestOne",
+      "observed": "README: executable conformance and Lean-scoped machine checks reported; MACHINE_CHECKED_RELEASE remains NO pending reseal."
+    },
+    {
+      "source": "Ivan-Pasev/codexstation-ief",
+      "observed": "README: provider-neutral execution cells, provider ABI, explicit authority/bounds/trace, deny-by-default network and opt-in persistence."
+    },
+    {
+      "source": "Ivan-Pasev/AI-WITNESS",
+      "observed": "README: W0/W1/W2/W3 correspondence receipts, deterministic hashing/policy replay, semantic-truth boundary."
+    },
+    {
+      "source": "Ivan-Pasev/fabric-reference-node",
+      "observed": "README: PASS/HOLD/FAIL separate from institutional decision; receipts, persistence, retraction/rollback without history erasure."
+    },
+    {
+      "source": "Ivan-Pasev/neural-lattice",
+      "observed": "README: private engineering genesis for typed state, provenance-preserving reconciliation, explicit conflict and closure evaluation."
+    }
+  ]
+}
