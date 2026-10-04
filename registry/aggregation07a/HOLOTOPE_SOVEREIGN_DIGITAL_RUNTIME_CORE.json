@@ -1,0 +1,67 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-HOLOTOPE/0.7",
+  "holotope_id": "cs://holotope/runtime/sovereign-digital-runtime-core@0.7",
+  "mission": "Compile the minimum cross-project substrate for a provider-portable, provenance-preserving and authority-bounded digital runtime.",
+  "object_ids": [
+    "cs.object::authority-provenance::v0.4",
+    "cs.object::claim-evidence-gate::v0.4",
+    "cs.object::capability-routing::v0.4",
+    "cs.object::visible-memory-continuity::v0.4",
+    "cs.object::artifact-release-fabric::v0.4",
+    "cs.object::failure-hold-semantics::v0.4",
+    "cs.object::skill-object-promotion::v0.4"
+  ],
+  "invariants": [
+    "HOST != STATION",
+    "MODEL != REALITY",
+    "CAPABILITY != AUTHORITY",
+    "CLAIM != EVIDENCE",
+    "SOURCE_PROJECT_CANON != OMEGA_AGGREGATE_VIEW",
+    "PLATFORM_PROFILE != CANON_FORK"
+  ],
+  "skills": [
+    "cs.skill::source-audit::v0.4",
+    "cs.skill::capability-probe-route::v0.4",
+    "cs.skill::visible-continuity-pack::v0.4",
+    "cs.skill::artifact-release-compile::v0.4",
+    "cs://skill/aggregation/deep-map/project-harvest@0.7"
+  ],
+  "kernels": [
+    "cs://kernel/core/identity/canonical-digest@0.1",
+    "cs://kernel/core/authority/admission@0.1",
+    "cs://kernel/core/transition/validate-commit@0.1",
+    "cs://kernel/core/receipt/witness-binding@0.1",
+    "cs://kernel/execution/isolation/provider-abi@0.1",
+    "cs://kernel/knowledge/holotope-context@0.1"
+  ],
+  "capability_requirements": [
+    "source-read",
+    "repository-read",
+    "artifact-write",
+    "optional-execution-sandbox"
+  ],
+  "evidence": [],
+  "open_gates": [
+    {
+      "id": "kernel-record-qualification",
+      "status": "OPEN"
+    },
+    {
+      "id": "live-provider-conformance",
+      "status": "OPEN"
+    }
+  ],
+  "negative_knowledge": [],
+  "source_pointers": [
+    "Digital.Fabrica.Canon",
+    "Digital.Fabrica.Core",
+    "DFPL",
+    "CodexStation.HighestOne",
+    "codexstation-ief",
+    "AI-WITNESS",
+    "fabric-reference-node",
+    "neural-lattice"
+  ],
+  "semantic_parent": "cs.semantic-parent::public-objectization-04::v0.5",
+  "authority_delta": "NONE"
+}
