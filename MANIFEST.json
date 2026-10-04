@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "PACKAGING_06_IMPLEMENTED_PENDING_CI",
+  "registry_state": "PACKAGING_06_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "PUBLIC_OMEGA_DEPLOYMENT_PACKAGING_SLICE_06",
+  "current_target": "PUBLIC_OMEGA_LIVE_CONFORMANCE_SLICE_07",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -69,6 +69,10 @@
     "packager": "tools/build_packages06.py",
     "semantic_parent_fingerprint": "eb43face6ab49b0eab112b5c9ddc6308a5dc0444c3d140622365c61976138719",
     "parity_fingerprint": "7ebb3332e2596fc53a2f956bbe26bf558fa96a93c159d0190625d10993d3dcd1",
-    "status": "PACKAGING_IMPLEMENTED_PENDING_CI"
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+    "package_index": "packaging06/PACKAGE_INDEX.json",
+    "deployment_guide": "packaging06/DEPLOYMENT.md",
+    "chatgpt_plugin_sha256": "f5bca8051c8d760e69a55dd55c4b9af98807113b3e14123b1253eba09d040714",
+    "gemini_notebook_sha256": "60d90cd81e2d9186aaeae89268137d99e48adcb935af9e7434e5e6c05bf1c2c4"
   }
 }
