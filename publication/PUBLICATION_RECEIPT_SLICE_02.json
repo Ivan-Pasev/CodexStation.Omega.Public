@@ -1,0 +1,34 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-METABOLIZATION-RECEIPT/0.2",
+  "receipt_id": "cs.public.receipt::metabolization-slice-02::v0.2",
+  "candidate_id": "cs.public.candidate::semantic-registry-genesis::v0.2",
+  "result": "PASS_CANDIDATE_PENDING_CI",
+  "scope": "Machine-readable semantic registry genesis only; no full private dense-corpus publication.",
+  "artifacts": [
+    "registry/OMEGA_REGISTRY.json",
+    "tools/validate_registry.py",
+    "tests/test_registry.py"
+  ],
+  "expected_checks": [
+    "unique IDs",
+    "valid relation endpoints",
+    "noncollapse endpoints",
+    "multiaxial status model",
+    "theorem-target non-promotion",
+    "skill guards and provenance",
+    "gate authority delta NONE"
+  ],
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "blockers": [
+    "LICENSE_IP_REVIEW",
+    "FULL_PRIVATE_CORPUS_PUBLICATION"
+  ],
+  "does_not_establish": [
+    "formal theoremhood",
+    "empirical confirmation",
+    "scientific validity",
+    "AGI or ASI",
+    "release eligibility"
+  ]
+}
