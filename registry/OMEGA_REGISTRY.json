@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.2",
+  "version": "0.4",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -906,5 +906,14 @@
       "scope": "clean Chat bundled-fallback regression",
       "authority_delta": "NONE"
     }
-  ]
+  ],
+  "objectization_slice_04": {
+    "objects": "registry/objectization04/OBJECTS.json",
+    "provenance": "registry/objectization04/PROVENANCE.json",
+    "relations": "registry/objectization04/RELATIONS.json",
+    "negative_hold": "registry/objectization04/NEGATIVE_HOLD.json",
+    "skills": "registry/objectization04/SKILLS.json",
+    "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
+    "status": "IMPLEMENTED_PENDING_CI"
+  }
 }
