@@ -22,3 +22,5 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Publication bootstrap validation
         run: python tools/validate_publication.py --mode bootstrap
+      - name: Semantic registry validation
+        run: python tools/validate_registry.py

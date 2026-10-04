@@ -1,0 +1,904 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
+  "version": "0.2",
+  "status": "PUBLICATION_STAGING",
+  "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
+  "authority_delta": "NONE",
+  "semantic_basis": [
+    "Ω NEXT constitutional root",
+    "MLCO dense-canon architecture",
+    "KBI invariant-governed assurance",
+    "HighestOne frontier-selection contract",
+    "Omnius cognitive/mission fabric",
+    "DFT/Fabrica lawful transformation",
+    "Prime Fabrica sovereignty/non-collapse laws"
+  ],
+  "relation_types": [
+    "DEPENDS_ON",
+    "USES",
+    "ASSUMES",
+    "IMPLEMENTS",
+    "CHECKS",
+    "SUPPORTS",
+    "CONTRADICTS",
+    "REFINES",
+    "SPECIALIZES",
+    "GENERATES",
+    "VALIDATES",
+    "BINDS",
+    "SUPERSEDES",
+    "DERIVES_FROM",
+    "REPRESENTS",
+    "CONSTRAINS",
+    "TESTS",
+    "MEASURES",
+    "BRIDGES_TO",
+    "BLOCKS",
+    "DISCHARGES",
+    "OBSERVED_BY",
+    "CONTROLLED_BY",
+    "PROJECTS_TO",
+    "COMPILES_TO",
+    "SELECTS",
+    "CONSTRUCTS",
+    "TRANSFORMS",
+    "ROUTES_TO"
+  ],
+  "objects": [
+    {
+      "id": "cs.surface::private-rnd-canon::v0.1",
+      "kind": "CANONICAL_RND_SURFACE",
+      "name": "CodexStation Ω NEXT private R&D canon",
+      "scope": "private R&D working authority",
+      "authority_ceiling": "CANONICAL_RND",
+      "status": "ACTIVE",
+      "lineage": "Ω NEXT",
+      "source_refs": [
+        "README.md",
+        "AGENTS.md"
+      ],
+      "failure_modes": [
+        "silent public/private collapse"
+      ]
+    },
+    {
+      "id": "cs.surface::public-repository::v0.1",
+      "kind": "PUBLICATION_SURFACE",
+      "name": "CodexStation Ω Public repository",
+      "scope": "public publication and reproducibility surface",
+      "authority_ceiling": "PUBLIC_CANON_ONLY",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "README.md",
+        "MANIFEST.json"
+      ],
+      "failure_modes": [
+        "public visibility mistaken for stronger truth"
+      ]
+    },
+    {
+      "id": "cs.role::kbi-crystal::v0.1",
+      "kind": "ROLE",
+      "name": "KBI / Crystal",
+      "scope": "structured state, dependencies, evidence and admissible frontier",
+      "authority_ceiling": "METHOD_AND_CANON_STATE",
+      "status": "ACTIVE",
+      "lineage": "KBI/Crystal",
+      "source_refs": [
+        "canon/OMEGA_CORE.md",
+        "canon/OMEGA_CRYSTAL.md"
+      ],
+      "failure_modes": [
+        "memory mistaken for truth authority"
+      ]
+    },
+    {
+      "id": "cs.role::highestone::v0.1",
+      "kind": "ROLE",
+      "name": "HighestOne",
+      "scope": "continuity-aware bounded frontier selection",
+      "authority_ceiling": "PRIORITY_SELECTION",
+      "status": "ACTIVE",
+      "lineage": "HighestOne",
+      "source_refs": [
+        "canon/OMEGA_CORE.md"
+      ],
+      "failure_modes": [
+        "priority mistaken for truth",
+        "selection mistaken for authorization"
+      ]
+    },
+    {
+      "id": "cs.role::omnius::v0.1",
+      "kind": "ROLE",
+      "name": "Omnius",
+      "scope": "mission and cognitive compilation",
+      "authority_ceiling": "MISSION_COMPILATION",
+      "status": "ACTIVE",
+      "lineage": "Omnius",
+      "source_refs": [
+        "canon/OMEGA_CORE.md"
+      ],
+      "failure_modes": [
+        "mission success mistaken for claim promotion"
+      ]
+    },
+    {
+      "id": "cs.layer::dft-fabrica::v0.1",
+      "kind": "TRANSFORMATION_LAYER",
+      "name": "DFT / Fabrica",
+      "scope": "lawful composition and transformation",
+      "authority_ceiling": "DECLARED_TRANSFORMATION_SCOPE",
+      "status": "ACTIVE",
+      "lineage": "DFT/Fabrica",
+      "source_refs": [
+        "canon/OMEGA_CORE.md"
+      ],
+      "failure_modes": [
+        "formal transform mistaken for empirical realization"
+      ]
+    },
+    {
+      "id": "cs.house::prime-fabrica::v0.1",
+      "kind": "CONSTITUTIONAL_HOUSE",
+      "name": "Prime Fabrica",
+      "scope": "portable cyber-physical house / continuity architecture",
+      "authority_ceiling": "AUTHORIAL_CONSTITUTION",
+      "status": "SOURCE_BOUND",
+      "lineage": "Prime Fabrica",
+      "source_refs": [
+        "docs/ARCHITECTURE.md"
+      ],
+      "failure_modes": [
+        "house collapsed into host",
+        "model collapsed into world"
+      ]
+    },
+    {
+      "id": "cs.object::claim::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Claim",
+      "scope": "proposition with scope/status/evidence obligations",
+      "authority_ceiling": "NONE_BY_EXISTENCE",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "canon/OMEGA_CRYSTAL.md"
+      ],
+      "failure_modes": [
+        "claim mistaken for evidence"
+      ]
+    },
+    {
+      "id": "cs.object::evidence::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Evidence",
+      "scope": "typed support or counter-support",
+      "authority_ceiling": "EVIDENCE_CLASS_SCOPED",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "canon/OMEGA_CRYSTAL.md"
+      ],
+      "failure_modes": [
+        "evidence class overgeneralized"
+      ]
+    },
+    {
+      "id": "cs.object::authority::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Authority",
+      "scope": "declared warrant for statement/action",
+      "authority_ceiling": "META",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "canon/OMEGA_CRYSTAL.md"
+      ],
+      "failure_modes": [
+        "capability mistaken for authority"
+      ]
+    },
+    {
+      "id": "cs.object::capability::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Capability",
+      "scope": "observed or candidate host/tool affordance",
+      "authority_ceiling": "NONE_BY_AVAILABILITY",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ],
+      "failure_modes": [
+        "documented capability mistaken for observed capability"
+      ]
+    },
+    {
+      "id": "cs.object::skill::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Skill",
+      "scope": "typed reusable method",
+      "authority_ceiling": "METHOD",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ],
+      "failure_modes": [
+        "skill text mistaken for tool"
+      ]
+    },
+    {
+      "id": "cs.object::receipt::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Receipt",
+      "scope": "scoped record of action/verification/state transition",
+      "authority_ceiling": "OBSERVATION_SCOPED",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "publication/PUBLICATION_RECEIPT_BOOTSTRAP.json"
+      ],
+      "failure_modes": [
+        "receipt mistaken for scientific truth"
+      ]
+    },
+    {
+      "id": "cs.object::artifact::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Artifact",
+      "scope": "versioned representation compiled from governed state",
+      "authority_ceiling": "NONE_BY_EXISTENCE",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "canon/OMEGA_CRYSTAL.md"
+      ],
+      "failure_modes": [
+        "artifact mistaken for evidence"
+      ]
+    },
+    {
+      "id": "cs.object::bridge::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Bridge",
+      "scope": "explicit map across representation/scale/physical/empirical layers",
+      "authority_ceiling": "BRIDGE_SCOPED",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "canon/OMEGA_CRYSTAL.md"
+      ],
+      "failure_modes": [
+        "formal consistency mistaken for physical correspondence"
+      ]
+    },
+    {
+      "id": "cs.object::frontier::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Admissible Frontier",
+      "scope": "unresolved lawful candidate continuations",
+      "authority_ceiling": "NONE_BY_MEMBERSHIP",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "canon/OMEGA_CORE.md"
+      ],
+      "failure_modes": [
+        "frontier membership mistaken for priority"
+      ]
+    },
+    {
+      "id": "cs.object::mission::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Mission",
+      "scope": "bounded compiled work program",
+      "authority_ceiling": "EXECUTION_AS_GRANTED",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "canon/OMEGA_CORE.md"
+      ],
+      "failure_modes": [
+        "plan mistaken for execution"
+      ]
+    },
+    {
+      "id": "cs.object::canon::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Canon",
+      "scope": "governed accepted authorial state",
+      "authority_ceiling": "AUTHORIAL_CANON",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "docs/PUBLICATION_POLICY.md"
+      ],
+      "failure_modes": [
+        "canon mistaken for external truth"
+      ]
+    },
+    {
+      "id": "cs.object::host::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Host",
+      "scope": "replaceable execution/storage/model substrate",
+      "authority_ceiling": "HOST_PERMISSION_ONLY",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "docs/ARCHITECTURE.md"
+      ],
+      "failure_modes": [
+        "host mistaken for station"
+      ]
+    },
+    {
+      "id": "cs.object::model-service::v0.1",
+      "kind": "SEMANTIC_PRIMITIVE",
+      "name": "Model Service",
+      "scope": "replaceable reasoning/model service",
+      "authority_ceiling": "NONE_BY_MODEL_STATUS",
+      "status": "ACTIVE",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "README.md"
+      ],
+      "failure_modes": [
+        "model mistaken for entity or reality"
+      ]
+    },
+    {
+      "id": "cs.dist::chatgpt-codex::v0.1",
+      "kind": "DISTRIBUTION",
+      "name": "ChatGPT / Codex distribution",
+      "scope": "provider-specific compiled public view",
+      "authority_ceiling": "PUBLIC_CANON_PROJECTION",
+      "status": "TARGET",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "MANIFEST.json"
+      ],
+      "failure_modes": [
+        "distribution fork becomes silent canon"
+      ]
+    },
+    {
+      "id": "cs.dist::gemini-notebook::v0.1",
+      "kind": "DISTRIBUTION",
+      "name": "Gemini Notebook distribution",
+      "scope": "provider-specific compiled public view",
+      "authority_ceiling": "PUBLIC_CANON_PROJECTION",
+      "status": "TARGET",
+      "lineage": "Ω Public",
+      "source_refs": [
+        "MANIFEST.json"
+      ],
+      "failure_modes": [
+        "notebook chat becomes hidden canon"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel-001",
+      "type": "PROJECTS_TO",
+      "from": "cs.surface::private-rnd-canon::v0.1",
+      "to": "cs.surface::public-repository::v0.1",
+      "scope": "publication-filtered projection"
+    },
+    {
+      "id": "rel-002",
+      "type": "COMPILES_TO",
+      "from": "cs.surface::public-repository::v0.1",
+      "to": "cs.dist::chatgpt-codex::v0.1",
+      "scope": "provider compilation"
+    },
+    {
+      "id": "rel-003",
+      "type": "COMPILES_TO",
+      "from": "cs.surface::public-repository::v0.1",
+      "to": "cs.dist::gemini-notebook::v0.1",
+      "scope": "provider compilation"
+    },
+    {
+      "id": "rel-004",
+      "type": "CONSTRUCTS",
+      "from": "cs.role::kbi-crystal::v0.1",
+      "to": "cs.object::frontier::v0.1",
+      "scope": "governed state"
+    },
+    {
+      "id": "rel-005",
+      "type": "SELECTS",
+      "from": "cs.role::highestone::v0.1",
+      "to": "cs.object::frontier::v0.1",
+      "scope": "bounded priority selection"
+    },
+    {
+      "id": "rel-006",
+      "type": "GENERATES",
+      "from": "cs.role::omnius::v0.1",
+      "to": "cs.object::mission::v0.1",
+      "scope": "mission compilation"
+    },
+    {
+      "id": "rel-007",
+      "type": "TRANSFORMS",
+      "from": "cs.layer::dft-fabrica::v0.1",
+      "to": "cs.object::mission::v0.1",
+      "scope": "admissible transformation/execution path"
+    },
+    {
+      "id": "rel-008",
+      "type": "CONSTRAINS",
+      "from": "cs.object::authority::v0.1",
+      "to": "cs.object::mission::v0.1",
+      "scope": "execution authority"
+    },
+    {
+      "id": "rel-009",
+      "type": "SUPPORTS",
+      "from": "cs.object::evidence::v0.1",
+      "to": "cs.object::claim::v0.1",
+      "scope": "typed claim support"
+    },
+    {
+      "id": "rel-010",
+      "type": "VALIDATES",
+      "from": "cs.object::receipt::v0.1",
+      "to": "cs.object::artifact::v0.1",
+      "scope": "only when receipt type says so"
+    },
+    {
+      "id": "rel-011",
+      "type": "BRIDGES_TO",
+      "from": "cs.object::bridge::v0.1",
+      "to": "cs.object::claim::v0.1",
+      "scope": "cross-layer interpretation"
+    },
+    {
+      "id": "rel-012",
+      "type": "BINDS",
+      "from": "cs.object::skill::v0.1",
+      "to": "cs.object::capability::v0.1",
+      "scope": "required capability declaration; not availability proof"
+    },
+    {
+      "id": "rel-013",
+      "type": "USES",
+      "from": "cs.house::prime-fabrica::v0.1",
+      "to": "cs.role::kbi-crystal::v0.1",
+      "scope": "functional role"
+    },
+    {
+      "id": "rel-014",
+      "type": "USES",
+      "from": "cs.house::prime-fabrica::v0.1",
+      "to": "cs.role::highestone::v0.1",
+      "scope": "functional role"
+    },
+    {
+      "id": "rel-015",
+      "type": "USES",
+      "from": "cs.house::prime-fabrica::v0.1",
+      "to": "cs.role::omnius::v0.1",
+      "scope": "functional role"
+    },
+    {
+      "id": "rel-016",
+      "type": "USES",
+      "from": "cs.house::prime-fabrica::v0.1",
+      "to": "cs.layer::dft-fabrica::v0.1",
+      "scope": "functional role"
+    }
+  ],
+  "noncollapse": [
+    {
+      "lhs": "cs.surface::private-rnd-canon::v0.1",
+      "rhs": "cs.surface::public-repository::v0.1",
+      "rule": "NOT_IDENTICAL"
+    },
+    {
+      "lhs": "cs.role::kbi-crystal::v0.1",
+      "rhs": "cs.role::highestone::v0.1",
+      "rule": "NOT_IDENTICAL"
+    },
+    {
+      "lhs": "cs.role::highestone::v0.1",
+      "rhs": "cs.role::omnius::v0.1",
+      "rule": "NOT_IDENTICAL"
+    },
+    {
+      "lhs": "cs.role::omnius::v0.1",
+      "rhs": "cs.layer::dft-fabrica::v0.1",
+      "rule": "NOT_IDENTICAL"
+    },
+    {
+      "lhs": "cs.object::skill::v0.1",
+      "rhs": "cs.object::capability::v0.1",
+      "rule": "NO_AUTHORITY_INHERITANCE"
+    },
+    {
+      "lhs": "cs.object::claim::v0.1",
+      "rhs": "cs.object::evidence::v0.1",
+      "rule": "NOT_IDENTICAL"
+    },
+    {
+      "lhs": "cs.object::host::v0.1",
+      "rhs": "cs.surface::public-repository::v0.1",
+      "rule": "NOT_IDENTICAL"
+    },
+    {
+      "lhs": "cs.object::model-service::v0.1",
+      "rhs": "cs.surface::public-repository::v0.1",
+      "rule": "NOT_IDENTICAL"
+    }
+  ],
+  "status_model": {
+    "formal": [
+      "OPEN",
+      "SPECIFIED",
+      "PARTIAL",
+      "CHECKED",
+      "INDEPENDENT_CHECKED"
+    ],
+    "empirical": [
+      "NONE",
+      "OBSERVED",
+      "SUPPORTED",
+      "REPLICATED",
+      "CONTESTED"
+    ],
+    "execution": [
+      "NOT_EXECUTED",
+      "PARTIAL",
+      "PASS",
+      "FAIL"
+    ],
+    "reproduction": [
+      "NONE",
+      "LOCAL",
+      "INDEPENDENT"
+    ],
+    "implementation": [
+      "SPECIFIED",
+      "IMPLEMENTED",
+      "TESTED",
+      "QUALIFIED",
+      "DEPLOYED"
+    ],
+    "publication": [
+      "PRIVATE",
+      "DRAFT",
+      "RELEASED",
+      "ARCHIVED"
+    ],
+    "canon": [
+      "EXPLORATORY",
+      "AUTHORIAL",
+      "CANON_CANDIDATE",
+      "CANON",
+      "SUPERSEDED"
+    ]
+  },
+  "theorematic_objects": [
+    {
+      "id": "cs.thm::omega-public::host-transport-non-promotion::v0.1",
+      "label": "T-ΩP-01",
+      "class": "THEOREM_TARGET",
+      "statement": "Representational or host transport without new independently admissible evidence cannot by itself strengthen epistemic or authority status.",
+      "proof_status": "OPEN",
+      "source_refs": [
+        "canon/OMEGA_THEOREMATIC_SPINE.md"
+      ]
+    },
+    {
+      "id": "cs.thm::omega-public::non-escalation-by-orchestration::v0.1",
+      "label": "T-ΩP-02",
+      "class": "THEOREM_TARGET",
+      "statement": "Composition of agents/tools/providers without a new lawful authority witness cannot generate a stronger execution authority class.",
+      "proof_status": "OPEN",
+      "source_refs": [
+        "canon/OMEGA_THEOREMATIC_SPINE.md"
+      ]
+    },
+    {
+      "id": "cs.thm::omega-public::provenance-conservation::v0.1",
+      "label": "T-ΩP-03",
+      "class": "THEOREM_TARGET",
+      "statement": "Semantics-preserving transport retains reconstructible lineage or explicitly reports information loss.",
+      "proof_status": "OPEN",
+      "source_refs": [
+        "canon/OMEGA_THEOREMATIC_SPINE.md"
+      ]
+    },
+    {
+      "id": "cs.thm::omega-public::no-silent-identity-substitution::v0.1",
+      "label": "T-ΩP-04",
+      "class": "DERIVED_LAW",
+      "statement": "Provider/model replacement does not by itself replace Station identity when declared identity state and migration witnesses are preserved.",
+      "proof_status": "FORMALIZATION_TARGET",
+      "source_refs": [
+        "canon/OMEGA_THEOREMATIC_SPINE.md"
+      ]
+    },
+    {
+      "id": "cs.thm::omega-public::reinstantiation-sufficiency::v0.1",
+      "label": "T-ΩP-05",
+      "class": "THEOREM_TARGET",
+      "statement": "Define a minimal portable state sufficient for conformant Station reinstantiation under explicit replay assumptions.",
+      "proof_status": "OPEN",
+      "source_refs": [
+        "canon/OMEGA_THEOREMATIC_SPINE.md"
+      ]
+    },
+    {
+      "id": "cs.thm::omega-public::witnessed-cross-level-promotion::v0.1",
+      "label": "T-ΩP-06",
+      "class": "THEOREM_TARGET",
+      "statement": "Authority-bearing cross-level promotion requires a typed witness carrying source, target, transformation, residuals and obligations.",
+      "proof_status": "OPEN",
+      "source_refs": [
+        "canon/OMEGA_THEOREMATIC_SPINE.md"
+      ]
+    },
+    {
+      "id": "cs.thm::omega-public::effect-receipt-soundness::v0.1",
+      "label": "T-ΩP-07",
+      "class": "THEOREM_TARGET",
+      "statement": "Command or API success does not establish external-world effect without an admissible effect witness.",
+      "proof_status": "OPEN",
+      "source_refs": [
+        "canon/OMEGA_THEOREMATIC_SPINE.md"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "cs.skill::source-audit::v0.1",
+      "class": "RESEARCH",
+      "intent": "Classify lineage, authority, conflict and evidence boundaries.",
+      "status": "PUBLIC_SEED",
+      "authority_ceiling": "METHOD",
+      "required_capabilities": [
+        "source-read"
+      ],
+      "guards": [
+        "SOURCE != AUTHORITY"
+      ],
+      "source_refs": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ]
+    },
+    {
+      "id": "cs.skill::formalize-claim::v0.1",
+      "class": "FORMAL",
+      "intent": "Convert prose claim into typed definitions, assumptions, scope and obligations.",
+      "status": "PUBLIC_SEED",
+      "authority_ceiling": "METHOD",
+      "required_capabilities": [
+        "source-read"
+      ],
+      "guards": [
+        "PROOF_OBLIGATION != PROOF"
+      ],
+      "source_refs": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ]
+    },
+    {
+      "id": "cs.skill::adversarial-review::v0.1",
+      "class": "VERIFICATION",
+      "intent": "Challenge collapse, authority inflation, stale state and unsupported claims.",
+      "status": "PUBLIC_SEED",
+      "authority_ceiling": "METHOD",
+      "required_capabilities": [
+        "source-read"
+      ],
+      "guards": [
+        "NO_COUNTEREXAMPLE_FOUND != PROOF"
+      ],
+      "source_refs": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ]
+    },
+    {
+      "id": "cs.skill::repository-mutation::v0.1",
+      "class": "ENGINEERING",
+      "intent": "Perform bounded repository mutation with lineage and tests.",
+      "status": "PUBLIC_SEED",
+      "authority_ceiling": "EXECUTION_AS_GRANTED",
+      "required_capabilities": [
+        "repository-write"
+      ],
+      "guards": [
+        "AVAILABLE != AUTHORIZED"
+      ],
+      "source_refs": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ]
+    },
+    {
+      "id": "cs.skill::publication-filter::v0.1",
+      "class": "PUBLICATION",
+      "intent": "Evaluate public admissibility across secret, IP, claim, provenance and dedup gates.",
+      "status": "PUBLIC_SEED",
+      "authority_ceiling": "PUBLICATION_DECISION",
+      "required_capabilities": [
+        "source-read"
+      ],
+      "guards": [
+        "PUBLICATION != AUTHORITY_PROMOTION"
+      ],
+      "source_refs": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ]
+    },
+    {
+      "id": "cs.skill::migration-witness::v0.1",
+      "class": "CONTINUITY",
+      "intent": "Record substrate migration, preserved invariants and residual loss.",
+      "status": "PUBLIC_SEED",
+      "authority_ceiling": "OBSERVATION_SCOPED",
+      "required_capabilities": [
+        "source-read"
+      ],
+      "guards": [
+        "HOST != STATION"
+      ],
+      "source_refs": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ]
+    },
+    {
+      "id": "cs.skill::research-closure::v0.1",
+      "class": "RESEARCH",
+      "intent": "Close, hold or split a research branch using explicit evidence debt.",
+      "status": "PUBLIC_SEED",
+      "authority_ceiling": "METHOD",
+      "required_capabilities": [
+        "source-read"
+      ],
+      "guards": [
+        "HOLD is valid"
+      ],
+      "source_refs": [
+        "canon/OMEGA_CRYSTAL.md"
+      ]
+    },
+    {
+      "id": "cs.skill::capability-probe::v0.1",
+      "class": "RUNTIME",
+      "intent": "Distinguish described, observed and authorized host capabilities.",
+      "status": "PUBLIC_SEED",
+      "authority_ceiling": "OBSERVATION_SCOPED",
+      "required_capabilities": [
+        "host-inspection"
+      ],
+      "guards": [
+        "CAPABILITY != AUTHORITY"
+      ],
+      "source_refs": [
+        "canon/OMEGA_CORE.md"
+      ]
+    },
+    {
+      "id": "cs.skill::evidence-gate::v0.1",
+      "class": "VERIFICATION",
+      "intent": "Prevent unsupported status or authority promotion.",
+      "status": "PUBLIC_SEED",
+      "authority_ceiling": "METHOD",
+      "required_capabilities": [
+        "source-read"
+      ],
+      "guards": [
+        "CLAIM != EVIDENCE"
+      ],
+      "source_refs": [
+        "docs/PUBLICATION_POLICY.md"
+      ]
+    },
+    {
+      "id": "cs.skill::distribution-compile::v0.1",
+      "class": "DISTRIBUTION",
+      "intent": "Compile provider-specific views from one admitted public semantic parent.",
+      "status": "PUBLIC_SEED",
+      "authority_ceiling": "PUBLIC_CANON_PROJECTION",
+      "required_capabilities": [
+        "repository-read"
+      ],
+      "guards": [
+        "PLATFORM_PROFILE != CANON_FORK"
+      ],
+      "source_refs": [
+        "docs/ARCHITECTURE.md"
+      ]
+    }
+  ],
+  "anchors": [
+    {
+      "id": "anchor::codexstation-omega-public",
+      "type": "REPOSITORY",
+      "uri": "https://github.com/Ivan-Pasev/CodexStation.Omega.Public",
+      "title": "CodexStation.Omega.Public",
+      "claim_boundary": "Public constitutional/reproducibility surface."
+    },
+    {
+      "id": "anchor::gilc-codexstation",
+      "type": "REPOSITORY",
+      "uri": "https://github.com/Ivan-Pasev/GILC.CodexStation",
+      "title": "GILC.CodexStation",
+      "claim_boundary": "Existing public CodexStation reference/runtime surface."
+    },
+    {
+      "id": "anchor::dfpl",
+      "type": "REPOSITORY",
+      "uri": "https://github.com/Ivan-Pasev/DFPL",
+      "title": "DFPL",
+      "claim_boundary": "Public cybernetic law-kernel/programming-language surface."
+    },
+    {
+      "id": "anchor::ai-witness",
+      "type": "REPOSITORY",
+      "uri": "https://github.com/Ivan-Pasev/AI-WITNESS",
+      "title": "AI-WITNESS",
+      "claim_boundary": "Public interpretation-receipt/witness implementation surface."
+    },
+    {
+      "id": "anchor::fabric-reference-node",
+      "type": "REPOSITORY",
+      "uri": "https://github.com/Ivan-Pasev/fabric-reference-node",
+      "title": "fabric-reference-node",
+      "claim_boundary": "Public Fabric reference-node surface."
+    },
+    {
+      "id": "anchor::fabric-mesh-protocol",
+      "type": "REPOSITORY",
+      "uri": "https://github.com/Ivan-Pasev/fabric-mesh-protocol",
+      "title": "fabric-mesh-protocol",
+      "claim_boundary": "Public Fabric mesh protocol surface."
+    },
+    {
+      "id": "anchor::qic",
+      "type": "REPOSITORY",
+      "uri": "https://github.com/Ivan-Pasev/QIC",
+      "title": "QIC",
+      "claim_boundary": "Public quantum-computing initiative surface."
+    }
+  ],
+  "gates": [
+    {
+      "id": "gate::public-repo-genesis",
+      "status": "PASS",
+      "scope": "standalone repository exists and bootstrap CI passed",
+      "authority_delta": "NONE"
+    },
+    {
+      "id": "gate::license-ip-review",
+      "status": "OPEN",
+      "scope": "deliberate code/documentation license decision",
+      "authority_delta": "NONE"
+    },
+    {
+      "id": "gate::full-private-corpus-publication",
+      "status": "HOLD",
+      "scope": "private dense Core/Crystal require object-level publication admission",
+      "authority_delta": "NONE"
+    },
+    {
+      "id": "gate::nb00-live-conformance",
+      "status": "OPEN",
+      "scope": "external Gemini Notebook live conformance",
+      "authority_delta": "NONE"
+    },
+    {
+      "id": "gate::rgt04-clean-chat",
+      "status": "OPEN",
+      "scope": "clean Chat bundled-fallback regression",
+      "authority_delta": "NONE"
+    }
+  ]
+}
