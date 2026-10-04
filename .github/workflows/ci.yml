@@ -26,3 +26,5 @@ jobs:
         run: python tools/validate_registry.py
       - name: Objectization slice validation
         run: python tools/validate_objectization04.py
+      - name: Distribution compiler parity
+        run: python tools/compile_distributions.py
