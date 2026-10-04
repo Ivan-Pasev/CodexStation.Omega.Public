@@ -1,0 +1,289 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PROJECT-HARVEST-CAPSULE/0.7",
+  "capsule_id": "cs://capsule/fab-sys/root-harvest@0.7",
+  "project_id": "cs://project/fab-sys/root@2026-10-04",
+  "canonical_name": "FAB.SYS",
+  "aliases": [
+    "FAB SYS"
+  ],
+  "source_roots": [
+    "current ChatGPT FAB.SYS project context",
+    "https://drive.google.com/drive/folders/1PgsUYHh_MgiXMC8O-sXZgJ9oEvglI1vd",
+    "https://drive.google.com/drive/folders/1xdYhJLgVPMa5_3DWemTwbpvvNHvjH5Ng"
+  ],
+  "repository_urls": [
+    "https://github.com/Ivan-Pasev/Digital.Fabrica.Canon",
+    "https://github.com/Ivan-Pasev/Digital.Fabrica.Core",
+    "https://github.com/Ivan-Pasev/DFPL",
+    "https://github.com/Ivan-Pasev/neural-lattice",
+    "https://github.com/Ivan-Pasev/CodexStation.HighestOne",
+    "https://github.com/Ivan-Pasev/codexstation-ief",
+    "https://github.com/Ivan-Pasev/AI-WITNESS",
+    "https://github.com/Ivan-Pasev/fabric-reference-node",
+    "https://github.com/Ivan-Pasev/fabric-mesh-protocol",
+    "https://github.com/Ivan-Pasev/cross-principal-agent-witness",
+    "https://github.com/Ivan-Pasev/geant4-control-fabric",
+    "https://github.com/Ivan-Pasev/QIC",
+    "https://github.com/Ivan-Pasev/CodexStation.Omega.Public"
+  ],
+  "authority_map": [
+    {
+      "scope": "source projects",
+      "authority": "project-local canonical Drive/GitHub rules",
+      "law": "SOURCE_PROJECT_CANON != OMEGA_AGGREGATE_VIEW"
+    },
+    {
+      "scope": "FAB.SYS recovered patterns",
+      "authority": "CONVERSATION_HISTORY_DERIVED until source-bound"
+    },
+    {
+      "scope": "public repo artifacts",
+      "authority": "repository source only; not global scientific authority"
+    }
+  ],
+  "lineage_map": [
+    {
+      "id": "digital-fabrica",
+      "status": "REPO_BOUND"
+    },
+    {
+      "id": "dfpl-prima",
+      "status": "REPO_AND_DRIVE_BOUND"
+    },
+    {
+      "id": "neural-lattice",
+      "status": "REPO_AND_DRIVE_BOUND"
+    },
+    {
+      "id": "highestone",
+      "status": "REPO_BOUND"
+    },
+    {
+      "id": "codexstation-ief",
+      "status": "REPO_AND_DRIVE_BOUND"
+    },
+    {
+      "id": "ai-witness-irp1",
+      "status": "REPO_AND_DRIVE_BOUND"
+    },
+    {
+      "id": "fabric-reference-node",
+      "status": "REPO_BOUND"
+    },
+    {
+      "id": "fabric-mesh-protocol",
+      "status": "REPO_BOUND"
+    },
+    {
+      "id": "missiondna-fabricdna-celldna-instancedna",
+      "status": "CONVERSATION_HISTORY_DERIVED"
+    },
+    {
+      "id": "fap",
+      "status": "CONVERSATION_HISTORY_DERIVED"
+    },
+    {
+      "id": "needle-fesk-ctk",
+      "status": "CONVERSATION_HISTORY_DERIVED"
+    },
+    {
+      "id": "fns",
+      "status": "CONVERSATION_HISTORY_DERIVED"
+    }
+  ],
+  "active_frontier": "OMEGA_MASS_AGGREGATION_GENESIS_SLICE_07A",
+  "last_observed_source_state": {
+    "date": "2026-10-04",
+    "note": "High-value digital/computing/coding artifacts mapped from current Drive/GitHub estate; external upstream refs require re-verification before code reuse."
+  },
+  "sources": [],
+  "objects": [
+    {
+      "id": "fab.object::missiondna-fabricdna-chain",
+      "kind": "architecture",
+      "status": "CONVERSATION_HISTORY_DERIVED"
+    },
+    {
+      "id": "fab.object::fabric-agent-protocol",
+      "kind": "agent_interop",
+      "status": "CONVERSATION_HISTORY_DERIVED"
+    },
+    {
+      "id": "fab.object::design-kernel",
+      "kind": "design_extraction",
+      "status": "UPSTREAM_REVERIFY_REQUIRED"
+    },
+    {
+      "id": "fab.object::spatial-observer-adapter",
+      "kind": "observer_adapter",
+      "status": "UPSTREAM_REVERIFY_REQUIRED"
+    },
+    {
+      "id": "fab.object::helixdb-sidecar",
+      "kind": "storage_adapter",
+      "status": "UPSTREAM_REVERIFY_REQUIRED"
+    },
+    {
+      "id": "fab.object::needle-fesk-ctk",
+      "kind": "semantic_action_microkernel",
+      "status": "CONVERSATION_HISTORY_DERIVED"
+    },
+    {
+      "id": "fab.object::fns",
+      "kind": "federation_governance",
+      "status": "CONVERSATION_HISTORY_DERIVED"
+    }
+  ],
+  "relations": [],
+  "evidence": [],
+  "kernels": [
+    {
+      "kernel_id": "cs://kernel/core/identity/canonical-digest@0.1",
+      "priority": "P0",
+      "source_lineages": [
+        "Digital Fabrica",
+        "DFPL",
+        "HighestOne"
+      ]
+    },
+    {
+      "kernel_id": "cs://kernel/core/authority/admission@0.1",
+      "priority": "P0",
+      "source_lineages": [
+        "Digital Fabrica",
+        "HighestOne",
+        "Fabric Reference Node"
+      ]
+    },
+    {
+      "kernel_id": "cs://kernel/core/transition/validate-commit@0.1",
+      "priority": "P0",
+      "source_lineages": [
+        "Digital Fabrica Core",
+        "DFPL"
+      ]
+    },
+    {
+      "kernel_id": "cs://kernel/core/event/fold-replay@0.1",
+      "priority": "P0",
+      "source_lineages": [
+        "FAP",
+        "AI-WITNESS",
+        "Fabric Reference Node"
+      ]
+    },
+    {
+      "kernel_id": "cs://kernel/core/receipt/witness-binding@0.1",
+      "priority": "P0",
+      "source_lineages": [
+        "AI-WITNESS",
+        "Fabric Reference Node",
+        "Geant4 Control Fabric"
+      ]
+    },
+    {
+      "kernel_id": "cs://kernel/execution/isolation/provider-abi@0.1",
+      "priority": "P1",
+      "source_lineages": [
+        "CodexStation IEF"
+      ]
+    },
+    {
+      "kernel_id": "cs://kernel/knowledge/conflict-reconciliation@0.1",
+      "priority": "P2",
+      "source_lineages": [
+        "Neural Lattice",
+        "KBI"
+      ]
+    },
+    {
+      "kernel_id": "cs://kernel/knowledge/holotope-context@0.1",
+      "priority": "P2",
+      "source_lineages": [
+        "Ω Mass Aggregation",
+        "MLCO"
+      ]
+    },
+    {
+      "kernel_id": "cs://kernel/orchestration/mission-compiler@0.1",
+      "priority": "P3",
+      "source_lineages": [
+        "MissionDNA",
+        "Omnius"
+      ]
+    },
+    {
+      "kernel_id": "cs://kernel/interop/agent-protocol@0.1",
+      "priority": "P3",
+      "source_lineages": [
+        "FAP",
+        "FMP"
+      ]
+    },
+    {
+      "kernel_id": "cs://kernel/action/semantic-capability@0.1",
+      "priority": "P4",
+      "source_lineages": [
+        "Needle/FESK/CTK",
+        "DFPL",
+        "IEF"
+      ]
+    },
+    {
+      "kernel_id": "cs://kernel/release/deterministic-package@0.1",
+      "priority": "P4",
+      "source_lineages": [
+        "CodexStation Ω Public"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "cs://skill/aggregation/deep-map/project-harvest@0.7",
+      "status": "IMPLEMENTED_PUBLIC_CANDIDATE"
+    }
+  ],
+  "contradictions": [],
+  "negative_results": [],
+  "open_gates": [
+    {
+      "id": "gate.fab.bind-conversation-lineages",
+      "status": "OPEN"
+    },
+    {
+      "id": "gate.fab.external-license-reverify",
+      "status": "OPEN"
+    },
+    {
+      "id": "gate.fab.fap-current-interface-reconcile",
+      "status": "OPEN"
+    },
+    {
+      "id": "gate.fab.needle-dfpl-ief-reconcile",
+      "status": "OPEN"
+    }
+  ],
+  "quarantined": [
+    {
+      "item": "external upstream code reuse",
+      "reason": "license/ref re-verification required"
+    },
+    {
+      "item": "private/unpublished source bodies",
+      "reason": "publication gate required"
+    }
+  ],
+  "candidate_global_deltas": [
+    {
+      "type": "Holotope",
+      "id": "cs://holotope/runtime/sovereign-digital-runtime-core@0.7"
+    },
+    {
+      "type": "ArchetonicPlate",
+      "id": "cs://plate/runtime/codexstation-execution-knowledge-fabric@0.7"
+    }
+  ],
+  "next_target": "BIND_KERNEL_RECORDS_AND_RUN_FIRST_PROJECT_DEEP_MAP",
+  "observed_at": "2026-10-04T23:37:00+03:00",
+  "authority_delta": "NONE"
+}
