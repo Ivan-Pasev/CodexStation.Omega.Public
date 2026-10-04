@@ -30,6 +30,8 @@ jobs:
         run: python tools/compile_distributions.py
       - name: Deployment packaging validation
         run: python tools/build_packages06.py --out build/package06
+      - name: Aggregation 07A validation
+        run: python tools/validate_aggregation07a.py
       - name: Upload deployment candidates
         if: matrix.python-version == '3.12'
         uses: actions/upload-artifact@v4
