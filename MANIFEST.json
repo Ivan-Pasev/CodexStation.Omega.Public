@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.1",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.4",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "GENESIS_METABOLIZED_PASS_CANDIDATE",
+  "registry_state": "OBJECTIZATION_04_IMPLEMENTED_PENDING_CI",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -35,7 +35,7 @@
     "authority_ceiling_check": "PASS_CANDIDATE_BOOTSTRAP",
     "provenance_complete": "PASS_CANDIDATE_BOOTSTRAP",
     "public_interest_check": "PASS_CANDIDATE_BOOTSTRAP",
-    "duplication_dedup": "PASS_CANDIDATE_BOOTSTRAP",
+    "duplication_dedup": "OBJECT_LEVEL_PARTIAL",
     "publication_witness": "PASS_CANDIDATE_BOOTSTRAP"
   },
   "distribution_targets": [
@@ -43,5 +43,15 @@
     "gemini-notebook"
   ],
   "semantic_root_rule": "SEMANTIC_ROOT(CHATGPT_DIST) == SEMANTIC_ROOT(GEMINI_DIST)",
-  "license_policy": "OPEN_DECISION"
+  "license_policy": "OPEN_DECISION",
+  "objectization04": {
+    "objects": "registry/objectization04/OBJECTS.json",
+    "provenance": "registry/objectization04/PROVENANCE.json",
+    "relations": "registry/objectization04/RELATIONS.json",
+    "negative_hold": "registry/objectization04/NEGATIVE_HOLD.json",
+    "skills": "registry/objectization04/SKILLS.json",
+    "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
+    "status": "IMPLEMENTED_PENDING_CI"
+  },
+  "current_target": "PUBLIC_OMEGA_OBJECTIZATION_SLICE_04"
 }
