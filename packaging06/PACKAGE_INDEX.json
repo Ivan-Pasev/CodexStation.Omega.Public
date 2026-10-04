@@ -5,16 +5,17 @@
   "parity_fingerprint": "7ebb3332e2596fc53a2f956bbe26bf558fa96a93c159d0190625d10993d3dcd1",
   "build_witness": {
     "workflow": "public-omega-ci",
-    "run_id": 37210931722,
-    "artifact_id": 11305963821,
-    "artifact_digest": "sha256:bd6120bf884941b5a5e6e04f4dbe50673ca527ed915784d33d963789f75b136b"
+    "run_id": 37211204301,
+    "artifact_id": 11306133757,
+    "artifact_digest": "sha256:4f254a7c41fdf4bc466f92598ea50f6adff1faee5eb25cd4a95696cc297dfc74",
+    "head": "0060951d88aa2ac1e05f198d089240372b9aa838"
   },
   "packages": [
     {
       "package_id": "cs.package::chatgpt-plugin::v0.6",
       "file_name": "codexstation-omega-public.zip",
-      "bytes": 31239,
-      "sha256": "f5bca8051c8d760e69a55dd55c4b9af98807113b3e14123b1253eba09d040714",
+      "bytes": 31282,
+      "sha256": "283786f4a51598a6cab9a91e5c3583aaae432b97c6cec45f935329fc40156720",
       "file_count": 17,
       "profile": "CHATGPT_PLUGIN",
       "live_conformance": "OPEN"
@@ -22,8 +23,8 @@
     {
       "package_id": "cs.package::gemini-notebook::v0.6",
       "file_name": "codexstation-omega-public-gemini-notebook.zip",
-      "bytes": 28728,
-      "sha256": "60d90cd81e2d9186aaeae89268137d99e48adcb935af9e7434e5e6c05bf1c2c4",
+      "bytes": 28767,
+      "sha256": "2d3e6656d85a7e61684315176b8e342dc2f640de68ab422e744a93315045c15f",
       "file_count": 17,
       "profile": "GEMINI_NOTEBOOK",
       "live_conformance": "OPEN"
