@@ -1,0 +1,85 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-NEGATIVE-HOLD/0.4",
+  "authority_delta": "NONE",
+  "classes": [
+    {
+      "id": "cs.negative::no-go::v0.4",
+      "kind": "NO_GO",
+      "required": [
+        "scope",
+        "assumptions",
+        "target_claim",
+        "proof_or_test",
+        "excludes",
+        "does_not_exclude"
+      ],
+      "law": "NO_GO_UNDER_ASSUMPTIONS != UNIVERSAL_IMPOSSIBILITY",
+      "source_ids": [
+        "src.formal.rc0_37",
+        "src.research.rc0_37"
+      ]
+    },
+    {
+      "id": "cs.negative::contradiction::v0.4",
+      "kind": "CONTRADICTION",
+      "classes": [
+        "TERMINOLOGICAL",
+        "VERSIONAL",
+        "ASSUMPTION_MISMATCH",
+        "FORMAL_INCONSISTENCY",
+        "EMPIRICAL_CONFLICT",
+        "MODEL_SELECTION_CONFLICT",
+        "SOURCE_CONFLICT",
+        "REPRESENTATION_MISMATCH"
+      ],
+      "resolution": [
+        "DISAMBIGUATE",
+        "SCOPE_SPLIT",
+        "VERSION_SPLIT",
+        "ASSUMPTION_SPLIT",
+        "REFUTE",
+        "SUPERSEDE",
+        "RETAIN_COMPETING_MODELS",
+        "HOLD"
+      ],
+      "law": "CONTRADICTION != AUTOMATIC_AVERAGING",
+      "source_ids": [
+        "src.formal.rc0_37",
+        "src.research.rc0_37",
+        "src.continuity.rc0_37"
+      ]
+    },
+    {
+      "id": "cs.negative::hold::v0.4",
+      "kind": "HOLD",
+      "classes": [
+        "HOLD_INSUFFICIENT_EVIDENCE",
+        "HOLD_MISSING_BRIDGE",
+        "HOLD_CONTRADICTION",
+        "HOLD_CAPABILITY_LIMIT",
+        "HOLD_RESOURCE_LIMIT",
+        "HOLD_RETRIEVAL_INCOMPLETE"
+      ],
+      "law": "HOLD preserves unresolved debt and does not imply refutation.",
+      "source_ids": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.continuity.rc0_37"
+      ]
+    },
+    {
+      "id": "cs.negative::bounded-search::v0.4",
+      "kind": "SEARCH_BOUNDARY",
+      "classes": [
+        "NO_COUNTEREXAMPLE_FOUND"
+      ],
+      "law": "NO_COUNTEREXAMPLE_FOUND != PROOF",
+      "source_ids": [
+        "src.formal.rc0_37",
+        "src.research.rc0_37"
+      ]
+    }
+  ]
+}
