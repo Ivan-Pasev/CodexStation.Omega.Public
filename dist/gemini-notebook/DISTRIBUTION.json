@@ -1,0 +1,83 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-DISTRIBUTION/0.5",
+  "distribution_id": "cs.dist::gemini-notebook::v0.5",
+  "provider_profile": "GEMINI_NOTEBOOK",
+  "status": "COMPILED_CANDIDATE",
+  "semantic_parent_id": "cs.semantic-parent::public-objectization-04::v0.5",
+  "semantic_parent_fingerprint": "eb43face6ab49b0eab112b5c9ddc6308a5dc0444c3d140622365c61976138719",
+  "semantic_sets": {
+    "objects": [
+      "cs.object::universal-vocabulary::v0.4",
+      "cs.object::authority-provenance::v0.4",
+      "cs.object::claim-evidence-gate::v0.4",
+      "cs.object::formal-verification-program::v0.4",
+      "cs.object::research-program-fabric::v0.4",
+      "cs.object::capability-routing::v0.4",
+      "cs.object::observer-constitution::v0.4",
+      "cs.object::theory-namespace-routing::v0.4",
+      "cs.object::visible-memory-continuity::v0.4",
+      "cs.object::artifact-release-fabric::v0.4",
+      "cs.object::failure-hold-semantics::v0.4",
+      "cs.object::skill-object-promotion::v0.4"
+    ],
+    "skills": [
+      "cs.skill::source-audit::v0.4",
+      "cs.skill::claim-evidence-gate::v0.4",
+      "cs.skill::formal-proof-program::v0.4",
+      "cs.skill::research-program-compile::v0.4",
+      "cs.skill::capability-probe-route::v0.4",
+      "cs.skill::observer-bridge-audit::v0.4",
+      "cs.skill::theory-namespace-route::v0.4",
+      "cs.skill::visible-continuity-pack::v0.4",
+      "cs.skill::artifact-release-compile::v0.4",
+      "cs.skill::contradiction-no-go-route::v0.4",
+      "cs.skill::skill-metabolize::v0.4",
+      "cs.skill::next-frontier-select::v0.4"
+    ],
+    "theorematic_objects": [
+      "cs.thm::omega-public::host-transport-non-promotion::v0.1",
+      "cs.thm::omega-public::non-escalation-by-orchestration::v0.1",
+      "cs.thm::omega-public::provenance-conservation::v0.1",
+      "cs.thm::omega-public::no-silent-identity-substitution::v0.1",
+      "cs.thm::omega-public::reinstantiation-sufficiency::v0.1",
+      "cs.thm::omega-public::witnessed-cross-level-promotion::v0.1",
+      "cs.thm::omega-public::effect-receipt-soundness::v0.1"
+    ],
+    "negative_hold_classes": [
+      "cs.negative::no-go::v0.4",
+      "cs.negative::contradiction::v0.4",
+      "cs.negative::hold::v0.4",
+      "cs.negative::bounded-search::v0.4"
+    ],
+    "anchors": [
+      "anchor::codexstation-omega-public",
+      "anchor::gilc-codexstation",
+      "anchor::dfpl",
+      "anchor::ai-witness",
+      "anchor::fabric-reference-node",
+      "anchor::fabric-mesh-protocol",
+      "anchor::qic"
+    ]
+  },
+  "packaging": {
+    "primary_reference": "dist/gemini-notebook/PUBLIC_OMEGA_GEMINI_NOTEBOOK.md",
+    "mode": "NOTEBOOK_DENSE_SOURCE",
+    "intended_surfaces": [
+      "Gemini Notebook",
+      "Google Drive source corpus"
+    ],
+    "host_specific": [
+      "notebook source attachment",
+      "visible bridge capsules",
+      "notebook-role instructions"
+    ]
+  },
+  "runtime_laws": [
+    "NOTEBOOK != STATION",
+    "NOTEBOOK_CHAT != CANONICAL_MEMORY",
+    "CROSS_NOTEBOOK_MEMORY != ASSUMED",
+    "PLATFORM_PROFILE != CANON_FORK"
+  ],
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}
