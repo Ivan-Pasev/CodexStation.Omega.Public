@@ -1,0 +1,87 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-PACKAGING/0.6",
+  "package_id": "cs.package::gemini-notebook::v0.6",
+  "profile": "GEMINI_NOTEBOOK",
+  "version": "0.5.0-alpha.0",
+  "semantic_parent_fingerprint": "eb43face6ab49b0eab112b5c9ddc6308a5dc0444c3d140622365c61976138719",
+  "parity_fingerprint": "7ebb3332e2596fc53a2f956bbe26bf558fa96a93c159d0190625d10993d3dcd1",
+  "root_name": "codexstation-omega-public-gemini-notebook",
+  "package_sources": [
+    [
+      "packaging06/gemini-notebook/START_HERE.md",
+      "START_HERE.md"
+    ],
+    [
+      "dist/gemini-notebook/PUBLIC_OMEGA_GEMINI_NOTEBOOK.md",
+      "PUBLIC_OMEGA_GEMINI_NOTEBOOK.md"
+    ],
+    [
+      "canon/OMEGA_CORE.md",
+      "OMEGA_CORE.md"
+    ],
+    [
+      "canon/OMEGA_CRYSTAL.md",
+      "OMEGA_CRYSTAL.md"
+    ],
+    [
+      "canon/OMEGA_SKILL_SPINDLE.md",
+      "OMEGA_SKILL_SPINDLE.md"
+    ],
+    [
+      "canon/OMEGA_THEOREMATIC_SPINE.md",
+      "OMEGA_THEOREMATIC_SPINE.md"
+    ],
+    [
+      "canon/OMEGA_PUBLIC_ANCHORS.md",
+      "OMEGA_PUBLIC_ANCHORS.md"
+    ],
+    [
+      "distribution05/SEMANTIC_PARENT.json",
+      "_machine/SEMANTIC_PARENT.json"
+    ],
+    [
+      "distribution05/COMPILED_SEMANTICS.json",
+      "_machine/COMPILED_SEMANTICS.json"
+    ],
+    [
+      "registry/OMEGA_REGISTRY.json",
+      "_machine/OMEGA_REGISTRY.json"
+    ],
+    [
+      "registry/objectization04/OBJECTS.json",
+      "_machine/OBJECTS.json"
+    ],
+    [
+      "registry/objectization04/PROVENANCE.json",
+      "_machine/PROVENANCE.json"
+    ],
+    [
+      "registry/objectization04/RELATIONS.json",
+      "_machine/RELATIONS.json"
+    ],
+    [
+      "registry/objectization04/NEGATIVE_HOLD.json",
+      "_machine/NEGATIVE_HOLD.json"
+    ],
+    [
+      "registry/objectization04/SKILLS.json",
+      "_machine/SKILLS.json"
+    ],
+    [
+      "registry/objectization04/THEOREM_DEPENDENCIES.json",
+      "_machine/THEOREM_DEPENDENCIES.json"
+    ]
+  ],
+  "notebook_source_recommendation": [
+    "START_HERE.md",
+    "PUBLIC_OMEGA_GEMINI_NOTEBOOK.md",
+    "OMEGA_CORE.md",
+    "OMEGA_CRYSTAL.md",
+    "OMEGA_SKILL_SPINDLE.md",
+    "OMEGA_THEOREMATIC_SPINE.md",
+    "OMEGA_PUBLIC_ANCHORS.md"
+  ],
+  "live_conformance": "OPEN",
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}

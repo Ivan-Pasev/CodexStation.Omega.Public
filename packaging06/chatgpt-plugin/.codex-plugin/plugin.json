@@ -1,0 +1,30 @@
+{
+  "interface": {
+    "displayName": "CodexStation Ω Public",
+    "shortDescription": "Public Ω semantic canon, evidence gates, skills, continuity and orchestration",
+    "longDescription": "Operate the publication-admitted CodexStation Ω Public object universe with typed skills, explicit authority/evidence boundaries, visible continuity, and provider-independent semantic roots.",
+    "developerName": "GILC",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "ROOT() — resolve the strongest current public CodexStation Ω state and its semantic parent.",
+      "NEXT() — advance the highest-value admissible bounded frontier without authority promotion.",
+      "REGRESSION() — validate public distribution invariants and emit a fail-closed receipt."
+    ],
+    "capabilities": []
+  },
+  "name": "codexstation-omega-public",
+  "version": "0.5.0-alpha.0",
+  "description": "Public CodexStation Omega distribution candidate compiled from one provider-independent semantic parent.",
+  "author": {
+    "name": "GILC"
+  },
+  "keywords": [
+    "codexstation",
+    "semantic-registry",
+    "evidence-gates",
+    "continuity",
+    "orchestration"
+  ],
+  "repository": "https://github.com/Ivan-Pasev/CodexStation.Omega.Public",
+  "skills": "./skills"
+}
