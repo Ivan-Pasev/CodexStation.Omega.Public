@@ -4,6 +4,12 @@
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
+  "metabolization_slice_03": {
+    "sources": "registry/metabolization03/SOURCES.json",
+    "index": "registry/metabolization03/INDEX.json",
+    "first_family": "registry/metabolization03/FAMILY_01.json",
+    "status": "STRUCTURAL_PASS_CANDIDATE"
+  },
   "semantic_basis": [
     "Ω NEXT constitutional root",
     "MLCO dense-canon architecture",
