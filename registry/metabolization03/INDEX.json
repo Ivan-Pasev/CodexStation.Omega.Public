@@ -1,0 +1,32 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-METABOLIZATION-INDEX/0.3",
+  "authority_delta": "NONE",
+  "families": [
+    "Universal Object Vocabulary",
+    "Authority and Provenance",
+    "Claim Evidence Gate Fabric",
+    "Formal Verification Program",
+    "Research Program Fabric",
+    "Capability Routing",
+    "Observer Constitution",
+    "Theory Namespace Routing",
+    "Visible Memory and Continuity",
+    "Artifact and Release Fabric",
+    "Failure and Hold Semantics",
+    "Skill Object and Promotion"
+  ],
+  "retained_organs": [
+    "formal",
+    "knowledge",
+    "research",
+    "engineering",
+    "domain",
+    "continuity"
+  ],
+  "publication_state": {
+    "raw_source_bodies": "private",
+    "synthesized_index": "public_candidate",
+    "license_review": "open",
+    "release_eligible": false
+  }
+}
