@@ -1,0 +1,56 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-KERNEL-FOUNDRY-EXTENSION/0.7b",
+  "extension_id": "cs.semantic-extension::kernel-foundry::v0.7b",
+  "base_composite_semantic_fingerprint": "daa85b0bf47e392c4a310b2dc11f8074dee2480b5b7dd34c3bde917981bd4c7d",
+  "fingerprint_basis": [
+    "kernel-foundry07b/SOURCE_LEDGER.json",
+    "kernel-foundry07b/KERNEL_REGISTRY.json",
+    "kernel-foundry07b/SOVEREIGN_RUNTIME_ABI.json",
+    "kernel-foundry07b/COMPATIBILITY_MATRIX.json"
+  ],
+  "kernel_ids": [
+    "cs.kernel::canonical-serialization::v0.7b",
+    "cs.kernel::digest-identity::v0.7b",
+    "cs.kernel::transition-validator::v0.7b",
+    "cs.kernel::authority-capability-gate::v0.7b",
+    "cs.kernel::invariant-gate::v0.7b",
+    "cs.kernel::event-fold-replay::v0.7b",
+    "cs.kernel::witness-receipt::v0.7b",
+    "cs.kernel::retraction-rollback::v0.7b",
+    "cs.kernel::knowledge-admission::v0.7b",
+    "cs.kernel::conflict-contradiction::v0.7b",
+    "cs.kernel::context-holotope-compiler::v0.7b",
+    "cs.kernel::isolated-execution-cell::v0.7b",
+    "cs.kernel::projection-compiler::v0.7b",
+    "cs.kernel::release-packager::v0.7b"
+  ],
+  "abi_ids": [
+    "cs.abi::canonical-state::v0.7b",
+    "cs.abi::candidate-transition::v0.7b",
+    "cs.abi::semantic-verdict::v0.7b",
+    "cs.abi::decision-certificate::v0.7b",
+    "cs.abi::authorization-decision::v0.7b",
+    "cs.abi::execution-spec::v0.7b",
+    "cs.abi::execution-receipt::v0.7b",
+    "cs.abi::witness-receipt::v0.7b",
+    "cs.abi::conflict-object::v0.7b",
+    "cs.abi::projection-receipt::v0.7b"
+  ],
+  "laws": [
+    "NATIVE_SOURCE_SEMANTICS != SHARED_INTEROP_ABI",
+    "SOURCE_PROJECT_CANON != OMEGA_AGGREGATE_VIEW",
+    "CAPABILITY != AUTHORITY",
+    "SEMANTIC_PERMIT != AUTHORIZATION",
+    "AUTHORIZATION != EXECUTION",
+    "EXECUTION_RECEIPT != SCIENTIFIC_PROOF",
+    "HASH != PROOF",
+    "PLATFORM_PROFILE != CANON_FORK"
+  ],
+  "parallel_open_gates": [
+    "NB00_LIVE_CONFORMANCE_01",
+    "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
+    "LICENSE_IP_REVIEW"
+  ],
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}
