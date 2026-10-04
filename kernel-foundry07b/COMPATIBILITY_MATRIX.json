@@ -1,0 +1,245 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-KERNEL-COMPATIBILITY-MATRIX/0.7b",
+  "status": "SOURCE_GROUNDED_ARCHITECTURAL_CROSSWALK",
+  "authority_delta": "NONE",
+  "legend": {
+    "DIRECT": "native source exposes a closely corresponding construct in the inspected sources",
+    "ADAPTER": "construct exists but requires an explicit semantic adapter",
+    "PARTIAL": "only part of the shared ABI is covered by inspected sources",
+    "NONE_OBSERVED": "not established by the inspected source set"
+  },
+  "systems": [
+    {
+      "system": "Digital.Fabrica",
+      "sources": [
+        "src.dfab.canon.constitution",
+        "src.dfab.canon.fir",
+        "src.dfab.canon.transition",
+        "src.dfab.canon.witness",
+        "src.dfab.core.admission",
+        "src.dfab.core.events",
+        "src.dfab.core.witness"
+      ],
+      "identity": "DIRECT",
+      "transition": "DIRECT",
+      "authority": "DIRECT",
+      "invariants": "DIRECT",
+      "event_replay": "DIRECT",
+      "witness_receipt": "DIRECT",
+      "rollback": "PARTIAL",
+      "knowledge_admission": "PARTIAL",
+      "conflict": "PARTIAL",
+      "execution": "ADAPTER",
+      "projection": "DIRECT",
+      "release": "ADAPTER",
+      "note": "Strong candidate for canonical project/state-transition substrate; effect execution remains outside the inspected core."
+    },
+    {
+      "system": "DFPL.PRIMA",
+      "sources": [
+        "src.dfpl.architecture",
+        "src.dfpl.lawir",
+        "src.dfpl.encoding",
+        "src.dfpl.decision",
+        "src.dfpl.authorization"
+      ],
+      "identity": "DIRECT",
+      "transition": "DIRECT",
+      "authority": "DIRECT",
+      "invariants": "DIRECT",
+      "event_replay": "PARTIAL",
+      "witness_receipt": "ADAPTER",
+      "rollback": "NONE_OBSERVED",
+      "knowledge_admission": "NONE_OBSERVED",
+      "conflict": "PARTIAL",
+      "execution": "ADAPTER",
+      "projection": "PARTIAL",
+      "release": "PARTIAL",
+      "note": "Strong semantic verification, canonical encoding, decision certificate and authorization layer. Effects are explicitly separated."
+    },
+    {
+      "system": "CodexStation.HighestOne",
+      "sources": [
+        "src.highestone.architecture",
+        "src.highestone.claim",
+        "src.highestone.core",
+        "src.highestone.recovery"
+      ],
+      "identity": "DIRECT",
+      "transition": "DIRECT",
+      "authority": "DIRECT",
+      "invariants": "DIRECT",
+      "event_replay": "PARTIAL",
+      "witness_receipt": "PARTIAL",
+      "rollback": "DIRECT",
+      "knowledge_admission": "PARTIAL",
+      "conflict": "PARTIAL",
+      "execution": "PARTIAL",
+      "projection": "PARTIAL",
+      "release": "PARTIAL",
+      "note": "Strong identity/non-escalation/recovery assurance lineage. Public claim ceiling must remain evidence-tiered."
+    },
+    {
+      "system": "GILC.CodexStation",
+      "sources": [
+        "src.codex.authority",
+        "src.codex.memory"
+      ],
+      "identity": "PARTIAL",
+      "transition": "PARTIAL",
+      "authority": "DIRECT",
+      "invariants": "PARTIAL",
+      "event_replay": "PARTIAL",
+      "witness_receipt": "PARTIAL",
+      "rollback": "PARTIAL",
+      "knowledge_admission": "DIRECT",
+      "conflict": "PARTIAL",
+      "execution": "PARTIAL",
+      "projection": "PARTIAL",
+      "release": "PARTIAL",
+      "note": "Inspected slice directly supports bounded authority and provenance-bearing memory admission."
+    },
+    {
+      "system": "Neural.Lattice",
+      "sources": [
+        "src.nl.invariants",
+        "src.nl.statecell",
+        "src.nl.conflict",
+        "src.nl.receipt",
+        "src.nl.authority",
+        "src.nl.execution"
+      ],
+      "identity": "ADAPTER",
+      "transition": "DIRECT",
+      "authority": "DIRECT",
+      "invariants": "DIRECT",
+      "event_replay": "PARTIAL",
+      "witness_receipt": "DIRECT",
+      "rollback": "PARTIAL",
+      "knowledge_admission": "ADAPTER",
+      "conflict": "DIRECT",
+      "execution": "DIRECT",
+      "projection": "PARTIAL",
+      "release": "PARTIAL",
+      "note": "Strong typed-state, conflict, delegation/revocation and commit-time authority revalidation substrate."
+    },
+    {
+      "system": "CodexStation.IEF",
+      "sources": [
+        "src.ief.architecture",
+        "src.ief.cellprofile",
+        "src.ief.policy"
+      ],
+      "identity": "ADAPTER",
+      "transition": "ADAPTER",
+      "authority": "DIRECT",
+      "invariants": "PARTIAL",
+      "event_replay": "PARTIAL",
+      "witness_receipt": "DIRECT",
+      "rollback": "PARTIAL",
+      "knowledge_admission": "NONE_OBSERVED",
+      "conflict": "PARTIAL",
+      "execution": "DIRECT",
+      "projection": "ADAPTER",
+      "release": "DIRECT",
+      "note": "Primary isolated-execution/provider-neutral execution ABI candidate; reported assurance must not exceed qualification."
+    },
+    {
+      "system": "AI.WITNESS.IRP1",
+      "sources": [
+        "src.irp1.spec",
+        "src.irp1.receipt"
+      ],
+      "identity": "DIRECT",
+      "transition": "ADAPTER",
+      "authority": "DIRECT",
+      "invariants": "PARTIAL",
+      "event_replay": "DIRECT",
+      "witness_receipt": "DIRECT",
+      "rollback": "NONE_OBSERVED",
+      "knowledge_admission": "NONE_OBSERVED",
+      "conflict": "PARTIAL",
+      "execution": "ADAPTER",
+      "projection": "PARTIAL",
+      "release": "PARTIAL",
+      "note": "Strong deterministic observation-intent-authorization-outcome correspondence receipt chain. Semantic truth remains explicitly unproven."
+    },
+    {
+      "system": "Fabric.Reference.Node",
+      "sources": [
+        "src.refnode.architecture",
+        "src.refnode.transition",
+        "src.refnode.runtime"
+      ],
+      "identity": "DIRECT",
+      "transition": "DIRECT",
+      "authority": "PARTIAL",
+      "invariants": "DIRECT",
+      "event_replay": "DIRECT",
+      "witness_receipt": "DIRECT",
+      "rollback": "DIRECT",
+      "knowledge_admission": "ADAPTER",
+      "conflict": "DIRECT",
+      "execution": "PARTIAL",
+      "projection": "ADAPTER",
+      "release": "PARTIAL",
+      "note": "Strong durable effective/history root split, retraction/rollback and append-hash history."
+    },
+    {
+      "system": "Omega.Public.Aggregation",
+      "sources": [
+        "src.omega.aggregation07a",
+        "src.omega.schema07a",
+        "src.omega.packager07a"
+      ],
+      "identity": "DIRECT",
+      "transition": "PARTIAL",
+      "authority": "DIRECT",
+      "invariants": "DIRECT",
+      "event_replay": "PARTIAL",
+      "witness_receipt": "DIRECT",
+      "rollback": "PARTIAL",
+      "knowledge_admission": "DIRECT",
+      "conflict": "DIRECT",
+      "execution": "PARTIAL",
+      "projection": "DIRECT",
+      "release": "DIRECT",
+      "note": "Cross-project harvest, Holotope/Plate and deterministic dual-provider packaging layer; live host conformance remains external."
+    }
+  ],
+  "integration_decision": {
+    "mode": "ADAPTER_FIRST_NO_FORCED_MERGE",
+    "shared_core_candidates": [
+      "K0",
+      "K1",
+      "K2",
+      "K3",
+      "K4",
+      "K5",
+      "K6",
+      "K7",
+      "K8",
+      "K9",
+      "K10",
+      "K11",
+      "K12",
+      "K13"
+    ],
+    "first_crosswalk_targets": [
+      "CanonicalState identity",
+      "CandidateTransition",
+      "SemanticVerdict / DecisionCertificate",
+      "AuthorizationDecision",
+      "ExecutionSpec / ExecutionReceipt",
+      "WitnessReceipt",
+      "ConflictObject",
+      "ProjectionReceipt"
+    ],
+    "prohibited": [
+      "silent native status collapse",
+      "authority lattice widening",
+      "receipt-family equivalence without mapping",
+      "hash/proof conflation"
+    ]
+  }
+}
