@@ -1,0 +1,461 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-Pasev/CodexStation.Omega.Public/aggregation07a/SCHEMA_BUNDLE.json",
+  "title": "CodexStation Omega Aggregation 07A Schema Bundle",
+  "type": "object",
+  "$defs": {
+    "SourceRef": {
+      "type": "object",
+      "required": [
+        "source_id",
+        "kind",
+        "authority_class",
+        "status"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uri": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "kind": {
+          "type": "string"
+        },
+        "authority_class": {
+          "type": "string"
+        },
+        "lineage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "status": {
+          "type": "string"
+        },
+        "license_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publication_boundary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "ProjectHarvestCapsule": {
+      "type": "object",
+      "required": [
+        "capsule_id",
+        "project_id",
+        "source_roots",
+        "authority_map",
+        "active_lineage",
+        "sources",
+        "objects",
+        "relations",
+        "kernels",
+        "skills",
+        "negative_results",
+        "open_gates",
+        "candidate_global_deltas",
+        "authority_delta"
+      ],
+      "properties": {
+        "capsule_id": {
+          "type": "string"
+        },
+        "project_id": {
+          "type": "string"
+        },
+        "canonical_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_roots": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "authority_map": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "active_lineage": {
+          "type": "string"
+        },
+        "active_frontier": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SourceRef"
+          }
+        },
+        "objects": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "kernels": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "contradictions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "negative_results": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "open_gates": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "quarantined": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "candidate_global_deltas": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "next_target": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    },
+    "KernelRecord": {
+      "type": "object",
+      "required": [
+        "kernel_id",
+        "name",
+        "domain",
+        "source_project",
+        "lineage",
+        "version",
+        "purpose",
+        "inputs",
+        "outputs",
+        "determinism",
+        "side_effects",
+        "authority_ceiling",
+        "required_capabilities",
+        "test_evidence",
+        "status",
+        "authority_delta"
+      ],
+      "properties": {
+        "kernel_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string"
+        },
+        "source_project": {
+          "type": "string"
+        },
+        "source_repository": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lineage": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "license": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "inputs": {
+          "type": "array"
+        },
+        "outputs": {
+          "type": "array"
+        },
+        "algorithm": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "data_model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "determinism": {
+          "type": "string"
+        },
+        "stateful": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "side_effects": {
+          "type": "array"
+        },
+        "authority_ceiling": {
+          "type": "string"
+        },
+        "required_capabilities": {
+          "type": "array"
+        },
+        "dependencies": {
+          "type": "array"
+        },
+        "security_assumptions": {
+          "type": "array"
+        },
+        "test_evidence": {
+          "type": "array"
+        },
+        "formal_evidence": {
+          "type": "array"
+        },
+        "known_failures": {
+          "type": "array"
+        },
+        "portable_targets": {
+          "type": "array"
+        },
+        "status": {
+          "type": "string"
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Holotope": {
+      "type": "object",
+      "required": [
+        "holotope_id",
+        "mission",
+        "object_ids",
+        "source_refs",
+        "invariants",
+        "kernels",
+        "skills",
+        "open_gates",
+        "context_budget",
+        "authority_delta"
+      ],
+      "properties": {
+        "holotope_id": {
+          "type": "string"
+        },
+        "mission": {
+          "type": "string"
+        },
+        "object_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "invariants": {
+          "type": "array"
+        },
+        "kernels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "negative_knowledge": {
+          "type": "array"
+        },
+        "open_gates": {
+          "type": "array"
+        },
+        "context_budget": {
+          "type": "object"
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    },
+    "ArchetonicPlate": {
+      "type": "object",
+      "required": [
+        "plate_id",
+        "mission",
+        "requirements",
+        "constraints",
+        "invariants",
+        "holotope_id",
+        "candidate_architectures",
+        "selected_kernels",
+        "capability_requirements",
+        "verification_plan",
+        "evidence_plan",
+        "open_gates",
+        "authority_delta"
+      ],
+      "properties": {
+        "plate_id": {
+          "type": "string"
+        },
+        "mission": {
+          "type": "string"
+        },
+        "requirements": {
+          "type": "array"
+        },
+        "constraints": {
+          "type": "array"
+        },
+        "invariants": {
+          "type": "array"
+        },
+        "holotope_id": {
+          "type": "string"
+        },
+        "candidate_architectures": {
+          "type": "array"
+        },
+        "selected_kernels": {
+          "type": "array"
+        },
+        "capability_requirements": {
+          "type": "array"
+        },
+        "execution_plan": {
+          "type": "array"
+        },
+        "verification_plan": {
+          "type": "array"
+        },
+        "evidence_plan": {
+          "type": "array"
+        },
+        "risks": {
+          "type": "array"
+        },
+        "open_gates": {
+          "type": "array"
+        },
+        "expected_artifacts": {
+          "type": "array"
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}
