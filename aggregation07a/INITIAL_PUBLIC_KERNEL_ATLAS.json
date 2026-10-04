@@ -1,0 +1,95 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-KERNEL-ATLAS/0.7a",
+  "status": "PUBLIC_SAFE_SEED",
+  "authority_delta": "NONE",
+  "repositories": [
+    {
+      "repo": "Ivan-Pasev/Digital.Fabrica.Canon",
+      "role": "normative transition/ontology canon",
+      "priority": "OMEGA_A"
+    },
+    {
+      "repo": "Ivan-Pasev/Digital.Fabrica.Core",
+      "role": "deterministic state/admission/invariant runtime",
+      "priority": "OMEGA_A"
+    },
+    {
+      "repo": "Ivan-Pasev/DFPL",
+      "role": "law kernel and PRIMA orchestration semantics",
+      "priority": "OMEGA_A"
+    },
+    {
+      "repo": "Ivan-Pasev/CodexStation.HighestOne",
+      "role": "identity/authority/recovery/formal assurance",
+      "priority": "OMEGA_A"
+    },
+    {
+      "repo": "Ivan-Pasev/GILC.CodexStation",
+      "role": "station runtime, memory, authority and reinstantiation",
+      "priority": "OMEGA_A"
+    },
+    {
+      "repo": "Ivan-Pasev/neural-lattice",
+      "role": "typed state, conflict, reconciliation and closure",
+      "priority": "OMEGA_A"
+    },
+    {
+      "repo": "Ivan-Pasev/codexstation-ief",
+      "role": "isolated execution and provider ABI",
+      "priority": "OMEGA_B"
+    },
+    {
+      "repo": "Ivan-Pasev/AI-WITNESS",
+      "role": "interpretation/action correspondence receipts",
+      "priority": "OMEGA_B"
+    },
+    {
+      "repo": "Ivan-Pasev/fabric-reference-node",
+      "role": "governed state node, rollback/retraction and receipts",
+      "priority": "OMEGA_B"
+    },
+    {
+      "repo": "Ivan-Pasev/FMP",
+      "role": "governed projection and interoperability",
+      "priority": "OMEGA_B"
+    },
+    {
+      "repo": "Ivan-Pasev/cross-principal-agent-witness",
+      "role": "delegation/provenance adversarial evaluator",
+      "priority": "OMEGA_B"
+    },
+    {
+      "repo": "Ivan-Pasev/TRWM",
+      "role": "formal/replay/world-model research kernel lineage",
+      "priority": "OMEGA_C"
+    },
+    {
+      "repo": "Ivan-Pasev/QIC",
+      "role": "cybernetic computing architecture and KBI/MLCO integration",
+      "priority": "OMEGA_C"
+    },
+    {
+      "repo": "Ivan-Pasev/geant4-control-fabric",
+      "role": "scientific execution/source-identity/evidence quarantine pattern",
+      "priority": "OMEGA_C"
+    }
+  ],
+  "kernel_families": [
+    "CANONICAL_SERIALIZATION",
+    "IDENTITY_DIGEST",
+    "TRANSITION_VALIDATION",
+    "AUTHORITY_CAPABILITY",
+    "INVARIANT_GATE",
+    "EVENT_FOLD_REPLAY",
+    "WITNESS_RECEIPT",
+    "ROLLBACK_RETRACTION",
+    "KNOWLEDGE_ADMISSION",
+    "CONFLICT_REGISTRY",
+    "CONTEXT_HOLOTOPE",
+    "ISOLATED_EXECUTION",
+    "PROJECTION_COMPILER",
+    "FORMAL_VERIFICATION",
+    "RELEASE_PACKAGING"
+  ],
+  "boundary": "Repository presence and architecture descriptions do not imply integrated maturity or scientific validity."
+}
