@@ -1,0 +1,137 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-ARCHETONIC-PLATE/0.7",
+  "plate_id": "cs://plate/runtime/codexstation-execution-knowledge-fabric@0.7",
+  "mission": "Build a practical execution-and-knowledge fabric that ingests governed projects, compiles bounded mission context, routes lawful capabilities, executes in isolated cells, verifies outcomes, and persists provenance-bearing receipts.",
+  "requirements": [
+    "provider-independent semantic canon",
+    "project-local authority preservation",
+    "typed source and provenance",
+    "bounded context compilation",
+    "capability observation before execution",
+    "effect authority check",
+    "isolated execution",
+    "receipt and witness emission",
+    "rollback and replay",
+    "deterministic provider packaging"
+  ],
+  "objects": [
+    "cs://holotope/runtime/sovereign-digital-runtime-core@0.7"
+  ],
+  "relations": [],
+  "constraints": [
+    "no implicit authority escalation",
+    "no source erasure during compaction",
+    "no publication of private source bodies without admission",
+    "no dependency on one model/provider for semantic identity"
+  ],
+  "invariants": [
+    "HOST != STATION",
+    "MODEL != REALITY",
+    "CAPABILITY != AUTHORITY",
+    "CLAIM != EVIDENCE",
+    "SOURCE_PROJECT_CANON != OMEGA_AGGREGATE_VIEW",
+    "PLATFORM_PROFILE != CANON_FORK"
+  ],
+  "candidate_architectures": [
+    {
+      "id": "A",
+      "name": "Typed lattice + deterministic kernel foundry + isolated execution cells",
+      "status": "SELECTED_CANDIDATE"
+    },
+    {
+      "id": "B",
+      "name": "Monolithic context pack + provider-native execution",
+      "status": "REJECTED",
+      "reason": "poor sovereignty, context scaling and semantic drift"
+    },
+    {
+      "id": "C",
+      "name": "Vector-store-first memory",
+      "status": "SIDECAR_ONLY",
+      "reason": "similarity cannot define identity or authority"
+    }
+  ],
+  "selected_methods_kernels": [
+    "cs://kernel/core/identity/canonical-digest@0.1",
+    "cs://kernel/core/authority/admission@0.1",
+    "cs://kernel/core/transition/validate-commit@0.1",
+    "cs://kernel/core/receipt/witness-binding@0.1",
+    "cs://kernel/execution/isolation/provider-abi@0.1",
+    "cs://kernel/knowledge/holotope-context@0.1"
+  ],
+  "capabilities": [
+    "Drive/project source read",
+    "Git repository read/write where authorized",
+    "CI",
+    "artifact packaging",
+    "optional sandbox provider"
+  ],
+  "execution_plan": [
+    "deep-map mounted project",
+    "emit ProjectHarvestCapsule",
+    "qualify global deltas",
+    "compile mission Holotope",
+    "compile Archetonic Plate",
+    "resolve capabilities and authority",
+    "execute bounded kernel chain",
+    "verify",
+    "emit receipts",
+    "sync visible state"
+  ],
+  "verification_plan": [
+    "schema validation",
+    "provenance completeness",
+    "authority-ceiling checks",
+    "lineage collision tests",
+    "negative-result retention",
+    "provider parity",
+    "deterministic package hashes"
+  ],
+  "evidence_plan": [
+    "source revision IDs or hashes",
+    "CI receipts",
+    "target-runtime receipts where executed",
+    "formal proof receipts where applicable",
+    "empirical evidence only from admissible measurements"
+  ],
+  "risks": [
+    "context obesity",
+    "authority laundering",
+    "semantic deduplication error",
+    "license contamination",
+    "provider drift",
+    "conversation-derived patterns mistaken for source-bound facts"
+  ],
+  "open_gates": [
+    {
+      "id": "qualify-p0-p1-kernel-records",
+      "status": "OPEN"
+    },
+    {
+      "id": "bind-fab-history-to-source",
+      "status": "OPEN"
+    },
+    {
+      "id": "live-chatgpt-conformance",
+      "status": "OPEN"
+    },
+    {
+      "id": "live-gemini-conformance",
+      "status": "OPEN"
+    }
+  ],
+  "expected_artifacts": [
+    "ProjectHarvestCapsule",
+    "KernelRecords",
+    "KnowledgeLattice deltas",
+    "Holotope",
+    "ArchetonicPlate",
+    "execution receipts",
+    "provider packages"
+  ],
+  "receipt_contract": {
+    "authority_delta": "NONE",
+    "claim_boundary": "engineering architecture evidence only"
+  },
+  "authority_delta": "NONE"
+}
