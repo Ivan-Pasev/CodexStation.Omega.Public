@@ -72,7 +72,9 @@
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
     "package_index": "packaging06/PACKAGE_INDEX.json",
     "deployment_guide": "packaging06/DEPLOYMENT.md",
-    "chatgpt_plugin_sha256": "f5bca8051c8d760e69a55dd55c4b9af98807113b3e14123b1253eba09d040714",
-    "gemini_notebook_sha256": "60d90cd81e2d9186aaeae89268137d99e48adcb935af9e7434e5e6c05bf1c2c4"
+    "chatgpt_plugin_sha256": "283786f4a51598a6cab9a91e5c3583aaae432b97c6cec45f935329fc40156720",
+    "gemini_notebook_sha256": "2d3e6656d85a7e61684315176b8e342dc2f640de68ab422e744a93315045c15f",
+    "build_witness_run": 37211204301,
+    "artifact_id": 11306133757
   }
 }
