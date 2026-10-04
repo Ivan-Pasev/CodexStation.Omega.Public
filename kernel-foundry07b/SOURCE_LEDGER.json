@@ -1,0 +1,253 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-KERNEL-FOUNDRY-SOURCE-LEDGER/0.7b",
+  "status": "SOURCE_GROUNDED_METADATA",
+  "authority_delta": "NONE",
+  "publication_boundary": "Repository/file identity, SHA and original synthesis only. Raw private source bodies are not published by this ledger.",
+  "sources": [
+    {
+      "id": "src.dfab.canon.constitution",
+      "repo": "Ivan-Pasev/Digital.Fabrica.Canon",
+      "path": "constitution/DFAB_CONSTITUTION_v0.1.md",
+      "sha": "113ccfa739df31603d57d61b117237123d3ae067",
+      "role": "model-independent state, authority, invariant, witness and fail-closed constitutional laws"
+    },
+    {
+      "id": "src.dfab.canon.fir",
+      "repo": "Ivan-Pasev/Digital.Fabrica.Canon",
+      "path": "spec/FIR_v0.1.md",
+      "sha": "88fc7012ac390855e04c80af4d2f420b76cba4ed",
+      "role": "typed FIR state, source registry, invariants, evidence, capabilities, identity and observer projection"
+    },
+    {
+      "id": "src.dfab.canon.transition",
+      "repo": "Ivan-Pasev/Digital.Fabrica.Canon",
+      "path": "spec/TRANSITION_v0.1.md",
+      "sha": "3d5b2d55631a76e69ace9eca2e21830ad9670d81",
+      "role": "fresh-parent transition admission and terminal-state semantics"
+    },
+    {
+      "id": "src.dfab.canon.witness",
+      "repo": "Ivan-Pasev/Digital.Fabrica.Canon",
+      "path": "spec/WITNESS_v0.1.md",
+      "sha": "1d4d61be7013328bfa8eda4149a3540dc2232b43",
+      "role": "before/after/intent/authority/invariant witness contract"
+    },
+    {
+      "id": "src.dfab.core.admission",
+      "repo": "Ivan-Pasev/Digital.Fabrica.Core",
+      "path": "src/admission.ts",
+      "sha": "74ecff8bd81608aa89d36b240ed486b49a0786ba",
+      "role": "executable admission checks for schema, freshness, authority, invariant/evidence/policy"
+    },
+    {
+      "id": "src.dfab.core.events",
+      "repo": "Ivan-Pasev/Digital.Fabrica.Core",
+      "path": "src/events.ts",
+      "sha": "927c63c5f115580124e227106f5b74d35d06a139",
+      "role": "transition/event/witness event store surface"
+    },
+    {
+      "id": "src.dfab.core.witness",
+      "repo": "Ivan-Pasev/Digital.Fabrica.Core",
+      "path": "src/witness.ts",
+      "sha": "9c44bf25ccbe0bbe5ba1e4e59d8b46b5399e7dec",
+      "role": "executable witness correspondence checks"
+    },
+    {
+      "id": "src.dfpl.architecture",
+      "repo": "Ivan-Pasev/DFPL",
+      "path": "docs/architecture.md",
+      "sha": "094622a857231ffb0017bdf0567bc15e44674d40",
+      "role": "semantic verification separated from orchestration and effects"
+    },
+    {
+      "id": "src.dfpl.lawir",
+      "repo": "Ivan-Pasev/DFPL",
+      "path": "spec/04-law-ir.md",
+      "sha": "b46475573da2d825982de8379c945505472",
+      "role": "canonical LawIR semantic convergence object"
+    },
+    {
+      "id": "src.dfpl.encoding",
+      "repo": "Ivan-Pasev/DFPL",
+      "path": "spec/08-canonical-encoding-ids.md",
+      "sha": "710a8778033c20b43f6dbb78df26e97d8623998e",
+      "role": "host-independent canonical encoding and domain-separated content IDs"
+    },
+    {
+      "id": "src.dfpl.decision",
+      "repo": "Ivan-Pasev/DFPL",
+      "path": "spec/09-decision-certificates.md",
+      "sha": "aedc9dbfb6df41d284cf825982de8379f6375a6e",
+      "role": "DecisionCertificate semantic-result envelope distinct from authorization and outcome receipt"
+    },
+    {
+      "id": "src.dfpl.authorization",
+      "repo": "Ivan-Pasev/DFPL",
+      "path": "prima/02-capability-authorization.md",
+      "sha": "336888a3fab7a9227b4c97ed8a52bef3d7ba7828",
+      "role": "capability, approval and authorization artifact model"
+    },
+    {
+      "id": "src.highestone.architecture",
+      "repo": "Ivan-Pasev/CodexStation.HighestOne",
+      "path": "docs/ARCHITECTURE.md",
+      "sha": "d81c45ef507c1f9aad9dc8363d3c4866a6a17c01",
+      "role": "persistent entity, non-collapse invariants and constrained recovery"
+    },
+    {
+      "id": "src.highestone.claim",
+      "repo": "Ivan-Pasev/CodexStation.HighestOne",
+      "path": "docs/CLAIM_BOUNDARY.md",
+      "sha": "0ee5abcc0424aa7b74232a8252d488f72df41295",
+      "role": "evidence-tiered claim ceiling"
+    },
+    {
+      "id": "src.highestone.core",
+      "repo": "Ivan-Pasev/CodexStation.HighestOne",
+      "path": "formal/lean/CodexStation/Core.lean",
+      "sha": "a7da1cafb731482f07eddde976b9e946f43598da",
+      "role": "formal state/transition/authorization non-escalation source"
+    },
+    {
+      "id": "src.highestone.recovery",
+      "repo": "Ivan-Pasev/CodexStation.HighestOne",
+      "path": "formal/lean/CodexStation/Recovery.lean",
+      "sha": "931cab3fb93bdfe7a41e790b7adf9f5da1f77ed2",
+      "role": "recovery state machine with verified evidence/quarantine cases"
+    },
+    {
+      "id": "src.codex.authority",
+      "repo": "Ivan-Pasev/GILC.CodexStation",
+      "path": "src/gilc_codex_station/authority.py",
+      "sha": "86800db2d14f29fed940773f368c0a6043bd3b0e",
+      "role": "bounded authority check"
+    },
+    {
+      "id": "src.codex.memory",
+      "repo": "Ivan-Pasev/GILC.CodexStation",
+      "path": "src/gilc_codex_station/memory.py",
+      "sha": "72ae9dd433714b13d6d2c073fa5b6cdfa1f31e87",
+      "role": "provenance-bearing memory admission/quarantine"
+    },
+    {
+      "id": "src.nl.invariants",
+      "repo": "Ivan-Pasev/neural-lattice",
+      "path": "docs/invariants.md",
+      "sha": "620a56ba3ef2af5f3e1ce57abee80bf9ed31f308",
+      "role": "authority/provenance/conflict/closure invariants"
+    },
+    {
+      "id": "src.nl.statecell",
+      "repo": "Ivan-Pasev/neural-lattice",
+      "path": "specs/state-cell.schema.json",
+      "sha": "9fb2d362e670595a36cfc7480adea9be30a02584",
+      "role": "typed state cell with provenance, authority and conflict status"
+    },
+    {
+      "id": "src.nl.conflict",
+      "repo": "Ivan-Pasev/neural-lattice",
+      "path": "specs/conflict.schema.json",
+      "sha": "808be4e05053f3c7569fbae3489f6d03290f5cfd",
+      "role": "first-class conflict object"
+    },
+    {
+      "id": "src.nl.receipt",
+      "repo": "Ivan-Pasev/neural-lattice",
+      "path": "specs/transition-receipt.schema.json",
+      "sha": "45a58941ebcce2047b9e41f7cffb0e03020f3b8b",
+      "role": "transition receipt with authority/provenance/conflicts/evidence"
+    },
+    {
+      "id": "src.nl.authority",
+      "repo": "Ivan-Pasev/neural-lattice",
+      "path": "src/authority.mjs",
+      "sha": "e4efd57c2d6b0682e40c4e3815db685adcda8a7a",
+      "role": "capability delegation/revocation without widening"
+    },
+    {
+      "id": "src.nl.execution",
+      "repo": "Ivan-Pasev/neural-lattice",
+      "path": "src/execution.mjs",
+      "sha": "1434def2d9a0c7b110cc563a096a44bcf377846e",
+      "role": "authorization token and commit-time authority revalidation"
+    },
+    {
+      "id": "src.ief.architecture",
+      "repo": "Ivan-Pasev/codexstation-ief",
+      "path": "ARCHITECTURE.md",
+      "sha": "caafefa2f22b905edbaa21ca9094b5b3fb8773eb",
+      "role": "policy-mediated isolated execution boundary and provider-neutral ABI"
+    },
+    {
+      "id": "src.ief.cellprofile",
+      "repo": "Ivan-Pasev/codexstation-ief",
+      "path": "schemas/cell-profile.schema.json",
+      "sha": "4c4b61f85366b59f3e1f9a0f8a6f3c6a2dac271e",
+      "role": "reproducibility and isolation profile"
+    },
+    {
+      "id": "src.ief.policy",
+      "repo": "Ivan-Pasev/codexstation-ief",
+      "path": "schemas/policy-decision.schema.json",
+      "sha": "56e297da07420e520698ae5fe5f12d385d6da90d",
+      "role": "provider/capability/qualification policy decision"
+    },
+    {
+      "id": "src.irp1.spec",
+      "repo": "Ivan-Pasev/AI-WITNESS",
+      "path": "specification/IRP-1.md",
+      "sha": "fc6d74b6932f5e68f019070abc12a7d921265f3e",
+      "role": "W0 observation -> W1 intent -> W2 authorization -> W3 outcome receipt chain"
+    },
+    {
+      "id": "src.irp1.receipt",
+      "repo": "Ivan-Pasev/AI-WITNESS",
+      "path": "src/protocol/create-receipt.ts",
+      "sha": "3ab066a097adbb7b6327a1272121658323b5490e",
+      "role": "receipt validation/hash construction"
+    },
+    {
+      "id": "src.refnode.architecture",
+      "repo": "Ivan-Pasev/fabric-reference-node",
+      "path": "docs/ARCHITECTURE.md",
+      "sha": "b169887a66b4468b1039c8d89f19381ba9d940de",
+      "role": "recoverable consequential-action chain and dual effective/history roots"
+    },
+    {
+      "id": "src.refnode.transition",
+      "repo": "Ivan-Pasev/fabric-reference-node",
+      "path": "schemas/state-transition.schema.json",
+      "sha": "74cda0ec903a915745890d9de32dbebf645533a2",
+      "role": "retraction/rollback receipt schema with history preservation"
+    },
+    {
+      "id": "src.refnode.runtime",
+      "repo": "Ivan-Pasev/fabric-reference-node",
+      "path": "src/fabric_reference_node/transitions.py",
+      "sha": "2140a0f23074a8fe5e8746f514f9c766e89c9506",
+      "role": "event-sourced effective-state overlays, rollback and stale-root fail-closed runtime"
+    },
+    {
+      "id": "src.omega.aggregation07a",
+      "repo": "Ivan-Pasev/CodexStation.Omega.Public",
+      "path": "aggregation07a/AGGREGATION_PROTOCOL.md",
+      "sha": "db570d1a923609f1ec9f40ac68c2a7aa26c5ef76",
+      "role": "ProjectHarvest/Holotope/ArchetonicPlate aggregation protocol"
+    },
+    {
+      "id": "src.omega.schema07a",
+      "repo": "Ivan-Pasev/CodexStation.Omega.Public",
+      "path": "aggregation07a/SCHEMA_BUNDLE.json",
+      "sha": "9876dbdceda4cf9b6fa07e8a25cf2da763727253",
+      "role": "KernelRecord/Holotope/ArchetonicPlate schemas"
+    },
+    {
+      "id": "src.omega.packager07a",
+      "repo": "Ivan-Pasev/CodexStation.Omega.Public",
+      "path": "tools/build_packages07a.py",
+      "sha": "29905413e523aa6cce274b4ecc8b9688f8f97f5c",
+      "role": "deterministic dual-provider packaging"
+    }
+  ]
+}
