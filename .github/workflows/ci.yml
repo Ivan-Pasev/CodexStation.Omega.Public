@@ -29,4 +29,11 @@ jobs:
       - name: Distribution compiler parity
         run: python tools/compile_distributions.py
       - name: Deployment packaging validation
-        run: python tools/build_packages06.py
+        run: python tools/build_packages06.py --out build/package06
+      - name: Upload deployment candidates
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@v4
+        with:
+          name: codexstation-omega-public-packages-v0.6
+          path: build/package06/*.zip
+          if-no-files-found: error
