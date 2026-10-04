@@ -1,0 +1,254 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-OBJECT-PROVENANCE/0.4",
+  "authority_delta": "NONE",
+  "extraction_mode": "STRUCTURAL_SYNTHESIS",
+  "source_body_publication": false,
+  "mappings": [
+    {
+      "object_id": "cs.object::universal-vocabulary::v0.4",
+      "source_ids": [
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.domain.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    },
+    {
+      "object_id": "cs.object::authority-provenance::v0.4",
+      "source_ids": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.domain.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    },
+    {
+      "object_id": "cs.object::claim-evidence-gate::v0.4",
+      "source_ids": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    },
+    {
+      "object_id": "cs.object::formal-verification-program::v0.4",
+      "source_ids": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    },
+    {
+      "object_id": "cs.object::research-program-fabric::v0.4",
+      "source_ids": [
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.domain.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    },
+    {
+      "object_id": "cs.object::capability-routing::v0.4",
+      "source_ids": [
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    },
+    {
+      "object_id": "cs.object::observer-constitution::v0.4",
+      "source_ids": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.domain.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    },
+    {
+      "object_id": "cs.object::theory-namespace-routing::v0.4",
+      "source_ids": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.domain.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    },
+    {
+      "object_id": "cs.object::visible-memory-continuity::v0.4",
+      "source_ids": [
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    },
+    {
+      "object_id": "cs.object::artifact-release-fabric::v0.4",
+      "source_ids": [
+        "src.engineering.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    },
+    {
+      "object_id": "cs.object::failure-hold-semantics::v0.4",
+      "source_ids": [
+        "src.formal.rc0_37",
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    },
+    {
+      "object_id": "cs.object::skill-object-promotion::v0.4",
+      "source_ids": [
+        "src.knowledge.rc0_37",
+        "src.research.rc0_37",
+        "src.engineering.rc0_37",
+        "src.domain.rc0_37",
+        "src.continuity.rc0_37"
+      ],
+      "transformation": [
+        "heading-level structural comparison",
+        "cross-organ deduplication",
+        "original public synthesis"
+      ],
+      "does_not_establish": [
+        "source claim truth",
+        "formal proof",
+        "empirical confirmation",
+        "publication of raw source body"
+      ]
+    }
+  ]
+}
