@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codexstation-omega-public",
+  "version": "0.7.0-alpha.0",
+  "description": "Public CodexStation Omega semantic, evidence-gated, project-harvesting and cross-provider orchestration candidate.",
+  "repository": "https://github.com/Ivan-Pasev/CodexStation.Omega.Public",
+  "keywords": [
+    "codexstation",
+    "canonical-state",
+    "evidence-gates",
+    "semantic-registry",
+    "knowledge-lattice",
+    "project-harvest",
+    "kernel-foundry",
+    "orchestration",
+    "continuity"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "CodexStation Ω Public",
+        "shortDescription": "Ω semantic canon, project harvest, knowledge lattice, kernels and orchestration",
+        "longDescription": "Operate the public CodexStation Ω semantic fabric with deep project mapping, provenance-preserving aggregation, knowledge lattices, Holotopes, Archetonic Plates, typed skills and explicit authority/evidence boundaries.",
+        "developerName": "GILC",
+        "category": "Productivity",
+        "defaultPrompt": [
+          "ROOT() — resolve current public Ω semantic state and open gates.",
+          "DEEP_MAP() — deeply map the mounted governed project before cross-project synthesis.",
+          "NEXT() — advance the highest-value admissible bounded frontier without authority promotion."
+        ]
+      }
+    }
+  }
+}
