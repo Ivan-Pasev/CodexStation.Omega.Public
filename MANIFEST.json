@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.6",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.7",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "PACKAGING_06_PASS_CANDIDATE",
+  "registry_state": "MASS_AGGREGATION_07A_IMPLEMENTED_PENDING_VALIDATION",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "PUBLIC_OMEGA_LIVE_CONFORMANCE_SLICE_07",
+  "current_target": "OMEGA_MASS_AGGREGATION_GENESIS_SLICE_07A",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -76,5 +76,17 @@
     "gemini_notebook_sha256": "2d3e6656d85a7e61684315176b8e342dc2f640de68ab422e744a93315045c15f",
     "build_witness_run": 37211204301,
     "artifact_id": 11306133757
+  },
+  "aggregation07a": {
+    "canon": "canon/OMEGA_MASS_AGGREGATION_FABRIC.md",
+    "schema_bundle": "registry/aggregation07a/OMEGA_AGGREGATION_SCHEMA_BUNDLE.json",
+    "fab_sys_capsule": "registry/aggregation07a/FAB_SYS_PROJECT_HARVEST_CAPSULE.json",
+    "kernel_registry": "registry/aggregation07a/KERNEL_REGISTRY_SEED.json",
+    "holotope": "registry/aggregation07a/HOLOTOPE_SOVEREIGN_DIGITAL_RUNTIME_CORE.json",
+    "archetonic_plate": "registry/aggregation07a/PLATE_CODEXSTATION_EXECUTION_KNOWLEDGE_FABRIC.json",
+    "deep_map_skill": "skills/omega-project-deep-map/SKILL.md",
+    "chatgpt_package": "packaging07a/chatgpt-plugin/PACKAGING.json",
+    "gemini_package": "packaging07a/gemini-notebook/PACKAGING.json",
+    "status": "IMPLEMENTED_PENDING_VALIDATION"
   }
 }
