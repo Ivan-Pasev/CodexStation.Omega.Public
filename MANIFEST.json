@@ -5,6 +5,8 @@
   "release_eligible": false,
   "private_rnd_authority": "CODEXSTATION_OMEGA_NEXT_CANONICAL_R&D_WORKING_TREE",
   "authority_delta": "NONE",
+  "machine_registry": "registry/OMEGA_REGISTRY.json",
+  "registry_state": "GENESIS_METABOLIZED_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
