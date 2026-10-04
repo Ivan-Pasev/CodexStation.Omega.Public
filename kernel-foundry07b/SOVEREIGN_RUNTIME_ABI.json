@@ -1,0 +1,289 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SOVEREIGN-RUNTIME-ABI/0.7b",
+  "status": "ADAPTER_FIRST_CANDIDATE",
+  "authority_delta": "NONE",
+  "compatibility_rule": "Native source systems retain their own canonical semantics. The shared ABI is an interop envelope and MUST NOT silently reinterpret a native PASS/HOLD/FAIL, authority level, evidence class, or identity.",
+  "records": [
+    {
+      "abi_id": "cs.abi::canonical-state::v0.7b",
+      "name": "CanonicalState",
+      "required": [
+        "state_id",
+        "schema_id",
+        "source_root",
+        "content_digest",
+        "provenance"
+      ],
+      "optional": [
+        "effective_state_root",
+        "history_root",
+        "version",
+        "timestamp",
+        "open_conflicts",
+        "open_gates"
+      ],
+      "laws": [
+        "STATE_COPY != CERTIFIED_CONTINUATION",
+        "CONTENT_IDENTITY != BEHAVIORAL_EQUIVALENCE"
+      ],
+      "adapters": {
+        "Digital.Fabrica": "FIR/Fabricum identity",
+        "DFPL": "canonical object + KernelID/LawID commitments",
+        "Neural.Lattice": "StateCell",
+        "Fabric.Reference.Node": "effective_state_root + history_root"
+      }
+    },
+    {
+      "abi_id": "cs.abi::candidate-transition::v0.7b",
+      "name": "CandidateTransition",
+      "required": [
+        "transition_id",
+        "parent_state_id",
+        "intent_digest",
+        "operations",
+        "required_authority",
+        "invariant_refs"
+      ],
+      "optional": [
+        "evidence_refs",
+        "policy_refs",
+        "verification_plan",
+        "reversibility",
+        "proposer",
+        "created_at"
+      ],
+      "laws": [
+        "STALE_PARENT -> NON_MUTATION",
+        "PROPOSAL != CANONICAL_STATE"
+      ],
+      "adapters": {
+        "Digital.Fabrica": "Transition Protocol",
+        "DFPL.PRIMA": "PlanIR + CandidateTransition",
+        "Neural.Lattice": "authorized transition/commit path",
+        "Fabric.Reference.Node": "state transition event"
+      }
+    },
+    {
+      "abi_id": "cs.abi::semantic-verdict::v0.7b",
+      "name": "SemanticVerdict",
+      "required": [
+        "verdict_id",
+        "profile",
+        "native_verdict",
+        "reason_codes",
+        "input_commitments"
+      ],
+      "optional": [
+        "coarse_class",
+        "law_id",
+        "kernel_id",
+        "evidence_commitments"
+      ],
+      "laws": [
+        "SEMANTIC_PERMIT != AUTHORIZATION",
+        "NATIVE_VERDICT_IS_PRESERVED"
+      ],
+      "adapters": {
+        "DFPL": "Detailed Verdict / VerdictClass",
+        "Digital.Fabrica": "AdmissionDecision",
+        "Fabric.Reference.Node": "PASS | HOLD | FAIL assessment"
+      }
+    },
+    {
+      "abi_id": "cs.abi::decision-certificate::v0.7b",
+      "name": "DecisionCertificate",
+      "required": [
+        "decision_id",
+        "semantic_verdict_ref",
+        "verification_profile",
+        "input_commitments"
+      ],
+      "optional": [
+        "kernel_id",
+        "law_id",
+        "proof_or_attestation_refs",
+        "replay_context"
+      ],
+      "laws": [
+        "DECISION_CERTIFICATE != AUTHORIZATION",
+        "HASH != PROOF",
+        "ATTESTATION != SEMANTIC_PROOF"
+      ],
+      "adapters": {
+        "DFPL": "DecisionCertificate",
+        "CodexStation": "claim/evidence receipt projection"
+      }
+    },
+    {
+      "abi_id": "cs.abi::authorization-decision::v0.7b",
+      "name": "AuthorizationDecision",
+      "required": [
+        "authorization_id",
+        "principal_ref",
+        "requested_effects",
+        "capability_refs",
+        "decision"
+      ],
+      "optional": [
+        "approval_refs",
+        "runtime_context",
+        "valid_until",
+        "policy_ref",
+        "reason_codes"
+      ],
+      "laws": [
+        "CAPABILITY != AUTHORITY",
+        "AUTHORITY_MUST_NOT_WIDEN",
+        "AUTHORIZATION_MUST_BIND_EXACT_PLAN_OR_EFFECT"
+      ],
+      "adapters": {
+        "DFPL.PRIMA": "AuthorizationArtifact",
+        "Neural.Lattice": "AuthorizationToken / capability chain",
+        "GILC.CodexStation": "Authority check",
+        "CodexStation.IEF": "PolicyDecision"
+      }
+    },
+    {
+      "abi_id": "cs.abi::execution-spec::v0.7b",
+      "name": "ExecutionSpec",
+      "required": [
+        "execution_id",
+        "authorized_plan_ref",
+        "provider_profile",
+        "declared_effects",
+        "expected_outputs"
+      ],
+      "optional": [
+        "network_policy",
+        "persistence_policy",
+        "toolchain_commitments",
+        "reproducibility_mode",
+        "resource_limits"
+      ],
+      "laws": [
+        "PLAN != EXECUTION",
+        "PROVIDER_PROFILE != SEMANTIC_PARENT"
+      ],
+      "adapters": {
+        "CodexStation.IEF": "ExecutionSpec / CellProfile",
+        "Neural.Lattice": "commit-time execution context"
+      }
+    },
+    {
+      "abi_id": "cs.abi::execution-receipt::v0.7b",
+      "name": "ExecutionReceipt",
+      "required": [
+        "execution_id",
+        "execution_state",
+        "observed_outputs",
+        "provider_ref",
+        "timestamp"
+      ],
+      "optional": [
+        "exit_status",
+        "artifact_hashes",
+        "logs_ref",
+        "resource_usage",
+        "divergence",
+        "attestation_refs"
+      ],
+      "laws": [
+        "COMMAND_ISSUED != PHYSICAL_EFFECT_CONFIRMED",
+        "EXECUTION_RECEIPT != SCIENTIFIC_PROOF"
+      ],
+      "adapters": {
+        "CodexStation.IEF": "ExecutionReceipt / EvidenceBundle",
+        "AI.WITNESS": "W3 Outcome",
+        "Neural.Lattice": "TransitionReceipt execution evidence"
+      }
+    },
+    {
+      "abi_id": "cs.abi::witness-receipt::v0.7b",
+      "name": "WitnessReceipt",
+      "required": [
+        "witness_id",
+        "intent_ref",
+        "authorization_ref",
+        "before_state_id",
+        "after_state_id",
+        "result"
+      ],
+      "optional": [
+        "invariant_results",
+        "verification_results",
+        "evidence_refs",
+        "outcome_ref",
+        "timestamp"
+      ],
+      "laws": [
+        "RECEIPT_STRENGTH <= EVIDENCE_STRENGTH",
+        "RECEIPT != SEMANTIC_TRUTH"
+      ],
+      "adapters": {
+        "Digital.Fabrica": "Witness Protocol",
+        "AI.WITNESS": "W0-W3 chain",
+        "Neural.Lattice": "TransitionReceipt",
+        "Fabric.Reference.Node": "retraction/rollback receipt"
+      }
+    },
+    {
+      "abi_id": "cs.abi::conflict-object::v0.7b",
+      "name": "ConflictObject",
+      "required": [
+        "conflict_id",
+        "participants",
+        "status",
+        "scope"
+      ],
+      "optional": [
+        "evidence_refs",
+        "severity",
+        "classification",
+        "resolution",
+        "closed_at"
+      ],
+      "laws": [
+        "CONFLICT != AUTOMATIC_AVERAGING",
+        "UNRESOLVED != RESOLVED"
+      ],
+      "adapters": {
+        "Neural.Lattice": "Conflict Object",
+        "Omega.Public": "negative/HOLD classes",
+        "Fabric.Reference.Node": "contradicted/suspended effective state"
+      }
+    },
+    {
+      "abi_id": "cs.abi::projection-receipt::v0.7b",
+      "name": "ProjectionReceipt",
+      "required": [
+        "projection_id",
+        "semantic_parent_fingerprint",
+        "profile",
+        "artifact_hash"
+      ],
+      "optional": [
+        "source_object_ids",
+        "omissions",
+        "transformations",
+        "parity_fingerprint",
+        "created_at"
+      ],
+      "laws": [
+        "PLATFORM_PROFILE != CANON_FORK",
+        "PROJECTION != AUTHORITY_PROMOTION"
+      ],
+      "adapters": {
+        "Omega.Public": "ChatGPT/Codex and Gemini compiled distributions",
+        "Digital.Fabrica": "observer projection law"
+      }
+    }
+  ],
+  "next_formal_targets": [
+    "canonical field-level adapter mappings",
+    "lossless/lossy adapter declaration",
+    "state identity profile",
+    "authority lattice crosswalk",
+    "receipt-family crosswalk",
+    "event/replay compatibility profile"
+  ]
+}
