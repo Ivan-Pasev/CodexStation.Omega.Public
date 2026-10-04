@@ -1,0 +1,666 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-Pasev/CodexStation.Omega.Public/registry/aggregation07a/OMEGA_AGGREGATION_SCHEMA_BUNDLE.json",
+  "title": "CodexStation Omega Mass Aggregation Schema Bundle v0.7",
+  "version": "0.7.0-alpha.0",
+  "status": "PUBLICATION_STAGING",
+  "authority_delta": "NONE",
+  "$defs": {
+    "StatusVector": {
+      "type": "object",
+      "properties": {
+        "definition_status": {
+          "type": "string"
+        },
+        "source_status": {
+          "type": "string"
+        },
+        "evidence_status": {
+          "type": "string"
+        },
+        "formal_status": {
+          "type": "string"
+        },
+        "empirical_status": {
+          "type": "string"
+        },
+        "implementation_status": {
+          "type": "string"
+        },
+        "replication_status": {
+          "type": "string"
+        },
+        "release_status": {
+          "type": "string"
+        },
+        "authority_status": {
+          "type": "string"
+        },
+        "license_status": {
+          "type": "string"
+        },
+        "security_status": {
+          "type": "string"
+        },
+        "freshness_status": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SourceRef": {
+      "type": "object",
+      "required": [
+        "source_id",
+        "locator",
+        "authority_class",
+        "lineage",
+        "status"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "locator": {
+          "type": "string"
+        },
+        "source_kind": {
+          "type": "string"
+        },
+        "authority_class": {
+          "type": "string"
+        },
+        "lineage": {
+          "type": "string"
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "revision_or_hash": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "type": "string"
+        },
+        "size_bytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "supersedes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "derived_from": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license_ip_state": {
+          "type": "string"
+        },
+        "sensitivity": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "ProjectHarvestCapsule": {
+      "type": "object",
+      "required": [
+        "capsule_id",
+        "project_id",
+        "canonical_name",
+        "source_roots",
+        "authority_map",
+        "lineage_map",
+        "active_frontier",
+        "sources",
+        "objects",
+        "relations",
+        "kernels",
+        "skills",
+        "contradictions",
+        "negative_results",
+        "open_gates",
+        "quarantined",
+        "candidate_global_deltas",
+        "observed_at",
+        "authority_delta"
+      ],
+      "properties": {
+        "capsule_id": {
+          "type": "string"
+        },
+        "project_id": {
+          "type": "string"
+        },
+        "canonical_name": {
+          "type": "string"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_roots": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "repository_urls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "authority_map": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "lineage_map": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "active_version_release": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "active_frontier": {
+          "type": "string"
+        },
+        "last_observed_source_state": {
+          "type": "object"
+        },
+        "releases": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SourceRef"
+          }
+        },
+        "objects": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "kernels": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "contradictions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "negative_results": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "open_gates": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "quarantined": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "candidate_global_deltas": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "next_target": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed_at": {
+          "type": "string"
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    },
+    "KernelRecord": {
+      "type": "object",
+      "required": [
+        "kernel_id",
+        "name",
+        "intent",
+        "source",
+        "lineage",
+        "inputs",
+        "outputs",
+        "state_model",
+        "authority_boundary",
+        "determinism",
+        "side_effects",
+        "capability_requirements",
+        "algorithm",
+        "interfaces",
+        "test_evidence",
+        "formal_evidence",
+        "security_boundary",
+        "failure_modes",
+        "portability",
+        "dependencies",
+        "license_ip_state",
+        "version",
+        "status",
+        "authority_delta"
+      ],
+      "properties": {
+        "kernel_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "intent": {
+          "type": "string"
+        },
+        "source": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "lineage": {
+          "type": "string"
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "state_model": {
+          "type": "string"
+        },
+        "authority_boundary": {
+          "type": "string"
+        },
+        "determinism": {
+          "type": "string"
+        },
+        "side_effects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "capability_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "algorithm": {
+          "type": "string"
+        },
+        "data_structures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "interfaces": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "test_evidence": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "formal_evidence": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "performance_evidence": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "security_boundary": {
+          "type": "string"
+        },
+        "failure_modes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "portability": {
+          "type": "string"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "license_ip_state": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Holotope": {
+      "type": "object",
+      "required": [
+        "holotope_id",
+        "mission",
+        "object_ids",
+        "invariants",
+        "skills",
+        "kernels",
+        "capability_requirements",
+        "evidence",
+        "open_gates",
+        "negative_knowledge",
+        "source_pointers",
+        "semantic_parent",
+        "authority_delta"
+      ],
+      "properties": {
+        "holotope_id": {
+          "type": "string"
+        },
+        "mission": {
+          "type": "string"
+        },
+        "object_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "invariants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "kernels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "capability_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "open_gates": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "negative_knowledge": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "source_pointers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "semantic_parent": {
+          "type": "string"
+        },
+        "context_budget": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    },
+    "ArchetonicPlate": {
+      "type": "object",
+      "required": [
+        "plate_id",
+        "mission",
+        "requirements",
+        "objects",
+        "relations",
+        "constraints",
+        "invariants",
+        "candidate_architectures",
+        "selected_methods_kernels",
+        "capabilities",
+        "execution_plan",
+        "verification_plan",
+        "evidence_plan",
+        "risks",
+        "open_gates",
+        "expected_artifacts",
+        "receipt_contract",
+        "authority_delta"
+      ],
+      "properties": {
+        "plate_id": {
+          "type": "string"
+        },
+        "mission": {
+          "type": "string"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "objects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "invariants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "candidate_architectures": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "selected_methods_kernels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "execution_plan": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "verification_plan": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_plan": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "risks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "open_gates": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "expected_artifacts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receipt_contract": {
+          "type": "object"
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}
