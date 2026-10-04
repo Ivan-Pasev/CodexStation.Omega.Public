@@ -1,0 +1,30 @@
+{
+  "interface": {
+    "displayName": "CodexStation Ω Public",
+    "shortDescription": "Ω semantic canon, deep mapping, knowledge lattice, kernels and orchestration",
+    "longDescription": "Operate the publication-admitted CodexStation Ω Public fabric with typed skills, project harvest capsules, knowledge lattices, holotopes, archetonic plates, kernel qualification, authority/evidence boundaries and provider-independent semantic roots.",
+    "developerName": "GILC",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "ROOT() — resolve the public Ω semantic parent, mounted project authority and open gates.",
+      "DEEP_MAP() — map a canonical project into a provenance-preserving ProjectHarvestCapsule.",
+      "NEXT() — advance the highest-value admissible bounded frontier and crystallize reusable deltas."
+    ],
+    "capabilities": []
+  },
+  "name": "codexstation-omega-public",
+  "version": "0.7.0-alpha.0",
+  "description": "Public CodexStation Omega aggregation and orchestration candidate.",
+  "author": {
+    "name": "GILC"
+  },
+  "keywords": [
+    "codexstation",
+    "knowledge-lattice",
+    "project-harvest",
+    "kernel-foundry",
+    "continuity"
+  ],
+  "repository": "https://github.com/Ivan-Pasev/CodexStation.Omega.Public",
+  "skills": "./skills"
+}
