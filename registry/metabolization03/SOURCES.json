@@ -1,0 +1,49 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-METABOLIZATION-SOURCES/0.3",
+  "authority_delta": "NONE",
+  "source_policy": "Original synthesis only; raw private source bodies remain outside the public repository.",
+  "sources": [
+    {
+      "id": "src.formal.rc0_37",
+      "drive_id": "15718r1Fe2_GlqnCfenwZCSVkVIGuzlDi",
+      "title": "01_OMEGA_FORMAL_THEOREMATIC_CRYSTAL_RC0_37.md",
+      "bytes": 725225,
+      "heading_count": 430
+    },
+    {
+      "id": "src.knowledge.rc0_37",
+      "drive_id": "1hyRFvct0uouxmrguYS17JZoU5plxoEIp",
+      "title": "02_OMEGA_KNOWLEDGE_ONTOLOGY_GRAMMAR_CRYSTAL_RC0_37.md",
+      "bytes": 812246,
+      "heading_count": 951
+    },
+    {
+      "id": "src.research.rc0_37",
+      "drive_id": "1b5mXu5q6tgKRxdWxMfAh55IgytRkkzRi",
+      "title": "03_OMEGA_RESEARCH_DISCOVERY_VERIFICATION_CRYSTAL_RC0_37.md",
+      "bytes": 743932,
+      "heading_count": 531
+    },
+    {
+      "id": "src.engineering.rc0_37",
+      "drive_id": "165ZABb9hXqicF_awhlapqFcQxV9-EHTQ",
+      "title": "04_OMEGA_ENGINEERING_AGENTIC_SYSTEMS_CRYSTAL_RC0_37.md",
+      "bytes": 770863,
+      "heading_count": 553
+    },
+    {
+      "id": "src.domain.rc0_37",
+      "drive_id": "1xXy4BXK4CoNPpriGzPpV5SaxHRkTGbyO",
+      "title": "05_OMEGA_DOMAIN_THEORY_ATLAS_CRYSTAL_RC0_37.md",
+      "bytes": 730795,
+      "heading_count": 458
+    },
+    {
+      "id": "src.continuity.rc0_37",
+      "drive_id": "13Gc4Qs9Fw6B_4SvcARw9IwMZtj2BOHHj",
+      "title": "06_OMEGA_CONTINUITY_EVIDENCE_ARTIFACTS_CRYSTAL_RC0_37.md",
+      "bytes": 716794,
+      "heading_count": 439
+    }
+  ]
+}
