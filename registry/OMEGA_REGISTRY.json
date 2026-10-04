@@ -914,6 +914,6 @@
     "negative_hold": "registry/objectization04/NEGATIVE_HOLD.json",
     "skills": "registry/objectization04/SKILLS.json",
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
-    "status": "IMPLEMENTED_PENDING_CI"
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   }
 }
