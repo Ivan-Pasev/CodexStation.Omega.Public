@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.6",
+  "version": "0.7a",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -934,5 +934,23 @@
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
     "package_index": "packaging06/PACKAGE_INDEX.json",
     "archive_hashes": "EXTERNAL_PACKAGE_INDEX_TO_AVOID_SELF_REFERENCE"
+  },
+  "aggregation_slice_07a": {
+    "protocol": "aggregation07a/AGGREGATION_PROTOCOL.md",
+    "schema_bundle": "aggregation07a/SCHEMA_BUNDLE.json",
+    "public_kernel_atlas": "aggregation07a/INITIAL_PUBLIC_KERNEL_ATLAS.json",
+    "semantic_extension": "aggregation07a/SEMANTIC_EXTENSION.json",
+    "base_semantic_parent_fingerprint": "eb43face6ab49b0eab112b5c9ddc6308a5dc0444c3d140622365c61976138719",
+    "aggregation_extension_fingerprint": "c74ce95fda667d384d95fc4852a932a2a5bdc242b0c819ab5012696988c9153a",
+    "composite_semantic_fingerprint": "daa85b0bf47e392c4a310b2dc11f8074dee2480b5b7dd34c3bde917981bd4c7d",
+    "status": "IMPLEMENTED_PENDING_CI",
+    "authority_delta": "NONE"
+  },
+  "packaging_slice_07a": {
+    "chatgpt_plugin": "packaging07a/chatgpt-plugin/PACKAGING.json",
+    "gemini_notebook": "packaging07a/gemini-notebook/PACKAGING.json",
+    "packager": "tools/build_packages07a.py",
+    "status": "IMPLEMENTED_PENDING_CI",
+    "authority_delta": "NONE"
   }
 }
