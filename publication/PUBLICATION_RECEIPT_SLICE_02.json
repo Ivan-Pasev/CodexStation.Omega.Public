@@ -2,7 +2,7 @@
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-METABOLIZATION-RECEIPT/0.2",
   "receipt_id": "cs.public.receipt::metabolization-slice-02::v0.2",
   "candidate_id": "cs.public.candidate::semantic-registry-genesis::v0.2",
-  "result": "PASS_CANDIDATE_PENDING_CI",
+  "result": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
   "scope": "Machine-readable semantic registry genesis only; no full private dense-corpus publication.",
   "artifacts": [
     "registry/OMEGA_REGISTRY.json",
@@ -30,5 +30,31 @@
     "scientific validity",
     "AGI or ASI",
     "release eligibility"
-  ]
+  ],
+  "validated_head": "10b5aba10d054b72e89141c7d9084864aa6a05c5",
+  "ci": {
+    "workflow": "public-omega-ci",
+    "run_id": 37206046210,
+    "conclusion": "success",
+    "python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    },
+    "unit_tests": "12 PASS",
+    "publication_validator": "PASS",
+    "semantic_registry_validator": "PASS",
+    "repository_semantic_fingerprint": "eeeb363f4d9ba15137aa5feff4688bc32851b622b91441e0f651c3da2b673797",
+    "registry_sha256": "2e2a6b7203e70b90a6b13ee5720489642a216f0a2a4acb0fba985870a451e19c",
+    "registry_counts": {
+      "objects": 22,
+      "relations": 16,
+      "noncollapse_rules": 8,
+      "theorematic_objects": 7,
+      "skills": 10,
+      "anchors": 7,
+      "gates": 5
+    }
+  },
+  "next_target": "PUBLIC_OMEGA_CRYSTAL_METABOLIZATION_SLICE_03"
 }
