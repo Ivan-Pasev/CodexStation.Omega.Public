@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-Pasev/CodexStation.Omega.Public/schemas/publication_receipt.schema.json",
+  "title": "CodexStation Omega Public Publication Receipt",
+  "type": "object",
+  "required": [
+    "receipt_id",
+    "candidate_id",
+    "result",
+    "checked_paths",
+    "gates",
+    "authority_delta",
+    "does_not_establish"
+  ],
+  "properties": {
+    "receipt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "result": {
+      "enum": [
+        "PASS",
+        "PASS_CANDIDATE",
+        "FAIL",
+        "HOLD"
+      ]
+    },
+    "checked_paths": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "gates": {
+      "type": "object"
+    },
+    "authority_delta": {
+      "enum": [
+        "NONE",
+        "SCOPED_EXPLICIT"
+      ]
+    },
+    "does_not_establish": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": true
+}
