@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "OBJECTIZATION_04_IMPLEMENTED_PENDING_CI",
+  "registry_state": "OBJECTIZATION_04_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -51,7 +51,7 @@
     "negative_hold": "registry/objectization04/NEGATIVE_HOLD.json",
     "skills": "registry/objectization04/SKILLS.json",
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
-    "status": "IMPLEMENTED_PENDING_CI"
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "PUBLIC_OMEGA_OBJECTIZATION_SLICE_04"
+  "current_target": "PUBLIC_OMEGA_DISTRIBUTION_COMPILER_SLICE_05"
 }
