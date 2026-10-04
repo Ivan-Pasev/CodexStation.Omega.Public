@@ -1,0 +1,37 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-PUBLICATION-RECEIPT/0.1",
+  "receipt_id": "cs.public.receipt::bootstrap::v0.1",
+  "candidate_id": "cs.public.candidate::genesis-bootstrap::v0.1",
+  "result": "PASS_CANDIDATE",
+  "checked_paths": [
+    "README.md",
+    "AGENTS.md",
+    "MANIFEST.json",
+    "docs/ARCHITECTURE.md",
+    "docs/PUBLICATION_POLICY.md",
+    "canon/OMEGA_CORE.md",
+    "canon/OMEGA_CRYSTAL.md",
+    "canon/OMEGA_SKILL_SPINDLE.md",
+    "canon/OMEGA_THEOREMATIC_SPINE.md",
+    "canon/OMEGA_PUBLIC_ANCHORS.md"
+  ],
+  "gates": {
+    "secret_pii": "PASS_CANDIDATE_MACHINE_HEURISTIC",
+    "license_ip": "OPEN_LICENSE_DECISION",
+    "claim_evidence": "PASS_CANDIDATE",
+    "authority": "PASS_CANDIDATE",
+    "provenance": "PASS_CANDIDATE_BOOTSTRAP",
+    "dedup": "PASS_CANDIDATE_BOOTSTRAP",
+    "witness": "PASS_CANDIDATE_BOOTSTRAP"
+  },
+  "authority_delta": "NONE",
+  "publication_scope": "PUBLIC-SAFE GENESIS ONLY; NO PRIVATE DENSE CORE/CRYSTAL PROMOTION",
+  "does_not_establish": [
+    "scientific validity",
+    "formal theoremhood",
+    "empirical confirmation",
+    "AGI or ASI",
+    "release eligibility",
+    "licensing permission for unpublished private corpus"
+  ]
+}
