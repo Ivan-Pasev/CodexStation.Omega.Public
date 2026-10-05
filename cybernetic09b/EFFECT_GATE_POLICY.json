@@ -1,0 +1,35 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-EFFECT-GATE-POLICY/0.9b",
+  "statuses": [
+    "PENDING",
+    "PASS",
+    "FAIL",
+    "UNKNOWN_OUTCOME"
+  ],
+  "receipt_required_fields": [
+    "effect_id",
+    "plan_digest",
+    "status",
+    "observer",
+    "evidence_refs"
+  ],
+  "admission": [
+    "effect_id matches compiled effect",
+    "plan_digest matches mission plan digest",
+    "status is PASS|FAIL|UNKNOWN_OUTCOME",
+    "observer is explicit",
+    "evidence_refs is non-empty for PASS or FAIL"
+  ],
+  "closure": {
+    "PASS": "Effect may be treated as confirmed only for the declared effect scope.",
+    "FAIL": "Effect execution failed or was independently observed not to satisfy declared success.",
+    "UNKNOWN_OUTCOME": "No conclusive independent outcome evidence."
+  },
+  "noncollapse": [
+    "COMMAND_ISSUED != EFFECT_CONFIRMED",
+    "PROVIDER_ACK != EFFECT_CONFIRMED",
+    "EFFECT_PASS != MISSION_TRUTH",
+    "EFFECT_PASS != SCIENTIFIC_CONFIRMATION"
+  ],
+  "authority_delta": "NONE"
+}
