@@ -1,0 +1,39 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-TIER-A-INTEGRATION-HARNESS/0.8d",
+  "harness_id": "cs.harness::tier-a-integration::v0.8d",
+  "status": "SOURCE_BOUND_REFERENCE_HARNESS_CANDIDATE",
+  "abi": "cs.abi::constitutional-core::v0.8b",
+  "runtime": "cs.runtime::constitutional-reference::v0.8c",
+  "source_bindings": "aggregation08b/SOURCE_BINDINGS.json",
+  "source_fixtures": "integration08d/SOURCE_FIXTURES.json",
+  "source_families": [
+    "DIGITAL_FABRICA_CORE",
+    "DFPL_PRIMA",
+    "HIGHESTONE",
+    "GILC_CODEXSTATION",
+    "NEURAL_LATTICE"
+  ],
+  "paths_tested": [
+    "source_fixture_identity",
+    "source_to_adapter_normalization",
+    "adapter_to_abi",
+    "transition_admission",
+    "predecessor_authority",
+    "protected_invariant_gate",
+    "exact_plan_binding",
+    "external_effect_unknown_outcome",
+    "conflict_durability",
+    "receipt_state_binding",
+    "recovery_quarantine_or_recoverable"
+  ],
+  "evidence_boundary": [
+    "fixtures are source-derived static witnesses, not execution of the source repositories",
+    "normalization is explicit and may be lossy",
+    "adapter conformance does not establish type identity",
+    "reference-runtime correspondence does not establish production integration",
+    "source-reported theorem/test status is not promoted to local reproduction",
+    "external effects remain unconfirmed unless an external executor/witness is supplied"
+  ],
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}
