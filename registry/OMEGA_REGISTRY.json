@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.8b",
+  "version": "0.8c",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -997,5 +997,23 @@
     "composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3",
     "archive_hashes": "EXTERNAL_PACKAGE_INDEX_TO_AVOID_SELF_REFERENCE",
     "build_witness": "EXTERNAL_PACKAGE_INDEX"
+  },
+  "aggregation_slice_08c": {
+    "runtime_contract": "aggregation08c/RUNTIME_CONTRACT.md",
+    "semantic_extension": "aggregation08c/SEMANTIC_EXTENSION.json",
+    "runtime_profile": "runtime08c/RUNTIME_PROFILE.json",
+    "reference_scenarios": "runtime08c/REFERENCE_SCENARIOS.json",
+    "runtime": "runtime08c/runtime.py",
+    "adapters": "runtime08c/adapters.py",
+    "status": "IMPLEMENTED_PENDING_CI",
+    "authority_delta": "NONE"
+  },
+  "packaging_slice_08c": {
+    "chatgpt_plugin": "packaging08c/chatgpt-plugin/PACKAGING.json",
+    "gemini_notebook": "packaging08c/gemini-notebook/PACKAGING.json",
+    "packager": "tools/build_packages08c.py",
+    "status": "IMPLEMENTED_PENDING_CI",
+    "archive_hashes": "EXTERNAL_PACKAGE_INDEX_TO_AVOID_SELF_REFERENCE",
+    "authority_delta": "NONE"
   }
 }
