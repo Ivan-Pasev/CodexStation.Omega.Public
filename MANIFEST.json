@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9h",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9i",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "CYBERNETIC_HOST_WITNESS_RUNNER_09H_IMPLEMENTED_LIVE_PENDING",
+  "registry_state": "CYBERNETIC_LIVE_HOST_ACQUISITION_09I_PASS_LIVE_PENDING",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_CYBERNETIC_LIVE_HOST_WITNESS_ACQUISITION_SLICE_09I",
+  "current_target": "OMEGA_CYBERNETIC_HOST_RETURN_INGESTION_AND_LIVE_CONFORMANCE_SLICE_09J",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -264,7 +264,7 @@
   },
   "parallel_frontiers": {
     "evidence": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I",
-    "capability": "OMEGA_CYBERNETIC_HOST_WITNESS_RUNNER_PACK_SLICE_09H"
+    "capability": "OMEGA_CYBERNETIC_LIVE_HOST_WITNESS_ACQUISITION_SLICE_09I"
   },
   "cybernetic09a": {
     "capability_lattice": "cybernetic09a/CAPABILITY_LATTICE.json",
@@ -457,5 +457,21 @@
       "3.12": "success",
       "3.13": "success"
     }
+  },
+  "cybernetic09i": {
+    "protocol": "cybernetic09i/ACQUISITION_PROTOCOL.json",
+    "ledger": "cybernetic09i/ACQUISITION_LEDGER.json",
+    "requests": "cybernetic09i/REQUESTS.json",
+    "acquisition_engine": "cybernetic09i/acquisition.py",
+    "builder": "tools/build_acquisition_packets09i.py",
+    "validator": "tools/validate_cybernetic09i.py",
+    "tests": "tests/test_cybernetic09i.py",
+    "status": "ACQUISITION_PROTOCOL_PASS_LIVE_RECEIPTS_PENDING",
+    "live_receipts_ingested": 0,
+    "live_multi_host_conformance_closed": false,
+    "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+    "predecessor_composite_semantic_fingerprint": "3d5282a9f1649c63555db3813bbbc6cc76035cd039e7ab8f5acff051af827a84",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09I_RECEIPT.json"
   }
 }
