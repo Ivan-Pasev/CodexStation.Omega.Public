@@ -1,0 +1,28 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-RECEIPT-REGISTRY/0.8g",
+  "ingestion_id": "cs.ingestion::tier-a-receipts::v0.8g",
+  "families": {
+    "DIGITAL_FABRICA_CORE": {
+      "source_commit": "c3e142d73ddbbcdfd5677aed242da3c6c52ae9e6",
+      "verdict": "HOLD_NO_RECEIPT",
+      "receipt_digest": null,
+      "evidence_scope": null
+    },
+    "HIGHESTONE": {
+      "source_commit": "a4f237aba8156d0bf6f1354457275de9a67ac21a",
+      "verdict": "HOLD_NO_RECEIPT",
+      "receipt_digest": null,
+      "evidence_scope": null
+    },
+    "NEURAL_LATTICE": {
+      "source_commit": "57da881b28a5a4e924b900a18e2e59f3a202f6fe",
+      "verdict": "HOLD_NO_RECEIPT",
+      "receipt_digest": null,
+      "evidence_scope": null
+    }
+  },
+  "admitted_receipts": [],
+  "conflicts": [],
+  "authority_delta": "NONE",
+  "release_eligible": false
+}
