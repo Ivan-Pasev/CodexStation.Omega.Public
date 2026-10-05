@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8f",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8g",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "TIER_A_RESTRICTED_BRIDGE_08F_IMPLEMENTED_EXECUTION_HOLD",
+  "registry_state": "TIER_A_RECEIPT_INGESTION_08G_CAPABILITY_PASS_NO_NEW_RECEIPTS",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_TIER_A_PRIVATE_RECEIPT_INGESTION_SLICE_08G",
+  "current_target": "OMEGA_TIER_A_RESTRICTED_RUNNER_EXECUTION_PACK_SLICE_08H",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -219,5 +219,16 @@
     "predecessor_composite_semantic_fingerprint": "3c140cbdb00ca9e5725ce0742928d8a9085f2649c7bddffb4b18e6f352c0b5c7",
     "authority_delta": "NONE",
     "receipt": "publication/SLICE_08F_RECEIPT.json"
+  },
+  "ingestion08g": {
+    "policy": "ingestion08g/INGESTION_POLICY.json",
+    "registry": "ingestion08g/RECEIPT_REGISTRY.json",
+    "engine": "ingestion08g/ingest.py",
+    "validator": "tools/validate_ingestion08g.py",
+    "tests": "tests/test_ingestion08g.py",
+    "status": "INGESTION_CAPABILITY_PASS_NO_NEW_RECEIPTS",
+    "predecessor_composite_semantic_fingerprint": "ac43b3f0ccd001bc4235f1e19331e03819d5694393dbc7733cb0bfb56065428c",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_08G_RECEIPT.json"
   }
 }
