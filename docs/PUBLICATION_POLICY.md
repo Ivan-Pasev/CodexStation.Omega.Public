@@ -52,3 +52,15 @@ PUBLIC_CANON -> GEMINI_DIST
 ```
 
 A provider-specific build may change packaging, indexing or sharding. It may not silently alter semantics or claim status.
+
+## Deduplication and supersession scope
+
+The release deduplication gate is discharged only for **machine-addressable public declarations** enumerated by `cybernetic09n/DEDUP_SCOPE.json`. The audit checks canonical identifier uniqueness, identical normalized payloads under different identifiers, explicit supersession/alias integrity, and supersession cycles.
+
+A scoped object-level `PASS` does **not** claim semantic uniqueness of free-form prose, third-party source bodies, cross-repository concepts, or same-labeled objects in distinct lineages.
+
+```text
+SCOPED_DEDUP_PASS != GLOBAL_SEMANTIC_UNIQUENESS
+SAME_LABEL != SAME_LINEAGE
+SUPERSESSION != DELETION
+```

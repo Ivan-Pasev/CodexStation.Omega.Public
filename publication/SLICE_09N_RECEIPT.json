@@ -1,0 +1,15 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.9n",
+  "slice": "OMEGA_PUBLICATION_OBJECT_IDENTITY_DEDUP_SUPERSESSION_SLICE_09N",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "omega-09n-publication-object-dedup",
+  "predecessor": "OMEGA_CYBERNETIC_GOVERNANCE_DECISION_AND_RELEASE_READINESS_SLICE_09L",
+  "previous_composite_semantic_fingerprint": "c964d45b46ea0466c1972c04f2b25fd036fa096cd83e7b81855e54eb8a176d7f",
+  "status": "SCOPED_OBJECT_DEDUP_PASS_CANDIDATE",
+  "dedup_gate": "PASS",
+  "scope_id": "MACHINE_ADDRESSABLE_PUBLIC_DECLARATIONS",
+  "free_form_prose_semantic_dedup_claimed": false,
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "next_target": "OMEGA_CYBERNETIC_GOVERNANCE_AUTHORIZATION_OR_EXTERNAL_EVIDENCE_WAIT_STATE_09M"
+}

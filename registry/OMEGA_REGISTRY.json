@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.9l",
+  "version": "0.9n",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -1246,5 +1246,22 @@
     "slice_fingerprint": "f2f27aad739f966d174775d4b3f2887e2356b85ab1c20c5bedb7213844f088e1",
     "composite_semantic_fingerprint": "c964d45b46ea0466c1972c04f2b25fd036fa096cd83e7b81855e54eb8a176d7f",
     "validation_run": 37318241812
+  },
+  "publication_object_dedup_09n": {
+    "dedup_scope": "cybernetic09n/DEDUP_SCOPE.json",
+    "supersession_registry": "cybernetic09n/SUPERSESSION_REGISTRY.json",
+    "auditor": "cybernetic09n/dedup.py",
+    "validator": "tools/validate_cybernetic09n.py",
+    "status": "SCOPED_OBJECT_DEDUP_PASS_CANDIDATE",
+    "gate": "PASS",
+    "scope_id": "MACHINE_ADDRESSABLE_PUBLIC_DECLARATIONS",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09N_RECEIPT.json",
+    "slice_fingerprint": "b9b0845d68c84e176c00a02656911a584a62bdee3d793b78600570f4be269989",
+    "composite_semantic_fingerprint": "6935f0c1e4868657b2274b86531c7c3fbf27dacfdd6c23fa343fcbec87c5ea1c",
+    "validation_run": 37321240784,
+    "audited_record_count": 98,
+    "duplicate_id_count": 0,
+    "payload_collision_count": 0
   }
 }

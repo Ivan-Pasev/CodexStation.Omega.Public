@@ -214,3 +214,8 @@ jobs:
         run: |
           python tools/validate_cybernetic09l.py
           python -m unittest -v tests.test_cybernetic09l
+
+      - name: Publication object dedup 09N validation
+        run: |
+          python tools/validate_cybernetic09n.py
+          python -m unittest -v tests.test_cybernetic09n
