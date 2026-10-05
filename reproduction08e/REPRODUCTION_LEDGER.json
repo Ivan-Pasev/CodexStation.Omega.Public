@@ -30,8 +30,13 @@
         "python -m unittest -v tests.test_encoder_b"
       ],
       "exact_commit_source_ci": null,
-      "independent_reproduction": "PENDING_CROSS_REPO_CI",
-      "status": "PARTIAL_SOURCE_NATIVE_REPRODUCTION_PENDING",
+      "independent_reproduction": {
+        "workflow_run_id": 37280622913,
+        "job": "dfpl-public-sentinel",
+        "conclusion": "success",
+        "exact_pin_verified": true
+      },
+      "status": "PARTIAL_SOURCE_NATIVE_REPRODUCTION_PASS",
       "semantic_scope": "Public Encoder B sentinel only",
       "residual": "08D uses PRIMA authorization/effect semantics. Pinned public repo documents those semantics but does not contain the executable private prima-runtime-rs harness described by PRIMA §10."
     },
@@ -81,8 +86,17 @@
           "3.13": "success"
         }
       },
-      "independent_reproduction": "PENDING_CROSS_REPO_CI",
-      "status": "INDEPENDENT_REPRODUCTION_PENDING"
+      "independent_reproduction": {
+        "workflow_run_id": 37280622913,
+        "conclusion": "success",
+        "exact_pin_verified": true,
+        "python": {
+          "3.11": "success",
+          "3.12": "success",
+          "3.13": "success"
+        }
+      },
+      "status": "INDEPENDENT_CROSS_REPO_NATIVE_EXECUTION_PASS"
     },
     {
       "source_family": "NEURAL_LATTICE",
@@ -104,11 +118,17 @@
       "residual": "Exact pinned private commit has successful native CI, but no independent public cross-repository execution is admissible without private-source access."
     }
   ],
-  "aggregate_status": "REPRODUCTION_EXECUTION_PENDING",
+  "aggregate_status": "BOUNDED_REPRODUCTION_PASS_WITH_HOLDS",
   "laws": [
     "PRIVATE_SOURCE_STAYS_PRIVATE",
     "SOURCE_NATIVE_EXACT_COMMIT_CI != INDEPENDENT_REPRODUCTION",
     "SOURCE_NATIVE_LINEAGE_APPLICABLE_CI != INDEPENDENT_REPRODUCTION",
     "PARTIAL_SOURCE_NATIVE_REPRODUCTION != FULL_08D_CORRESPONDENCE_REPRODUCTION"
-  ]
+  ],
+  "execution_witness": {
+    "workflow": "tier-a-independent-reproduction-08e",
+    "run_id": 37280622913,
+    "conclusion": "success",
+    "ledger_validation": "success"
+  }
 }
