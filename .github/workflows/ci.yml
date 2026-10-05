@@ -84,3 +84,28 @@ jobs:
           name: codexstation-omega-public-gemini-v0.8b
           path: build/package08b/codexstation-omega-public-gemini-v0.8b.zip
           if-no-files-found: error
+      - name: Constitutional reference runtime 08C validation
+        run: python tools/validate_runtime08c.py
+      - name: Constitutional reference runtime 08C packaging
+        run: python tools/build_packages08c.py --out build/package08c
+      - name: Upload reference runtime 08C candidates
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@v4
+        with:
+          name: codexstation-omega-public-packages-v0.8c
+          path: build/package08c/*.zip
+          if-no-files-found: error
+      - name: Upload reference runtime 08C ChatGPT candidate
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@v4
+        with:
+          name: codexstation-omega-public-chatgpt-v0.8c
+          path: build/package08c/codexstation-omega-public-v0.8c.zip
+          if-no-files-found: error
+      - name: Upload reference runtime 08C Gemini candidate
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@v4
+        with:
+          name: codexstation-omega-public-gemini-v0.8c
+          path: build/package08c/codexstation-omega-public-gemini-v0.8c.zip
+          if-no-files-found: error

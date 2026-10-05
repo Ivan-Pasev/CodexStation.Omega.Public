@@ -1,0 +1,59 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-PACKAGE-INDEX/0.8c",
+  "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+  "source_branch": "public-omega-reference-runtime-08c",
+  "source_build_head": "74d15fbb79a77a0dc3f599c79215a83c36f68a42",
+  "previous_composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3",
+  "slice_fingerprint": "a7382fc07a734dfe188ee49e6a787bec3576b43b1c34ae6d732656f8ba4db545",
+  "composite_semantic_fingerprint": "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64",
+  "build_witness": {
+    "workflow": "public-omega-ci",
+    "run_id": 37271388713,
+    "head": "ff0939c9d50a74947f500c66a90f845d4ba5c05a",
+    "repository_semantic_fingerprint": "8216327b0689aebdca896eba212fe544fa98d3ed1d6609e27cad8a5c36d886ad",
+    "registry_sha256": "9c82534adf4296f3575ced87780f162dedd045c09af72413a0fe833fb6a499f3",
+    "matrix": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    },
+    "tests": "85 PASS"
+  },
+  "packages": [
+    {
+      "package_id": "cs.package::chatgpt-plugin::v0.8c",
+      "profile": "CHATGPT_PLUGIN",
+      "inner_file": "codexstation-omega-public-v0.8c.zip",
+      "bytes": 58584,
+      "sha256": "7bee590f054951832983e6717569cdfa05eae88149eb10dbc8fbc49378c8d839",
+      "file_count": 31,
+      "github_artifact_id": 11327688902,
+      "github_artifact_digest": "sha256:031bef1b4655c622482b98fa0db30b6f8b9860bf326fca234ca5d0c3599b3f25",
+      "drive_artifact_file_id": "1AhyZDJC4qvszzQqMFsXNgly00Z30fp5r",
+      "live_conformance": "OPEN"
+    },
+    {
+      "package_id": "cs.package::gemini-notebook::v0.8c",
+      "profile": "GEMINI_NOTEBOOK",
+      "inner_file": "codexstation-omega-public-gemini-v0.8c.zip",
+      "bytes": 42107,
+      "sha256": "da4e0bd3f89a84a4de45d77472f088b550426c306243f0f73e13dfcdf9219258",
+      "file_count": 23,
+      "github_artifact_id": 11327614169,
+      "github_artifact_digest": "sha256:4804129cae333b5366dd3696165cb3cfcfb3ce8750ded74fb3193d62984e5ee0",
+      "drive_artifact_file_id": "1Y_mc8N9Gy2ECHddA1akdvxodrKHqTv3W",
+      "live_conformance": "OPEN"
+    }
+  ],
+  "combined_artifact": {
+    "github_artifact_id": 11327648983,
+    "github_artifact_digest": "sha256:495d73c76f3e64e4ea204dbe836c3e1d514e8ba2a5ea297816343109d055bb21",
+    "drive_file_id": "1QQxsS5Z0kwiN4T3iJqCzEPzQDtgTEhp3",
+    "contains": [
+      "codexstation-omega-public-v0.8c.zip",
+      "codexstation-omega-public-gemini-v0.8c.zip"
+    ]
+  },
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}

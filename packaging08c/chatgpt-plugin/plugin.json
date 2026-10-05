@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codexstation-omega-public",
+  "version": "0.8.0-alpha.2",
+  "description": "Public CodexStation Omega source-world mounting, pinned Tier-A constitutional ABI, deterministic reference runtime, evidence-gated aggregation and cross-provider orchestration candidate.",
+  "repository": "https://github.com/Ivan-Pasev/CodexStation.Omega.Public",
+  "keywords": [
+    "codexstation",
+    "project-mount",
+    "constitutional-abi",
+    "reference-runtime",
+    "knowledge-lattice",
+    "kernel-foundry",
+    "project-harvest",
+    "evidence-gates",
+    "orchestration",
+    "continuity"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "CodexStation Ω Public",
+        "shortDescription": "Mount governed projects, bind a constitutional ABI, and run the deterministic Ω reference runtime",
+        "longDescription": "Operate the public CodexStation Ω fabric with source-world mounting, revision-pinned kernel bindings, a provider-independent constitutional ABI, a deterministic fail-closed reference runtime, provenance-preserving aggregation, Holotopes, Archetonic Plates and explicit authority/evidence boundaries.",
+        "developerName": "GILC",
+        "category": "Productivity",
+        "defaultPrompt": [
+          "ROOT() — resolve current public Ω state, source bindings, semantic parent, reference-runtime status and open gates.",
+          "MOUNT::SOURCE_ROOT=<url> — resolve the governed source project before aggregation.",
+          "NEXT() — continue project work while harvesting, ABI-binding and validating the highest-value admissible reusable delta."
+        ]
+      }
+    }
+  }
+}

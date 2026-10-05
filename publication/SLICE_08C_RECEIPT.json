@@ -1,0 +1,65 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SLICE-RECEIPT/0.8c",
+  "receipt_id": "cs.public.receipt::constitutional-reference-runtime-08c",
+  "target": "OMEGA_CONSTITUTIONAL_REFERENCE_RUNTIME_SLICE_08C",
+  "result": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "public-omega-reference-runtime-08c",
+  "pull_request": 10,
+  "validated_head": "ff0939c9d50a74947f500c66a90f845d4ba5c05a",
+  "runtime_id": "cs.runtime::constitutional-reference::v0.8c",
+  "source_adapters": 5,
+  "reference_scenarios": 6,
+  "tests": "85 PASS",
+  "runtime_laws": [
+    "PREDECESSOR_AUTHORITY_ONLY",
+    "NO_SUCCESSOR_AUTHORITY_BOOTSTRAP",
+    "STALE_PARENT -> HOLD",
+    "UNRESOLVED_PROTECTED_INVARIANT -> HOLD",
+    "EXACT_AUTHORIZED_PLAN_BINDING_REQUIRED",
+    "UNKNOWN_EFFECT_OUTCOME -> HOLD",
+    "CONFLICT_IS_DURABLE_STATE",
+    "RECOVERY_MISMATCH -> QUARANTINE"
+  ],
+  "slice_fingerprint": "a7382fc07a734dfe188ee49e6a787bec3576b43b1c34ae6d732656f8ba4db545",
+  "composite_semantic_fingerprint": "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64",
+  "ci": {
+    "run_id": 37271388713,
+    "python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    },
+    "validator": "PASS",
+    "packager": "PASS",
+    "repository_semantic_fingerprint": "8216327b0689aebdca896eba212fe544fa98d3ed1d6609e27cad8a5c36d886ad",
+    "registry_sha256": "9c82534adf4296f3575ced87780f162dedd045c09af72413a0fe833fb6a499f3"
+  },
+  "package_index": "packaging08c/PACKAGE_INDEX.json",
+  "open_gates": [
+    "NB00_LIVE_CONFORMANCE_01",
+    "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
+    "LICENSE_IP_REVIEW"
+  ],
+  "release_eligible": false,
+  "authority_delta": "NONE",
+  "next_target": "OMEGA_TIER_A_INTEGRATION_HARNESS_SLICE_08D",
+  "does_not_establish": [
+    "production readiness",
+    "external effect confirmation",
+    "full cross-repository integration",
+    "live provider conformance",
+    "formal theoremhood",
+    "independent reproduction",
+    "release eligibility"
+  ],
+  "drive": {
+    "chatgpt_artifact_id": "1AhyZDJC4qvszzQqMFsXNgly00Z30fp5r",
+    "gemini_artifact_id": "1Y_mc8N9Gy2ECHddA1akdvxodrKHqTv3W",
+    "combined_pack_id": "1QQxsS5Z0kwiN4T3iJqCzEPzQDtgTEhp3"
+  },
+  "package_hashes": {
+    "chatgpt": "7bee590f054951832983e6717569cdfa05eae88149eb10dbc8fbc49378c8d839",
+    "gemini": "da4e0bd3f89a84a4de45d77472f088b550426c306243f0f73e13dfcdf9219258"
+  }
+}
