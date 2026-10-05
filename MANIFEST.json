@@ -119,6 +119,12 @@
     "packager": "tools/build_packages08a.py",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
     "slice_fingerprint": "ea077212fa34edd670c687ea66603405a8faddf9f9c94c9ad978707debc33593",
-    "composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c"
+    "composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c",
+    "package_index": "packaging08a/PACKAGE_INDEX.json",
+    "chatgpt_plugin_sha256": "aca5ff898ea80790cee946f8fe8ebfb36041861a13fc5f9c6a7243b4a748aca2",
+    "gemini_notebook_sha256": "f1e441e38c412b3c69298550700c3c7fff0f25f499fd7d3d4871e85ad9e5b169",
+    "build_witness_run": 37265111941,
+    "artifact_id": 11325578772,
+    "combined_drive_file_id": "1h2BjaYJHwREMACx8dkgmQneu-nOOMfvG"
   }
 }
