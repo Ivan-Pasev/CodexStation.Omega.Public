@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.8h",
+  "version": "0.9a",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -1081,5 +1081,15 @@
     "composite_semantic_fingerprint": "39db2bcb7652a6ee31bb796d2c8c37c3c93bd9a50c891693d23362c431bf49cb",
     "validation_run": 37287811957,
     "artifact_id": 11335495471
+  },
+  "cybernetic_control_plane_09a": {
+    "capability_lattice": "cybernetic09a/CAPABILITY_LATTICE.json",
+    "control_policy": "cybernetic09a/CONTROL_POLICY.json",
+    "frontier_seed": "cybernetic09a/FRONTIER_SEED.json",
+    "controller": "cybernetic09a/controller.py",
+    "validator": "tools/validate_cybernetic09a.py",
+    "status": "CYBERNETIC_CONTROL_LOOP_PASS_CANDIDATE",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09A_RECEIPT.json"
   }
 }
