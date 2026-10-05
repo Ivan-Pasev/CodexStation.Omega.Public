@@ -10,6 +10,8 @@ FILES=[
  "runner08h/run_source.py",
  "runner08h/README.md",
  "tools/validate_runner_pack08h.py",
+ "tools/build_runner_pack08h.py",
+ "tests/test_runner08h.py",
  "publication/SLICE_08H_RECEIPT.json"
 ]
 
