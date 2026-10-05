@@ -1,0 +1,46 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-REFERENCE-RUNTIME/0.8c",
+  "runtime_id": "cs.runtime::constitutional-reference::v0.8c",
+  "status": "REFERENCE_IMPLEMENTATION_CANDIDATE",
+  "previous_composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3",
+  "abi": "cs.abi::constitutional-core::v0.8b",
+  "execution_mode": "DETERMINISTIC_PURE_BY_DEFAULT",
+  "external_effect_default": "UNKNOWN_OUTCOME_AND_HOLD",
+  "local_operations": [
+    "SET",
+    "DELETE",
+    "ASSERT",
+    "GRANT",
+    "EFFECT"
+  ],
+  "governance_only_operations": [
+    "GRANT"
+  ],
+  "source_adapters": [
+    "DIGITAL_FABRICA_CORE",
+    "DFPL_PRIMA",
+    "HIGHESTONE",
+    "GILC_CODEXSTATION",
+    "NEURAL_LATTICE"
+  ],
+  "invariants": [
+    "AUTHORIZATION_EVALUATED_ON_PREDECESSOR_STATE",
+    "NO_SUCCESSOR_AUTHORITY_BOOTSTRAP",
+    "NON_GOVERNANCE_TRANSITION_CANNOT_IMPLICITLY_ESCALATE_AUTHORITY",
+    "PARENT_STATE_IDENTITY_MUST_MATCH_CURRENT_STATE",
+    "PROTECTED_INVARIANTS_FAIL_CLOSED",
+    "EXACT_AUTHORIZED_PLAN_BINDING_REQUIRED",
+    "UNSUPPORTED_EFFECTS_ARE_REJECTED_NOT_APPROXIMATED",
+    "UNKNOWN_OUTCOME_IS_PRESERVED_AS_UNKNOWN",
+    "CONFLICT_IS_DURABLE_STATE",
+    "RECOVERY_WITH_UNVERIFIED_OBJECTS_OR_RECEIPT_QUARANTINES"
+  ],
+  "evidence_boundary": [
+    "reference runtime is not production runtime",
+    "pure deterministic effect model does not establish external effects",
+    "source adapter conformance does not establish full source-repository integration",
+    "tests do not establish formal theoremhood"
+  ],
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}
