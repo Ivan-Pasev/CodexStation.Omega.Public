@@ -1,0 +1,43 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PRIVATE-BRIDGE-PINS/0.8f",
+  "sources": [
+    {
+      "source_family": "DIGITAL_FABRICA_CORE",
+      "repository": "Ivan-Pasev/Digital.Fabrica.Core",
+      "source_commit": "c3e142d73ddbbcdfd5677aed242da3c6c52ae9e6",
+      "visibility": "private",
+      "native_commands": [
+        "npm install --ignore-scripts",
+        "npm run typecheck",
+        "npm run build"
+      ],
+      "declared_test_surface": "package.json declares npm test but pinned tree contains no *.test.* files",
+      "expected_receipt_scope": "TYPECHECK_BUILD"
+    },
+    {
+      "source_family": "HIGHESTONE",
+      "repository": "Ivan-Pasev/CodexStation.HighestOne",
+      "source_commit": "a4f237aba8156d0bf6f1354457275de9a67ac21a",
+      "visibility": "private",
+      "native_commands": [
+        "cd formal/lean",
+        "bash tools/bootstrap_and_check.sh"
+      ],
+      "expected_receipt_scope": "LEAN_KERNEL_GATE"
+    },
+    {
+      "source_family": "NEURAL_LATTICE",
+      "repository": "Ivan-Pasev/neural-lattice",
+      "source_commit": "57da881b28a5a4e924b900a18e2e59f3a202f6fe",
+      "visibility": "private",
+      "native_commands": [
+        "npm install --ignore-scripts",
+        "npm run validate"
+      ],
+      "expected_receipt_scope": "FULL_NATIVE_VALIDATE"
+    }
+  ],
+  "independent_execution_required": true,
+  "public_source_copy_forbidden": true,
+  "authority_delta": "NONE"
+}

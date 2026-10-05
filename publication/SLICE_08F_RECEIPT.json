@@ -1,0 +1,20 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.8f",
+  "slice": "OMEGA_TIER_A_PRIVATE_REPRODUCTION_BRIDGE_SLICE_08F",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "omega-08f-bridge",
+  "predecessor": "OMEGA_TIER_A_INDEPENDENT_REPRODUCTION_SLICE_08E",
+  "previous_composite_semantic_fingerprint": "3c140cbdb00ca9e5725ce0742928d8a9085f2649c7bddffb4b18e6f352c0b5c7",
+  "status": "BRIDGE_IMPLEMENTED_EXECUTION_HOLD",
+  "restricted_source_execution": {
+    "DIGITAL_FABRICA_CORE": "HOLD_EXTERNAL_RUNNER",
+    "HIGHESTONE": "HOLD_EXTERNAL_RUNNER",
+    "NEURAL_LATTICE": "HOLD_EXTERNAL_RUNNER"
+  },
+  "connector_write_attempt": "BLOCKED_BY_CONNECTED_GITHUB_SAFETY_BOUNDARY",
+  "source_copy_performed": false,
+  "sanitized_receipt_abi": "bridge08f/RECEIPT_SCHEMA.json",
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "next_target": "OMEGA_TIER_A_PRIVATE_RECEIPT_INGESTION_SLICE_08G"
+}
