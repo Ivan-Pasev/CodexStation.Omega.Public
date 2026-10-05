@@ -1039,8 +1039,9 @@
     "profile": "reproduction08e/REPRODUCTION_PROFILE.json",
     "ledger": "reproduction08e/REPRODUCTION_LEDGER.json",
     "workflow": ".github/workflows/reproduce-tier-a-08e.yml",
-    "status": "REPRODUCTION_EXECUTION_PENDING",
+    "status": "BOUNDED_REPRODUCTION_PASS_WITH_HOLDS",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_08E_RECEIPT.json"
+    "receipt": "publication/SLICE_08E_RECEIPT.json",
+    "execution_run": 37280622913
   }
 }
