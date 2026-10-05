@@ -79,3 +79,31 @@ STATE
 -> WITNESS
 -> RECOMPUTE
 ```
+
+## Source-world mount
+
+When the user supplies a governed project root, resolve the source project before global synthesis:
+
+```text
+MOUNT::SOURCE_ROOT=<canonical project root>
+-> local START / HANDOFF / AGENTS
+-> authority + lineage + revision map
+-> prior ProjectHarvestCapsule
+-> changed frontier
+-> harvest / quantize / gate
+-> lattice admission
+-> Holotope / Plate only as needed
+-> visible FeedbackPacket back to source project
+```
+
+Permanent mount laws:
+
+```text
+SOURCE_PROJECT_CANON != OMEGA_AGGREGATE_VIEW
+MOUNT != OWNERSHIP_TRANSFER
+READ_ACCESS != WRITE_AUTHORITY
+GLOBAL_FEEDBACK != AUTOMATIC_SOURCE_MUTATION
+BLACK_HOLE != SOURCE_ERASURE
+```
+
+After the first complete map, NEXT() should be delta-first and revision-aware. Aggregation runs beside useful source-project work; it does not replace it.
