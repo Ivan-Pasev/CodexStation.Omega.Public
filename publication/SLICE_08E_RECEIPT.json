@@ -3,7 +3,7 @@
   "slice": "OMEGA_TIER_A_INDEPENDENT_REPRODUCTION_SLICE_08E",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "branch": "public-omega-independent-reproduction-08e",
-  "status": "REPRODUCTION_EXECUTION_PENDING",
+  "status": "BOUNDED_REPRODUCTION_PASS_WITH_HOLDS",
   "predecessor": "OMEGA_TIER_A_INTEGRATION_HARNESS_SLICE_08D",
   "previous_composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7",
   "planned_independent_reproduction": [
@@ -30,5 +30,20 @@
     "external effect confirmation",
     "release eligibility",
     "scientific confirmation"
-  ]
+  ],
+  "execution_witness": {
+    "workflow": "tier-a-independent-reproduction-08e",
+    "run_id": 37280622913,
+    "conclusion": "success",
+    "independent_results": {
+      "DFPL_PRIMA": "PARTIAL_SOURCE_NATIVE_REPRODUCTION_PASS",
+      "GILC_CODEXSTATION": "INDEPENDENT_CROSS_REPO_NATIVE_EXECUTION_PASS"
+    },
+    "preserved_holds": [
+      "DIGITAL_FABRICA_CORE",
+      "HIGHESTONE",
+      "NEURAL_LATTICE",
+      "DFPL_PRIMA_FULL_AUTHORIZATION_EFFECT_CORRESPONDENCE"
+    ]
+  }
 }
