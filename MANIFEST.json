@@ -526,6 +526,23 @@
     "governance_frontier": "LICENSE_IP_REVIEW",
     "predecessor_composite_semantic_fingerprint": "0be842a754cdcbdeccb08bda090f719cb5c3d03d1e50b1100a323625abe4f2da",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09K_RECEIPT.json"
+    "receipt": "publication/SLICE_09K_RECEIPT.json",
+    "slice_fingerprint": "cd11da51dbe31e76e43637b26608a77a529ca105c56903b6e733fa0e65376e26",
+    "composite_semantic_fingerprint": "15be646c46117179f3d8372db17e2822c4c6224fb9ca89b297ca59cbb03cf8fb",
+    "validation_run": 37315508255,
+    "scheduler_next_action": "GOVERNANCE:LICENSE_IP_REVIEW",
+    "waiting_for_evidence": [
+      "08I_RESTRICTED_EXECUTION_RECEIPTS",
+      "09J_LIVE_HOST_RETURNS",
+      "NB00_LIVE_CONFORMANCE_01",
+      "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
+      "HIGHESTONE_RELEASE_EVIDENCE",
+      "DFPL_PRIMA_FULL_RUNTIME_REPRODUCTION"
+    ],
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
   }
 }
