@@ -1,0 +1,7 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SUPERSESSION-REGISTRY/0.9n",
+  "supersessions": [],
+  "aliases": [],
+  "note": "Empty is valid when the audited declaration corpus has no collision requiring explicit supersession or aliasing.",
+  "authority_delta": "NONE"
+}
