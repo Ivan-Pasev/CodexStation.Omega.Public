@@ -1,0 +1,56 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-ORCHESTRATION-POLICY/0.9c",
+  "step_states": [
+    "PENDING",
+    "READY",
+    "RUNNING",
+    "PASS",
+    "FAIL",
+    "HOLD",
+    "UNKNOWN_OUTCOME",
+    "QUARANTINE",
+    "RECOVERED",
+    "FALLBACK"
+  ],
+  "dependency_rule": "A step becomes READY only when all dependencies are PASS or RECOVERED.",
+  "skill_binding_order": [
+    "INTENT_MATCH",
+    "QUALIFIED_STATUS",
+    "CAPABILITY_BIND",
+    "AUTHORITY_CEILING",
+    "EVIDENCE_CEILING"
+  ],
+  "retry": {
+    "default_max_attempts": 1,
+    "allowed_only_when": "failure is retryable and no external effect is unresolved",
+    "forbidden_for": [
+      "UNKNOWN_OUTCOME",
+      "IRREVERSIBLE_EXTERNAL_EFFECT"
+    ]
+  },
+  "fallback": {
+    "rule": "fallback must have equal-or-lower authority ceiling and may not increase evidence ceiling",
+    "classes": [
+      "NON_DESTRUCTIVE_ANALYSIS",
+      "HOLD",
+      "QUARANTINE"
+    ]
+  },
+  "telemetry": {
+    "records": [
+      "attempts",
+      "status",
+      "skill_uri",
+      "duration_class",
+      "failure_code",
+      "recovery_action"
+    ],
+    "forbidden_inference": [
+      "authority promotion",
+      "truth promotion",
+      "scientific promotion"
+    ]
+  },
+  "authority_delta": "NONE",
+  "release_eligible": false
+}
