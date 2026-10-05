@@ -1,0 +1,35 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-RUNTIME-SCENARIOS/0.8c",
+  "scenarios": [
+    {
+      "id": "pass-local-transition",
+      "expected": "PASS",
+      "purpose": "valid predecessor, authority, invariant and plan binding"
+    },
+    {
+      "id": "stale-parent",
+      "expected": "HOLD",
+      "purpose": "reject stale/foreign parent"
+    },
+    {
+      "id": "missing-protected-invariant",
+      "expected": "HOLD",
+      "purpose": "fail closed on unresolved invariant"
+    },
+    {
+      "id": "non-governance-authority-escalation",
+      "expected": "HOLD",
+      "purpose": "prevent successor authority bootstrap"
+    },
+    {
+      "id": "unknown-external-effect",
+      "expected": "UNKNOWN_OUTCOME",
+      "purpose": "preserve unknown external outcome"
+    },
+    {
+      "id": "recovery-mismatch",
+      "expected": "QUARANTINE",
+      "purpose": "fail closed on receipt/state mismatch"
+    }
+  ]
+}
