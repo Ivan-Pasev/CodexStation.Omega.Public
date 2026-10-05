@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.8c",
+  "version": "0.8d",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -1021,5 +1021,15 @@
     "slice_fingerprint": "a7382fc07a734dfe188ee49e6a787bec3576b43b1c34ae6d732656f8ba4db545",
     "composite_semantic_fingerprint": "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64",
     "package_index": "packaging08c/PACKAGE_INDEX.json"
+  },
+  "aggregation_slice_08d": {
+    "integration_contract": "aggregation08d/INTEGRATION_CONTRACT.md",
+    "semantic_extension": "aggregation08d/SEMANTIC_EXTENSION.json",
+    "source_fixtures": "integration08d/SOURCE_FIXTURES.json",
+    "harness_profile": "integration08d/HARNESS_PROFILE.json",
+    "harness": "integration08d/harness.py",
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_08D_RECEIPT.json"
   }
 }
