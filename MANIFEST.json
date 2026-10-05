@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8g",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8h",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "TIER_A_RECEIPT_INGESTION_08G_CAPABILITY_PASS_NO_NEW_RECEIPTS",
+  "registry_state": "TIER_A_RESTRICTED_RUNNER_PACK_08H_IMPLEMENTED_EXECUTION_PENDING",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_TIER_A_RESTRICTED_RUNNER_EXECUTION_PACK_SLICE_08H",
+  "current_target": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -238,5 +238,17 @@
       "3.12": "success",
       "3.13": "success"
     }
+  },
+  "runner08h": {
+    "profiles": "runner08h/FAMILY_PROFILES.json",
+    "runner": "runner08h/run_source.py",
+    "readme": "runner08h/README.md",
+    "validator": "tools/validate_runner_pack08h.py",
+    "builder": "tools/build_runner_pack08h.py",
+    "tests": "tests/test_runner08h.py",
+    "status": "RUNNER_PACK_IMPLEMENTED_EXECUTION_PENDING",
+    "predecessor_composite_semantic_fingerprint": "f557bd38c1cfa705ea37a1d97168b7ff218e85e9abdd8086e5aa23cd97795488",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_08H_RECEIPT.json"
   }
 }
