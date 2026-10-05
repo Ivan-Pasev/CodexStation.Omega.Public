@@ -1,0 +1,49 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-CYBERNETIC-CONTROL-POLICY/0.9a",
+  "controller_id": "cs.controller::omega-next::v0.9a",
+  "loop": [
+    "OBSERVE",
+    "ESTIMATE",
+    "FRONTIER",
+    "SELECT",
+    "COMPILE",
+    "CAPABILITY_RESOLVE",
+    "AUTHORITY_CHECK",
+    "EXECUTE",
+    "VERIFY",
+    "CRITIQUE",
+    "LEARN",
+    "CRYSTALLIZE"
+  ],
+  "mission_states": [
+    "CANDIDATE",
+    "ADMISSIBLE",
+    "HELD_CAPABILITY",
+    "HELD_AUTHORITY",
+    "EXECUTED",
+    "VERIFIED",
+    "FAILED",
+    "UNKNOWN_OUTCOME"
+  ],
+  "selection": {
+    "rule": "highest priority among missions whose hard preconditions are satisfied",
+    "blocked_mission_behavior": "retain in frontier with explicit hold reason",
+    "no_admissible_behavior": "HOLD"
+  },
+  "learning": {
+    "allowed_updates": [
+      "observed capability status",
+      "receipt-linked success/failure counters",
+      "known failure modes",
+      "frontier residuals"
+    ],
+    "forbidden_updates": [
+      "authority grants from success",
+      "truth status from confidence",
+      "scientific status from implementation pass"
+    ]
+  },
+  "external_effect_rule": "Without an independent effect receipt/observer, outcome remains UNKNOWN_OUTCOME.",
+  "authority_delta": "NONE",
+  "release_eligible": false
+}

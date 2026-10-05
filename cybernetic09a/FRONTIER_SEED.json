@@ -1,0 +1,48 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-CYBERNETIC-FRONTIER/0.9a",
+  "missions": [
+    {
+      "id": "mission.08i.restricted-receipts",
+      "priority": 100,
+      "intent": "Acquire direct exact-pin execution receipts for held Tier-A restricted sources.",
+      "required_capabilities": [
+        "cap.execute.restricted_source"
+      ],
+      "required_authority": [
+        "A2"
+      ],
+      "mode": "EVIDENCE_ACQUISITION",
+      "status": "HELD_CAPABILITY",
+      "hold_reason": "08H runner ready; authorized external execution receipt not yet returned."
+    },
+    {
+      "id": "mission.09a.cybernetic-self-validation",
+      "priority": 90,
+      "intent": "Validate the cybernetic controller and capability firewall against deterministic fixtures.",
+      "required_capabilities": [
+        "cap.simulate.reference_runtime",
+        "cap.execute.public_ci"
+      ],
+      "required_authority": [
+        "A0"
+      ],
+      "mode": "LOCAL_VERIFICATION",
+      "status": "ADMISSIBLE"
+    },
+    {
+      "id": "mission.live-provider-conformance",
+      "priority": 80,
+      "intent": "Discharge live provider conformance gate.",
+      "required_capabilities": [
+        "cap.external_effect.confirmed"
+      ],
+      "required_authority": [
+        "A2"
+      ],
+      "mode": "EXTERNAL_VERIFICATION",
+      "status": "HELD_CAPABILITY"
+    }
+  ],
+  "law": "A blocked higher-priority mission MUST NOT starve lower-priority admissible work.",
+  "authority_delta": "NONE"
+}

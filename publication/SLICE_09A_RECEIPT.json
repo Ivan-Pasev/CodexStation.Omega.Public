@@ -1,0 +1,14 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.9a",
+  "slice": "OMEGA_CYBERNETIC_CONTROL_PLANE_SLICE_09A",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "omega-09a-cybernetic-control-plane",
+  "predecessor": "OMEGA_TIER_A_RESTRICTED_RUNNER_EXECUTION_PACK_SLICE_08H",
+  "previous_composite_semantic_fingerprint": "39db2bcb7652a6ee31bb796d2c8c37c3c93bd9a50c891693d23362c431bf49cb",
+  "status": "CYBERNETIC_CONTROL_LOOP_PASS_CANDIDATE",
+  "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+  "capability_frontier": "09A_ACTIVE",
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "next_target": "OMEGA_CYBERNETIC_MISSION_COMPILER_AND_EFFECT_GATE_SLICE_09B"
+}

@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8h",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9a",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "TIER_A_RESTRICTED_RUNNER_PACK_08H_IMPLEMENTED_EXECUTION_PENDING",
+  "registry_state": "CYBERNETIC_CONTROL_PLANE_09A_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I",
+  "current_target": "OMEGA_CYBERNETIC_MISSION_COMPILER_AND_EFFECT_GATE_SLICE_09B",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -260,6 +260,31 @@
       "uploaded_artifact_sha256": "c9fbe9d543db64f966cfcb2dc6d2529dce93379e7a33c1863a4ef7f72fab214e",
       "file_count": 9,
       "contains_restricted_source": false
+    }
+  },
+  "parallel_frontiers": {
+    "evidence": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I",
+    "capability": "OMEGA_CYBERNETIC_CONTROL_PLANE_SLICE_09A"
+  },
+  "cybernetic09a": {
+    "capability_lattice": "cybernetic09a/CAPABILITY_LATTICE.json",
+    "control_policy": "cybernetic09a/CONTROL_POLICY.json",
+    "frontier_seed": "cybernetic09a/FRONTIER_SEED.json",
+    "controller": "cybernetic09a/controller.py",
+    "validator": "tools/validate_cybernetic09a.py",
+    "tests": "tests/test_cybernetic09a.py",
+    "status": "CYBERNETIC_CONTROL_LOOP_PASS_CANDIDATE",
+    "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+    "predecessor_composite_semantic_fingerprint": "39db2bcb7652a6ee31bb796d2c8c37c3c93bd9a50c891693d23362c431bf49cb",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09A_RECEIPT.json",
+    "slice_fingerprint": "a183fd56bdef60123697617937f6c7a87142a4770667debf3d35742d94b51304",
+    "composite_semantic_fingerprint": "69f15615e127194a801aa3f92913678461cbcd136e9fbb0eddc3688be6421102",
+    "validation_run": 37289084682,
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
     }
   }
 }

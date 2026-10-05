@@ -1,0 +1,117 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-CAPABILITY-LATTICE/0.9a",
+  "lattice_id": "cs.capability-lattice::omega::v0.9a",
+  "law": "CAPABILITY_LEVEL != AUTHORITY_LEVEL",
+  "levels": [
+    {
+      "level": "C0",
+      "name": "OBSERVE",
+      "meaning": "Read/inspect state and evidence without mutation."
+    },
+    {
+      "level": "C1",
+      "name": "MODEL_SIMULATE",
+      "meaning": "Deterministic local modeling, validation and dry-run reasoning."
+    },
+    {
+      "level": "C2",
+      "name": "LOCAL_EXECUTE",
+      "meaning": "Execute bounded local transformations with receipts."
+    },
+    {
+      "level": "C3",
+      "name": "CONNECTED_MUTATE",
+      "meaning": "Mutate connected digital systems under explicit permission and validation."
+    },
+    {
+      "level": "C4",
+      "name": "EXTERNAL_EFFECT",
+      "meaning": "Issue or confirm non-local external effects through explicit effect gateways."
+    },
+    {
+      "level": "C5",
+      "name": "CLOSED_LOOP_CYBERPHYSICAL",
+      "meaning": "Sense-act-verify physical or cyber-physical control with independent observation."
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "cap.observe.public_repo",
+      "level": "C0",
+      "status": "OBSERVED",
+      "evidence": [
+        "GitHub read access",
+        "Ω public CI"
+      ]
+    },
+    {
+      "id": "cap.observe.canonical_drive",
+      "level": "C0",
+      "status": "OBSERVED",
+      "evidence": [
+        "canonical Drive control-plane reads"
+      ]
+    },
+    {
+      "id": "cap.simulate.reference_runtime",
+      "level": "C1",
+      "status": "OBSERVED",
+      "evidence": [
+        "runtime08c validation"
+      ]
+    },
+    {
+      "id": "cap.execute.public_ci",
+      "level": "C2",
+      "status": "OBSERVED",
+      "evidence": [
+        "multi-version Ω CI runs"
+      ]
+    },
+    {
+      "id": "cap.mutate.public_repo",
+      "level": "C3",
+      "status": "OBSERVED",
+      "evidence": [
+        "bounded branch/file/PR mutations"
+      ]
+    },
+    {
+      "id": "cap.mutate.canonical_drive",
+      "level": "C3",
+      "status": "OBSERVED",
+      "evidence": [
+        "revision-bound Docs updates"
+      ]
+    },
+    {
+      "id": "cap.execute.restricted_source",
+      "level": "C3",
+      "status": "HELD_EXTERNAL",
+      "evidence": [
+        "08H runner ready; no returned direct receipts"
+      ]
+    },
+    {
+      "id": "cap.external_effect.confirmed",
+      "level": "C4",
+      "status": "UNOBSERVED",
+      "evidence": []
+    },
+    {
+      "id": "cap.cyberphysical.closed_loop",
+      "level": "C5",
+      "status": "UNOBSERVED",
+      "evidence": []
+    }
+  ],
+  "invariants": [
+    "CAPABILITY_AVAILABILITY != AUTHORIZATION",
+    "AUTHORIZATION != EXECUTION",
+    "EXECUTION != VERIFIED_OUTCOME",
+    "VERIFIED_OUTCOME != SCIENTIFIC_CONFIRMATION",
+    "HELD_CAPABILITY_CANNOT_BE_ASSUMED",
+    "CAPABILITY_ESCALATION_REQUIRES_NEW_OBSERVATION"
+  ],
+  "authority_delta": "NONE"
+}
