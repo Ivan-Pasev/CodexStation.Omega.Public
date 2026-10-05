@@ -1005,15 +1005,21 @@
     "reference_scenarios": "runtime08c/REFERENCE_SCENARIOS.json",
     "runtime": "runtime08c/runtime.py",
     "adapters": "runtime08c/adapters.py",
-    "status": "IMPLEMENTED_PENDING_CI",
-    "authority_delta": "NONE"
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+    "authority_delta": "NONE",
+    "slice_fingerprint": "a7382fc07a734dfe188ee49e6a787bec3576b43b1c34ae6d732656f8ba4db545",
+    "composite_semantic_fingerprint": "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64",
+    "receipt": "publication/SLICE_08C_RECEIPT.json"
   },
   "packaging_slice_08c": {
     "chatgpt_plugin": "packaging08c/chatgpt-plugin/PACKAGING.json",
     "gemini_notebook": "packaging08c/gemini-notebook/PACKAGING.json",
     "packager": "tools/build_packages08c.py",
-    "status": "IMPLEMENTED_PENDING_CI",
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
     "archive_hashes": "EXTERNAL_PACKAGE_INDEX_TO_AVOID_SELF_REFERENCE",
-    "authority_delta": "NONE"
+    "authority_delta": "NONE",
+    "slice_fingerprint": "a7382fc07a734dfe188ee49e6a787bec3576b43b1c34ae6d732656f8ba4db545",
+    "composite_semantic_fingerprint": "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64",
+    "package_index": "packaging08c/PACKAGE_INDEX.json"
   }
 }
