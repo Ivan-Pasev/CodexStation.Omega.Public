@@ -1183,6 +1183,10 @@
     "status": "HOST_WITNESS_RUNNER_PACK_IMPLEMENTED_LIVE_EXECUTION_PENDING",
     "live_host_witness_obtained": false,
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09H_RECEIPT.json"
+    "receipt": "publication/SLICE_09H_RECEIPT.json",
+    "slice_fingerprint": "a91c186ce7742b0b5ae9e45c69c7e01ba89f1f45ae712ffb6f98ceedeec60627",
+    "composite_semantic_fingerprint": "3d5282a9f1649c63555db3813bbbc6cc76035cd039e7ab8f5acff051af827a84",
+    "validation_run": 37313169299,
+    "artifact_id": 11346428555
   }
 }
