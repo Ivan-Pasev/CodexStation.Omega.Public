@@ -1,0 +1,13 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.9b",
+  "slice": "OMEGA_CYBERNETIC_MISSION_COMPILER_AND_EFFECT_GATE_SLICE_09B",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "omega-09b-mission-compiler-effect-gate",
+  "predecessor": "OMEGA_CYBERNETIC_CONTROL_PLANE_SLICE_09A",
+  "previous_composite_semantic_fingerprint": "69f15615e127194a801aa3f92913678461cbcd136e9fbb0eddc3688be6421102",
+  "status": "MISSION_COMPILER_EFFECT_GATE_PASS_CANDIDATE",
+  "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "next_target": "OMEGA_CYBERNETIC_SKILL_BINDER_AND_RECOVERY_ORCHESTRATOR_SLICE_09C"
+}

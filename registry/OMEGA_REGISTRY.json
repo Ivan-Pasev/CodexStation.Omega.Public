@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.9a",
+  "version": "0.9b",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -1094,5 +1094,17 @@
     "slice_fingerprint": "a183fd56bdef60123697617937f6c7a87142a4770667debf3d35742d94b51304",
     "composite_semantic_fingerprint": "69f15615e127194a801aa3f92913678461cbcd136e9fbb0eddc3688be6421102",
     "validation_run": 37289084682
+  },
+  "mission_compiler_09b": {
+    "mission_plan_schema": "cybernetic09b/MISSION_PLAN_SCHEMA.json",
+    "effect_gate_policy": "cybernetic09b/EFFECT_GATE_POLICY.json",
+    "compiler": "cybernetic09b/compiler.py",
+    "validator": "tools/validate_cybernetic09b.py",
+    "status": "MISSION_COMPILER_EFFECT_GATE_PASS_CANDIDATE",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09B_RECEIPT.json",
+    "slice_fingerprint": "68cf7ddaae57bebc179343512263a6a58dfaac876605e7ccb2de5f6fe38abb5e",
+    "composite_semantic_fingerprint": "bda8728a88b61a89781c6f0ae070ddfccb57bfc463a2191bcb3f8a2acb314501",
+    "validation_run": 37300622038
   }
 }

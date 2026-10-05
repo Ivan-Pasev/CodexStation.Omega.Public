@@ -1,0 +1,28 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-MISSION-PLAN/0.9b",
+  "required": [
+    "plan_id",
+    "mission_id",
+    "project_id",
+    "principal_id",
+    "mode",
+    "intent",
+    "required_capabilities",
+    "required_authority",
+    "local_operations",
+    "external_effects",
+    "protected_invariants",
+    "reversibility",
+    "plan_digest"
+  ],
+  "laws": [
+    "MISSION_PLAN_IS_IMMUTABLY_DIGEST_BOUND",
+    "LOCAL_OPERATIONS_ROUTE_TO_CONSTITUTIONAL_RUNTIME",
+    "EXTERNAL_EFFECTS_ROUTE_TO_EFFECT_GATE",
+    "EFFECT_RECEIPT_MUST_MATCH_EFFECT_ID_AND_PLAN_DIGEST",
+    "NO_MATCHING_EFFECT_RECEIPT_MEANS_UNKNOWN_OUTCOME",
+    "CAPABILITY_BINDING_DOES_NOT_CREATE_AUTHORITY",
+    "ROLLBACK_REQUIRES_REVERSIBILITY_AND_VERIFIED_PREDECESSOR"
+  ],
+  "authority_delta": "NONE"
+}
