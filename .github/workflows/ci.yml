@@ -120,3 +120,8 @@ jobs:
         run: |
           python tools/verify_private_receipt08f.py
           python tools/validate_bridge08f.py
+
+      - name: Tier-A receipt ingestion 08G validation
+        run: |
+          python tools/validate_ingestion08g.py
+          python -m unittest -v tests.test_ingestion08g

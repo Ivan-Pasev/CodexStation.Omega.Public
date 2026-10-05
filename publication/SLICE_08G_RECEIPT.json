@@ -1,0 +1,25 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.8g",
+  "slice": "OMEGA_TIER_A_PRIVATE_RECEIPT_INGESTION_SLICE_08G",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "omega-08g-receipt-ingestion",
+  "predecessor": "OMEGA_TIER_A_PRIVATE_REPRODUCTION_BRIDGE_SLICE_08F",
+  "previous_composite_semantic_fingerprint": "ac43b3f0ccd001bc4235f1e19331e03819d5694393dbc7733cb0bfb56065428c",
+  "status": "INGESTION_CAPABILITY_PASS_NO_NEW_RECEIPTS",
+  "family_state": {
+    "DIGITAL_FABRICA_CORE": "HOLD_NO_RECEIPT",
+    "HIGHESTONE": "HOLD_NO_RECEIPT",
+    "NEURAL_LATTICE": "HOLD_NO_RECEIPT"
+  },
+  "admitted_receipt_count": 0,
+  "synthetic_vectors_are_execution_evidence": false,
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "next_target": "OMEGA_TIER_A_RESTRICTED_RUNNER_EXECUTION_PACK_SLICE_08H",
+  "does_not_establish": [
+    "new restricted-source execution",
+    "private-family reproduction pass",
+    "DFPL PRIMA full-runtime reproduction",
+    "release eligibility"
+  ]
+}
