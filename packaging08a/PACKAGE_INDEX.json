@@ -1,0 +1,39 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-PACKAGE-INDEX/0.8a",
+  "status": "DEPLOYMENT_CANDIDATES_BUILT_PASS_CANDIDATE",
+  "previous_composite_semantic_fingerprint": "daa85b0bf47e392c4a310b2dc11f8074dee2480b5b7dd34c3bde917981bd4c7d",
+  "slice_fingerprint": "ea077212fa34edd670c687ea66603405a8faddf9f9c94c9ad978707debc33593",
+  "composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c",
+  "build_witness": {
+    "workflow": "public-omega-ci",
+    "run_id": 37265111941,
+    "artifact_id": 11325578772,
+    "artifact_digest": "sha256:7466f24d9a8467bb1c2060f2042054c498423d0dcc6e8376804bf266aadc6ac6",
+    "head": "2e74b0b97752f9c910d7488c9dc5ded07e49553e"
+  },
+  "packages": [
+    {
+      "package_id": "cs.package::chatgpt-plugin::v0.8a",
+      "file_name": "codexstation-omega-public-v0.8a.zip",
+      "bytes": 40734,
+      "sha256": "aca5ff898ea80790cee946f8fe8ebfb36041861a13fc5f9c6a7243b4a748aca2",
+      "file_count": 22,
+      "drive_file_id": "1xjkAahean504i5kYe-WiEeTucv4TgCZD",
+      "profile": "CHATGPT_PLUGIN",
+      "live_conformance": "OPEN"
+    },
+    {
+      "package_id": "cs.package::gemini-notebook::v0.8a",
+      "file_name": "codexstation-omega-public-gemini-v0.8a.zip",
+      "bytes": 30563,
+      "sha256": "f1e441e38c412b3c69298550700c3c7fff0f25f499fd7d3d4871e85ad9e5b169",
+      "file_count": 17,
+      "drive_file_id": "1ORTuHyTYd0GmshJn9Bt4SXU6h88EjtMK",
+      "profile": "GEMINI_NOTEBOOK",
+      "live_conformance": "OPEN"
+    }
+  ],
+  "combined_drive_file_id": "1h2BjaYJHwREMACx8dkgmQneu-nOOMfvG",
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}
