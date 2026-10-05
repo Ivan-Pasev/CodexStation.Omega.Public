@@ -1,0 +1,38 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-MULTI-HOST-POLICY-DISTRIBUTION/0.9f",
+  "active_policy_registry": "cybernetic09e/ACTIVE_POLICY_REGISTRY.json",
+  "required_host_receipt_fields": [
+    "host_id",
+    "active_policy_digest",
+    "policy_version",
+    "replay_policy_digest",
+    "routing_order",
+    "summary_digest",
+    "host_profile_digest",
+    "status"
+  ],
+  "statuses": [
+    "PARITY_PASS",
+    "HOLD_POLICY_MISMATCH",
+    "HOLD_REPLAY_DIVERGENCE",
+    "HOLD_PROFILE_INVALID"
+  ],
+  "parity_law": "active_policy_digest == replay_policy_digest == canonical active policy digest",
+  "host_variance_allowed": [
+    "capability availability",
+    "transport",
+    "presentation",
+    "adapter implementation",
+    "tool surface"
+  ],
+  "host_variance_forbidden": [
+    "policy digest",
+    "policy scope",
+    "authority semantics",
+    "evidence semantics",
+    "UNKNOWN_OUTCOME semantics",
+    "routing result for identical telemetry and admissible candidate set"
+  ],
+  "authority_delta": "NONE",
+  "release_eligible": false
+}
