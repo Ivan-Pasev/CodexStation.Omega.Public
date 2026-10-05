@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.9b",
+  "version": "0.9c",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -1106,5 +1106,14 @@
     "slice_fingerprint": "68cf7ddaae57bebc179343512263a6a58dfaac876605e7ccb2de5f6fe38abb5e",
     "composite_semantic_fingerprint": "bda8728a88b61a89781c6f0ae070ddfccb57bfc463a2191bcb3f8a2acb314501",
     "validation_run": 37300622038
+  },
+  "skill_orchestrator_09c": {
+    "skill_registry": "cybernetic09c/SKILL_REGISTRY.json",
+    "orchestration_policy": "cybernetic09c/ORCHESTRATION_POLICY.json",
+    "orchestrator": "cybernetic09c/orchestrator.py",
+    "validator": "tools/validate_cybernetic09c.py",
+    "status": "SKILL_ORCHESTRATION_RECOVERY_PASS_CANDIDATE",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09C_RECEIPT.json"
   }
 }
