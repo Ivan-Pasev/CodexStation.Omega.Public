@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9j",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9k",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "CYBERNETIC_HOST_RETURN_INGESTION_09J_READY_LIVE_HOLD",
+  "registry_state": "CYBERNETIC_EVIDENCE_FRONTIER_09K_RECONCILED",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_CYBERNETIC_EVIDENCE_FRONTIER_RECONCILIATION_SLICE_09K",
+  "current_target": "OMEGA_CYBERNETIC_GOVERNANCE_DECISION_AND_RELEASE_READINESS_SLICE_09L",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -264,7 +264,8 @@
   },
   "parallel_frontiers": {
     "evidence": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I",
-    "capability": "OMEGA_CYBERNETIC_HOST_RETURN_INGESTION_AND_LIVE_CONFORMANCE_SLICE_09J"
+    "live_host": "OMEGA_CYBERNETIC_HOST_RETURN_INGESTION_AND_LIVE_CONFORMANCE_SLICE_09J",
+    "governance": "LICENSE_IP_REVIEW"
   },
   "cybernetic09a": {
     "capability_lattice": "cybernetic09a/CAPABILITY_LATTICE.json",
@@ -508,6 +509,36 @@
     "slice_fingerprint": "4e989c83e3fa9580a8029da4b11eb1f991d44c4fce1f5ac890b63ece14c7acb6",
     "composite_semantic_fingerprint": "0be842a754cdcbdeccb08bda090f719cb5c3d03d1e50b1100a323625abe4f2da",
     "validation_run": 37314721586,
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
+  },
+  "cybernetic09k": {
+    "graph": "cybernetic09k/EVIDENCE_FRONTIER_GRAPH.json",
+    "scheduler_policy": "cybernetic09k/FRONTIER_SCHEDULER_POLICY.json",
+    "reconciler": "cybernetic09k/reconciler.py",
+    "validator": "tools/validate_cybernetic09k.py",
+    "tests": "tests/test_cybernetic09k.py",
+    "status": "EVIDENCE_FRONTIER_RECONCILED_NO_IMPLEMENTATION_GAPS",
+    "implementation_gaps": 0,
+    "governance_frontier": "LICENSE_IP_REVIEW",
+    "predecessor_composite_semantic_fingerprint": "0be842a754cdcbdeccb08bda090f719cb5c3d03d1e50b1100a323625abe4f2da",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09K_RECEIPT.json",
+    "slice_fingerprint": "cd11da51dbe31e76e43637b26608a77a529ca105c56903b6e733fa0e65376e26",
+    "composite_semantic_fingerprint": "15be646c46117179f3d8372db17e2822c4c6224fb9ca89b297ca59cbb03cf8fb",
+    "validation_run": 37315508255,
+    "scheduler_next_action": "GOVERNANCE:LICENSE_IP_REVIEW",
+    "waiting_for_evidence": [
+      "08I_RESTRICTED_EXECUTION_RECEIPTS",
+      "09J_LIVE_HOST_RETURNS",
+      "NB00_LIVE_CONFORMANCE_01",
+      "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
+      "HIGHESTONE_RELEASE_EVIDENCE",
+      "DFPL_PRIMA_FULL_RUNTIME_REPRODUCTION"
+    ],
     "ci_python": {
       "3.11": "success",
       "3.12": "success",

@@ -204,3 +204,8 @@ jobs:
         run: |
           python tools/validate_cybernetic09j.py
           python -m unittest -v tests.test_cybernetic09j
+
+      - name: Cybernetic evidence frontier 09K validation
+        run: |
+          python tools/validate_cybernetic09k.py
+          python -m unittest -v tests.test_cybernetic09k

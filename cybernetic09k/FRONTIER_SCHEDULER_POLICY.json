@@ -1,0 +1,32 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-EVIDENCE-FRONTIER-SCHEDULER/0.9k",
+  "scheduler_id": "cs.scheduler::evidence-frontier::v0.9k",
+  "classes": [
+    "IMPLEMENTATION_GAP",
+    "EXTERNAL_EVIDENCE_PENDING",
+    "EXTERNAL_OR_ENVIRONMENTAL_EVIDENCE_PENDING",
+    "GOVERNANCE_DECISION_PENDING",
+    "RELEASE_HOLD"
+  ],
+  "decisions": [
+    "RESUME",
+    "WAIT_FOR_EVIDENCE",
+    "IMPLEMENT_NOW",
+    "REQUEST_GOVERNANCE",
+    "HOLD_RELEASE"
+  ],
+  "rules": [
+    "IMPLEMENTATION_GAP => IMPLEMENT_NOW",
+    "EXTERNAL_EVIDENCE_PENDING + no_new_evidence => WAIT_FOR_EVIDENCE",
+    "EXTERNAL_OR_ENVIRONMENTAL_EVIDENCE_PENDING + no_new_evidence => WAIT_FOR_EVIDENCE",
+    "GOVERNANCE_DECISION_PENDING => REQUEST_GOVERNANCE",
+    "RELEASE_HOLD => HOLD_RELEASE",
+    "new admissible evidence satisfying resume_condition => RESUME"
+  ],
+  "anti_spin": [
+    "same gate + same evidence set + same architecture state => scheduler decision MUST remain stable",
+    "WAIT_FOR_EVIDENCE gates MUST NOT generate a new implementation target solely from elapsed time",
+    "RESUME requires evidence delta or explicit governance delta"
+  ],
+  "authority_delta": "NONE"
+}
