@@ -1,0 +1,48 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-POLICY-PROMOTION-GOVERNOR/0.9e",
+  "governor_id": "cs.governor::adaptive-policy::v0.9e",
+  "required_checks": [
+    "PREDECESSOR_POLICY_IDENTITY",
+    "POLICY_VERSION_INCREMENT",
+    "IMMUTABLE_SEMANTIC_FIELDS",
+    "AUTHORITY_DELTA_NONE",
+    "REPLAY_WITNESS_VALID",
+    "GOVERNANCE_AUTHORIZATION_PRESENT"
+  ],
+  "immutable_semantic_fields": [
+    "scope",
+    "authority_delta",
+    "release_eligible"
+  ],
+  "forbidden_mutations": [
+    "skill qualification status",
+    "skill authority ceiling",
+    "skill evidence ceiling",
+    "truth status",
+    "scientific status",
+    "UNKNOWN_OUTCOME closure semantics"
+  ],
+  "governance_authorization": {
+    "required_level": "A3",
+    "required_right": "POLICY_PROMOTE",
+    "receipt_fields": [
+      "authorization_id",
+      "principal_id",
+      "authority_level",
+      "rights",
+      "proposal_digest",
+      "predecessor_policy_digest"
+    ]
+  },
+  "rollback_law": "POLICY_ROLLBACK_RESTORES_ROUTING_POLICY_ONLY",
+  "noncollapse": [
+    "POLICY_PROPOSAL != ACTIVE_POLICY",
+    "TELEMETRY != GOVERNANCE_AUTHORIZATION",
+    "ACTIVE_POLICY != CANONICAL_TRUTH",
+    "ACTIVE_POLICY != SCIENTIFIC_AUTHORITY",
+    "POLICY_ROLLBACK != RUNTIME_STATE_ROLLBACK",
+    "POLICY_ROLLBACK != EXTERNAL_EFFECT_ROLLBACK"
+  ],
+  "authority_delta": "NONE",
+  "release_eligible": false
+}
