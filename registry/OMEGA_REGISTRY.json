@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.8d",
+  "version": "0.8e",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -1033,5 +1033,14 @@
     "receipt": "publication/SLICE_08D_RECEIPT.json",
     "slice_fingerprint": "16114b528cd956eba3c4ffa1425e3d56c2c066be90abcfd23ca1bfc8c52f164f",
     "composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7"
+  },
+  "reproduction_slice_08e": {
+    "contract": "aggregation08e/REPRODUCTION_CONTRACT.md",
+    "profile": "reproduction08e/REPRODUCTION_PROFILE.json",
+    "ledger": "reproduction08e/REPRODUCTION_LEDGER.json",
+    "workflow": ".github/workflows/reproduce-tier-a-08e.yml",
+    "status": "REPRODUCTION_EXECUTION_PENDING",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_08E_RECEIPT.json"
   }
 }
