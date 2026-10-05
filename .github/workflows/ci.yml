@@ -209,3 +209,8 @@ jobs:
         run: |
           python tools/validate_cybernetic09k.py
           python -m unittest -v tests.test_cybernetic09k
+
+      - name: Cybernetic governance release readiness 09L validation
+        run: |
+          python tools/validate_cybernetic09l.py
+          python -m unittest -v tests.test_cybernetic09l
