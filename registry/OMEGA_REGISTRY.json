@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.8a",
+  "version": "0.8b",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -974,5 +974,22 @@
     "authority_delta": "NONE",
     "slice_fingerprint": "ea077212fa34edd670c687ea66603405a8faddf9f9c94c9ad978707debc33593",
     "composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c"
+  },
+  "aggregation_slice_08b": {
+    "source_bindings": "aggregation08b/SOURCE_BINDINGS.json",
+    "constitutional_abi": "aggregation08b/CONSTITUTIONAL_ABI.json",
+    "adapter_map": "aggregation08b/ADAPTER_MAP.json",
+    "kernel_bindings": "aggregation08b/KERNEL_BINDINGS.json",
+    "abi_test_vectors": "aggregation08b/ABI_TEST_VECTORS.json",
+    "semantic_extension": "aggregation08b/SEMANTIC_EXTENSION.json",
+    "status": "IMPLEMENTED_PENDING_CI",
+    "authority_delta": "NONE"
+  },
+  "packaging_slice_08b": {
+    "chatgpt_plugin": "packaging08b/chatgpt-plugin/PACKAGING.json",
+    "gemini_notebook": "packaging08b/gemini-notebook/PACKAGING.json",
+    "packager": "tools/build_packages08b.py",
+    "status": "IMPLEMENTED_PENDING_CI",
+    "authority_delta": "NONE"
   }
 }
