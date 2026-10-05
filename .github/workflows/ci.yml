@@ -199,3 +199,8 @@ jobs:
           name: codexstation-omega-live-host-acquisition-v0.9i
           path: build/acquisition09i/codexstation-omega-live-host-acquisition-v0.9i.zip
           if-no-files-found: error
+
+      - name: Cybernetic host return ingestion 09J validation
+        run: |
+          python tools/validate_cybernetic09j.py
+          python -m unittest -v tests.test_cybernetic09j
