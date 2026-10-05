@@ -1,0 +1,224 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-CONSTITUTIONAL-ABI/0.8b",
+  "abi_id": "cs.abi::constitutional-core::v0.8b",
+  "status": "EXECUTABLE_SCHEMA_CANDIDATE",
+  "authority_delta": "NONE",
+  "primitives": {
+    "CanonicalDigest": {
+      "required": [
+        "algorithm",
+        "value",
+        "domain"
+      ],
+      "fields": {
+        "algorithm": "string",
+        "value": "hex-or-provider-digest",
+        "domain": "string"
+      }
+    },
+    "Principal": {
+      "required": [
+        "principal_id"
+      ],
+      "fields": {
+        "principal_id": "string",
+        "authentication_evidence": "array",
+        "attributes": "object"
+      }
+    },
+    "AuthorityGrant": {
+      "required": [
+        "grant_id",
+        "principal_id",
+        "scope"
+      ],
+      "fields": {
+        "grant_id": "string",
+        "principal_id": "string",
+        "level": "optional",
+        "rights": "array",
+        "scope": "array",
+        "constraints": "array",
+        "valid_from": "optional",
+        "valid_until": "optional",
+        "delegation_parent": "optional",
+        "revocation_ref": "optional",
+        "evidence_refs": "array"
+      }
+    },
+    "CanonicalState": {
+      "required": [
+        "state_id",
+        "project_id",
+        "revision",
+        "digest",
+        "provenance_refs"
+      ],
+      "fields": {
+        "state_id": "string",
+        "project_id": "string",
+        "root_id": "optional",
+        "branch_id": "optional",
+        "revision": "integer-or-string",
+        "digest": "CanonicalDigest",
+        "payload_ref": "optional",
+        "provenance_refs": "array",
+        "authority_snapshot_refs": "array",
+        "conflict_status": "optional",
+        "health": "optional"
+      }
+    },
+    "CandidateTransition": {
+      "required": [
+        "transition_id",
+        "project_id",
+        "parent_state_digest",
+        "proposer_principal_id",
+        "kind",
+        "operations",
+        "required_authority",
+        "protected_invariants"
+      ],
+      "fields": {
+        "transition_id": "string",
+        "project_id": "string",
+        "parent_state_digest": "CanonicalDigest",
+        "proposer_principal_id": "string",
+        "kind": "string",
+        "operations": "array",
+        "required_authority": "array",
+        "protected_invariants": "array",
+        "verification_plan": "array",
+        "reversibility": "string"
+      }
+    },
+    "InvariantEvaluation": {
+      "required": [
+        "invariant_id",
+        "status",
+        "evidence_refs"
+      ],
+      "fields": {
+        "invariant_id": "string",
+        "class": "optional",
+        "status": "PASS|FAIL|UNRESOLVED|NOT_APPLICABLE",
+        "evidence_level": "optional",
+        "evidence_refs": "array",
+        "evaluator": "optional"
+      }
+    },
+    "DecisionVector": {
+      "required": [
+        "semantic",
+        "admission",
+        "authorization",
+        "execution",
+        "closure"
+      ],
+      "fields": {
+        "semantic": "object-or-null",
+        "admission": "object-or-null",
+        "authorization": "object-or-null",
+        "execution": "object-or-null",
+        "closure": "object-or-null"
+      }
+    },
+    "Event": {
+      "required": [
+        "event_id",
+        "sequence",
+        "event_type",
+        "subject_ref"
+      ],
+      "fields": {
+        "event_id": "string",
+        "sequence": "integer",
+        "event_type": "string",
+        "subject_ref": "string",
+        "before_digest": "optional",
+        "after_digest": "optional",
+        "receipt_ref": "optional",
+        "timestamp": "optional"
+      }
+    },
+    "Receipt": {
+      "required": [
+        "receipt_id",
+        "receipt_type",
+        "subject_id",
+        "outcome",
+        "source_profile"
+      ],
+      "fields": {
+        "receipt_id": "string",
+        "receipt_type": "string",
+        "subject_id": "string",
+        "before_digest": "optional",
+        "after_digest": "optional",
+        "intent_digest": "optional",
+        "authority_refs": "array",
+        "invariant_results": "array",
+        "evidence_refs": "array",
+        "outcome": "string",
+        "witness": "optional",
+        "source_profile": "string"
+      }
+    },
+    "Conflict": {
+      "required": [
+        "conflict_id",
+        "conflict_type",
+        "participants",
+        "status"
+      ],
+      "fields": {
+        "conflict_id": "string",
+        "conflict_type": "string",
+        "participants": "array",
+        "status": "string",
+        "evidence_refs": "array",
+        "severity": "optional",
+        "resolution": "optional"
+      }
+    },
+    "RecoveryEvidence": {
+      "required": [
+        "recovery_id",
+        "source_state_ref",
+        "target_state_ref",
+        "objects_verified",
+        "receipt_verified"
+      ],
+      "fields": {
+        "recovery_id": "string",
+        "source_state_ref": "string",
+        "target_state_ref": "string",
+        "objects_verified": "boolean",
+        "receipt_verified": "boolean",
+        "migration_witness_ref": "optional",
+        "residuals": "array"
+      }
+    }
+  },
+  "phase_laws": [
+    "SEMANTIC_DECISION != AUTHORIZATION_DECISION",
+    "AUTHORIZATION_DECISION != EXECUTION_OUTCOME",
+    "EXECUTION_OUTCOME != CLOSURE_DECISION",
+    "CAPABILITY != AUTHORITY",
+    "COGNITION != AUTHORITY",
+    "CLAIM != EVIDENCE"
+  ],
+  "transition_laws": [
+    "AUTHORIZATION_EVALUATED_ON_PREDECESSOR_STATE",
+    "NO_SUCCESSOR_AUTHORITY_BOOTSTRAP",
+    "NON_GOVERNANCE_TRANSITION_CANNOT_IMPLICITLY_ESCALATE_AUTHORITY",
+    "PARENT_STATE_IDENTITY_MUST_MATCH_CURRENT_STATE",
+    "PROTECTED_INVARIANTS_FAIL_CLOSED",
+    "EXACT_AUTHORIZED_PLAN_BINDING_REQUIRED",
+    "UNSUPPORTED_EFFECTS_ARE_REJECTED_NOT_APPROXIMATED",
+    "UNKNOWN_OUTCOME_IS_PRESERVED_AS_UNKNOWN",
+    "CONFLICT_IS_DURABLE_STATE",
+    "RECOVERY_WITH_UNVERIFIED_OBJECTS_OR_RECEIPT_QUARANTINES"
+  ],
+  "boundary": "This ABI is an interoperability candidate. It does not claim that source projects already implement a single shared runtime."
+}

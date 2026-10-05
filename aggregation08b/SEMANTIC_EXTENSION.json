@@ -1,0 +1,43 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-EXTENSION/0.8b",
+  "extension_id": "cs.semantic-extension::tier-a-pinned-constitutional-abi::v0.8b",
+  "previous_composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c",
+  "object_types": [
+    "SourceBinding",
+    "ConstitutionalABI",
+    "ABIAdapter",
+    "KernelSourceBinding",
+    "ABITestVector"
+  ],
+  "source_binding_ids": [
+    "cs.binding::digital-fabrica-core::2026-10-05",
+    "cs.binding::dfpl::2026-10-05",
+    "cs.binding::highestone::2026-10-05",
+    "cs.binding::gilc-codexstation::2026-10-05",
+    "cs.binding::neural-lattice::2026-10-05"
+  ],
+  "abi_id": "cs.abi::constitutional-core::v0.8b",
+  "adapter_ids": [
+    "cs.adapter::digital-fabrica-core::v0.8b",
+    "cs.adapter::dfpl-prima::v0.8b",
+    "cs.adapter::highestone::v0.8b",
+    "cs.adapter::gilc-codexstation::v0.8b",
+    "cs.adapter::neural-lattice::v0.8b"
+  ],
+  "laws": [
+    "PINNED_SOURCE != RELEASE",
+    "ADAPTER != AUTHORITY_PROMOTION",
+    "SEMANTIC_DECISION != AUTHORIZATION_DECISION",
+    "AUTHORIZATION_DECISION != EXECUTION_OUTCOME",
+    "NO_SUCCESSOR_AUTHORITY_BOOTSTRAP",
+    "UNKNOWN_OUTCOME_IS_PRESERVED_AS_UNKNOWN",
+    "CONFLICT_IS_DURABLE_STATE"
+  ],
+  "parallel_open_gates": [
+    "NB00_LIVE_CONFORMANCE_01",
+    "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
+    "LICENSE_IP_REVIEW"
+  ],
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}

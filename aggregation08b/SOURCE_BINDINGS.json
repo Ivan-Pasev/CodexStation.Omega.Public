@@ -1,0 +1,155 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SOURCE-BINDINGS/0.8b",
+  "status": "PINNED_PUBLIC_REPOSITORY_BINDINGS",
+  "observed_at": "2026-10-05",
+  "authority_delta": "NONE",
+  "bindings": [
+    {
+      "binding_id": "cs.binding::digital-fabrica-core::2026-10-05",
+      "repository": "Ivan-Pasev/Digital.Fabrica.Core",
+      "branch": "main",
+      "commit": "c3e142d73ddbbcdfd5677aed242da3c6c52ae9e6",
+      "role": "deterministic transition/admission/invariant/event/witness runtime",
+      "paths": [
+        {
+          "path": "src/types.ts",
+          "blob": "28dfcdce202e7904c3f89756894ce430920fc66a",
+          "role": "core typed contracts"
+        },
+        {
+          "path": "src/admission.ts",
+          "blob": "74ecff8bd81608aa89d36b240ed486b49a0786ba",
+          "role": "fail-closed transition admission"
+        },
+        {
+          "path": "src/events.ts",
+          "blob": "927c63c5f115580124e227106f5b74d35d06a139",
+          "role": "ordered event model"
+        }
+      ],
+      "evidence_boundary": "Pinned source identity and inspected implementation; no claim of production readiness."
+    },
+    {
+      "binding_id": "cs.binding::dfpl::2026-10-05",
+      "repository": "Ivan-Pasev/DFPL",
+      "branch": "main",
+      "commit": "5602b083dcb8fad2ef8522bc4c93fe2734806bc3",
+      "role": "canonical law IR, semantic decision, capability authorization, effect gateway",
+      "paths": [
+        {
+          "path": "spec/01-types.md",
+          "blob": "7188b8fe6247e7396d49d8eea7d3edd9c7798cb7",
+          "role": "canonical type domain"
+        },
+        {
+          "path": "spec/04-law-ir.md",
+          "blob": "b46475573da2d825fbe1a4a7569bc9c945505472",
+          "role": "canonical LawIR"
+        },
+        {
+          "path": "prima/02-capability-authorization.md",
+          "blob": "336888a3fab7a9227b4c97ed8a52bef3d7ba7828",
+          "role": "authorization model"
+        },
+        {
+          "path": "prima/03-effect-gateway-outcomes.md",
+          "blob": "25c70b464c3b2566a4e21f04fad16242fca41edd",
+          "role": "effect/outcome semantics"
+        }
+      ],
+      "evidence_boundary": "Normative/freeze-candidate specifications and scoped repository evidence; theorem targets remain obligations unless separately proved."
+    },
+    {
+      "binding_id": "cs.binding::highestone::2026-10-05",
+      "repository": "Ivan-Pasev/CodexStation.HighestOne",
+      "branch": "main",
+      "commit": "a4f237aba8156d0bf6f1354457275de9a67ac21a",
+      "role": "formal state identity, predecessor authorization, authority non-escalation, receipt binding, recovery",
+      "paths": [
+        {
+          "path": "formal/lean/CodexStation/Core.lean",
+          "blob": "a7da1cafb731482f07eddde976b9e946f43598da",
+          "role": "formal State/Grant/Transition/Step"
+        },
+        {
+          "path": "formal/lean/CodexStation/Receipt.lean",
+          "blob": "42cda99906efd6db22a177e59784cdec4634ebf9",
+          "role": "receipt state binding"
+        },
+        {
+          "path": "formal/lean/CodexStation/Recovery.lean",
+          "blob": "931cab3fb93bdfe7a41e790b7adf9f5da1f77ed2",
+          "role": "recovery state machine"
+        }
+      ],
+      "evidence_boundary": "Pinned Lean source; local/source-reported machine-check status must remain separately witnessed from repository presence."
+    },
+    {
+      "binding_id": "cs.binding::gilc-codexstation::2026-10-05",
+      "repository": "Ivan-Pasev/GILC.CodexStation",
+      "branch": "main",
+      "commit": "dae8c25c721b688da76fc5589aa8440ee810d7dd",
+      "role": "station/entity separation, typed memory, authority lattice, effect receipts, checkpoint/migration",
+      "paths": [
+        {
+          "path": "src/gilc_codex_station/models.py",
+          "blob": "a1ed10aa5655bc3cfdca06c2399fe2042f45c8ae",
+          "role": "memory/admission/authority/effect intent types"
+        },
+        {
+          "path": "src/gilc_codex_station/authority.py",
+          "blob": "86800db2d14f29fed940773f368c0a6043bd3b0e",
+          "role": "authority check"
+        },
+        {
+          "path": "src/gilc_codex_station/effects.py",
+          "blob": "9b940a7346fbaa1b2075325243e3477a4f5cced9",
+          "role": "effect receipt"
+        },
+        {
+          "path": "src/gilc_codex_station/checkpoint.py",
+          "blob": "50a8932453e2c2cd12cb8340bd5a76a7d839f5d8",
+          "role": "checkpoint/migration verification"
+        }
+      ],
+      "evidence_boundary": "Pinned reference implementation; global Ω101 promotion is not inferred from file presence."
+    },
+    {
+      "binding_id": "cs.binding::neural-lattice::2026-10-05",
+      "repository": "Ivan-Pasev/neural-lattice",
+      "branch": "main",
+      "commit": "57da881b28a5a4e924b900a18e2e59f3a202f6fe",
+      "role": "typed state cells, transition receipts, conflict and closure semantics",
+      "paths": [
+        {
+          "path": "specs/state-cell.schema.json",
+          "blob": "9fb2d362e670595a36cfc7480adea9be30a02584",
+          "role": "typed state cell"
+        },
+        {
+          "path": "specs/transition-receipt.schema.json",
+          "blob": "45a58941ebcce2047b9e41f7cffb0e03020f3b8b",
+          "role": "transition receipt"
+        },
+        {
+          "path": "specs/closure-policy.schema.json",
+          "blob": "c00910ceb9dae7408d5a95ef27e5d8e445745ad4",
+          "role": "closure policy"
+        },
+        {
+          "path": "specs/conflict.schema.json",
+          "blob": "808be4e05053f3c7569fbae3489f6d03290f5cfd",
+          "role": "conflict object"
+        }
+      ],
+      "evidence_boundary": "Pinned schemas from private engineering genesis; public/global maturity is not inferred."
+    }
+  ],
+  "laws": [
+    "PINNED_COMMIT != RELEASE",
+    "PINNED_SOURCE != INDEPENDENT_REPRODUCTION",
+    "SOURCE_REPORTED_PASS != LOCALLY_REPRODUCED_PASS",
+    "SAME_CONCEPT != SAME_TYPE",
+    "ADAPTER != AUTHORITY_PROMOTION"
+  ]
+}

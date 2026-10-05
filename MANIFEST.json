@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8a",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8b",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "MOUNT_KERNEL_LATTICE_08A_PASS_CANDIDATE",
+  "registry_state": "TIER_A_PINNED_ABI_08B_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_TIER_A_KERNEL_PIN_AND_BIND_SLICE_08B",
+  "current_target": "OMEGA_CONSTITUTIONAL_REFERENCE_RUNTIME_SLICE_08C",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -126,5 +126,32 @@
     "build_witness_run": 37265111941,
     "artifact_id": 11325578772,
     "combined_drive_file_id": "1h2BjaYJHwREMACx8dkgmQneu-nOOMfvG"
+  },
+  "aggregation08b": {
+    "source_bindings": "aggregation08b/SOURCE_BINDINGS.json",
+    "constitutional_abi": "aggregation08b/CONSTITUTIONAL_ABI.json",
+    "adapter_map": "aggregation08b/ADAPTER_MAP.json",
+    "kernel_bindings": "aggregation08b/KERNEL_BINDINGS.json",
+    "abi_test_vectors": "aggregation08b/ABI_TEST_VECTORS.json",
+    "semantic_extension": "aggregation08b/SEMANTIC_EXTENSION.json",
+    "validator": "tools/validate_tier_a08b.py",
+    "previous_composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c",
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+    "slice_fingerprint": "88da43743289f459da546d030b1879ec767242670bb8a981b4a39d3c4cca8cf8",
+    "composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3",
+    "receipt": "publication/SLICE_08B_RECEIPT.json"
+  },
+  "packaging08b": {
+    "chatgpt_plugin": "packaging08b/chatgpt-plugin/PACKAGING.json",
+    "gemini_notebook": "packaging08b/gemini-notebook/PACKAGING.json",
+    "packager": "tools/build_packages08b.py",
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+    "slice_fingerprint": "88da43743289f459da546d030b1879ec767242670bb8a981b4a39d3c4cca8cf8",
+    "composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3",
+    "package_index": "packaging08b/PACKAGE_INDEX.json",
+    "chatgpt_plugin_sha256": "7979921149bbb5b04dbb7847d5e802f1402eb82508acc4a4a8396b5c7cfa36bb",
+    "gemini_notebook_sha256": "c70d7b6d483145254bfde3347083ec65c09750831ac277101ae8cac1e3374237",
+    "build_witness_run": 37268147523,
+    "combined_drive_file_id": "1-lsMc-NhaMz_jBjBfIwcOdOG5EIz0ubT"
   }
 }

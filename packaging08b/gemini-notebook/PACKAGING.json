@@ -1,0 +1,103 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-PACKAGING/0.8b",
+  "package_id": "cs.package::gemini-notebook::v0.8b",
+  "profile": "GEMINI_NOTEBOOK",
+  "version": "0.8.0-alpha.1",
+  "previous_composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c",
+  "root_name": "codexstation-omega-public-gemini-v0.8b",
+  "package_sources": [
+    [
+      "packaging08b/gemini-notebook/START_HERE.md",
+      "START_HERE.md"
+    ],
+    [
+      "dist/gemini-notebook/PUBLIC_OMEGA_GEMINI_NOTEBOOK_v0.8b.md",
+      "PUBLIC_OMEGA_GEMINI_NOTEBOOK_v0.8b.md"
+    ],
+    [
+      "aggregation08b/ABI_CONTRACT.md",
+      "ABI_CONTRACT.md"
+    ],
+    [
+      "aggregation08a/MOUNT_PROTOCOL.md",
+      "MOUNT_PROTOCOL.md"
+    ],
+    [
+      "aggregation07a/AGGREGATION_PROTOCOL.md",
+      "AGGREGATION_PROTOCOL.md"
+    ],
+    [
+      "canon/OMEGA_CORE.md",
+      "OMEGA_CORE.md"
+    ],
+    [
+      "canon/OMEGA_CRYSTAL.md",
+      "OMEGA_CRYSTAL.md"
+    ],
+    [
+      "canon/OMEGA_SKILL_SPINDLE.md",
+      "OMEGA_SKILL_SPINDLE.md"
+    ],
+    [
+      "canon/OMEGA_THEOREMATIC_SPINE.md",
+      "OMEGA_THEOREMATIC_SPINE.md"
+    ],
+    [
+      "canon/OMEGA_PUBLIC_ANCHORS.md",
+      "OMEGA_PUBLIC_ANCHORS.md"
+    ],
+    [
+      "aggregation08b/SOURCE_BINDINGS.json",
+      "_machine/SOURCE_BINDINGS.json"
+    ],
+    [
+      "aggregation08b/CONSTITUTIONAL_ABI.json",
+      "_machine/CONSTITUTIONAL_ABI.json"
+    ],
+    [
+      "aggregation08b/ADAPTER_MAP.json",
+      "_machine/ADAPTER_MAP.json"
+    ],
+    [
+      "aggregation08b/KERNEL_BINDINGS.json",
+      "_machine/KERNEL_BINDINGS.json"
+    ],
+    [
+      "aggregation08b/ABI_TEST_VECTORS.json",
+      "_machine/ABI_TEST_VECTORS.json"
+    ],
+    [
+      "aggregation08b/SEMANTIC_EXTENSION.json",
+      "_machine/SEMANTIC_EXTENSION_08B.json"
+    ],
+    [
+      "aggregation08a/MOUNT_REGISTRY.json",
+      "_machine/MOUNT_REGISTRY.json"
+    ],
+    [
+      "aggregation08a/KERNEL_LATTICE.json",
+      "_machine/KERNEL_LATTICE.json"
+    ],
+    [
+      "registry/OMEGA_REGISTRY.json",
+      "_machine/OMEGA_REGISTRY.json"
+    ]
+  ],
+  "notebook_source_recommendation": [
+    "START_HERE.md",
+    "PUBLIC_OMEGA_GEMINI_NOTEBOOK_v0.8b.md",
+    "ABI_CONTRACT.md",
+    "MOUNT_PROTOCOL.md",
+    "AGGREGATION_PROTOCOL.md",
+    "OMEGA_CORE.md",
+    "OMEGA_CRYSTAL.md",
+    "OMEGA_SKILL_SPINDLE.md",
+    "OMEGA_THEOREMATIC_SPINE.md",
+    "OMEGA_PUBLIC_ANCHORS.md"
+  ],
+  "live_conformance": "OPEN",
+  "release_eligible": false,
+  "authority_delta": "NONE",
+  "slice_fingerprint": "88da43743289f459da546d030b1879ec767242670bb8a981b4a39d3c4cca8cf8",
+  "composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3"
+}

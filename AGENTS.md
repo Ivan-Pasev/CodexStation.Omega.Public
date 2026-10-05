@@ -107,3 +107,37 @@ BLACK_HOLE != SOURCE_ERASURE
 ```
 
 After the first complete map, NEXT() should be delta-first and revision-aware. Aggregation runs beside useful source-project work; it does not replace it.
+
+## Kernel / ABI binding rule
+
+When a mounted source exposes a reusable coding, systems, formal, runtime or protocol kernel:
+
+1. pin the exact repository commit;
+2. pin exact relevant paths and blob identities;
+3. map the source object to an existing Constitutional ABI primitive when lawful;
+4. record adapter fidelity, omissions, splits, merges and open gaps;
+5. preserve source-project type/status where no lawful equivalence exists;
+6. emit a KnowledgeQuantum / KernelBinding candidate;
+7. admit only after provenance, authority, evidence and license gates.
+
+```text
+PINNED_SOURCE != RELEASE
+ADAPTER != SEMANTIC_IDENTITY
+ADAPTER != AUTHORITY_PROMOTION
+SOURCE_TYPE_SIMILARITY != TYPE_EQUIVALENCE
+```
+
+For practical work, compile:
+
+```text
+PROJECT MOUNT
+-> REVISION PIN
+-> ABI / KERNEL MAP
+-> KNOWLEDGE QUANTA
+-> HOLOTOPE
+-> ARCHETONIC PLATE
+-> EXECUTE / VERIFY / WITNESS
+-> FEEDBACK PACKET
+```
+
+The global fabric should absorb reusable structure while the source project retains local canon and write authority.
