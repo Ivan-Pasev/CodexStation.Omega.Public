@@ -1,0 +1,258 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-TIER-A-SOURCE-FIXTURES/0.8d",
+  "harness_id": "cs.harness::tier-a-integration::v0.8d",
+  "previous_composite_semantic_fingerprint": "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64",
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "evidence_classes": {
+    "SOURCE_PINNED_IMPLEMENTATION": "fixture derived from inspected implementation at exact pinned commit/path",
+    "NORMATIVE_SPEC_DERIVED": "fixture derived from pinned normative specification text rather than executable source"
+  },
+  "fixtures": [
+    {
+      "fixture_id": "08d-digital-fabrica-admit",
+      "source_family": "DIGITAL_FABRICA_CORE",
+      "repository": "Ivan-Pasev/Digital.Fabrica.Core",
+      "commit": "c3e142d73ddbbcdfd5677aed242da3c6c52ae9e6",
+      "paths": [
+        "src/types.ts",
+        "src/admission.ts",
+        "src/events.ts"
+      ],
+      "evidence_class": "SOURCE_PINNED_IMPLEMENTATION",
+      "native": {
+        "id": "dfc:t1",
+        "projectId": "p08d",
+        "kind": "OPERATIONAL",
+        "parentStateHash": "$CURRENT_STATE_DIGEST",
+        "intentDigest": "intent:dfc:t1",
+        "proposer": "actor:dfc",
+        "affectedObjects": [
+          "x"
+        ],
+        "operations": [
+          {
+            "op": "SET",
+            "key": "x",
+            "value": 1
+          }
+        ],
+        "requiredAuthority": "A2",
+        "protectedInvariants": [
+          "inv:root"
+        ],
+        "verificationPlan": [],
+        "reversibility": "REVERSIBLE",
+        "createdAt": "SOURCE_FIXTURE"
+      },
+      "normalization": {
+        "id": "digital-fabrica-native-to-08c-adapter",
+        "transforms": [
+          "id -> transition_id",
+          "parentStateHash -> parent_state_digest",
+          "proposer -> actor_id",
+          "requiredAuthority scalar -> required_authority array",
+          "protectedInvariants -> protected_invariants",
+          "verificationPlan -> verification_plan"
+        ]
+      },
+      "expected": {
+        "runtime_status": "PASS",
+        "event": "TRANSITION_APPLIED",
+        "source_admission_code": "ADMITTED"
+      },
+      "residuals": [
+        "Digital.Fabrica.Core admission consumes contextual booleans/effective authority that are reconstructed by the Ω runtime rather than passed as one native AdmissionContext object.",
+        "WitnessRecord/FabricEvent shapes are compared semantically, not byte-identically."
+      ]
+    },
+    {
+      "fixture_id": "08d-dfpl-exact-plan",
+      "source_family": "DFPL_PRIMA",
+      "repository": "Ivan-Pasev/DFPL",
+      "commit": "5602b083dcb8fad2ef8522bc4c93fe2734806bc3",
+      "paths": [
+        "prima/02-capability-authorization.md",
+        "prima/03-effect-gateway-outcomes.md"
+      ],
+      "evidence_class": "NORMATIVE_SPEC_DERIVED",
+      "native": {
+        "gateway_request": {
+          "request_id": "dfpl:plan:1",
+          "parent_state_digest": "$CURRENT_STATE_DIGEST",
+          "operations": [
+            {
+              "op": "SET",
+              "key": "lawful",
+              "value": true
+            }
+          ],
+          "protected_invariants": [
+            "inv:root"
+          ],
+          "verification_plan": [],
+          "reversibility": "REVERSIBLE"
+        },
+        "authorization": {
+          "principal_id": "actor:dfpl",
+          "required_capabilities": [
+            "Tool.Invoke"
+          ],
+          "plan_digest": "$AUTHORIZED_PLAN_DIGEST"
+        }
+      },
+      "expected": {
+        "runtime_status": "PASS",
+        "plan_binding": "EXACT"
+      },
+      "residuals": [
+        "Pinned PRIMA material is normative/freeze-candidate specification, not an executable authorization engine.",
+        "Capability constraints, delegation, approvals, revocation and authenticated-principal evidence remain outside the reduced 08C rights/level evaluator."
+      ]
+    },
+    {
+      "fixture_id": "08d-highestone-predecessor-authority",
+      "source_family": "HIGHESTONE",
+      "repository": "Ivan-Pasev/CodexStation.HighestOne",
+      "commit": "a4f237aba8156d0bf6f1354457275de9a67ac21a",
+      "paths": [
+        "formal/lean/CodexStation/Core.lean",
+        "formal/lean/CodexStation/Receipt.lean",
+        "formal/lean/CodexStation/Recovery.lean"
+      ],
+      "evidence_class": "SOURCE_PINNED_IMPLEMENTATION",
+      "native": {
+        "rootId": 1,
+        "branchId": 7,
+        "revision": 3,
+        "grants": [
+          {
+            "actor": "42",
+            "level": 2,
+            "grant_id": "highest:42",
+            "scope": [
+              "*"
+            ]
+          }
+        ]
+      },
+      "expected": {
+        "adapted_revision": 3,
+        "predecessor_authority": "PASS",
+        "non_governance_bootstrap": "FORBIDDEN",
+        "recovery_verified": "RECOVERABLE"
+      },
+      "residuals": [
+        "Lean source uses Nat identities/hashes and Level L0..L4; public ABI uses string identities and A0..A5 profile encoding.",
+        "HighestOne Transition abstracts operation payloads, so operation-level correspondence is supplied by the Ω runtime profile rather than the formal core."
+      ]
+    },
+    {
+      "fixture_id": "08d-gilc-effect-unknown",
+      "source_family": "GILC_CODEXSTATION",
+      "repository": "Ivan-Pasev/GILC.CodexStation",
+      "commit": "dae8c25c721b688da76fc5589aa8440ee810d7dd",
+      "paths": [
+        "src/gilc_codex_station/models.py",
+        "src/gilc_codex_station/authority.py",
+        "src/gilc_codex_station/effects.py",
+        "src/gilc_codex_station/checkpoint.py"
+      ],
+      "evidence_class": "SOURCE_PINNED_IMPLEMENTATION",
+      "native": {
+        "intent": "deploy candidate",
+        "actor": "actor:gilc",
+        "target": "sandbox",
+        "required_authority": "A2",
+        "operation": "DEPLOY",
+        "metadata": {
+          "mode": "dry-reference"
+        }
+      },
+      "normalization": {
+        "id": "gilc-native-effectintent-to-08c-adapter",
+        "transforms": [
+          "actor -> principal_id",
+          "operation -> effect_type",
+          "target + metadata -> parameters",
+          "required_authority enum/name -> required_authority"
+        ]
+      },
+      "expected": {
+        "runtime_status_without_executor": "UNKNOWN_OUTCOME",
+        "successor_created": false
+      },
+      "residuals": [
+        "Pinned GILC execute_simulated can emit executed=True only with a witness; 08C deliberately defaults external EFFECT to UNKNOWN_OUTCOME when no executor/witness is supplied.",
+        "Reference simulation is not external effect confirmation."
+      ]
+    },
+    {
+      "fixture_id": "08d-neural-lattice-conflict",
+      "source_family": "NEURAL_LATTICE",
+      "repository": "Ivan-Pasev/neural-lattice",
+      "commit": "57da881b28a5a4e924b900a18e2e59f3a202f6fe",
+      "paths": [
+        "specs/state-cell.schema.json",
+        "specs/transition-receipt.schema.json",
+        "specs/closure-policy.schema.json",
+        "specs/conflict.schema.json"
+      ],
+      "evidence_class": "SOURCE_PINNED_IMPLEMENTATION",
+      "native": {
+        "id": "nl:cell:1",
+        "version": 4,
+        "status": "CONFLICT",
+        "state": {
+          "value": 9
+        },
+        "provenance": {
+          "sources": [
+            "source:nl"
+          ],
+          "derivations": [
+            "derive:1"
+          ],
+          "previousCell": null
+        },
+        "evidence": [
+          "e:nl"
+        ],
+        "authority": {
+          "subject": "actor:nl",
+          "scope": [
+            "read"
+          ]
+        },
+        "time": {
+          "logical": 4,
+          "wallClock": null
+        },
+        "conflictStatus": "UNRESOLVED"
+      },
+      "normalization": {
+        "id": "nl-native-statecell-to-08c-adapter",
+        "transforms": [
+          "provenance.sources -> provenance array expected by 08C adapter"
+        ]
+      },
+      "expected": {
+        "adapted_revision": 4,
+        "conflict_durable": true
+      },
+      "residuals": [
+        "08C adapter accepts provenance as a list while the pinned NL-1 schema defines provenance as an object; 08D pre-normalizes provenance.sources and records this mismatch.",
+        "NL authority object is retained as payload context and is not promoted into an Ω AuthorityGrant."
+      ]
+    }
+  ],
+  "laws": [
+    "SOURCE_FIXTURE != SOURCE_RUNTIME_EXECUTION",
+    "SOURCE_REPORTED_PASS != LOCALLY_REPRODUCED_PASS",
+    "NORMALIZATION != SEMANTIC_IDENTITY",
+    "ADAPTER_PASS != FULL_SOURCE_INTEGRATION",
+    "PURE_EFFECT_MODEL != EXTERNAL_EFFECT_CONFIRMATION",
+    "TEST_PASS != FORMAL_PROOF",
+    "IMPLEMENTATION_PASS != SCIENTIFIC_PASS"
+  ]
+}

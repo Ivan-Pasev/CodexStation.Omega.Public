@@ -109,3 +109,6 @@ jobs:
           name: codexstation-omega-public-gemini-v0.8c
           path: build/package08c/codexstation-omega-public-gemini-v0.8c.zip
           if-no-files-found: error
+
+      - name: Tier-A integration harness 08D validation
+        run: python tools/validate_integration08d.py
