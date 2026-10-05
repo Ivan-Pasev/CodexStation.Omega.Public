@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8b",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8c",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "TIER_A_PINNED_ABI_08B_PASS_CANDIDATE",
+  "registry_state": "REFERENCE_RUNTIME_08C_IMPLEMENTED_PENDING_CI",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -153,5 +153,25 @@
     "gemini_notebook_sha256": "c70d7b6d483145254bfde3347083ec65c09750831ac277101ae8cac1e3374237",
     "build_witness_run": 37268147523,
     "combined_drive_file_id": "1-lsMc-NhaMz_jBjBfIwcOdOG5EIz0ubT"
+  },
+  "aggregation08c": {
+    "runtime_contract": "aggregation08c/RUNTIME_CONTRACT.md",
+    "semantic_extension": "aggregation08c/SEMANTIC_EXTENSION.json",
+    "runtime_profile": "runtime08c/RUNTIME_PROFILE.json",
+    "reference_scenarios": "runtime08c/REFERENCE_SCENARIOS.json",
+    "runtime": "runtime08c/runtime.py",
+    "adapters": "runtime08c/adapters.py",
+    "validator": "tools/validate_runtime08c.py",
+    "previous_composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3",
+    "status": "IMPLEMENTED_PENDING_CI",
+    "authority_delta": "NONE"
+  },
+  "packaging08c": {
+    "chatgpt_plugin": "packaging08c/chatgpt-plugin/PACKAGING.json",
+    "gemini_notebook": "packaging08c/gemini-notebook/PACKAGING.json",
+    "packager": "tools/build_packages08c.py",
+    "status": "IMPLEMENTED_PENDING_CI",
+    "archive_hashes": "EXTERNAL_PACKAGE_INDEX_TO_AVOID_SELF_REFERENCE",
+    "authority_delta": "NONE"
   }
 }
