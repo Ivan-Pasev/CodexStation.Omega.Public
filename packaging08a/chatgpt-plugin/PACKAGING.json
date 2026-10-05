@@ -1,0 +1,97 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-PACKAGING/0.8a",
+  "package_id": "cs.package::chatgpt-plugin::v0.8a",
+  "profile": "CHATGPT_PLUGIN",
+  "version": "0.8.0-alpha.0",
+  "previous_composite_semantic_fingerprint": "daa85b0bf47e392c4a310b2dc11f8074dee2480b5b7dd34c3bde917981bd4c7d",
+  "root_name": "codexstation-omega-public-v0.8a",
+  "package_sources": [
+    [
+      "packaging08a/chatgpt-plugin/plugin.json",
+      "plugin.json"
+    ],
+    [
+      "packaging08a/chatgpt-plugin/.codex-plugin/plugin.json",
+      ".codex-plugin/plugin.json"
+    ],
+    [
+      "AGENTS.md",
+      "AGENTS.md"
+    ],
+    [
+      "README.md",
+      "README.md"
+    ],
+    [
+      "packaging06/chatgpt-plugin/skills/codexstation-omega-public-orchestrator/SKILL.md",
+      "skills/codexstation-omega-public-orchestrator/SKILL.md"
+    ],
+    [
+      "skills/codexstation-omega-harvester/SKILL.md",
+      "skills/codexstation-omega-harvester/SKILL.md"
+    ],
+    [
+      "skills/codexstation-omega-project-mount/SKILL.md",
+      "skills/codexstation-omega-project-mount/SKILL.md"
+    ],
+    [
+      "dist/chatgpt-codex/PUBLIC_OMEGA_CHATGPT_CODEX_v0.8a.md",
+      "skills/codexstation-omega-public-orchestrator/references/PUBLIC_OMEGA_CHATGPT_CODEX_v0.8a.md"
+    ],
+    [
+      "aggregation08a/MOUNT_PROTOCOL.md",
+      "skills/codexstation-omega-project-mount/references/MOUNT_PROTOCOL.md"
+    ],
+    [
+      "aggregation08a/SCHEMA_EXTENSION.json",
+      "skills/codexstation-omega-project-mount/references/SCHEMA_EXTENSION.json"
+    ],
+    [
+      "aggregation08a/MOUNT_REGISTRY.json",
+      "skills/codexstation-omega-project-mount/references/MOUNT_REGISTRY.json"
+    ],
+    [
+      "aggregation08a/KERNEL_LATTICE.json",
+      "skills/codexstation-omega-project-mount/references/KERNEL_LATTICE.json"
+    ],
+    [
+      "aggregation08a/SEMANTIC_EXTENSION.json",
+      "skills/codexstation-omega-project-mount/references/SEMANTIC_EXTENSION.json"
+    ],
+    [
+      "aggregation07a/AGGREGATION_PROTOCOL.md",
+      "skills/codexstation-omega-harvester/references/AGGREGATION_PROTOCOL.md"
+    ],
+    [
+      "aggregation07a/SCHEMA_BUNDLE.json",
+      "skills/codexstation-omega-harvester/references/SCHEMA_BUNDLE.json"
+    ],
+    [
+      "canon/OMEGA_CORE.md",
+      "skills/codexstation-omega-public-orchestrator/references/OMEGA_CORE.md"
+    ],
+    [
+      "canon/OMEGA_CRYSTAL.md",
+      "skills/codexstation-omega-public-orchestrator/references/OMEGA_CRYSTAL.md"
+    ],
+    [
+      "canon/OMEGA_SKILL_SPINDLE.md",
+      "skills/codexstation-omega-public-orchestrator/references/OMEGA_SKILL_SPINDLE.md"
+    ],
+    [
+      "canon/OMEGA_THEOREMATIC_SPINE.md",
+      "skills/codexstation-omega-public-orchestrator/references/OMEGA_THEOREMATIC_SPINE.md"
+    ],
+    [
+      "canon/OMEGA_PUBLIC_ANCHORS.md",
+      "skills/codexstation-omega-public-orchestrator/references/OMEGA_PUBLIC_ANCHORS.md"
+    ],
+    [
+      "registry/OMEGA_REGISTRY.json",
+      "skills/codexstation-omega-public-orchestrator/references/OMEGA_REGISTRY.json"
+    ]
+  ],
+  "live_conformance": "OPEN",
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}

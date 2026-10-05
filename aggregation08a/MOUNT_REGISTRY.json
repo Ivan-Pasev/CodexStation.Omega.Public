@@ -1,0 +1,97 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MOUNT-REGISTRY/0.8a",
+  "status": "PUBLIC_SAFE_SEED",
+  "authority_delta": "NONE",
+  "mounts": [
+    {
+      "mount_id": "cs.mount::omega-next",
+      "project_id": "cs://project/codexstation/omega-next",
+      "canonical_name": "CodexStation Omega NEXT",
+      "source_root_class": "PRIVATE_DRIVE_CANON",
+      "repository_urls": [
+        "https://github.com/Ivan-Pasev/CodexStation.Omega.Public"
+      ],
+      "mapping_status": "ACTIVE_AGGREGATION_HOST",
+      "write_authority": "EXPLICIT_ONLY"
+    },
+    {
+      "mount_id": "cs.mount::fab-sys",
+      "project_id": "cs://project/fab-sys/root",
+      "canonical_name": "FAB.SYS",
+      "source_root_class": "CHATGPT_PROJECT_PLUS_DRIVE",
+      "repository_urls": [],
+      "mapping_status": "SEED_SOURCE_BINDING_PARTIAL",
+      "write_authority": "EXPLICIT_ONLY"
+    },
+    {
+      "mount_id": "cs.mount::realica",
+      "project_id": "cs://project/gilc/realica-hierarchy",
+      "canonical_name": "REALICA / TFR / UKC",
+      "source_root_class": "PRIVATE_DRIVE_CANON",
+      "repository_urls": [],
+      "mapping_status": "BOUNDED_PARTIAL_RAC_FORMAL_CORE",
+      "write_authority": "EXPLICIT_ONLY"
+    },
+    {
+      "mount_id": "cs.mount::dfpl",
+      "project_id": "cs://project/gilc/dfpl-prima",
+      "canonical_name": "DFPL / PRIMA",
+      "source_root_class": "PRIVATE_DRIVE_CANON",
+      "repository_urls": [
+        "https://github.com/Ivan-Pasev/DFPL"
+      ],
+      "mapping_status": "QUEUED",
+      "write_authority": "EXPLICIT_ONLY"
+    },
+    {
+      "mount_id": "cs.mount::neural-lattice",
+      "project_id": "cs://project/gilc/neural-lattice",
+      "canonical_name": "Neural Lattice",
+      "source_root_class": "PRIVATE_DRIVE_CANON",
+      "repository_urls": [
+        "https://github.com/Ivan-Pasev/neural-lattice"
+      ],
+      "mapping_status": "QUEUED",
+      "write_authority": "EXPLICIT_ONLY"
+    },
+    {
+      "mount_id": "cs.mount::trwm",
+      "project_id": "cs://project/gilc/trwm",
+      "canonical_name": "TRWM",
+      "source_root_class": "PRIVATE_DRIVE_CANON",
+      "repository_urls": [
+        "https://github.com/Ivan-Pasev/TRWM"
+      ],
+      "mapping_status": "QUEUED",
+      "write_authority": "EXPLICIT_ONLY"
+    },
+    {
+      "mount_id": "cs.mount::qic",
+      "project_id": "cs://project/gilc/qic",
+      "canonical_name": "QIC",
+      "source_root_class": "DRIVE_PLUS_REPOSITORY",
+      "repository_urls": [
+        "https://github.com/Ivan-Pasev/QIC"
+      ],
+      "mapping_status": "QUEUED",
+      "write_authority": "EXPLICIT_ONLY"
+    },
+    {
+      "mount_id": "cs.mount::ief",
+      "project_id": "cs://project/codexstation/ief",
+      "canonical_name": "CodexStation IEF",
+      "source_root_class": "DRIVE_PLUS_REPOSITORY",
+      "repository_urls": [
+        "https://github.com/Ivan-Pasev/codexstation-ief"
+      ],
+      "mapping_status": "REPO_BOUND_QUEUED_FOR_GLOBAL_KERNEL_EXTRACTION",
+      "write_authority": "EXPLICIT_ONLY"
+    }
+  ],
+  "laws": [
+    "SOURCE_PROJECT_CANON != OMEGA_AGGREGATE_VIEW",
+    "READ_ACCESS != WRITE_AUTHORITY",
+    "MOUNT != OWNERSHIP_TRANSFER",
+    "GLOBAL_FEEDBACK != AUTOMATIC_SOURCE_MUTATION"
+  ]
+}

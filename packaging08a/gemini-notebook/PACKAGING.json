@@ -1,0 +1,88 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-PACKAGING/0.8a",
+  "package_id": "cs.package::gemini-notebook::v0.8a",
+  "profile": "GEMINI_NOTEBOOK",
+  "version": "0.8.0-alpha.0",
+  "previous_composite_semantic_fingerprint": "daa85b0bf47e392c4a310b2dc11f8074dee2480b5b7dd34c3bde917981bd4c7d",
+  "root_name": "codexstation-omega-public-gemini-v0.8a",
+  "package_sources": [
+    [
+      "packaging08a/gemini-notebook/START_HERE.md",
+      "START_HERE.md"
+    ],
+    [
+      "dist/gemini-notebook/PUBLIC_OMEGA_GEMINI_NOTEBOOK_v0.8a.md",
+      "PUBLIC_OMEGA_GEMINI_NOTEBOOK_v0.8a.md"
+    ],
+    [
+      "aggregation08a/MOUNT_PROTOCOL.md",
+      "MOUNT_PROTOCOL.md"
+    ],
+    [
+      "aggregation07a/AGGREGATION_PROTOCOL.md",
+      "AGGREGATION_PROTOCOL.md"
+    ],
+    [
+      "canon/OMEGA_CORE.md",
+      "OMEGA_CORE.md"
+    ],
+    [
+      "canon/OMEGA_CRYSTAL.md",
+      "OMEGA_CRYSTAL.md"
+    ],
+    [
+      "canon/OMEGA_SKILL_SPINDLE.md",
+      "OMEGA_SKILL_SPINDLE.md"
+    ],
+    [
+      "canon/OMEGA_THEOREMATIC_SPINE.md",
+      "OMEGA_THEOREMATIC_SPINE.md"
+    ],
+    [
+      "canon/OMEGA_PUBLIC_ANCHORS.md",
+      "OMEGA_PUBLIC_ANCHORS.md"
+    ],
+    [
+      "aggregation08a/SCHEMA_EXTENSION.json",
+      "_machine/SCHEMA_EXTENSION.json"
+    ],
+    [
+      "aggregation08a/MOUNT_REGISTRY.json",
+      "_machine/MOUNT_REGISTRY.json"
+    ],
+    [
+      "aggregation08a/KERNEL_LATTICE.json",
+      "_machine/KERNEL_LATTICE.json"
+    ],
+    [
+      "aggregation08a/SEMANTIC_EXTENSION.json",
+      "_machine/SEMANTIC_EXTENSION.json"
+    ],
+    [
+      "aggregation07a/SCHEMA_BUNDLE.json",
+      "_machine/AGGREGATION_SCHEMA_BUNDLE.json"
+    ],
+    [
+      "distribution05/SEMANTIC_PARENT.json",
+      "_machine/BASE_SEMANTIC_PARENT.json"
+    ],
+    [
+      "registry/OMEGA_REGISTRY.json",
+      "_machine/OMEGA_REGISTRY.json"
+    ]
+  ],
+  "notebook_source_recommendation": [
+    "START_HERE.md",
+    "PUBLIC_OMEGA_GEMINI_NOTEBOOK_v0.8a.md",
+    "MOUNT_PROTOCOL.md",
+    "AGGREGATION_PROTOCOL.md",
+    "OMEGA_CORE.md",
+    "OMEGA_CRYSTAL.md",
+    "OMEGA_SKILL_SPINDLE.md",
+    "OMEGA_THEOREMATIC_SPINE.md",
+    "OMEGA_PUBLIC_ANCHORS.md"
+  ],
+  "live_conformance": "OPEN",
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}

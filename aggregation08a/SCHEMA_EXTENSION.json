@@ -1,0 +1,488 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-Pasev/CodexStation.Omega.Public/aggregation08a/SCHEMA_EXTENSION.json",
+  "title": "CodexStation Omega Project Mount and Kernel Lattice Schema Extension v0.8a",
+  "type": "object",
+  "$defs": {
+    "ProjectMount": {
+      "type": "object",
+      "required": [
+        "mount_id",
+        "project_id",
+        "source_roots",
+        "authority_map",
+        "active_lineage",
+        "access_mode",
+        "write_authority",
+        "mapping_status",
+        "authority_delta"
+      ],
+      "properties": {
+        "mount_id": {
+          "type": "string"
+        },
+        "project_id": {
+          "type": "string"
+        },
+        "canonical_name": {
+          "type": "string"
+        },
+        "source_roots": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "repository_urls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "authority_map": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "active_lineage": {
+          "type": "string"
+        },
+        "local_start_here": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "local_state_handoff": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "local_agents_contract": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_revision_set": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "access_mode": {
+          "type": "string"
+        },
+        "write_authority": {
+          "type": "string"
+        },
+        "publication_boundary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license_boundary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sensitivity_boundary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mapping_status": {
+          "type": "string"
+        },
+        "last_harvest_receipt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lattice_parent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "next_local_frontier": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "next_global_harvest_target": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    },
+    "HarvestSession": {
+      "type": "object",
+      "required": [
+        "session_id",
+        "project_mount_id",
+        "source_revision_set",
+        "intent",
+        "changed_sources",
+        "candidate_global_deltas",
+        "authority_delta"
+      ],
+      "properties": {
+        "session_id": {
+          "type": "string"
+        },
+        "project_mount_id": {
+          "type": "string"
+        },
+        "source_revision_set": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "previous_capsule_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intent": {
+          "type": "string"
+        },
+        "budgets": {
+          "type": "object"
+        },
+        "changed_sources": {
+          "type": "array"
+        },
+        "dependency_impacts": {
+          "type": "array"
+        },
+        "objects_seen": {
+          "type": "array"
+        },
+        "objects_created": {
+          "type": "array"
+        },
+        "objects_updated": {
+          "type": "array"
+        },
+        "relations_created": {
+          "type": "array"
+        },
+        "aliases_detected": {
+          "type": "array"
+        },
+        "supersessions_detected": {
+          "type": "array"
+        },
+        "contradictions_detected": {
+          "type": "array"
+        },
+        "kernels_extracted": {
+          "type": "array"
+        },
+        "skills_extracted": {
+          "type": "array"
+        },
+        "negative_results_preserved": {
+          "type": "array"
+        },
+        "quarantined": {
+          "type": "array"
+        },
+        "candidate_global_deltas": {
+          "type": "array"
+        },
+        "feedback_packets": {
+          "type": "array"
+        },
+        "receipt": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    },
+    "KnowledgeQuantum": {
+      "type": "object",
+      "required": [
+        "quantum_id",
+        "class",
+        "semantic_identity",
+        "source_refs",
+        "scope",
+        "status",
+        "authority_ceiling",
+        "authority_delta"
+      ],
+      "properties": {
+        "quantum_id": {
+          "type": "string"
+        },
+        "class": {
+          "type": "string"
+        },
+        "semantic_identity": {
+          "type": "string"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scope": {
+          "type": "object"
+        },
+        "assumptions": {
+          "type": "array"
+        },
+        "status": {
+          "type": "string"
+        },
+        "evidence_class": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dependencies": {
+          "type": "array"
+        },
+        "relations": {
+          "type": "array"
+        },
+        "contradictions": {
+          "type": "array"
+        },
+        "negative_results": {
+          "type": "array"
+        },
+        "authority_ceiling": {
+          "type": "string"
+        },
+        "publication_boundary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license_boundary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    },
+    "LatticeAdmission": {
+      "type": "object",
+      "required": [
+        "admission_id",
+        "candidate_id",
+        "decision",
+        "rationale",
+        "authority_delta"
+      ],
+      "properties": {
+        "admission_id": {
+          "type": "string"
+        },
+        "candidate_id": {
+          "type": "string"
+        },
+        "decision": {
+          "enum": [
+            "ADMIT",
+            "ALIAS",
+            "VERSION_SUCCESSOR",
+            "LINK_ONLY",
+            "QUARANTINE",
+            "REJECT",
+            "HOLD"
+          ]
+        },
+        "target_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "provenance_check": {
+          "type": "string"
+        },
+        "authority_check": {
+          "type": "string"
+        },
+        "license_check": {
+          "type": "string"
+        },
+        "status_check": {
+          "type": "string"
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    },
+    "FeedbackPacket": {
+      "type": "object",
+      "required": [
+        "feedback_id",
+        "target_project_id",
+        "source_global_objects",
+        "proposed_delta_type",
+        "rationale",
+        "required_authority",
+        "status",
+        "authority_delta"
+      ],
+      "properties": {
+        "feedback_id": {
+          "type": "string"
+        },
+        "target_project_id": {
+          "type": "string"
+        },
+        "source_global_objects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "proposed_delta_type": {
+          "type": "string"
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "dependencies": {
+          "type": "array"
+        },
+        "compatibility_assessment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence": {
+          "type": "array"
+        },
+        "risks": {
+          "type": "array"
+        },
+        "source_files_affected": {
+          "type": "array"
+        },
+        "suggested_tests": {
+          "type": "array"
+        },
+        "required_authority": {
+          "type": "string"
+        },
+        "publication_boundary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "PROPOSED",
+            "ACCEPTED_LOCAL",
+            "MODIFIED_LOCAL",
+            "REJECTED_LOCAL",
+            "DEFERRED_LOCAL"
+          ]
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    },
+    "KernelLatticeEntry": {
+      "type": "object",
+      "required": [
+        "kernel_id",
+        "name",
+        "tier",
+        "source_refs",
+        "source_class",
+        "purpose",
+        "evidence_vector",
+        "status",
+        "authority_delta"
+      ],
+      "properties": {
+        "kernel_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "tier": {
+          "type": "string"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_class": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "evidence_vector": {
+          "type": "object"
+        },
+        "boundary": {
+          "type": "array"
+        },
+        "relations": {
+          "type": "array"
+        },
+        "status": {
+          "type": "string"
+        },
+        "revision_binding": {
+          "type": "string"
+        },
+        "authority_delta": {
+          "const": "NONE"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}
