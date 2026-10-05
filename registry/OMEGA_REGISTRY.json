@@ -1170,6 +1170,9 @@
     "status": "HOST_WITNESS_GATE_IMPLEMENTED_LIVE_CONFORMANCE_HOLD",
     "live_host_conformance_closed": false,
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09G_RECEIPT.json"
+    "receipt": "publication/SLICE_09G_RECEIPT.json",
+    "slice_fingerprint": "3a1f8d508fefeb498a565a94af7c0c5da15e805fe2e467224309644ba2307420",
+    "composite_semantic_fingerprint": "f0c807fff1abb2df627cbc40467b45a59feb0a53201147a4fb685d03baad93d7",
+    "validation_run": 37311420585
   }
 }
