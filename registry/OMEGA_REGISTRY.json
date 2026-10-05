@@ -1242,6 +1242,9 @@
     "license_decision_state": "PROPOSED",
     "release_eligible": false,
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09L_RECEIPT.json"
+    "receipt": "publication/SLICE_09L_RECEIPT.json",
+    "slice_fingerprint": "f2f27aad739f966d174775d4b3f2887e2356b85ab1c20c5bedb7213844f088e1",
+    "composite_semantic_fingerprint": "c964d45b46ea0466c1972c04f2b25fd036fa096cd83e7b81855e54eb8a176d7f",
+    "validation_run": 37318241812
   }
 }
