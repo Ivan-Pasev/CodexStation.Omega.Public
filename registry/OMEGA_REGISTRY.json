@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.9h",
+  "version": "0.9i",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -1188,5 +1188,16 @@
     "composite_semantic_fingerprint": "3d5282a9f1649c63555db3813bbbc6cc76035cd039e7ab8f5acff051af827a84",
     "validation_run": 37313169299,
     "artifact_id": 11346428555
+  },
+  "live_host_acquisition_09i": {
+    "protocol": "cybernetic09i/ACQUISITION_PROTOCOL.json",
+    "ledger": "cybernetic09i/ACQUISITION_LEDGER.json",
+    "acquisition_engine": "cybernetic09i/acquisition.py",
+    "builder": "tools/build_acquisition_packets09i.py",
+    "validator": "tools/validate_cybernetic09i.py",
+    "status": "ACQUISITION_PROTOCOL_PASS_LIVE_RECEIPTS_PENDING",
+    "live_receipts_ingested": 0,
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09I_RECEIPT.json"
   }
 }
