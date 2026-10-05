@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8d",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8e",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "TIER_A_INTEGRATION_HARNESS_08D_PASS_CANDIDATE",
+  "registry_state": "TIER_A_INDEPENDENT_REPRODUCTION_08E_EXECUTION_PENDING",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -193,5 +193,16 @@
     "receipt": "publication/SLICE_08D_RECEIPT.json",
     "slice_fingerprint": "16114b528cd956eba3c4ffa1425e3d56c2c066be90abcfd23ca1bfc8c52f164f",
     "composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7"
+  },
+  "reproduction08e": {
+    "contract": "aggregation08e/REPRODUCTION_CONTRACT.md",
+    "profile": "reproduction08e/REPRODUCTION_PROFILE.json",
+    "ledger": "reproduction08e/REPRODUCTION_LEDGER.json",
+    "workflow": ".github/workflows/reproduce-tier-a-08e.yml",
+    "validator": "tools/validate_reproduction08e.py",
+    "previous_composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7",
+    "status": "REPRODUCTION_EXECUTION_PENDING",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_08E_RECEIPT.json"
   }
 }
