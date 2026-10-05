@@ -1,0 +1,43 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-LIVE-HOST-WITNESS/0.9g",
+  "required": [
+    "host_id",
+    "host_profile_digest",
+    "active_policy_digest",
+    "policy_version",
+    "replay_policy_digest",
+    "routing_order",
+    "summary_digest",
+    "environment",
+    "witness_origin",
+    "execution_id",
+    "status"
+  ],
+  "witness_origin_values": [
+    "LIVE_HOST",
+    "SYNTHETIC_TEST",
+    "REFERENCE_IMPLEMENTATION"
+  ],
+  "environment_required": [
+    "runtime",
+    "runtime_version",
+    "adapter_version",
+    "capability_observations"
+  ],
+  "status_values": [
+    "PASS",
+    "FAIL",
+    "UNKNOWN_OUTCOME"
+  ],
+  "laws": [
+    "REFERENCE_PARITY != LIVE_CONFORMANCE",
+    "SYNTHETIC_WITNESS != LIVE_WITNESS",
+    "HOST_IDENTITY_MUST_MATCH_REGISTERED_PROFILE",
+    "HOST_PROFILE_DIGEST_MUST_MATCH_REGISTERED_PROFILE",
+    "ACTIVE_POLICY_DIGEST_MUST_MATCH_CANONICAL_ACTIVE_POLICY",
+    "REPLAY_POLICY_DIGEST_MUST_MATCH_ACTIVE_POLICY_DIGEST",
+    "PASS_REQUIRES_NONEMPTY_EXECUTION_ID",
+    "PASS_REQUIRES_LIVE_HOST_ORIGIN"
+  ],
+  "authority_delta": "NONE"
+}
