@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.8e",
+  "version": "0.8f",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -1046,5 +1046,15 @@
     "slice_fingerprint": "5f51336863794ae75991cf5466daf0382a41a3f987d649acf4892479e197dd6f",
     "composite_semantic_fingerprint": "3c140cbdb00ca9e5725ce0742928d8a9085f2649c7bddffb4b18e6f352c0b5c7",
     "frozen_validation_run": 37280984516
+  },
+  "restricted_bridge_08f": {
+    "pins": "bridge08f/EXPECTED_PINS.json",
+    "receipt_schema": "bridge08f/RECEIPT_SCHEMA.json",
+    "protocol": "bridge08f/RUN_PROTOCOL.md",
+    "verifier": "tools/verify_private_receipt08f.py",
+    "validator": "tools/validate_bridge08f.py",
+    "status": "BRIDGE_IMPLEMENTED_EXECUTION_HOLD",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_08F_RECEIPT.json"
   }
 }
