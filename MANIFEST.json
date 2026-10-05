@@ -319,6 +319,14 @@
     "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
     "predecessor_composite_semantic_fingerprint": "bda8728a88b61a89781c6f0ae070ddfccb57bfc463a2191bcb3f8a2acb314501",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09C_RECEIPT.json"
+    "receipt": "publication/SLICE_09C_RECEIPT.json",
+    "slice_fingerprint": "064dd5b50fb9422b340a9b3369602af11fd18814f54c5635f894784bb47a0f59",
+    "composite_semantic_fingerprint": "e6666396426c2922bc68fc6256e75f7c7477f69027aa7fa43b9cb43037a579ee",
+    "validation_run": 37302786336,
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
   }
 }
