@@ -1,0 +1,59 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-REFERENCE-TELEMETRY/0.9d",
+  "records": [
+    {
+      "skill_uri": "cs.skill::source-audit::v0.1",
+      "step_status": "PASS",
+      "attempts": 1,
+      "failure_code": null,
+      "recovery_action": "NONE",
+      "workflow_id": "w1",
+      "policy_version": 1
+    },
+    {
+      "skill_uri": "cs.skill::source-audit::v0.1",
+      "step_status": "PASS",
+      "attempts": 1,
+      "failure_code": null,
+      "recovery_action": "NONE",
+      "workflow_id": "w2",
+      "policy_version": 1
+    },
+    {
+      "skill_uri": "cs.skill::source-audit::v0.1",
+      "step_status": "PASS",
+      "attempts": 1,
+      "failure_code": null,
+      "recovery_action": "NONE",
+      "workflow_id": "w3",
+      "policy_version": 1
+    },
+    {
+      "skill_uri": "cs.skill::adversarial-review::v0.1",
+      "step_status": "FAIL",
+      "attempts": 1,
+      "failure_code": "INSUFFICIENT_EVIDENCE",
+      "recovery_action": "HOLD",
+      "workflow_id": "w1",
+      "policy_version": 1
+    },
+    {
+      "skill_uri": "cs.skill::adversarial-review::v0.1",
+      "step_status": "HOLD",
+      "attempts": 1,
+      "failure_code": "INSUFFICIENT_EVIDENCE",
+      "recovery_action": "HOLD",
+      "workflow_id": "w2",
+      "policy_version": 1
+    },
+    {
+      "skill_uri": "cs.skill::adversarial-review::v0.1",
+      "step_status": "FAIL",
+      "attempts": 1,
+      "failure_code": "INSUFFICIENT_EVIDENCE",
+      "recovery_action": "HOLD",
+      "workflow_id": "w3",
+      "policy_version": 1
+    }
+  ]
+}
