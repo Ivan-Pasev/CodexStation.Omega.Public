@@ -1,0 +1,15 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.9j",
+  "slice": "OMEGA_CYBERNETIC_HOST_RETURN_INGESTION_AND_LIVE_CONFORMANCE_SLICE_09J",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "omega-09j-host-return-ingestion",
+  "predecessor": "OMEGA_CYBERNETIC_LIVE_HOST_WITNESS_ACQUISITION_SLICE_09I",
+  "previous_composite_semantic_fingerprint": "9bd7fef32e64225e378674c36ebf60487c04f6a683caeb438ceec66a90b07358",
+  "status": "HOST_RETURN_INGESTION_READY_LIVE_EVIDENCE_HOLD",
+  "live_receipts_ingested": 0,
+  "live_multi_host_conformance_closed": false,
+  "inbox_state": "EMPTY",
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "next_target": "OMEGA_CYBERNETIC_EVIDENCE_FRONTIER_RECONCILIATION_SLICE_09K"
+}
