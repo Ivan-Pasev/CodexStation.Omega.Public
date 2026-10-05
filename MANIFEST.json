@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9f",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9g",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "CYBERNETIC_MULTI_HOST_POLICY_09F_PASS_CANDIDATE",
+  "registry_state": "CYBERNETIC_HOST_WITNESS_09G_IMPLEMENTED_LIVE_HOLD",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_CYBERNETIC_HOST_WITNESS_AND_CONFORMANCE_GATE_SLICE_09G",
+  "current_target": "OMEGA_CYBERNETIC_HOST_WITNESS_RUNNER_PACK_SLICE_09H",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -264,7 +264,7 @@
   },
   "parallel_frontiers": {
     "evidence": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I",
-    "capability": "OMEGA_CYBERNETIC_MULTI_HOST_REPLAY_AND_POLICY_DISTRIBUTION_SLICE_09F"
+    "capability": "OMEGA_CYBERNETIC_HOST_WITNESS_AND_CONFORMANCE_GATE_SLICE_09G"
   },
   "cybernetic09a": {
     "capability_lattice": "cybernetic09a/CAPABILITY_LATTICE.json",
@@ -401,5 +401,22 @@
       "3.12": "success",
       "3.13": "success"
     }
+  },
+  "cybernetic09g": {
+    "witness_schema": "cybernetic09g/HOST_WITNESS_SCHEMA.json",
+    "live_registry": "cybernetic09g/LIVE_CONFORMANCE_REGISTRY.json",
+    "conformance_gate": "cybernetic09g/conformance.py",
+    "validator": "tools/validate_cybernetic09g.py",
+    "tests": "tests/test_cybernetic09g.py",
+    "status": "HOST_WITNESS_GATE_IMPLEMENTED_LIVE_CONFORMANCE_HOLD",
+    "live_host_conformance_closed": false,
+    "host_states": {
+      "chatgpt-codex": "HOLD_NO_HOST_WITNESS",
+      "gemini-notebook": "HOLD_NO_HOST_WITNESS"
+    },
+    "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+    "predecessor_composite_semantic_fingerprint": "9fa495721064479fcb4bfa397e28ef7db62d510f817305e970b1c932bcf01424",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09G_RECEIPT.json"
   }
 }
