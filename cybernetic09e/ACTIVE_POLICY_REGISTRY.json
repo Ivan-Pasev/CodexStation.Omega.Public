@@ -1,0 +1,14 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-ACTIVE-POLICY-REGISTRY/0.9e",
+  "active_policy": {
+    "policy_id": "cs.policy::adaptive-routing::v0.9d",
+    "policy_version": 1,
+    "policy_digest": "2c1cff5173ed8cb36a037c34ba030416af14c5c084ddccf47d9ee6241e9b0ea7",
+    "source": "cybernetic09d/ADAPTIVE_POLICY.json",
+    "status": "ACTIVE_GENESIS"
+  },
+  "predecessor": null,
+  "promotion_receipt": null,
+  "rollback_pointer": null,
+  "authority_delta": "NONE"
+}

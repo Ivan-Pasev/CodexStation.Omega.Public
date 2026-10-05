@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9d",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9e",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "CYBERNETIC_ADAPTIVE_POLICY_09D_PASS_CANDIDATE",
+  "registry_state": "CYBERNETIC_POLICY_GOVERNOR_09E_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_CYBERNETIC_POLICY_PROMOTION_AND_REPLAY_GOVERNOR_SLICE_09E",
+  "current_target": "OMEGA_CYBERNETIC_MULTI_HOST_REPLAY_AND_POLICY_DISTRIBUTION_SLICE_09F",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -264,7 +264,7 @@
   },
   "parallel_frontiers": {
     "evidence": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I",
-    "capability": "OMEGA_CYBERNETIC_ADAPTIVE_POLICY_AND_TELEMETRY_CRYSTALLIZATION_SLICE_09D"
+    "capability": "OMEGA_CYBERNETIC_POLICY_PROMOTION_AND_REPLAY_GOVERNOR_SLICE_09E"
   },
   "cybernetic09a": {
     "capability_lattice": "cybernetic09a/CAPABILITY_LATTICE.json",
@@ -346,6 +346,29 @@
     "composite_semantic_fingerprint": "adb4ccf266e8a7d59010b53dbafe4654a3e07dad6f2306986ca464a73c2c3936",
     "policy_digest": "2c1cff5173ed8cb36a037c34ba030416af14c5c084ddccf47d9ee6241e9b0ea7",
     "validation_run": 37303611882,
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
+  },
+  "cybernetic09e": {
+    "promotion_policy": "cybernetic09e/PROMOTION_POLICY.json",
+    "active_policy_registry": "cybernetic09e/ACTIVE_POLICY_REGISTRY.json",
+    "governor": "cybernetic09e/governor.py",
+    "validator": "tools/validate_cybernetic09e.py",
+    "tests": "tests/test_cybernetic09e.py",
+    "status": "POLICY_GOVERNOR_PASS_CANDIDATE",
+    "live_active_policy_version": 1,
+    "live_active_policy_digest": "2c1cff5173ed8cb36a037c34ba030416af14c5c084ddccf47d9ee6241e9b0ea7",
+    "synthetic_promotion_is_live": false,
+    "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+    "predecessor_composite_semantic_fingerprint": "adb4ccf266e8a7d59010b53dbafe4654a3e07dad6f2306986ca464a73c2c3936",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09E_RECEIPT.json",
+    "slice_fingerprint": "427682071f8a92635b4d1756fdf828e740110b6d275dfbb9128209c1c631f4ee",
+    "composite_semantic_fingerprint": "aa247cd65a8505bab2ec11b9bc470a1d42fb6d19c6c79c1ef4b05c890effe8f2",
+    "validation_run": 37307322565,
     "ci_python": {
       "3.11": "success",
       "3.12": "success",
