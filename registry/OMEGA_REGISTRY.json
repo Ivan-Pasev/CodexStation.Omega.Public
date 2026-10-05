@@ -1064,6 +1064,9 @@
     "validator": "tools/validate_ingestion08g.py",
     "status": "INGESTION_CAPABILITY_PASS_NO_NEW_RECEIPTS",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_08G_RECEIPT.json"
+    "receipt": "publication/SLICE_08G_RECEIPT.json",
+    "slice_fingerprint": "d9960449620c54a4dca34249cb143bc0dd2a042ba860cc0b1a8fbb63ad1adede",
+    "composite_semantic_fingerprint": "f557bd38c1cfa705ea37a1d97168b7ff218e85e9abdd8086e5aa23cd97795488",
+    "validation_run": 37287012689
   }
 }
