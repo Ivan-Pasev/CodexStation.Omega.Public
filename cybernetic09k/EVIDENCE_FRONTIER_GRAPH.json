@@ -1,0 +1,109 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-EVIDENCE-FRONTIER-GRAPH/0.9k",
+  "graph_id": "cs.evidence-frontier::omega::v0.9k",
+  "laws": [
+    "ARCHITECTURE_COMPLETE + EVIDENCE_PENDING != IMPLEMENTATION_INCOMPLETE",
+    "NO_NEW_EXTERNAL_EVIDENCE => DO_NOT_REBUILD_THE_SAME_GATE",
+    "HOLD != FAIL",
+    "SOURCE_REPORTED_PASS != LOCALLY_REPRODUCED_PASS",
+    "REFERENCE_PARITY != LIVE_CONFORMANCE",
+    "PUBLICATION_READY != RELEASE_ELIGIBLE"
+  ],
+  "gates": [
+    {
+      "gate_id": "08I_RESTRICTED_EXECUTION_RECEIPTS",
+      "classification": "EXTERNAL_EVIDENCE_PENDING",
+      "architecture_state": "COMPLETE",
+      "current_state": "HELD_EXTERNAL_RECEIPTS",
+      "minimal_admissible_evidence": [
+        "direct exact-pin execution receipt for Digital.Fabrica.Core",
+        "direct exact-pin execution receipt for HighestOne",
+        "direct exact-pin execution receipt for neural-lattice"
+      ],
+      "admission_surface": "ingestion08g/RECEIPT_REGISTRY.json",
+      "resume_condition": "at least one new directly admissible private-family receipt appears",
+      "dependencies": []
+    },
+    {
+      "gate_id": "09J_LIVE_HOST_RETURNS",
+      "classification": "EXTERNAL_EVIDENCE_PENDING",
+      "architecture_state": "COMPLETE",
+      "current_state": "HOLD_LIVE_RECEIPTS_PENDING",
+      "minimal_admissible_evidence": [
+        "challenge-bound LIVE_HOST return for chatgpt-codex",
+        "challenge-bound LIVE_HOST return for gemini-notebook"
+      ],
+      "admission_surface": "cybernetic09j/RETURN_INBOX.json",
+      "resume_condition": "one or more new returned host envelopes appear",
+      "dependencies": [
+        "09G_HOST_WITNESS_GATE",
+        "09I_HOST_ACQUISITION"
+      ]
+    },
+    {
+      "gate_id": "NB00_LIVE_CONFORMANCE_01",
+      "classification": "EXTERNAL_EVIDENCE_PENDING",
+      "architecture_state": "COMPLETE_OR_SUBSUMED_BY_09G_09J",
+      "current_state": "OPEN",
+      "minimal_admissible_evidence": [
+        "direct live conformance receipt from required supported surface"
+      ],
+      "admission_surface": "cybernetic09g/LIVE_CONFORMANCE_REGISTRY.json",
+      "resume_condition": "new admissible live-host witness exists",
+      "dependencies": [
+        "09J_LIVE_HOST_RETURNS"
+      ]
+    },
+    {
+      "gate_id": "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
+      "classification": "EXTERNAL_OR_ENVIRONMENTAL_EVIDENCE_PENDING",
+      "architecture_state": "IMPLEMENTED_TEST_SURFACE_AVAILABLE",
+      "current_state": "OPEN",
+      "minimal_admissible_evidence": [
+        "clean-chat fallback execution witness on target distribution surface"
+      ],
+      "admission_surface": "publication/release evidence surface",
+      "resume_condition": "fresh clean-chat execution evidence exists",
+      "dependencies": []
+    },
+    {
+      "gate_id": "LICENSE_IP_REVIEW",
+      "classification": "GOVERNANCE_DECISION_PENDING",
+      "architecture_state": "COMPLETE",
+      "current_state": "OPEN",
+      "minimal_admissible_evidence": [
+        "explicit reviewed license/IP decision"
+      ],
+      "admission_surface": "MANIFEST.json publication_gates.license_ip_review",
+      "resume_condition": "authorized license/IP decision recorded",
+      "dependencies": []
+    },
+    {
+      "gate_id": "HIGHESTONE_RELEASE_EVIDENCE",
+      "classification": "EXTERNAL_EVIDENCE_PENDING",
+      "architecture_state": "SOURCE_NATIVE_CHECKS_EXIST",
+      "current_state": "MACHINE_CHECKED_RELEASE_NO",
+      "minimal_admissible_evidence": [
+        "release-grade evidence completing unresolved HighestOne release witness requirements"
+      ],
+      "admission_surface": "upstream HighestOne release evidence",
+      "resume_condition": "new release-grade upstream evidence appears",
+      "dependencies": []
+    },
+    {
+      "gate_id": "DFPL_PRIMA_FULL_RUNTIME_REPRODUCTION",
+      "classification": "EXTERNAL_EVIDENCE_PENDING",
+      "architecture_state": "PUBLIC_SENTINEL_ONLY",
+      "current_state": "HOLD_EXECUTABLE_RUNTIME_UNAVAILABLE",
+      "minimal_admissible_evidence": [
+        "accessible executable PRIMA runtime at exact or explicitly reconciled pin",
+        "durable Backend A/B execution evidence"
+      ],
+      "admission_surface": "future DFPL/PRIMA reproduction receipt",
+      "resume_condition": "executable runtime becomes accessible with reproducible durable-backend evidence",
+      "dependencies": []
+    }
+  ],
+  "authority_delta": "NONE",
+  "release_eligible": false
+}
