@@ -1,0 +1,70 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-DEDUP-SCOPE/0.9n",
+  "gate": "duplication_dedup",
+  "scope_id": "MACHINE_ADDRESSABLE_PUBLIC_DECLARATIONS",
+  "declarations": [
+    {
+      "path": "registry/OMEGA_REGISTRY.json",
+      "array": "objects",
+      "id_field": "id",
+      "class": "OMEGA_REGISTRY_OBJECT"
+    },
+    {
+      "path": "registry/objectization04/OBJECTS.json",
+      "array": "objects",
+      "id_field": "id",
+      "class": "OBJECTIZATION_OBJECT"
+    },
+    {
+      "path": "registry/objectization04/RELATIONS.json",
+      "array": "relations",
+      "id_field": "id",
+      "class": "OBJECTIZATION_RELATION"
+    },
+    {
+      "path": "registry/objectization04/SKILLS.json",
+      "array": "skills",
+      "id_field": "id",
+      "class": "OBJECTIZATION_SKILL"
+    },
+    {
+      "path": "registry/objectization04/THEOREM_DEPENDENCIES.json",
+      "array": "dependencies",
+      "id_field": "theorem_id",
+      "class": "THEOREM_DEPENDENCY"
+    },
+    {
+      "path": "cybernetic09c/SKILL_REGISTRY.json",
+      "array": "skills",
+      "id_field": "skill_uri",
+      "class": "RUNTIME_SKILL"
+    }
+  ],
+  "publication_receipts": {
+    "glob": "publication/*.json",
+    "id_precedence": [
+      "receipt_id",
+      "slice"
+    ],
+    "class": "PUBLICATION_RECEIPT"
+  },
+  "pass_conditions": [
+    "no duplicate canonical id within the audited corpus",
+    "no identical normalized payload under multiple ids within the same declaration class unless explicitly superseded/aliased",
+    "every explicit supersession points to known ids",
+    "supersession graph is acyclic"
+  ],
+  "excluded_from_pass": [
+    "free-form prose semantic duplication",
+    "third-party source-body similarity",
+    "cross-repository semantic equivalence",
+    "same-label objects in explicitly distinct lineages"
+  ],
+  "laws": [
+    "SCOPED_DEDUP_PASS != GLOBAL_SEMANTIC_UNIQUENESS",
+    "SAME_LABEL != SAME_LINEAGE",
+    "SUPERSESSION != DELETION",
+    "DEDUP != AUTHORITY_PROMOTION"
+  ],
+  "authority_delta": "NONE"
+}
