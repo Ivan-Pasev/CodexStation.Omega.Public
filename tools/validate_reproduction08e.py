@@ -39,11 +39,11 @@ def main():
     for family in ("DIGITAL_FABRICA_CORE","HIGHESTONE","NEURAL_LATTICE"):
         if by.get(family,{}).get("independent_reproduction")!="HOLD":
             errors.append(f"private family promoted: {family}")
-    if by.get("DFPL_PRIMA",{}).get("status")!="PARTIAL_SOURCE_NATIVE_REPRODUCTION_PENDING":
-        errors.append("DFPL must remain partial until CI witness is bound")
-    if by.get("GILC_CODEXSTATION",{}).get("status")!="INDEPENDENT_REPRODUCTION_PENDING":
-        errors.append("GILC must remain pending until cross-repo CI witness is bound")
-    if by.get("HIGHESTONE",{}).get("lineage_check",{}).get("relevant_formal_tree_changed") is not False:
+    if by.get("DFPL_PRIMA",{}).get("status")!="PARTIAL_SOURCE_NATIVE_REPRODUCTION_PASS":
+        errors.append("DFPL partial reproduction witness missing")
+    if by.get("GILC_CODEXSTATION",{}).get("status")!="INDEPENDENT_CROSS_REPO_NATIVE_EXECUTION_PASS":
+        errors.append("GILC independent reproduction witness missing")
+    if by.get("DFPL_PRIMA",{}).get("independent_reproduction",{}).get("workflow_run_id") != 37280622913:\n        errors.append("DFPL reproduction run mismatch")\n    if by.get("GILC_CODEXSTATION",{}).get("independent_reproduction",{}).get("workflow_run_id") != 37280622913:\n        errors.append("GILC reproduction run mismatch")\n    if by.get("HIGHESTONE",{}).get("lineage_check",{}).get("relevant_formal_tree_changed") is not False:
         errors.append("HighestOne formal lineage not preserved")
     required={
         "SOURCE_REPORTED_PASS != LOCALLY_REPRODUCED_PASS",
