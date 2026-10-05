@@ -173,3 +173,16 @@ jobs:
         run: |
           python tools/validate_cybernetic09g.py
           python -m unittest -v tests.test_cybernetic09g
+
+      - name: Cybernetic host witness runner 09H validation
+        run: |
+          python tools/validate_cybernetic09h.py
+          python -m unittest -v tests.test_cybernetic09h
+          python tools/build_host_witness_pack09h.py --out build/host-witness09h
+      - name: Upload host witness pack 09H
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@v4
+        with:
+          name: codexstation-omega-host-witness-v0.9h
+          path: build/host-witness09h/codexstation-omega-host-witness-v0.9h.zip
+          if-no-files-found: error
