@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9e",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9f",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "CYBERNETIC_POLICY_GOVERNOR_09E_PASS_CANDIDATE",
+  "registry_state": "CYBERNETIC_MULTI_HOST_POLICY_09F_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_CYBERNETIC_MULTI_HOST_REPLAY_AND_POLICY_DISTRIBUTION_SLICE_09F",
+  "current_target": "OMEGA_CYBERNETIC_HOST_WITNESS_AND_CONFORMANCE_GATE_SLICE_09G",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -264,7 +264,7 @@
   },
   "parallel_frontiers": {
     "evidence": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I",
-    "capability": "OMEGA_CYBERNETIC_POLICY_PROMOTION_AND_REPLAY_GOVERNOR_SLICE_09E"
+    "capability": "OMEGA_CYBERNETIC_MULTI_HOST_REPLAY_AND_POLICY_DISTRIBUTION_SLICE_09F"
   },
   "cybernetic09a": {
     "capability_lattice": "cybernetic09a/CAPABILITY_LATTICE.json",
@@ -369,6 +369,33 @@
     "slice_fingerprint": "427682071f8a92635b4d1756fdf828e740110b6d275dfbb9128209c1c631f4ee",
     "composite_semantic_fingerprint": "aa247cd65a8505bab2ec11b9bc470a1d42fb6d19c6c79c1ef4b05c890effe8f2",
     "validation_run": 37307322565,
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
+  },
+  "cybernetic09f": {
+    "host_profiles": "cybernetic09f/HOST_PROFILES.json",
+    "distribution_contract": "cybernetic09f/DISTRIBUTION_CONTRACT.json",
+    "distributor": "cybernetic09f/distributor.py",
+    "validator": "tools/validate_cybernetic09f.py",
+    "tests": "tests/test_cybernetic09f.py",
+    "status": "MULTI_HOST_SEMANTIC_PARITY_PASS_CANDIDATE",
+    "active_policy_version": 1,
+    "active_policy_digest": "2c1cff5173ed8cb36a037c34ba030416af14c5c084ddccf47d9ee6241e9b0ea7",
+    "live_host_execution_claimed": false,
+    "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+    "predecessor_composite_semantic_fingerprint": "aa247cd65a8505bab2ec11b9bc470a1d42fb6d19c6c79c1ef4b05c890effe8f2",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09F_RECEIPT.json",
+    "slice_fingerprint": "377a93af094bdd493b10a18ab714a8932381746db14e0204fbee257d7fe67f91",
+    "composite_semantic_fingerprint": "9fa495721064479fcb4bfa397e28ef7db62d510f817305e970b1c932bcf01424",
+    "validation_run": 37310846189,
+    "host_profile_digests": {
+      "chatgpt-codex": "be4ac97da0a5f236edd318815195c05fa00001d1a25ae000d7a38fbc128e1156",
+      "gemini-notebook": "79cd3b96e67808653f1bc8833e4e9d6e9338b644036bcc66df160f024bfacbd9"
+    },
     "ci_python": {
       "3.11": "success",
       "3.12": "success",

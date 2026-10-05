@@ -1,0 +1,20 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.9f",
+  "slice": "OMEGA_CYBERNETIC_MULTI_HOST_REPLAY_AND_POLICY_DISTRIBUTION_SLICE_09F",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "omega-09f-multi-host-policy-distribution",
+  "predecessor": "OMEGA_CYBERNETIC_POLICY_PROMOTION_AND_REPLAY_GOVERNOR_SLICE_09E",
+  "previous_composite_semantic_fingerprint": "aa247cd65a8505bab2ec11b9bc470a1d42fb6d19c6c79c1ef4b05c890effe8f2",
+  "status": "MULTI_HOST_SEMANTIC_PARITY_PASS_CANDIDATE",
+  "active_policy_version": 1,
+  "active_policy_digest": "2c1cff5173ed8cb36a037c34ba030416af14c5c084ddccf47d9ee6241e9b0ea7",
+  "hosts": [
+    "chatgpt-codex",
+    "gemini-notebook"
+  ],
+  "live_host_execution_claimed": false,
+  "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "next_target": "OMEGA_CYBERNETIC_HOST_WITNESS_AND_CONFORMANCE_GATE_SLICE_09G"
+}
