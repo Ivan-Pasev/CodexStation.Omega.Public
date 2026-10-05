@@ -1090,6 +1090,9 @@
     "validator": "tools/validate_cybernetic09a.py",
     "status": "CYBERNETIC_CONTROL_LOOP_PASS_CANDIDATE",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09A_RECEIPT.json"
+    "receipt": "publication/SLICE_09A_RECEIPT.json",
+    "slice_fingerprint": "a183fd56bdef60123697617937f6c7a87142a4770667debf3d35742d94b51304",
+    "composite_semantic_fingerprint": "69f15615e127194a801aa3f92913678461cbcd136e9fbb0eddc3688be6421102",
+    "validation_run": 37289084682
   }
 }
