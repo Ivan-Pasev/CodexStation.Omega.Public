@@ -1143,6 +1143,9 @@
     "live_active_policy_digest": "2c1cff5173ed8cb36a037c34ba030416af14c5c084ddccf47d9ee6241e9b0ea7",
     "synthetic_promotion_is_live": false,
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09E_RECEIPT.json"
+    "receipt": "publication/SLICE_09E_RECEIPT.json",
+    "slice_fingerprint": "427682071f8a92635b4d1756fdf828e740110b6d275dfbb9128209c1c631f4ee",
+    "composite_semantic_fingerprint": "aa247cd65a8505bab2ec11b9bc470a1d42fb6d19c6c79c1ef4b05c890effe8f2",
+    "validation_run": 37307322565
   }
 }
