@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9l",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9n",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "CYBERNETIC_GOVERNANCE_09L_LICENSE_PENDING_RELEASE_HOLD",
+  "registry_state": "PUBLICATION_OBJECT_DEDUP_09N_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -35,7 +35,7 @@
     "authority_ceiling_check": "PASS_CANDIDATE_BOOTSTRAP",
     "provenance_complete": "PASS_CANDIDATE_BOOTSTRAP",
     "public_interest_check": "PASS_CANDIDATE_BOOTSTRAP",
-    "duplication_dedup": "OBJECT_LEVEL_PARTIAL",
+    "duplication_dedup": "PASS",
     "publication_witness": "PASS_CANDIDATE_BOOTSTRAP"
   },
   "distribution_targets": [
@@ -580,5 +580,19 @@
       "3.12": "success",
       "3.13": "success"
     }
+  },
+  "cybernetic09n": {
+    "dedup_scope": "cybernetic09n/DEDUP_SCOPE.json",
+    "supersession_registry": "cybernetic09n/SUPERSESSION_REGISTRY.json",
+    "auditor": "cybernetic09n/dedup.py",
+    "validator": "tools/validate_cybernetic09n.py",
+    "tests": "tests/test_cybernetic09n.py",
+    "status": "SCOPED_OBJECT_DEDUP_PASS_CANDIDATE",
+    "gate": "PASS",
+    "scope_id": "MACHINE_ADDRESSABLE_PUBLIC_DECLARATIONS",
+    "free_form_prose_semantic_dedup_claimed": false,
+    "predecessor_composite_semantic_fingerprint": "c964d45b46ea0466c1972c04f2b25fd036fa096cd83e7b81855e54eb8a176d7f",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09N_RECEIPT.json"
   }
 }
