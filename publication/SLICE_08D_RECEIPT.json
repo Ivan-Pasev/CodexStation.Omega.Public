@@ -10,7 +10,7 @@
   "source_families": 5,
   "fixture_count": 5,
   "source_execution": "NOT_PERFORMED",
-  "local_harness_execution": "CI_PENDING",
+  "local_harness_execution": "CI_PASS",
   "open_gates": [
     "NB00_LIVE_CONFORMANCE_01",
     "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
@@ -28,5 +28,17 @@
     "scientific confirmation",
     "live provider conformance",
     "release eligibility"
-  ]
+  ],
+  "validated_head": "972ff162b9b5995018be63ed08239595a47fb15d",
+  "slice_fingerprint": "16114b528cd956eba3c4ffa1425e3d56c2c066be90abcfd23ca1bfc8c52f164f",
+  "composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7",
+  "ci": {
+    "run_id": 37279267052,
+    "python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    },
+    "validator": "PASS"
+  }
 }
