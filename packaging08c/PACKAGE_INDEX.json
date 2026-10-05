@@ -8,9 +8,9 @@
   "composite_semantic_fingerprint": "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64",
   "build_witness": {
     "workflow": "public-omega-ci",
-    "run_id": 37271233916,
-    "head": "74d15fbb79a77a0dc3f599c79215a83c36f68a42",
-    "repository_semantic_fingerprint": "9a36612cb769b60063855da6cd5269e93ea914787845ddeeecf0557b3bcd89b1",
+    "run_id": 37271388713,
+    "head": "ff0939c9d50a74947f500c66a90f845d4ba5c05a",
+    "repository_semantic_fingerprint": "8216327b0689aebdca896eba212fe544fa98d3ed1d6609e27cad8a5c36d886ad",
     "registry_sha256": "9c82534adf4296f3575ced87780f162dedd045c09af72413a0fe833fb6a499f3",
     "matrix": {
       "3.11": "success",
@@ -27,9 +27,9 @@
       "bytes": 58584,
       "sha256": "7bee590f054951832983e6717569cdfa05eae88149eb10dbc8fbc49378c8d839",
       "file_count": 31,
-      "github_artifact_id": 11328298457,
-      "github_artifact_digest": "sha256:55170e2f260e6f9c01f3d782205f3945a9505cc09698090c21a4c589b8a3c043",
-      "drive_artifact_file_id": null,
+      "github_artifact_id": 11327688902,
+      "github_artifact_digest": "sha256:031bef1b4655c622482b98fa0db30b6f8b9860bf326fca234ca5d0c3599b3f25",
+      "drive_artifact_file_id": "1AhyZDJC4qvszzQqMFsXNgly00Z30fp5r",
       "live_conformance": "OPEN"
     },
     {
@@ -39,16 +39,16 @@
       "bytes": 42107,
       "sha256": "da4e0bd3f89a84a4de45d77472f088b550426c306243f0f73e13dfcdf9219258",
       "file_count": 23,
-      "github_artifact_id": 11328313337,
-      "github_artifact_digest": "sha256:d9220a9775b4fd598ec63dd5270b7654c9bfa53b304e74442d89d231495112f9",
-      "drive_artifact_file_id": null,
+      "github_artifact_id": 11327614169,
+      "github_artifact_digest": "sha256:4804129cae333b5366dd3696165cb3cfcfb3ce8750ded74fb3193d62984e5ee0",
+      "drive_artifact_file_id": "1Y_mc8N9Gy2ECHddA1akdvxodrKHqTv3W",
       "live_conformance": "OPEN"
     }
   ],
   "combined_artifact": {
-    "github_artifact_id": 11328293522,
-    "github_artifact_digest": "sha256:246efdd50b4accf1082e7f52a40fc4f99df07013658b2be0b7ca2f5f8d606e11",
-    "drive_file_id": null,
+    "github_artifact_id": 11327648983,
+    "github_artifact_digest": "sha256:495d73c76f3e64e4ea204dbe836c3e1d514e8ba2a5ea297816343109d055bb21",
+    "drive_file_id": "1QQxsS5Z0kwiN4T3iJqCzEPzQDtgTEhp3",
     "contains": [
       "codexstation-omega-public-v0.8c.zip",
       "codexstation-omega-public-gemini-v0.8c.zip"
