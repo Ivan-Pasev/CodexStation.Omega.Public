@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9k",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9l",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "CYBERNETIC_EVIDENCE_FRONTIER_09K_RECONCILED",
+  "registry_state": "CYBERNETIC_GOVERNANCE_09L_LICENSE_PENDING_RELEASE_HOLD",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_CYBERNETIC_GOVERNANCE_DECISION_AND_RELEASE_READINESS_SLICE_09L",
+  "current_target": "OMEGA_CYBERNETIC_GOVERNANCE_AUTHORIZATION_OR_EXTERNAL_EVIDENCE_WAIT_STATE_09M",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -544,5 +544,21 @@
       "3.12": "success",
       "3.13": "success"
     }
+  },
+  "cybernetic09l": {
+    "decision_schema": "cybernetic09l/GOVERNANCE_DECISION_SCHEMA.json",
+    "license_ip_decision": "cybernetic09l/LICENSE_IP_DECISION.json",
+    "release_readiness_policy": "cybernetic09l/RELEASE_READINESS_POLICY.json",
+    "governor": "cybernetic09l/governance.py",
+    "validator": "tools/validate_cybernetic09l.py",
+    "tests": "tests/test_cybernetic09l.py",
+    "status": "GOVERNANCE_SURFACE_PASS_LICENSE_DECISION_PENDING_RELEASE_HOLD",
+    "license_ip_review_closed": false,
+    "license_decision_state": "PROPOSED",
+    "recommended_profile": "APACHE-2.0_CODE_PLUS_CC-BY-4.0_DOCS",
+    "release_eligible": false,
+    "predecessor_composite_semantic_fingerprint": "15be646c46117179f3d8372db17e2822c4c6224fb9ca89b297ca59cbb03cf8fb",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09L_RECEIPT.json"
   }
 }
