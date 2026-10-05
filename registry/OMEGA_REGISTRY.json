@@ -1102,6 +1102,9 @@
     "validator": "tools/validate_cybernetic09b.py",
     "status": "MISSION_COMPILER_EFFECT_GATE_PASS_CANDIDATE",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09B_RECEIPT.json"
+    "receipt": "publication/SLICE_09B_RECEIPT.json",
+    "slice_fingerprint": "68cf7ddaae57bebc179343512263a6a58dfaac876605e7ccb2de5f6fe38abb5e",
+    "composite_semantic_fingerprint": "bda8728a88b61a89781c6f0ae070ddfccb57bfc463a2191bcb3f8a2acb314501",
+    "validation_run": 37300622038
   }
 }
