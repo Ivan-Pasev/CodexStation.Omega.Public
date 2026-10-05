@@ -1,0 +1,134 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-TIER-A-REPRODUCTION-LEDGER/0.8e",
+  "observed_at": "2026-10-05",
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "sources": [
+    {
+      "source_family": "DIGITAL_FABRICA_CORE",
+      "repository": "Ivan-Pasev/Digital.Fabrica.Core",
+      "commit": "c3e142d73ddbbcdfd5677aed242da3c6c52ae9e6",
+      "visibility": "private",
+      "native_toolchain": "Node >=20 / TypeScript 5.9",
+      "native_commands": [
+        "npm run typecheck",
+        "npm run build",
+        "npm test"
+      ],
+      "exact_commit_source_ci": null,
+      "independent_reproduction": "HOLD",
+      "status": "HOLD_PRIVATE_OR_MISSING_REPRO_SURFACE",
+      "reason": "Pinned repository is private and has no native workflow at the pin. Public Ω CI is not authorized to exfiltrate or silently mirror private source."
+    },
+    {
+      "source_family": "DFPL_PRIMA",
+      "repository": "Ivan-Pasev/DFPL",
+      "commit": "5602b083dcb8fad2ef8522bc4c93fe2734806bc3",
+      "visibility": "public",
+      "native_toolchain": "Python stdlib sentinel; PRIMA runtime model not public at this pin",
+      "native_commands": [
+        "python -m unittest -v tests.test_encoder_b"
+      ],
+      "exact_commit_source_ci": null,
+      "independent_reproduction": {
+        "workflow_run_id": 37280622913,
+        "job": "dfpl-public-sentinel",
+        "conclusion": "success",
+        "exact_pin_verified": true
+      },
+      "status": "PARTIAL_SOURCE_NATIVE_REPRODUCTION_PASS",
+      "semantic_scope": "Public Encoder B sentinel only",
+      "residual": "08D uses PRIMA authorization/effect semantics. Pinned public repo documents those semantics but does not contain the executable private prima-runtime-rs harness described by PRIMA §10."
+    },
+    {
+      "source_family": "HIGHESTONE",
+      "repository": "Ivan-Pasev/CodexStation.HighestOne",
+      "commit": "a4f237aba8156d0bf6f1354457275de9a67ac21a",
+      "visibility": "private",
+      "native_toolchain": "Lean 4.33.1 / lake",
+      "source_native_run": {
+        "run_id": 33790374960,
+        "head_sha": "b203042731ab3664bd430bb9bd258a7918577f1c",
+        "conclusion": "success",
+        "jobs": [
+          "source-ingestion-guard:success",
+          "machine-check:success"
+        ]
+      },
+      "lineage_check": {
+        "pinned_commit_ahead_by": 3,
+        "relevant_formal_tree_changed": false,
+        "changed_paths": [
+          "README.md",
+          "formal/lean/MACHINE_CHECKED_THEOREM_LEDGER_v0.8.8.md"
+        ]
+      },
+      "independent_reproduction": "HOLD",
+      "status": "SOURCE_NATIVE_LINEAGE_APPLICABLE_CI_ONLY",
+      "residual": "Successful Lean execution applies to unchanged formal source lineage, but this is not a fresh independent cross-repository execution of the private pinned commit."
+    },
+    {
+      "source_family": "GILC_CODEXSTATION",
+      "repository": "Ivan-Pasev/GILC.CodexStation",
+      "commit": "dae8c25c721b688da76fc5589aa8440ee810d7dd",
+      "visibility": "public",
+      "native_toolchain": "Python >=3.11 / pytest",
+      "native_commands": [
+        "pip install -e \".[dev]\"",
+        "pytest"
+      ],
+      "exact_commit_source_ci": {
+        "run_id": 33919239363,
+        "conclusion": "success",
+        "python": {
+          "3.11": "success",
+          "3.12": "success",
+          "3.13": "success"
+        }
+      },
+      "independent_reproduction": {
+        "workflow_run_id": 37280622913,
+        "conclusion": "success",
+        "exact_pin_verified": true,
+        "python": {
+          "3.11": "success",
+          "3.12": "success",
+          "3.13": "success"
+        }
+      },
+      "status": "INDEPENDENT_CROSS_REPO_NATIVE_EXECUTION_PASS"
+    },
+    {
+      "source_family": "NEURAL_LATTICE",
+      "repository": "Ivan-Pasev/neural-lattice",
+      "commit": "57da881b28a5a4e924b900a18e2e59f3a202f6fe",
+      "visibility": "private",
+      "native_toolchain": "Node 24 / npm",
+      "native_commands": [
+        "npm install --ignore-scripts",
+        "npm run validate"
+      ],
+      "exact_commit_source_ci": {
+        "run_id": 33970167198,
+        "conclusion": "success",
+        "job": "validate:success"
+      },
+      "independent_reproduction": "HOLD",
+      "status": "SOURCE_NATIVE_EXACT_COMMIT_CI_ONLY",
+      "residual": "Exact pinned private commit has successful native CI, but no independent public cross-repository execution is admissible without private-source access."
+    }
+  ],
+  "aggregate_status": "BOUNDED_REPRODUCTION_PASS_WITH_HOLDS",
+  "laws": [
+    "PRIVATE_SOURCE_STAYS_PRIVATE",
+    "SOURCE_NATIVE_EXACT_COMMIT_CI != INDEPENDENT_REPRODUCTION",
+    "SOURCE_NATIVE_LINEAGE_APPLICABLE_CI != INDEPENDENT_REPRODUCTION",
+    "PARTIAL_SOURCE_NATIVE_REPRODUCTION != FULL_08D_CORRESPONDENCE_REPRODUCTION"
+  ],
+  "execution_witness": {
+    "workflow": "tier-a-independent-reproduction-08e",
+    "run_id": 37280622913,
+    "conclusion": "success",
+    "ledger_validation": "success"
+  }
+}

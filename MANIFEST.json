@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8d",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.8e",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "TIER_A_INTEGRATION_HARNESS_08D_PASS_CANDIDATE",
+  "registry_state": "TIER_A_INDEPENDENT_REPRODUCTION_08E_PASS_WITH_HOLDS",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_TIER_A_INDEPENDENT_REPRODUCTION_SLICE_08E",
+  "current_target": "OMEGA_TIER_A_PRIVATE_REPRODUCTION_BRIDGE_SLICE_08F",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -193,5 +193,20 @@
     "receipt": "publication/SLICE_08D_RECEIPT.json",
     "slice_fingerprint": "16114b528cd956eba3c4ffa1425e3d56c2c066be90abcfd23ca1bfc8c52f164f",
     "composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7"
+  },
+  "reproduction08e": {
+    "contract": "aggregation08e/REPRODUCTION_CONTRACT.md",
+    "profile": "reproduction08e/REPRODUCTION_PROFILE.json",
+    "ledger": "reproduction08e/REPRODUCTION_LEDGER.json",
+    "workflow": ".github/workflows/reproduce-tier-a-08e.yml",
+    "validator": "tools/validate_reproduction08e.py",
+    "previous_composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7",
+    "status": "BOUNDED_REPRODUCTION_PASS_WITH_HOLDS",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_08E_RECEIPT.json",
+    "execution_run": 37280622913,
+    "slice_fingerprint": "5f51336863794ae75991cf5466daf0382a41a3f987d649acf4892479e197dd6f",
+    "composite_semantic_fingerprint": "3c140cbdb00ca9e5725ce0742928d8a9085f2649c7bddffb4b18e6f352c0b5c7",
+    "frozen_validation_run": 37280984516
   }
 }

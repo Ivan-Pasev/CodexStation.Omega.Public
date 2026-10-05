@@ -1,0 +1,63 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.8e",
+  "slice": "OMEGA_TIER_A_INDEPENDENT_REPRODUCTION_SLICE_08E",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "public-omega-independent-reproduction-08e",
+  "status": "BOUNDED_REPRODUCTION_PASS_WITH_HOLDS",
+  "predecessor": "OMEGA_TIER_A_INTEGRATION_HARNESS_SLICE_08D",
+  "previous_composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7",
+  "planned_independent_reproduction": [
+    "DFPL_PRIMA: public Encoder B sentinel only",
+    "GILC_CODEXSTATION: full native pytest matrix 3.11/3.12/3.13"
+  ],
+  "preserved_source_native_evidence": [
+    "HIGHESTONE: run 33790374960 on unchanged formal-source lineage",
+    "GILC_CODEXSTATION: run 33919239363 exact pinned commit",
+    "NEURAL_LATTICE: run 33970167198 exact pinned commit"
+  ],
+  "holds": [
+    "DIGITAL_FABRICA_CORE: private, no exact-pin native workflow",
+    "DFPL_PRIMA exact authorization/effect semantics: executable private runtime not present in pinned public repo",
+    "HIGHESTONE independent pinned-commit rerun: private-source boundary",
+    "NEURAL_LATTICE independent pinned-commit rerun: private-source boundary"
+  ],
+  "release_eligible": false,
+  "authority_delta": "NONE",
+  "next_target": "OMEGA_TIER_A_PRIVATE_REPRODUCTION_BRIDGE_SLICE_08F",
+  "does_not_establish": [
+    "full five-family independent reproduction",
+    "production integration",
+    "external effect confirmation",
+    "release eligibility",
+    "scientific confirmation"
+  ],
+  "execution_witness": {
+    "workflow": "tier-a-independent-reproduction-08e",
+    "run_id": 37280622913,
+    "conclusion": "success",
+    "independent_results": {
+      "DFPL_PRIMA": "PARTIAL_SOURCE_NATIVE_REPRODUCTION_PASS",
+      "GILC_CODEXSTATION": "INDEPENDENT_CROSS_REPO_NATIVE_EXECUTION_PASS"
+    },
+    "preserved_holds": [
+      "DIGITAL_FABRICA_CORE",
+      "HIGHESTONE",
+      "NEURAL_LATTICE",
+      "DFPL_PRIMA_FULL_AUTHORIZATION_EFFECT_CORRESPONDENCE"
+    ]
+  },
+  "validated_semantic_head": "19e32a6cec8e9fb1929952521e41d0f26d870551",
+  "slice_fingerprint": "5f51336863794ae75991cf5466daf0382a41a3f987d649acf4892479e197dd6f",
+  "composite_semantic_fingerprint": "3c140cbdb00ca9e5725ce0742928d8a9085f2649c7bddffb4b18e6f352c0b5c7",
+  "frozen_validation": {
+    "reproduction_run_id": 37280984516,
+    "reproduction_conclusion": "success",
+    "public_ci_run_id": 37280984544,
+    "public_ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    },
+    "validator": "PASS"
+  }
+}

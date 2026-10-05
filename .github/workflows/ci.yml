@@ -112,3 +112,6 @@ jobs:
 
       - name: Tier-A integration harness 08D validation
         run: python tools/validate_integration08d.py
+
+      - name: Tier-A independent reproduction 08E ledger validation
+        run: python tools/validate_reproduction08e.py
