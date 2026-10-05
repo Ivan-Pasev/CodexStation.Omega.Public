@@ -1,0 +1,19 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.8h",
+  "slice": "OMEGA_TIER_A_RESTRICTED_RUNNER_EXECUTION_PACK_SLICE_08H",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "omega-08h-runner-pack",
+  "predecessor": "OMEGA_TIER_A_PRIVATE_RECEIPT_INGESTION_SLICE_08G",
+  "previous_composite_semantic_fingerprint": "f557bd38c1cfa705ea37a1d97168b7ff218e85e9abdd8086e5aa23cd97795488",
+  "status": "RUNNER_PACK_IMPLEMENTED_EXECUTION_PENDING",
+  "family_state": {
+    "DIGITAL_FABRICA_CORE": "RUNNER_READY_NO_NEW_RECEIPT",
+    "HIGHESTONE": "RUNNER_READY_NO_NEW_RECEIPT",
+    "NEURAL_LATTICE": "RUNNER_READY_NO_NEW_RECEIPT"
+  },
+  "source_access_required": "AUTHORIZED_EXTERNAL_ENVIRONMENT",
+  "source_copy_performed": false,
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "next_target": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I"
+}
