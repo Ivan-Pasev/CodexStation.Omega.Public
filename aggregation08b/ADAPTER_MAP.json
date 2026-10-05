@@ -1,0 +1,173 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-CONSTITUTIONAL-ABI-ADAPTERS/0.8b",
+  "abi_id": "cs.abi::constitutional-core::v0.8b",
+  "authority_delta": "NONE",
+  "adapters": [
+    {
+      "adapter_id": "cs.adapter::digital-fabrica-core::v0.8b",
+      "source_binding": "cs.binding::digital-fabrica-core::2026-10-05",
+      "mappings": [
+        {
+          "source": "TransitionProposal",
+          "target": "CandidateTransition",
+          "fidelity": "DIRECT_WITH_FIELD_NORMALIZATION"
+        },
+        {
+          "source": "AdmissionDecision",
+          "target": "DecisionVector.admission",
+          "fidelity": "DIRECT"
+        },
+        {
+          "source": "InvariantEvaluation",
+          "target": "InvariantEvaluation",
+          "fidelity": "DIRECT"
+        },
+        {
+          "source": "FabricEvent",
+          "target": "Event",
+          "fidelity": "DIRECT"
+        },
+        {
+          "source": "WitnessRecord",
+          "target": "Receipt",
+          "fidelity": "DIRECT_WITH_PROFILE_TAG"
+        }
+      ],
+      "open_gaps": [
+        "CanonicalState payload shape is external to inspected files",
+        "Capability model is authority-string oriented in current inspected slice"
+      ]
+    },
+    {
+      "adapter_id": "cs.adapter::dfpl-prima::v0.8b",
+      "source_binding": "cs.binding::dfpl::2026-10-05",
+      "mappings": [
+        {
+          "source": "LawIRBody",
+          "target": "policy/law binding outside CanonicalState payload",
+          "fidelity": "DIRECT_SEMANTIC_OBJECT"
+        },
+        {
+          "source": "AuthorizationArtifact",
+          "target": "AuthorityGrant + DecisionVector.authorization",
+          "fidelity": "PARTIAL_SPLIT"
+        },
+        {
+          "source": "GatewayRequest/OutcomeReceipt",
+          "target": "CandidateTransition + Receipt + DecisionVector.execution",
+          "fidelity": "PARTIAL_SPLIT"
+        },
+        {
+          "source": "PrincipalID/AuthenticatedPrincipal",
+          "target": "Principal",
+          "fidelity": "DIRECT_WITH_AUTH_EVIDENCE"
+        }
+      ],
+      "open_gaps": [
+        "Exact canonical encodings remain profile obligations",
+        "PlanIR mapping requires additional pinned path in next slice"
+      ]
+    },
+    {
+      "adapter_id": "cs.adapter::highestone::v0.8b",
+      "source_binding": "cs.binding::highestone::2026-10-05",
+      "mappings": [
+        {
+          "source": "State",
+          "target": "CanonicalState",
+          "fidelity": "DIRECT_WITH_DIGEST_ADAPTER"
+        },
+        {
+          "source": "Grant",
+          "target": "AuthorityGrant",
+          "fidelity": "DIRECT_LEVEL_PROFILE"
+        },
+        {
+          "source": "Transition",
+          "target": "CandidateTransition",
+          "fidelity": "PARTIAL_MINIMAL_FORMAL"
+        },
+        {
+          "source": "Receipt",
+          "target": "Receipt",
+          "fidelity": "DIRECT_MINIMAL"
+        },
+        {
+          "source": "RecoveryEvidence",
+          "target": "RecoveryEvidence",
+          "fidelity": "DIRECT"
+        }
+      ],
+      "open_gaps": [
+        "Formal core uses Nat identities/hashes and requires profile encoding for public ABI",
+        "CandidateTransition operations are abstracted away in the formal source"
+      ]
+    },
+    {
+      "adapter_id": "cs.adapter::gilc-codexstation::v0.8b",
+      "source_binding": "cs.binding::gilc-codexstation::2026-10-05",
+      "mappings": [
+        {
+          "source": "Authority",
+          "target": "AuthorityGrant.level",
+          "fidelity": "DIRECT_LEVEL_PROFILE"
+        },
+        {
+          "source": "EffectIntent",
+          "target": "CandidateTransition",
+          "fidelity": "PARTIAL_EFFECT_INTENT"
+        },
+        {
+          "source": "EffectReceipt",
+          "target": "Receipt",
+          "fidelity": "DIRECT_WITH_DIGEST_NORMALIZATION"
+        },
+        {
+          "source": "Checkpoint",
+          "target": "CanonicalState + RecoveryEvidence",
+          "fidelity": "PARTIAL_SPLIT"
+        },
+        {
+          "source": "MemoryRecord",
+          "target": "CanonicalState.payload/provenance",
+          "fidelity": "PARTIAL"
+        }
+      ],
+      "open_gaps": [
+        "Current inspected reference effect executor is simulated",
+        "Authority enum alone is narrower than PRIMA capability model"
+      ]
+    },
+    {
+      "adapter_id": "cs.adapter::neural-lattice::v0.8b",
+      "source_binding": "cs.binding::neural-lattice::2026-10-05",
+      "mappings": [
+        {
+          "source": "NL-1 State Cell",
+          "target": "CanonicalState",
+          "fidelity": "DIRECT_WITH_FIELD_NORMALIZATION"
+        },
+        {
+          "source": "Transition Receipt",
+          "target": "Receipt",
+          "fidelity": "DIRECT"
+        },
+        {
+          "source": "Conflict Object",
+          "target": "Conflict",
+          "fidelity": "DIRECT"
+        },
+        {
+          "source": "Closure Policy",
+          "target": "DecisionVector.closure + invariant/gate policy",
+          "fidelity": "PARTIAL_SPLIT"
+        }
+      ],
+      "open_gaps": [
+        "No single source-level CandidateTransition schema was pinned in this slice",
+        "Authority token schema is deferred to next extraction wave"
+      ]
+    }
+  ],
+  "rule": "Adapter fidelity and loss are explicit; adaptation never asserts semantic identity where fields or phases differ."
+}
