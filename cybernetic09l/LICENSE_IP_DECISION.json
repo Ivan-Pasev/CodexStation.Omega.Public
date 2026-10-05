@@ -1,0 +1,34 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-LICENSE-IP-DECISION/0.9l",
+  "decision_id": "cs.decision::license-ip::v0.9l",
+  "state": "PROPOSED",
+  "target": "CodexStation.Omega.Public",
+  "current_repo_license_state": "OPEN_GATE_NO_LICENSE_FILE",
+  "recommended_profile": {
+    "profile_id": "APACHE-2.0_CODE_PLUS_CC-BY-4.0_DOCS",
+    "code_license_spdx": "Apache-2.0",
+    "documentation_license_spdx": "CC-BY-4.0",
+    "scope_note": "Recommendation only; not applied until explicit governance authorization."
+  },
+  "alternatives": [
+    {
+      "profile_id": "APACHE-2.0_ALL",
+      "code_license_spdx": "Apache-2.0",
+      "documentation_license_spdx": "Apache-2.0"
+    },
+    {
+      "profile_id": "ALL_RIGHTS_RESERVED_PENDING",
+      "code_license_spdx": null,
+      "documentation_license_spdx": null
+    }
+  ],
+  "ip_review_requirements": [
+    "confirm all public repository content is owned, licensed, or permissibly redistributable",
+    "confirm no restricted/private source text is copied into the public repository",
+    "confirm third-party notices and attribution obligations are identified before release",
+    "confirm code/documentation license split is intentional if selected",
+    "record explicit governance authorization before changing publication_gates.license_ip_review"
+  ],
+  "authorization": null,
+  "authority_delta": "NONE"
+}
