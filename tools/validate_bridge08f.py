@@ -2,7 +2,6 @@
 from __future__ import annotations
 import hashlib, json
 from pathlib import Path
-from tools.verify_private_receipt08f import synthetic_example, verify
 
 ROOT=Path(__file__).resolve().parents[1]
 PREVIOUS="3c140cbdb00ca9e5725ce0742928d8a9085f2649c7bddffb4b18e6f352c0b5c7"
@@ -29,7 +28,7 @@ def main():
     receipt=json.loads((ROOT/"publication/SLICE_08F_RECEIPT.json").read_text())
     families={x["source_family"] for x in pins.get("sources",[])}
     if families!={"DIGITAL_FABRICA_CORE","HIGHESTONE","NEURAL_LATTICE"}:
-        errors.append("private-family pin set mismatch")
+        errors.append("restricted-family pin set mismatch")
     if pins.get("authority_delta")!="NONE" or receipt.get("authority_delta")!="NONE":
         errors.append("authority delta must remain NONE")
     if receipt.get("release_eligible") is not False:
@@ -38,8 +37,11 @@ def main():
         errors.append("bridge status mismatch")
     if receipt.get("previous_composite_semantic_fingerprint")!=PREVIOUS:
         errors.append("predecessor fingerprint mismatch")
-    if verify(synthetic_example()):
-        errors.append("receipt ABI self-check failed")
+    for item in pins.get("sources",[]):
+        if len(item.get("source_commit",""))!=40:
+            errors.append("invalid source commit length: "+item.get("source_family","UNKNOWN"))
+        if not item.get("native_commands"):
+            errors.append("missing native commands: "+item.get("source_family","UNKNOWN"))
     sf,cf=fingerprint()
     print(json.dumps({
       "result":"PASS" if not errors else "FAIL",
