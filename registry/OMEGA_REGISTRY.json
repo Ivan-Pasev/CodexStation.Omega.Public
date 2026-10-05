@@ -1114,6 +1114,9 @@
     "validator": "tools/validate_cybernetic09c.py",
     "status": "SKILL_ORCHESTRATION_RECOVERY_PASS_CANDIDATE",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09C_RECEIPT.json"
+    "receipt": "publication/SLICE_09C_RECEIPT.json",
+    "slice_fingerprint": "064dd5b50fb9422b340a9b3369602af11fd18814f54c5635f894784bb47a0f59",
+    "composite_semantic_fingerprint": "e6666396426c2922bc68fc6256e75f7c7477f69027aa7fa43b9cb43037a579ee",
+    "validation_run": 37302786336
   }
 }
