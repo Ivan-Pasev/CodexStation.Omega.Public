@@ -1,0 +1,497 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-KERNEL-LATTICE/0.8a",
+  "status": "PUBLIC_SAFE_WORKING_SEED",
+  "evidence_vector_fields": [
+    "SPEC",
+    "IMPLEMENTATION",
+    "TEST",
+    "CI",
+    "FORMAL",
+    "RUNTIME",
+    "EMPIRICAL",
+    "REPLICATION",
+    "RELEASE"
+  ],
+  "kernels": [
+    {
+      "kernel_id": "cs.kernel::identity-digest::v0.8a",
+      "name": "Canonical State Identity / Digest",
+      "tier": "OMEGA_A",
+      "source_refs": [
+        "Ivan-Pasev/Digital.Fabrica.Core",
+        "Ivan-Pasev/QIC"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "normalized state identity, deterministic digest and stale-transition protection",
+      "evidence_vector": {
+        "SPEC": "IMPLEMENTED_SCOPE_DECLARED",
+        "IMPLEMENTATION": "PARTIAL",
+        "TEST": "OPEN",
+        "CI": "OPEN",
+        "FORMAL": "OPEN",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "CROSS_PROJECT_RECONCILIATION_OPEN",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::transition-admission-invariant::v0.8a",
+      "name": "Transition / Admission / Invariant",
+      "tier": "OMEGA_A",
+      "source_refs": [
+        "Ivan-Pasev/Digital.Fabrica.Core"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "typed candidate transition, admission predicates, authority and invariant evaluation interfaces",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "IMPLEMENTED",
+        "TEST": "OPEN",
+        "CI": "OPEN",
+        "FORMAL": "OPEN",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "EXACT_KERNEL_EXTRACTION_OPEN",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::law-effect::v0.8a",
+      "name": "Law / Effect Separation",
+      "tier": "OMEGA_A",
+      "source_refs": [
+        "Ivan-Pasev/DFPL"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "separate semantic verdict from authorization and effect execution",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PARTIAL",
+        "TEST": "OPEN",
+        "CI": "OPEN",
+        "FORMAL": "PARTIAL",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "SPECIFICATION_FORWARD",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::identity-authority-recovery::v0.8a",
+      "name": "HighestOne Identity / Authority / Recovery",
+      "tier": "OMEGA_A",
+      "source_refs": [
+        "Ivan-Pasev/CodexStation.HighestOne"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "model-independent identity, authority, persistence/recovery, homeostasis and formal assurance",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PASS_SCOPED",
+        "TEST": "PASS_SCOPED",
+        "CI": "PASS_SCOPED",
+        "FORMAL": "PASS_SCOPED",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "HIGH_VALUE_SOURCE_REPORTED_EVIDENCE",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::station-continuity::v0.8a",
+      "name": "Station / Entity / Model Separation & Reinstantiation",
+      "tier": "OMEGA_A",
+      "source_refs": [
+        "Ivan-Pasev/GILC.CodexStation"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "station identity, typed memory, provenance admission, authority lattice and portable reinstantiation",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PARTIAL",
+        "TEST": "PARTIAL",
+        "CI": "PARTIAL",
+        "FORMAL": "OPEN",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "OMEGA101_FRONTIER_GLOBAL_PASS_NOT_CLAIMED",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::conflict-reconciliation-closure::v0.8a",
+      "name": "Typed Conflict / Reconciliation / Closure",
+      "tier": "OMEGA_A",
+      "source_refs": [
+        "Ivan-Pasev/neural-lattice"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "typed state, explicit conflict, reconciliation, closure and reconstructable transitions",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PARTIAL",
+        "TEST": "PARTIAL",
+        "CI": "OPEN",
+        "FORMAL": "OPEN",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "PRIVATE_ENGINEERING_GENESIS",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::isolated-execution::v0.8a",
+      "name": "Isolated Execution Cell / Provider ABI",
+      "tier": "OMEGA_B",
+      "source_refs": [
+        "Ivan-Pasev/codexstation-ief"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "bounded computational worlds, provider negotiation, assurance and execution receipts",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PARTIAL",
+        "TEST": "PARTIAL",
+        "CI": "OPEN",
+        "FORMAL": "OPEN",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "EARLY_SPEC_REFERENCE",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::action-correspondence::v0.8a",
+      "name": "IRP-1 Action Correspondence Witness",
+      "tier": "OMEGA_B",
+      "source_refs": [
+        "Ivan-Pasev/AI-WITNESS"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "Observation to Intent to Authorization to Outcome receipts and correspondence verification",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PASS_SCOPED",
+        "TEST": "PASS_SCOPED",
+        "CI": "PASS_SCOPED",
+        "FORMAL": "OPEN",
+        "RUNTIME": "PASS_SCOPED",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "RC_ACCEPTED_NOT_PUBLISHED_SOURCE_REPORTED",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::governed-state-rollback::v0.8a",
+      "name": "Governed State / Retraction / Rollback",
+      "tier": "OMEGA_B",
+      "source_refs": [
+        "Ivan-Pasev/fabric-reference-node"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "claim/evidence/policy/invariant state with durable receipts, retraction and rollback",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PASS_SCOPED",
+        "TEST": "PASS_SCOPED",
+        "CI": "PASS_SCOPED",
+        "FORMAL": "OPEN",
+        "RUNTIME": "PASS_SCOPED",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "BOUNDED_LOCAL_EXECUTABLE_REFERENCE",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::projection-federation::v0.8a",
+      "name": "Governed Projection / Federation",
+      "tier": "OMEGA_B",
+      "source_refs": [
+        "Ivan-Pasev/FMP",
+        "Ivan-Pasev/fabric-mesh-protocol"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "projection-native interoperability and governed federation",
+      "evidence_vector": {
+        "SPEC": "PARTIAL",
+        "IMPLEMENTATION": "PARTIAL",
+        "TEST": "OPEN",
+        "CI": "OPEN",
+        "FORMAL": "OPEN",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "DEEP_EXTRACTION_OPEN",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::delegation-witness::v0.8a",
+      "name": "Cross-Principal Delegation / Revocation Witness",
+      "tier": "OMEGA_B",
+      "source_refs": [
+        "Ivan-Pasev/cross-principal-agent-witness"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "adversarial delegation, provenance, scope and revocation evaluation",
+      "evidence_vector": {
+        "SPEC": "PARTIAL",
+        "IMPLEMENTATION": "PARTIAL",
+        "TEST": "OPEN",
+        "CI": "OPEN",
+        "FORMAL": "OPEN",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "DEEP_EXTRACTION_OPEN",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::mission-compute-fabric::v0.8a",
+      "name": "KBI / MLCO / Hermes / Omnius Mission Compute Fabric",
+      "tier": "OMEGA_C",
+      "source_refs": [
+        "Ivan-Pasev/QIC"
+      ],
+      "source_class": "REPO_BOUND_PLUS_DRIVE_BOUND",
+      "purpose": "bounded knowledge-state processing, mission compilation, planning, orchestration and causal lineage",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PARTIAL",
+        "TEST": "OPEN",
+        "CI": "OPEN",
+        "FORMAL": "OPEN",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "OPEN",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "GENESIS_IMPLEMENTATION_CONVERGENCE",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::formal-replay-qualification::v0.8a",
+      "name": "Formal Verification / Replay / Qualification",
+      "tier": "OMEGA_C",
+      "source_refs": [
+        "Ivan-Pasev/CodexStation.HighestOne",
+        "Ivan-Pasev/TRWM",
+        "Ivan-Pasev/DFPL",
+        "Crystal-P65"
+      ],
+      "source_class": "MULTI_LINEAGE",
+      "purpose": "formal obligations, proof checking, replay, migration, promotion gating and portable capsules",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PARTIAL",
+        "TEST": "PARTIAL",
+        "CI": "PARTIAL",
+        "FORMAL": "PARTIAL",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "MULTI_LINEAGE_DO_NOT_COLLAPSE",
+      "revision_binding": "MIXED_REVISIONS",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::scientific-execution-quarantine::v0.8a",
+      "name": "Scientific Execution / Source Identity / Evidence Quarantine",
+      "tier": "OMEGA_C",
+      "source_refs": [
+        "Ivan-Pasev/geant4-control-fabric"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "exact source identity, pinned runtime path and quarantine before scientific adjudication",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PASS_SCOPED",
+        "TEST": "PASS_SCOPED",
+        "CI": "PASS_SCOPED",
+        "FORMAL": "OPEN",
+        "RUNTIME": "BLOCKED",
+        "EMPIRICAL": "OPEN",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "RUNTIME_BLOCKED_NO_GEANT4_SOURCE_REPORTED",
+      "revision_binding": "DEFAULT_BRANCH_HEAD_UNPINNED",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::project-mount::v0.8a",
+      "name": "Source-World Project Mount",
+      "tier": "OMEGA_META",
+      "source_refs": [
+        "Ivan-Pasev/CodexStation.Omega.Public"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "bind governed project roots into revision-aware harvest sessions without authority transfer",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "IMPLEMENTED",
+        "TEST": "PARTIAL",
+        "CI": "OPEN",
+        "FORMAL": "NOT_APPLICABLE",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "SLICE_08A_IMPLEMENTATION_CANDIDATE",
+      "revision_binding": "public-omega-mount-lattice-08a",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::harvest-quantize-lattice::v0.8a",
+      "name": "Deep Map / Harvest / Quantize / Lattice Admission",
+      "tier": "OMEGA_META",
+      "source_refs": [
+        "Ivan-Pasev/CodexStation.Omega.Public"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "revision-aware deep map, stable knowledge quanta and typed lattice admission",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "IMPLEMENTED",
+        "TEST": "PARTIAL",
+        "CI": "OPEN",
+        "FORMAL": "NOT_APPLICABLE",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "SLICE_08A_IMPLEMENTATION_CANDIDATE",
+      "revision_binding": "public-omega-mount-lattice-08a",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::holotope-plate-compiler::v0.8a",
+      "name": "Holotope / Archetonic Plate Compiler",
+      "tier": "OMEGA_META",
+      "source_refs": [
+        "Ivan-Pasev/CodexStation.Omega.Public"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "compile mission-bounded context and action-ready architecture structures",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PROPOSED",
+        "TEST": "OPEN",
+        "CI": "OPEN",
+        "FORMAL": "NOT_APPLICABLE",
+        "RUNTIME": "OPEN",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "SPECIFIED_IMPLEMENTATION_OPEN",
+      "revision_binding": "public-omega-mount-lattice-08a",
+      "authority_delta": "NONE"
+    },
+    {
+      "kernel_id": "cs.kernel::deterministic-dual-provider-release::v0.8a",
+      "name": "Deterministic Dual-Provider Release Packaging",
+      "tier": "OMEGA_META",
+      "source_refs": [
+        "Ivan-Pasev/CodexStation.Omega.Public"
+      ],
+      "source_class": "REPO_BOUND",
+      "purpose": "compile synchronized ChatGPT/Codex and Gemini packages with deterministic archives and receipts",
+      "evidence_vector": {
+        "SPEC": "PASS_SCOPED",
+        "IMPLEMENTATION": "PASS_SCOPED",
+        "TEST": "PASS_SCOPED",
+        "CI": "PASS_SCOPED",
+        "FORMAL": "NOT_APPLICABLE",
+        "RUNTIME": "PASS_SCOPED",
+        "EMPIRICAL": "NOT_APPLICABLE",
+        "REPLICATION": "OPEN",
+        "RELEASE": "OPEN"
+      },
+      "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE_PREDECESSOR",
+      "revision_binding": "public-omega-aggregation-07a",
+      "authority_delta": "NONE"
+    }
+  ],
+  "conversation_derived_candidates": [
+    {
+      "id": "candidate::mission-dna-family",
+      "status": "SOURCE_BINDING_REQUIRED"
+    },
+    {
+      "id": "candidate::fabric-agent-protocol",
+      "status": "SOURCE_BINDING_REQUIRED"
+    },
+    {
+      "id": "candidate::needle-fesk-ctk",
+      "status": "SOURCE_BINDING_REQUIRED"
+    },
+    {
+      "id": "candidate::fabrica-nervous-system",
+      "status": "SOURCE_BINDING_REQUIRED"
+    },
+    {
+      "id": "candidate::design-kernel",
+      "status": "UPSTREAM_REVERIFY_REQUIRED"
+    },
+    {
+      "id": "candidate::spatial-observer",
+      "status": "UPSTREAM_REVERIFY_REQUIRED"
+    },
+    {
+      "id": "candidate::helixdb-sidecar",
+      "status": "UPSTREAM_REVERIFY_REQUIRED"
+    },
+    {
+      "id": "candidate::ruflo-executor-adapter",
+      "status": "UPSTREAM_REVIEW_REQUIRED"
+    }
+  ],
+  "boundaries": [
+    "KERNEL_CENTRALITY != AUTHORITY",
+    "REPO_EXISTS != IMPLEMENTED",
+    "IMPLEMENTED != TESTED",
+    "CI_PASS != FORMAL_PROOF",
+    "FORMAL_PROOF != EMPIRICAL_CONFIRMATION",
+    "ARCHITECTURE_COMPOSITION != INTEGRATION_PASS"
+  ],
+  "authority_delta": "NONE"
+}
