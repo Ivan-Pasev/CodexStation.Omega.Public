@@ -1,0 +1,46 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-ORCHESTRATION-VECTORS/0.9c",
+  "workflows": [
+    {
+      "id": "09c-two-step-local",
+      "steps": [
+        {
+          "step_id": "audit",
+          "intent": "source audit",
+          "skill_uri": "cs.skill::source-audit::v0.1",
+          "depends_on": [],
+          "required_capabilities": [
+            "cap.observe.public_repo"
+          ],
+          "required_authority": [
+            "A0"
+          ],
+          "mode": "LOCAL_VERIFICATION"
+        },
+        {
+          "step_id": "mutate",
+          "intent": "repository mutation",
+          "skill_uri": "cs.skill::repository-mutation::v0.1",
+          "depends_on": [
+            "audit"
+          ],
+          "required_capabilities": [
+            "cap.mutate.public_repo"
+          ],
+          "required_authority": [
+            "A2"
+          ],
+          "mode": "LOCAL_VERIFICATION",
+          "local_operations": [
+            {
+              "op": "SET",
+              "key": "done",
+              "value": true
+            }
+          ],
+          "reversibility": "REVERSIBLE"
+        }
+      ]
+    }
+  ]
+}
