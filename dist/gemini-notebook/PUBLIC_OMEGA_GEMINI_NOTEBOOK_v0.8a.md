@@ -2,8 +2,8 @@
 
 Status: DEPLOYMENT CANDIDATE / NOT RELEASED  
 Previous composite semantic fingerprint: `daa85b0bf47e392c4a310b2dc11f8074dee2480b5b7dd34c3bde917981bd4c7d`  
-v0.8a slice fingerprint: `COMPUTED_BY_BUILD`  
-v0.8a composite semantic fingerprint: `COMPUTED_BY_BUILD`  
+v0.8a slice fingerprint: `ea077212fa34edd670c687ea66603405a8faddf9f9c94c9ad978707debc33593`  
+v0.8a composite semantic fingerprint: `d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c`  
 Authority delta: NONE
 
 The Notebook remains a bounded research/reasoning cell, not the Station or source canon.
