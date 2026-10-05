@@ -1,0 +1,61 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-RESTRICTED-RUNNER-PROFILES/0.8h",
+  "runner_pack_id": "cs.runner-pack::tier-a::v0.8h",
+  "predecessor_composite_semantic_fingerprint": "f557bd38c1cfa705ea37a1d97168b7ff218e85e9abdd8086e5aa23cd97795488",
+  "families": {
+    "DIGITAL_FABRICA_CORE": {
+      "repository": "Ivan-Pasev/Digital.Fabrica.Core",
+      "source_commit": "c3e142d73ddbbcdfd5677aed242da3c6c52ae9e6",
+      "scope": "TYPECHECK_BUILD",
+      "steps": [
+        {
+          "id": "install",
+          "cwd": ".",
+          "command": "npm install --ignore-scripts"
+        },
+        {
+          "id": "typecheck",
+          "cwd": ".",
+          "command": "npm run typecheck"
+        },
+        {
+          "id": "build",
+          "cwd": ".",
+          "command": "npm run build"
+        }
+      ]
+    },
+    "HIGHESTONE": {
+      "repository": "Ivan-Pasev/CodexStation.HighestOne",
+      "source_commit": "a4f237aba8156d0bf6f1354457275de9a67ac21a",
+      "scope": "LEAN_KERNEL_GATE",
+      "steps": [
+        {
+          "id": "lean_kernel_gate",
+          "cwd": "formal/lean",
+          "command": "bash tools/bootstrap_and_check.sh"
+        }
+      ]
+    },
+    "NEURAL_LATTICE": {
+      "repository": "Ivan-Pasev/neural-lattice",
+      "source_commit": "57da881b28a5a4e924b900a18e2e59f3a202f6fe",
+      "scope": "FULL_NATIVE_VALIDATE",
+      "steps": [
+        {
+          "id": "install",
+          "cwd": ".",
+          "command": "npm install --ignore-scripts"
+        },
+        {
+          "id": "validate",
+          "cwd": ".",
+          "command": "npm run validate"
+        }
+      ]
+    }
+  },
+  "output_contract": "GILC/CODEXSTATION/OMEGA-PRIVATE-REPRODUCTION-RECEIPT/0.8f",
+  "authority_delta": "NONE",
+  "release_eligible": false
+}
