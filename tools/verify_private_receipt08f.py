@@ -40,11 +40,29 @@ def verify(receipt):
                 errors.append("PASS receipt contains non-PASS required command")
     return errors
 
+def synthetic_example():
+    pin=BY_FAMILY["NEURAL_LATTICE"]
+    return {
+        "schema":"GILC/CODEXSTATION/OMEGA-PRIVATE-REPRODUCTION-RECEIPT/0.8f",
+        "source_family":"NEURAL_LATTICE",
+        "repository":pin["repository"],
+        "source_commit":pin["source_commit"],
+        "runner_identity":{"provider":"SCHEMA_TEST","run_id":"SYNTHETIC","runner_commit":"synthetic"},
+        "commands":pin["native_commands"],
+        "results":[{"command":x,"status":"PASS"} for x in pin["native_commands"]],
+        "overall_status":"PASS",
+        "scope":pin["expected_receipt_scope"],
+        "sanitized":True,
+        "private_source_disclosed":False,
+        "source_tree_modified_for_test":False,
+        "authority_delta":"NONE",
+        "evidence_class":"SYNTHETIC_SCHEMA_TEST_NOT_EXECUTION_EVIDENCE"
+    }
+
 def main():
-    path=Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/"bridge08f/SAMPLE_RECEIPT.json"
-    receipt=json.loads(path.read_text())
+    receipt=json.loads(Path(sys.argv[1]).read_text()) if len(sys.argv)>1 else synthetic_example()
     errors=verify(receipt)
-    print(json.dumps({"result":"PASS" if not errors else "FAIL","source_family":receipt.get("source_family"),"errors":errors},indent=2))
+    print(json.dumps({"result":"PASS" if not errors else "FAIL","source_family":receipt.get("source_family"),"evidence_class":receipt.get("evidence_class"),"errors":errors},indent=2))
     return 0 if not errors else 1
 
 if __name__=="__main__":
