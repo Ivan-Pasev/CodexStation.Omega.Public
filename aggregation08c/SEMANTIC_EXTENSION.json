@@ -1,0 +1,61 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-EXTENSION/0.8c",
+  "extension_id": "cs.semantic-extension::constitutional-reference-runtime::v0.8c",
+  "previous_composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3",
+  "new_objects": [
+    "cs.runtime::constitutional-reference::v0.8c",
+    "cs.runtime::transition-engine::v0.8c",
+    "cs.runtime::event-fold::v0.8c",
+    "cs.runtime::recovery-check::v0.8c",
+    "cs.runtime::archetonic-plate-compiler::v0.8c",
+    "cs.runtime::tier-a-adapter-set::v0.8c"
+  ],
+  "new_relations": [
+    [
+      "cs.runtime::constitutional-reference::v0.8c",
+      "IMPLEMENTS",
+      "cs.abi::constitutional-core::v0.8b"
+    ],
+    [
+      "cs.runtime::tier-a-adapter-set::v0.8c",
+      "BINDS",
+      "cs.abi::constitutional-core::v0.8b"
+    ],
+    [
+      "cs.runtime::archetonic-plate-compiler::v0.8c",
+      "COMPILES_TO",
+      "cs.runtime::transition-engine::v0.8c"
+    ],
+    [
+      "cs.runtime::transition-engine::v0.8c",
+      "GENERATES",
+      "Receipt"
+    ],
+    [
+      "cs.runtime::event-fold::v0.8c",
+      "REPLAYS",
+      "CanonicalState"
+    ],
+    [
+      "cs.runtime::recovery-check::v0.8c",
+      "VALIDATES",
+      "RecoveryEvidence"
+    ]
+  ],
+  "laws": [
+    "PURE_LOCAL_TRANSITION != EXTERNAL_EFFECT",
+    "UNKNOWN_EFFECT_OUTCOME -> HOLD",
+    "PREDECESSOR_AUTHORITY_ONLY",
+    "GOVERNANCE_REQUIRED_FOR_GRANT_MUTATION",
+    "STALE_PARENT -> HOLD",
+    "UNRESOLVED_PROTECTED_INVARIANT -> HOLD",
+    "REPLAY_DETERMINISM_IS_IMPLEMENTATION_EVIDENCE_ONLY"
+  ],
+  "parallel_open_gates": [
+    "NB00_LIVE_CONFORMANCE_01",
+    "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
+    "LICENSE_IP_REVIEW"
+  ],
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}
