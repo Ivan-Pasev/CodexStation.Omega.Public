@@ -115,3 +115,8 @@ jobs:
 
       - name: Tier-A independent reproduction 08E ledger validation
         run: python tools/validate_reproduction08e.py
+
+      - name: Tier-A bridge 08F validation
+        run: |
+          python tools/verify_private_receipt08f.py
+          python tools/validate_bridge08f.py
