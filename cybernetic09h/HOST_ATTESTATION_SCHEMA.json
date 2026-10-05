@@ -1,0 +1,23 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-HOST-ORIGIN-ATTESTATION/0.9h",
+  "required": [
+    "host_id",
+    "host_profile_digest",
+    "attestation_class",
+    "runtime_channel",
+    "execution_id",
+    "evidence_refs"
+  ],
+  "attestation_class_values": [
+    "HOST_BOUND_RUNTIME",
+    "REFERENCE_ONLY"
+  ],
+  "laws": [
+    "RUNNER_EXECUTABLE != LIVE_HOST_ORIGIN",
+    "LIVE_HOST_ORIGIN_REQUIRES_HOST_BOUND_ATTESTATION",
+    "ATTESTATION != TRUSTED_HARDWARE_PROOF",
+    "ATTESTATION != GOVERNANCE_AUTHORITY",
+    "ATTESTATION != SCIENTIFIC_EVIDENCE"
+  ],
+  "authority_delta": "NONE"
+}
