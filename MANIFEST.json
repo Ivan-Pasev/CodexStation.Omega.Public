@@ -388,6 +388,18 @@
     "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
     "predecessor_composite_semantic_fingerprint": "aa247cd65a8505bab2ec11b9bc470a1d42fb6d19c6c79c1ef4b05c890effe8f2",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09F_RECEIPT.json"
+    "receipt": "publication/SLICE_09F_RECEIPT.json",
+    "slice_fingerprint": "377a93af094bdd493b10a18ab714a8932381746db14e0204fbee257d7fe67f91",
+    "composite_semantic_fingerprint": "9fa495721064479fcb4bfa397e28ef7db62d510f817305e970b1c932bcf01424",
+    "validation_run": 37310846189,
+    "host_profile_digests": {
+      "chatgpt-codex": "be4ac97da0a5f236edd318815195c05fa00001d1a25ae000d7a38fbc128e1156",
+      "gemini-notebook": "79cd3b96e67808653f1bc8833e4e9d6e9338b644036bcc66df160f024bfacbd9"
+    },
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
   }
 }
