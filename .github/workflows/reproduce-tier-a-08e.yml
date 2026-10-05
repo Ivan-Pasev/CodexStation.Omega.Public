@@ -8,9 +8,6 @@ on:
       - "aggregation08e/**"
       - "tools/validate_reproduction08e.py"
       - "tests/test_reproduction08e.py"
-      - "publication/SLICE_08E_RECEIPT.json"
-      - "MANIFEST.json"
-      - "registry/OMEGA_REGISTRY.json"
   pull_request:
     paths:
       - ".github/workflows/reproduce-tier-a-08e.yml"
@@ -18,9 +15,6 @@ on:
       - "aggregation08e/**"
       - "tools/validate_reproduction08e.py"
       - "tests/test_reproduction08e.py"
-      - "publication/SLICE_08E_RECEIPT.json"
-      - "MANIFEST.json"
-      - "registry/OMEGA_REGISTRY.json"
   workflow_dispatch:
 
 permissions:
