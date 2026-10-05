@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9c",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9d",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "CYBERNETIC_SKILL_ORCHESTRATOR_09C_PASS_CANDIDATE",
+  "registry_state": "CYBERNETIC_ADAPTIVE_POLICY_09D_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_CYBERNETIC_ADAPTIVE_POLICY_AND_TELEMETRY_CRYSTALLIZATION_SLICE_09D",
+  "current_target": "OMEGA_CYBERNETIC_POLICY_PROMOTION_AND_REPLAY_GOVERNOR_SLICE_09E",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -264,7 +264,7 @@
   },
   "parallel_frontiers": {
     "evidence": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I",
-    "capability": "OMEGA_CYBERNETIC_SKILL_BINDER_AND_RECOVERY_ORCHESTRATOR_SLICE_09C"
+    "capability": "OMEGA_CYBERNETIC_ADAPTIVE_POLICY_AND_TELEMETRY_CRYSTALLIZATION_SLICE_09D"
   },
   "cybernetic09a": {
     "capability_lattice": "cybernetic09a/CAPABILITY_LATTICE.json",
@@ -323,6 +323,29 @@
     "slice_fingerprint": "064dd5b50fb9422b340a9b3369602af11fd18814f54c5635f894784bb47a0f59",
     "composite_semantic_fingerprint": "e6666396426c2922bc68fc6256e75f7c7477f69027aa7fa43b9cb43037a579ee",
     "validation_run": 37302786336,
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
+  },
+  "cybernetic09d": {
+    "telemetry_schema": "cybernetic09d/TELEMETRY_SCHEMA.json",
+    "adaptive_policy": "cybernetic09d/ADAPTIVE_POLICY.json",
+    "crystallizer": "cybernetic09d/crystallizer.py",
+    "reference_telemetry": "cybernetic09d/REFERENCE_TELEMETRY.json",
+    "validator": "tools/validate_cybernetic09d.py",
+    "tests": "tests/test_cybernetic09d.py",
+    "status": "BOUNDED_ADAPTIVE_POLICY_PASS_CANDIDATE",
+    "adaptation_scope": "ROUTING_PREFERENCE_ONLY",
+    "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+    "predecessor_composite_semantic_fingerprint": "e6666396426c2922bc68fc6256e75f7c7477f69027aa7fa43b9cb43037a579ee",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09D_RECEIPT.json",
+    "slice_fingerprint": "dcd3c03cbd05148d961efb0c574bb03350aeea55cda6d59e8ed613fa43cf971e",
+    "composite_semantic_fingerprint": "adb4ccf266e8a7d59010b53dbafe4654a3e07dad6f2306986ca464a73c2c3936",
+    "policy_digest": "2c1cff5173ed8cb36a037c34ba030416af14c5c084ddccf47d9ee6241e9b0ea7",
+    "validation_run": 37303611882,
     "ci_python": {
       "3.11": "success",
       "3.12": "success",

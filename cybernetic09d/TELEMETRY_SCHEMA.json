@@ -1,0 +1,35 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-TELEMETRY/0.9d",
+  "record_fields": [
+    "skill_uri",
+    "step_status",
+    "attempts",
+    "failure_code",
+    "recovery_action",
+    "workflow_id",
+    "policy_version"
+  ],
+  "derived_signals": [
+    "success_rate",
+    "failure_rate",
+    "hold_rate",
+    "quarantine_rate",
+    "fallback_rate",
+    "sample_count",
+    "health"
+  ],
+  "health_states": [
+    "UNKNOWN",
+    "HEALTHY",
+    "WATCH",
+    "DEGRADED"
+  ],
+  "laws": [
+    "TELEMETRY != AUTHORITY",
+    "TELEMETRY != TRUTH",
+    "SUCCESS_RATE != QUALIFICATION",
+    "HEALTH_SIGNAL != QUALIFICATION_STATUS",
+    "DEGRADATION_FLAG != AUTOMATIC_DISQUALIFICATION"
+  ],
+  "authority_delta": "NONE"
+}
