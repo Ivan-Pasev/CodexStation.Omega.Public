@@ -1,0 +1,34 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.8e",
+  "slice": "OMEGA_TIER_A_INDEPENDENT_REPRODUCTION_SLICE_08E",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "public-omega-independent-reproduction-08e",
+  "status": "REPRODUCTION_EXECUTION_PENDING",
+  "predecessor": "OMEGA_TIER_A_INTEGRATION_HARNESS_SLICE_08D",
+  "previous_composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7",
+  "planned_independent_reproduction": [
+    "DFPL_PRIMA: public Encoder B sentinel only",
+    "GILC_CODEXSTATION: full native pytest matrix 3.11/3.12/3.13"
+  ],
+  "preserved_source_native_evidence": [
+    "HIGHESTONE: run 33790374960 on unchanged formal-source lineage",
+    "GILC_CODEXSTATION: run 33919239363 exact pinned commit",
+    "NEURAL_LATTICE: run 33970167198 exact pinned commit"
+  ],
+  "holds": [
+    "DIGITAL_FABRICA_CORE: private, no exact-pin native workflow",
+    "DFPL_PRIMA exact authorization/effect semantics: executable private runtime not present in pinned public repo",
+    "HIGHESTONE independent pinned-commit rerun: private-source boundary",
+    "NEURAL_LATTICE independent pinned-commit rerun: private-source boundary"
+  ],
+  "release_eligible": false,
+  "authority_delta": "NONE",
+  "next_target": "OMEGA_TIER_A_PRIVATE_REPRODUCTION_BRIDGE_SLICE_08F",
+  "does_not_establish": [
+    "full five-family independent reproduction",
+    "production integration",
+    "external effect confirmation",
+    "release eligibility",
+    "scientific confirmation"
+  ]
+}
