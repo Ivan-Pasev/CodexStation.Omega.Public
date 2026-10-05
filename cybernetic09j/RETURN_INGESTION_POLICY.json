@@ -1,0 +1,24 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-HOST-RETURN-INGESTION/0.9j",
+  "policy_id": "cs.host-return-ingestion::v0.9j",
+  "laws": [
+    "EMPTY_INBOX = HOLD_NOT_FAIL",
+    "EACH_HOST_INGESTS_INDEPENDENTLY",
+    "INVALID_RETURN_CANNOT_MUTATE_HOST_STATE",
+    "ADMITTED_RETURN_CONSUMES_CHALLENGE",
+    "DUPLICATE_RETURN_CANNOT_DOUBLE_ADMIT",
+    "ONE_HOST_PASS != MULTI_HOST_PASS",
+    "LIVE_CONFORMANCE_CLOSES_ONLY_AFTER_ALL_REQUIRED_HOSTS_PASS"
+  ],
+  "audit_fields": [
+    "host_id",
+    "request_id",
+    "returned_digest",
+    "verdict",
+    "reasons",
+    "ledger_before",
+    "ledger_after"
+  ],
+  "authority_delta": "NONE",
+  "release_eligible": false
+}
