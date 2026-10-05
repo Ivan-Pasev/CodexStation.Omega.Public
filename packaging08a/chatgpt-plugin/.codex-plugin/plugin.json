@@ -1,0 +1,31 @@
+{
+  "interface": {
+    "displayName": "CodexStation Ω Public",
+    "shortDescription": "Mount governed projects, harvest deltas, compile kernel lattices and Ω contexts",
+    "longDescription": "Operate the public CodexStation Ω fabric with source-world mounting, revision-aware deep mapping, provenance-preserving aggregation, kernel lattices, Holotopes, Archetonic Plates and explicit authority/evidence boundaries.",
+    "developerName": "GILC",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "ROOT() — resolve current public Ω state, semantic parent and open gates.",
+      "MOUNT::SOURCE_ROOT=<url> — resolve the governed source project before aggregation.",
+      "NEXT() — continue project work while harvesting the highest-value admissible reusable delta."
+    ],
+    "capabilities": []
+  },
+  "name": "codexstation-omega-public",
+  "version": "0.8.0-alpha.0",
+  "description": "Public CodexStation Omega source-world mount and kernel-lattice candidate.",
+  "author": {
+    "name": "GILC"
+  },
+  "keywords": [
+    "codexstation",
+    "project-mount",
+    "kernel-lattice",
+    "knowledge-lattice",
+    "project-harvest",
+    "evidence-gates"
+  ],
+  "repository": "https://github.com/Ivan-Pasev/CodexStation.Omega.Public",
+  "skills": "./skills"
+}
