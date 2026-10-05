@@ -1,0 +1,20 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-LIVE-HOST-CONFORMANCE-REGISTRY/0.9g",
+  "active_policy_digest": "2c1cff5173ed8cb36a037c34ba030416af14c5c084ddccf47d9ee6241e9b0ea7",
+  "hosts": {
+    "chatgpt-codex": {
+      "host_profile_digest": "be4ac97da0a5f236edd318815195c05fa00001d1a25ae000d7a38fbc128e1156",
+      "state": "HOLD_NO_HOST_WITNESS",
+      "witness_digest": null
+    },
+    "gemini-notebook": {
+      "host_profile_digest": "79cd3b96e67808653f1bc8833e4e9d6e9338b644036bcc66df160f024bfacbd9",
+      "state": "HOLD_NO_HOST_WITNESS",
+      "witness_digest": null
+    }
+  },
+  "admitted_live_witnesses": [],
+  "rejected_witnesses": [],
+  "authority_delta": "NONE",
+  "release_eligible": false
+}
