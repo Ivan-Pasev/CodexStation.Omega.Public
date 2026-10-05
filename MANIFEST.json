@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9k",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9l",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "CYBERNETIC_EVIDENCE_FRONTIER_09K_RECONCILED",
+  "registry_state": "CYBERNETIC_GOVERNANCE_09L_LICENSE_PENDING_RELEASE_HOLD",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_CYBERNETIC_GOVERNANCE_DECISION_AND_RELEASE_READINESS_SLICE_09L",
+  "current_target": "OMEGA_CYBERNETIC_GOVERNANCE_AUTHORIZATION_OR_EXTERNAL_EVIDENCE_WAIT_STATE_09M",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -532,6 +532,42 @@
     "validation_run": 37315508255,
     "scheduler_next_action": "GOVERNANCE:LICENSE_IP_REVIEW",
     "waiting_for_evidence": [
+      "08I_RESTRICTED_EXECUTION_RECEIPTS",
+      "09J_LIVE_HOST_RETURNS",
+      "NB00_LIVE_CONFORMANCE_01",
+      "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
+      "HIGHESTONE_RELEASE_EVIDENCE",
+      "DFPL_PRIMA_FULL_RUNTIME_REPRODUCTION"
+    ],
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
+  },
+  "cybernetic09l": {
+    "decision_schema": "cybernetic09l/GOVERNANCE_DECISION_SCHEMA.json",
+    "license_ip_decision": "cybernetic09l/LICENSE_IP_DECISION.json",
+    "release_readiness_policy": "cybernetic09l/RELEASE_READINESS_POLICY.json",
+    "governor": "cybernetic09l/governance.py",
+    "validator": "tools/validate_cybernetic09l.py",
+    "tests": "tests/test_cybernetic09l.py",
+    "status": "GOVERNANCE_SURFACE_PASS_LICENSE_DECISION_PENDING_RELEASE_HOLD",
+    "license_ip_review_closed": false,
+    "license_decision_state": "PROPOSED",
+    "recommended_profile": "APACHE-2.0_CODE_PLUS_CC-BY-4.0_DOCS",
+    "release_eligible": false,
+    "predecessor_composite_semantic_fingerprint": "15be646c46117179f3d8372db17e2822c4c6224fb9ca89b297ca59cbb03cf8fb",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09L_RECEIPT.json",
+    "slice_fingerprint": "f2f27aad739f966d174775d4b3f2887e2356b85ab1c20c5bedb7213844f088e1",
+    "composite_semantic_fingerprint": "c964d45b46ea0466c1972c04f2b25fd036fa096cd83e7b81855e54eb8a176d7f",
+    "validation_run": 37318241812,
+    "publication_gate_blockers": [
+      "license_ip_review",
+      "duplication_dedup"
+    ],
+    "external_frontier_blockers": [
       "08I_RESTRICTED_EXECUTION_RECEIPTS",
       "09J_LIVE_HOST_RETURNS",
       "NB00_LIVE_CONFORMANCE_01",

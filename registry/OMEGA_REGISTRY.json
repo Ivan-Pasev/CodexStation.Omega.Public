@@ -1,6 +1,6 @@
 {
   "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-REGISTRY/0.2",
-  "version": "0.9k",
+  "version": "0.9l",
   "status": "PUBLICATION_STAGING",
   "lineage": "CodexStation Ω NEXT -> CodexStation Ω Public",
   "authority_delta": "NONE",
@@ -1231,5 +1231,20 @@
     "composite_semantic_fingerprint": "15be646c46117179f3d8372db17e2822c4c6224fb9ca89b297ca59cbb03cf8fb",
     "validation_run": 37315508255,
     "scheduler_next_action": "GOVERNANCE:LICENSE_IP_REVIEW"
+  },
+  "governance_release_readiness_09l": {
+    "decision_schema": "cybernetic09l/GOVERNANCE_DECISION_SCHEMA.json",
+    "license_ip_decision": "cybernetic09l/LICENSE_IP_DECISION.json",
+    "release_readiness_policy": "cybernetic09l/RELEASE_READINESS_POLICY.json",
+    "governor": "cybernetic09l/governance.py",
+    "validator": "tools/validate_cybernetic09l.py",
+    "status": "GOVERNANCE_SURFACE_PASS_LICENSE_DECISION_PENDING_RELEASE_HOLD",
+    "license_decision_state": "PROPOSED",
+    "release_eligible": false,
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09L_RECEIPT.json",
+    "slice_fingerprint": "f2f27aad739f966d174775d4b3f2887e2356b85ab1c20c5bedb7213844f088e1",
+    "composite_semantic_fingerprint": "c964d45b46ea0466c1972c04f2b25fd036fa096cd83e7b81855e54eb8a176d7f",
+    "validation_run": 37318241812
   }
 }

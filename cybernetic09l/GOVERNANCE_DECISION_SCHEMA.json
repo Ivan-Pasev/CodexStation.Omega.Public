@@ -1,0 +1,28 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-GOVERNANCE-DECISION/0.9l",
+  "decision_types": [
+    "LICENSE_IP_REVIEW",
+    "RELEASE_READINESS"
+  ],
+  "decision_states": [
+    "PROPOSED",
+    "AUTHORIZED",
+    "REJECTED",
+    "SUPERSEDED"
+  ],
+  "required_authorization_fields": [
+    "authorization_id",
+    "principal_id",
+    "authority_level",
+    "rights",
+    "decision_digest"
+  ],
+  "laws": [
+    "PROPOSED_DECISION != AUTHORIZED_DECISION",
+    "GOVERNANCE_DECISION != EXTERNAL_EVIDENCE",
+    "LICENSE_DECISION_PASS != RELEASE_ELIGIBLE",
+    "RELEASE_READINESS != RELEASE",
+    "DECISION_AUTHORIZATION_CANNOT_CLOSE_UNRELATED_GATES"
+  ],
+  "authority_delta": "NONE"
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-RELEASE-READINESS/0.9l",
+  "policy_id": "cs.release-readiness::v0.9l",
+  "required_publication_gates": [
+    "secret_pii_scan",
+    "license_ip_review",
+    "claim_evidence_typing",
+    "authority_ceiling_check",
+    "provenance_complete",
+    "public_interest_check",
+    "duplication_dedup",
+    "publication_witness"
+  ],
+  "blocking_frontiers": [
+    "08I_RESTRICTED_EXECUTION_RECEIPTS",
+    "09J_LIVE_HOST_RETURNS",
+    "NB00_LIVE_CONFORMANCE_01",
+    "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
+    "HIGHESTONE_RELEASE_EVIDENCE",
+    "DFPL_PRIMA_FULL_RUNTIME_REPRODUCTION"
+  ],
+  "laws": [
+    "ALL_PUBLICATION_GATES_PASS + ANY_BLOCKING_FRONTIER_OPEN => RELEASE_ELIGIBLE_FALSE",
+    "LICENSE_IP_AUTHORIZED + EXTERNAL_EVIDENCE_OPEN => RELEASE_ELIGIBLE_FALSE",
+    "RELEASE_CANDIDATE != RELEASE",
+    "RELEASE_ELIGIBLE_REQUIRES_ALL_REQUIRED_GATES_CLOSED"
+  ],
+  "authority_delta": "NONE"
+}

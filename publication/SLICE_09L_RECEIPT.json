@@ -1,0 +1,14 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.9l",
+  "slice": "OMEGA_CYBERNETIC_GOVERNANCE_DECISION_AND_RELEASE_READINESS_SLICE_09L",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "omega-09l-governance-release-readiness",
+  "predecessor": "OMEGA_CYBERNETIC_EVIDENCE_FRONTIER_RECONCILIATION_SLICE_09K",
+  "previous_composite_semantic_fingerprint": "15be646c46117179f3d8372db17e2822c4c6224fb9ca89b297ca59cbb03cf8fb",
+  "status": "GOVERNANCE_SURFACE_PASS_LICENSE_DECISION_PENDING_RELEASE_HOLD",
+  "license_ip_review_closed": false,
+  "license_decision_state": "PROPOSED",
+  "release_eligible": false,
+  "authority_delta": "NONE",
+  "next_target": "OMEGA_CYBERNETIC_GOVERNANCE_AUTHORIZATION_OR_EXTERNAL_EVIDENCE_WAIT_STATE_09M"
+}
