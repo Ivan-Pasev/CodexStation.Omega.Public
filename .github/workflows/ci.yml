@@ -143,3 +143,8 @@ jobs:
         run: |
           python tools/validate_cybernetic09a.py
           python -m unittest -v tests.test_cybernetic09a
+
+      - name: Cybernetic mission compiler 09B validation
+        run: |
+          python tools/validate_cybernetic09b.py
+          python -m unittest -v tests.test_cybernetic09b
