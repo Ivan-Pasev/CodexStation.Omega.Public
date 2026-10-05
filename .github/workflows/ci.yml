@@ -125,3 +125,16 @@ jobs:
         run: |
           python tools/validate_ingestion08g.py
           python -m unittest -v tests.test_ingestion08g
+
+      - name: Tier-A restricted runner pack 08H validation
+        run: |
+          python tools/validate_runner_pack08h.py
+          python -m unittest -v tests.test_runner08h
+          python tools/build_runner_pack08h.py --out build/runner08h
+      - name: Upload runner pack 08H
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@v4
+        with:
+          name: codexstation-omega-runner-v0.8h
+          path: build/runner08h/codexstation-omega-runner-v0.8h.zip
+          if-no-files-found: error
