@@ -961,14 +961,18 @@
     "semantic_extension": "aggregation08a/SEMANTIC_EXTENSION.json",
     "project_mount_skill": "skills/codexstation-omega-project-mount/SKILL.md",
     "previous_composite_semantic_fingerprint": "daa85b0bf47e392c4a310b2dc11f8074dee2480b5b7dd34c3bde917981bd4c7d",
-    "status": "IMPLEMENTED_PENDING_CI",
-    "authority_delta": "NONE"
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+    "authority_delta": "NONE",
+    "slice_fingerprint": "ea077212fa34edd670c687ea66603405a8faddf9f9c94c9ad978707debc33593",
+    "composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c"
   },
   "packaging_slice_08a": {
     "chatgpt_plugin": "packaging08a/chatgpt-plugin/PACKAGING.json",
     "gemini_notebook": "packaging08a/gemini-notebook/PACKAGING.json",
     "packager": "tools/build_packages08a.py",
-    "status": "IMPLEMENTED_PENDING_CI",
-    "authority_delta": "NONE"
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+    "authority_delta": "NONE",
+    "slice_fingerprint": "ea077212fa34edd670c687ea66603405a8faddf9f9c94c9ad978707debc33593",
+    "composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c"
   }
 }
