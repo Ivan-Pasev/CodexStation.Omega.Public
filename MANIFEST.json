@@ -472,6 +472,25 @@
     "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
     "predecessor_composite_semantic_fingerprint": "3d5282a9f1649c63555db3813bbbc6cc76035cd039e7ab8f5acff051af827a84",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09I_RECEIPT.json"
+    "receipt": "publication/SLICE_09I_RECEIPT.json",
+    "slice_fingerprint": "f9fff285e325ee632e60ba9babf12796a5a7bab47cd7c3ad808b51a832c4578c",
+    "composite_semantic_fingerprint": "9bd7fef32e64225e378674c36ebf60487c04f6a683caeb438ceec66a90b07358",
+    "validation_run": 37313873513,
+    "request_challenges": {
+      "chatgpt-codex": "bebc7afe63e3420d5d7a0596f10d511fc0149c9aff09730294f904923e22a921",
+      "gemini-notebook": "cbde946329d6ea9488bdc5560a1b328de1552bce5286c7c25ac78767bcc7f747"
+    },
+    "artifact": {
+      "name": "codexstation-omega-live-host-acquisition-v0.9i",
+      "artifact_id": 11346579508,
+      "inner_zip_sha256": "4b405b30d330d810517607fa31c8df4c3154f7679daec18377e2952ebab1aef2",
+      "uploaded_artifact_sha256": "467409e78329ff9fa2a5eb11c14351fa3920ec11f6d3c1a5050ec7d0ab8e9c67",
+      "live_receipts_included": false
+    },
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
   }
 }
