@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9b",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9c",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "CYBERNETIC_MISSION_COMPILER_EFFECT_GATE_09B_PASS_CANDIDATE",
+  "registry_state": "CYBERNETIC_SKILL_ORCHESTRATOR_09C_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_CYBERNETIC_SKILL_BINDER_AND_RECOVERY_ORCHESTRATOR_SLICE_09C",
+  "current_target": "OMEGA_CYBERNETIC_ADAPTIVE_POLICY_AND_TELEMETRY_CRYSTALLIZATION_SLICE_09D",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -264,7 +264,7 @@
   },
   "parallel_frontiers": {
     "evidence": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I",
-    "capability": "OMEGA_CYBERNETIC_MISSION_COMPILER_AND_EFFECT_GATE_SLICE_09B"
+    "capability": "OMEGA_CYBERNETIC_SKILL_BINDER_AND_RECOVERY_ORCHESTRATOR_SLICE_09C"
   },
   "cybernetic09a": {
     "capability_lattice": "cybernetic09a/CAPABILITY_LATTICE.json",
@@ -307,5 +307,18 @@
       "3.12": "success",
       "3.13": "success"
     }
+  },
+  "cybernetic09c": {
+    "skill_registry": "cybernetic09c/SKILL_REGISTRY.json",
+    "orchestration_policy": "cybernetic09c/ORCHESTRATION_POLICY.json",
+    "orchestrator": "cybernetic09c/orchestrator.py",
+    "reference_workflows": "cybernetic09c/REFERENCE_WORKFLOWS.json",
+    "validator": "tools/validate_cybernetic09c.py",
+    "tests": "tests/test_cybernetic09c.py",
+    "status": "SKILL_ORCHESTRATION_RECOVERY_PASS_CANDIDATE",
+    "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+    "predecessor_composite_semantic_fingerprint": "bda8728a88b61a89781c6f0ae070ddfccb57bfc463a2191bcb3f8a2acb314501",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09C_RECEIPT.json"
   }
 }
