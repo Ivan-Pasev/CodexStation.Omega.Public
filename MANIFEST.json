@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "REFERENCE_RUNTIME_08C_IMPLEMENTED_PENDING_CI",
+  "registry_state": "REFERENCE_RUNTIME_08C_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_CONSTITUTIONAL_REFERENCE_RUNTIME_SLICE_08C",
+  "current_target": "OMEGA_TIER_A_INTEGRATION_HARNESS_SLICE_08D",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -163,15 +163,21 @@
     "adapters": "runtime08c/adapters.py",
     "validator": "tools/validate_runtime08c.py",
     "previous_composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3",
-    "status": "IMPLEMENTED_PENDING_CI",
-    "authority_delta": "NONE"
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+    "authority_delta": "NONE",
+    "slice_fingerprint": "a7382fc07a734dfe188ee49e6a787bec3576b43b1c34ae6d732656f8ba4db545",
+    "composite_semantic_fingerprint": "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64",
+    "receipt": "publication/SLICE_08C_RECEIPT.json"
   },
   "packaging08c": {
     "chatgpt_plugin": "packaging08c/chatgpt-plugin/PACKAGING.json",
     "gemini_notebook": "packaging08c/gemini-notebook/PACKAGING.json",
     "packager": "tools/build_packages08c.py",
-    "status": "IMPLEMENTED_PENDING_CI",
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
     "archive_hashes": "EXTERNAL_PACKAGE_INDEX_TO_AVOID_SELF_REFERENCE",
-    "authority_delta": "NONE"
+    "authority_delta": "NONE",
+    "slice_fingerprint": "a7382fc07a734dfe188ee49e6a787bec3576b43b1c34ae6d732656f8ba4db545",
+    "composite_semantic_fingerprint": "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64",
+    "package_index": "packaging08c/PACKAGE_INDEX.json"
   }
 }
