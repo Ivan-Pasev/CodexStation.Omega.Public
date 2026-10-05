@@ -186,3 +186,16 @@ jobs:
           name: codexstation-omega-host-witness-v0.9h
           path: build/host-witness09h/codexstation-omega-host-witness-v0.9h.zip
           if-no-files-found: error
+
+      - name: Cybernetic live host acquisition 09I validation
+        run: |
+          python tools/validate_cybernetic09i.py
+          python -m unittest -v tests.test_cybernetic09i
+          python tools/build_acquisition_packets09i.py --out build/acquisition09i
+      - name: Upload acquisition packets 09I
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@v4
+        with:
+          name: codexstation-omega-live-host-acquisition-v0.9i
+          path: build/acquisition09i/codexstation-omega-live-host-acquisition-v0.9i.zip
+          if-no-files-found: error
