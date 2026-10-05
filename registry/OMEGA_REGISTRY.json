@@ -1042,6 +1042,9 @@
     "status": "BOUNDED_REPRODUCTION_PASS_WITH_HOLDS",
     "authority_delta": "NONE",
     "receipt": "publication/SLICE_08E_RECEIPT.json",
-    "execution_run": 37280622913
+    "execution_run": 37280622913,
+    "slice_fingerprint": "5f51336863794ae75991cf5466daf0382a41a3f987d649acf4892479e197dd6f",
+    "composite_semantic_fingerprint": "3c140cbdb00ca9e5725ce0742928d8a9085f2649c7bddffb4b18e6f352c0b5c7",
+    "frozen_validation_run": 37280984516
   }
 }
