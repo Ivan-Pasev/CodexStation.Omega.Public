@@ -1,0 +1,33 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-ADAPTIVE-ROUTING-POLICY/0.9d",
+  "policy_id": "cs.policy::adaptive-routing::v0.9d",
+  "policy_version": 1,
+  "scope": "ROUTING_PREFERENCE_WITHIN_ALREADY_ADMISSIBLE_SKILLS",
+  "minimum_samples_for_health": 3,
+  "thresholds": {
+    "healthy_success_rate": 0.8,
+    "watch_success_rate": 0.5,
+    "degraded_success_rate_below": 0.5
+  },
+  "scoring": {
+    "base_score": 100,
+    "pass_bonus": 10,
+    "recovered_bonus": 4,
+    "fallback_penalty": 8,
+    "hold_penalty": 10,
+    "fail_penalty": 20,
+    "quarantine_penalty": 30
+  },
+  "constraints": [
+    "candidate skill MUST already pass 09C qualification, capability and authority gates",
+    "adaptive score MAY reorder only candidates with compatible authority/evidence ceilings",
+    "policy MUST NOT change skill qualification status",
+    "policy MUST NOT change authority ceiling",
+    "policy MUST NOT change evidence ceiling",
+    "policy MUST NOT close UNKNOWN_OUTCOME",
+    "policy updates MUST be versioned and digest-bound",
+    "same telemetry + same policy version MUST replay to the same routing order"
+  ],
+  "authority_delta": "NONE",
+  "release_eligible": false
+}
