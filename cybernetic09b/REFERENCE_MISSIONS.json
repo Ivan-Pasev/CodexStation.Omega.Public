@@ -1,0 +1,52 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-MISSION-COMPILER-VECTORS/0.9b",
+  "vectors": [
+    {
+      "id": "09b-local-pass",
+      "mission": {
+        "id": "mission.09b.local",
+        "intent": "Set verified local marker",
+        "mode": "LOCAL_VERIFICATION",
+        "required_capabilities": [
+          "cap.execute.public_ci"
+        ],
+        "required_authority": [
+          "A0"
+        ]
+      },
+      "local_operations": [
+        {
+          "op": "SET",
+          "key": "marker",
+          "value": "verified"
+        }
+      ],
+      "external_effects": [],
+      "reversibility": "REVERSIBLE",
+      "expected": "PASS"
+    },
+    {
+      "id": "09b-effect-unknown",
+      "mission": {
+        "id": "mission.09b.effect",
+        "intent": "Request external action",
+        "mode": "EXTERNAL_VERIFICATION",
+        "required_capabilities": [
+          "cap.external_effect.confirmed"
+        ],
+        "required_authority": [
+          "A0"
+        ]
+      },
+      "local_operations": [],
+      "external_effects": [
+        {
+          "kind": "EXTERNAL_ACTION",
+          "target": "fixture"
+        }
+      ],
+      "reversibility": "UNKNOWN",
+      "expected": "UNKNOWN_OUTCOME"
+    }
+  ]
+}
