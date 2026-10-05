@@ -559,6 +559,26 @@
     "release_eligible": false,
     "predecessor_composite_semantic_fingerprint": "15be646c46117179f3d8372db17e2822c4c6224fb9ca89b297ca59cbb03cf8fb",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09L_RECEIPT.json"
+    "receipt": "publication/SLICE_09L_RECEIPT.json",
+    "slice_fingerprint": "f2f27aad739f966d174775d4b3f2887e2356b85ab1c20c5bedb7213844f088e1",
+    "composite_semantic_fingerprint": "c964d45b46ea0466c1972c04f2b25fd036fa096cd83e7b81855e54eb8a176d7f",
+    "validation_run": 37318241812,
+    "publication_gate_blockers": [
+      "license_ip_review",
+      "duplication_dedup"
+    ],
+    "external_frontier_blockers": [
+      "08I_RESTRICTED_EXECUTION_RECEIPTS",
+      "09J_LIVE_HOST_RETURNS",
+      "NB00_LIVE_CONFORMANCE_01",
+      "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
+      "HIGHESTONE_RELEASE_EVIDENCE",
+      "DFPL_PRIMA_FULL_RUNTIME_REPRODUCTION"
+    ],
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
   }
 }
