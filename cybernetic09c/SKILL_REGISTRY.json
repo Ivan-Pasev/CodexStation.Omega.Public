@@ -1,0 +1,156 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SKILL-REGISTRY/0.9c",
+  "source": "canon/OMEGA_SKILL_SPINDLE.md",
+  "law": "SKILL_AVAILABLE != SKILL_QUALIFIED",
+  "skills": [
+    {
+      "skill_uri": "cs.skill::source-audit::v0.1",
+      "intent_tags": [
+        "source",
+        "audit",
+        "lineage",
+        "evidence"
+      ],
+      "status": "QUALIFIED_PUBLIC_SEED",
+      "required_capabilities": [
+        "cap.observe.public_repo"
+      ],
+      "authority_ceiling": "A1",
+      "evidence_ceiling": "IMPLEMENTATION",
+      "qualification_evidence": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ],
+      "failure_modes": [
+        "STALE_SOURCE",
+        "UNKNOWN_LINEAGE"
+      ],
+      "fallback_class": "NON_DESTRUCTIVE_ANALYSIS"
+    },
+    {
+      "skill_uri": "cs.skill::formalize-claim::v0.1",
+      "intent_tags": [
+        "claim",
+        "formalize",
+        "definitions",
+        "obligations"
+      ],
+      "status": "QUALIFIED_PUBLIC_SEED",
+      "required_capabilities": [
+        "cap.simulate.reference_runtime"
+      ],
+      "authority_ceiling": "A1",
+      "evidence_ceiling": "FORMALIZATION_ONLY",
+      "qualification_evidence": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ],
+      "failure_modes": [
+        "UNSUPPORTED_ASSUMPTION",
+        "MISSING_DEFINITION"
+      ],
+      "fallback_class": "HOLD"
+    },
+    {
+      "skill_uri": "cs.skill::adversarial-review::v0.1",
+      "intent_tags": [
+        "review",
+        "adversarial",
+        "challenge",
+        "evidence"
+      ],
+      "status": "QUALIFIED_PUBLIC_SEED",
+      "required_capabilities": [
+        "cap.observe.public_repo"
+      ],
+      "authority_ceiling": "A1",
+      "evidence_ceiling": "IMPLEMENTATION",
+      "qualification_evidence": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ],
+      "failure_modes": [
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "fallback_class": "HOLD"
+    },
+    {
+      "skill_uri": "cs.skill::repository-mutation::v0.1",
+      "intent_tags": [
+        "repository",
+        "mutation",
+        "code",
+        "change"
+      ],
+      "status": "QUALIFIED_PUBLIC_SEED",
+      "required_capabilities": [
+        "cap.mutate.public_repo"
+      ],
+      "authority_ceiling": "A3",
+      "evidence_ceiling": "IMPLEMENTATION",
+      "qualification_evidence": [
+        "bounded branch/SHA lineage",
+        "public CI receipts"
+      ],
+      "failure_modes": [
+        "WRITE_BLOCKED",
+        "CI_FAIL",
+        "STALE_BRANCH"
+      ],
+      "fallback_class": "NON_DESTRUCTIVE_ANALYSIS"
+    },
+    {
+      "skill_uri": "cs.skill::publication-filter::v0.1",
+      "intent_tags": [
+        "publication",
+        "filter",
+        "release",
+        "provenance"
+      ],
+      "status": "QUALIFIED_PUBLIC_SEED",
+      "required_capabilities": [
+        "cap.observe.public_repo"
+      ],
+      "authority_ceiling": "A2",
+      "evidence_ceiling": "PUBLICATION_ADMISSIBILITY",
+      "qualification_evidence": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ],
+      "failure_modes": [
+        "LICENSE_OPEN",
+        "PROVENANCE_GAP",
+        "CLAIM_STATUS_OPEN"
+      ],
+      "fallback_class": "HOLD"
+    },
+    {
+      "skill_uri": "cs.skill::migration-witness::v0.1",
+      "intent_tags": [
+        "migration",
+        "witness",
+        "recovery",
+        "lineage"
+      ],
+      "status": "QUALIFIED_PUBLIC_SEED",
+      "required_capabilities": [
+        "cap.simulate.reference_runtime"
+      ],
+      "authority_ceiling": "A2",
+      "evidence_ceiling": "IMPLEMENTATION",
+      "qualification_evidence": [
+        "canon/OMEGA_SKILL_SPINDLE.md"
+      ],
+      "failure_modes": [
+        "UNVERIFIED_OBJECT",
+        "UNVERIFIED_RECEIPT"
+      ],
+      "fallback_class": "QUARANTINE"
+    }
+  ],
+  "invariants": [
+    "SKILL != AGENT_IDENTITY",
+    "SKILL != CAPABILITY",
+    "SKILL != AUTHORITY",
+    "QUALIFICATION != AUTHORIZATION",
+    "SUCCESS_HISTORY != QUALIFICATION_PROOF",
+    "TELEMETRY != AUTHORITY"
+  ],
+  "authority_delta": "NONE"
+}
