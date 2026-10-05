@@ -138,14 +138,20 @@
     "previous_composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
     "slice_fingerprint": "88da43743289f459da546d030b1879ec767242670bb8a981b4a39d3c4cca8cf8",
-    "composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3"
+    "composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3",
+    "receipt": "publication/SLICE_08B_RECEIPT.json"
   },
   "packaging08b": {
     "chatgpt_plugin": "packaging08b/chatgpt-plugin/PACKAGING.json",
     "gemini_notebook": "packaging08b/gemini-notebook/PACKAGING.json",
     "packager": "tools/build_packages08b.py",
-    "status": "BUILD_WITNESS_PENDING_FINAL_CI",
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
     "slice_fingerprint": "88da43743289f459da546d030b1879ec767242670bb8a981b4a39d3c4cca8cf8",
-    "composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3"
+    "composite_semantic_fingerprint": "cf9bc1de879c91756640cc145538324787646868811fa8ca9007e363b11c7de3",
+    "package_index": "packaging08b/PACKAGE_INDEX.json",
+    "chatgpt_plugin_sha256": "7979921149bbb5b04dbb7847d5e802f1402eb82508acc4a4a8396b5c7cfa36bb",
+    "gemini_notebook_sha256": "c70d7b6d483145254bfde3347083ec65c09750831ac277101ae8cac1e3374237",
+    "build_witness_run": 37268147523,
+    "combined_drive_file_id": "1-lsMc-NhaMz_jBjBfIwcOdOG5EIz0ubT"
   }
 }
