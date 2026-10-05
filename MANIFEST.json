@@ -440,6 +440,22 @@
     "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
     "predecessor_composite_semantic_fingerprint": "f0c807fff1abb2df627cbc40467b45a59feb0a53201147a4fb685d03baad93d7",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09H_RECEIPT.json"
+    "receipt": "publication/SLICE_09H_RECEIPT.json",
+    "slice_fingerprint": "a91c186ce7742b0b5ae9e45c69c7e01ba89f1f45ae712ffb6f98ceedeec60627",
+    "composite_semantic_fingerprint": "3d5282a9f1649c63555db3813bbbc6cc76035cd039e7ab8f5acff051af827a84",
+    "validation_run": 37313169299,
+    "artifact": {
+      "name": "codexstation-omega-host-witness-v0.9h",
+      "artifact_id": 11346428555,
+      "inner_zip_sha256": "4e6de4f89facf18e39a9dbec3c75372539ce5f0202b1ab4d72e09270f895a1ec",
+      "uploaded_artifact_sha256": "511902cd005f11812f61fd354142bcc4318486f83e8c9bf6eaf7fc1c2271b6dd",
+      "file_count": 12,
+      "contains_private_source": false
+    },
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
   }
 }
