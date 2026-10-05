@@ -168,3 +168,8 @@ jobs:
         run: |
           python tools/validate_cybernetic09f.py
           python -m unittest -v tests.test_cybernetic09f
+
+      - name: Cybernetic live host witness 09G validation
+        run: |
+          python tools/validate_cybernetic09g.py
+          python -m unittest -v tests.test_cybernetic09g
