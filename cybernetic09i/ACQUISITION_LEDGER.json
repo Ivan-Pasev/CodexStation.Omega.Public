@@ -1,0 +1,20 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-LIVE-HOST-ACQUISITION-LEDGER/0.9i",
+  "active_policy_digest": "2c1cff5173ed8cb36a037c34ba030416af14c5c084ddccf47d9ee6241e9b0ea7",
+  "hosts": {
+    "chatgpt-codex": {
+      "acquisition_state": "LIVE_RECEIPT_PENDING",
+      "request_id": "acq09i-chatgpt-codex-v1",
+      "admitted_witness_digest": null,
+      "challenge_consumed": false
+    },
+    "gemini-notebook": {
+      "acquisition_state": "LIVE_RECEIPT_PENDING",
+      "request_id": "acq09i-gemini-notebook-v1",
+      "admitted_witness_digest": null,
+      "challenge_consumed": false
+    }
+  },
+  "live_multi_host_conformance_closed": false,
+  "authority_delta": "NONE"
+}
