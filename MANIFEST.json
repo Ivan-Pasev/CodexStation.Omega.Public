@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "TIER_A_INDEPENDENT_REPRODUCTION_08E_EXECUTION_PENDING",
+  "registry_state": "TIER_A_INDEPENDENT_REPRODUCTION_08E_PASS_WITH_HOLDS",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_TIER_A_INDEPENDENT_REPRODUCTION_SLICE_08E",
+  "current_target": "OMEGA_TIER_A_PRIVATE_REPRODUCTION_BRIDGE_SLICE_08F",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -201,8 +201,9 @@
     "workflow": ".github/workflows/reproduce-tier-a-08e.yml",
     "validator": "tools/validate_reproduction08e.py",
     "previous_composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7",
-    "status": "REPRODUCTION_EXECUTION_PENDING",
+    "status": "BOUNDED_REPRODUCTION_PASS_WITH_HOLDS",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_08E_RECEIPT.json"
+    "receipt": "publication/SLICE_08E_RECEIPT.json",
+    "execution_run": 37280622913
   }
 }
