@@ -1,0 +1,38 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-HOST-PROFILES/0.9f",
+  "law": "PLATFORM_PROFILE != CANON_FORK",
+  "hosts": [
+    {
+      "host_id": "chatgpt-codex",
+      "distribution_target": "dist/chatgpt-codex/DISTRIBUTION.json",
+      "capability_profile": {
+        "observe": true,
+        "local_execute": true,
+        "connected_mutate": "HOST_DEPENDENT",
+        "external_effect": "HOST_DEPENDENT"
+      },
+      "semantic_policy_source": "cybernetic09e/ACTIVE_POLICY_REGISTRY.json",
+      "host_adapter_scope": "PRESENTATION_AND_CAPABILITY_BINDING_ONLY"
+    },
+    {
+      "host_id": "gemini-notebook",
+      "distribution_target": "dist/gemini-notebook/DISTRIBUTION.json",
+      "capability_profile": {
+        "observe": true,
+        "local_execute": "HOST_DEPENDENT",
+        "connected_mutate": "HOST_DEPENDENT",
+        "external_effect": "HOST_DEPENDENT"
+      },
+      "semantic_policy_source": "cybernetic09e/ACTIVE_POLICY_REGISTRY.json",
+      "host_adapter_scope": "PRESENTATION_AND_CAPABILITY_BINDING_ONLY"
+    }
+  ],
+  "invariants": [
+    "HOST_PROFILE_MAY_DIFFER",
+    "ACTIVE_POLICY_DIGEST_MUST_NOT_DIFFER",
+    "REPLAY_SEMANTICS_MUST_NOT_DIFFER",
+    "HOST_CAPABILITY_GAP != POLICY_DIVERGENCE",
+    "HOST_ADAPTER != CANONICAL_POLICY"
+  ],
+  "authority_delta": "NONE"
+}
