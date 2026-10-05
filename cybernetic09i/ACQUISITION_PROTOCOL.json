@@ -1,0 +1,41 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-LIVE-HOST-ACQUISITION/0.9i",
+  "protocol_id": "cs.host-acquisition::v0.9i",
+  "stages": [
+    "REQUEST_ISSUED",
+    "HOST_EXECUTION",
+    "WITNESS_RETURNED",
+    "CHALLENGE_VERIFY",
+    "09G_CLASSIFY",
+    "LEDGER_INGEST",
+    "AGGREGATE"
+  ],
+  "request_required": [
+    "request_id",
+    "host_id",
+    "host_profile_digest",
+    "active_policy_digest",
+    "policy_version",
+    "challenge_id",
+    "challenge_digest",
+    "runner_pack",
+    "expires_after_use"
+  ],
+  "return_required": [
+    "request_id",
+    "challenge_id",
+    "challenge_digest",
+    "host_witness"
+  ],
+  "laws": [
+    "REQUEST_READY != LIVE_WITNESS",
+    "RETURNED_WITNESS_MUST_BIND_REQUEST",
+    "RETURNED_WITNESS_MUST_BIND_CHALLENGE",
+    "CHALLENGE_ACCEPTED_ONCE_PER_LEDGER",
+    "09G_CLASSIFICATION_REQUIRED_AFTER_CHALLENGE",
+    "ONE_HOST_PASS != MULTI_HOST_PASS",
+    "MISSING_HOST_RECEIPT = HOLD"
+  ],
+  "authority_delta": "NONE",
+  "release_eligible": false
+}

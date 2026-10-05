@@ -1,0 +1,9 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-LIVE-HOST-REQUESTS/0.9i",
+  "note": "Requests are deterministically generated from registered host/profile and active policy. They are not live receipts.",
+  "hosts": [
+    "chatgpt-codex",
+    "gemini-notebook"
+  ],
+  "authority_delta": "NONE"
+}
