@@ -48,3 +48,14 @@ jobs:
           name: codexstation-omega-public-packages-v0.7a
           path: build/package07a/*.zip
           if-no-files-found: error
+      - name: Mount / kernel lattice 08A validation
+        run: python tools/validate_mount_lattice08a.py
+      - name: Mount / kernel lattice 08A packaging
+        run: python tools/build_packages08a.py --out build/package08a
+      - name: Upload mount / kernel lattice 08A candidates
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@v4
+        with:
+          name: codexstation-omega-public-packages-v0.8a
+          path: build/package08a/*.zip
+          if-no-files-found: error
