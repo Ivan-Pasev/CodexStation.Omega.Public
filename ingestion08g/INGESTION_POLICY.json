@@ -1,0 +1,40 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-RECEIPT-INGESTION-POLICY/0.8g",
+  "ingestion_id": "cs.ingestion::tier-a-receipts::v0.8g",
+  "predecessor_composite_semantic_fingerprint": "ac43b3f0ccd001bc4235f1e19331e03819d5694393dbc7733cb0bfb56065428c",
+  "accepted_receipt_schema": "GILC/CODEXSTATION/OMEGA-PRIVATE-REPRODUCTION-RECEIPT/0.8f",
+  "source_contract": "bridge08f/EXPECTED_PINS.json",
+  "admission_order": [
+    "SCHEMA_AND_FAMILY",
+    "REPOSITORY_AND_EXACT_PIN",
+    "SANITIZATION_AND_NO_SOURCE_MUTATION",
+    "AUTHORITY_DELTA_NONE",
+    "RUNNER_IDENTITY_PRESENT",
+    "NON_SYNTHETIC_EXECUTION_EVIDENCE",
+    "REQUIRED_COMMAND_COVERAGE",
+    "RESULT_VECTOR_CONSISTENCY",
+    "DECLARED_SCOPE_MATCH",
+    "VERDICT"
+  ],
+  "verdicts": {
+    "PASS_REPRODUCED": "All exact-pin, command, scope and execution-evidence checks pass and overall_status=PASS.",
+    "FAIL_REPRODUCTION": "Receipt is authentic in shape/scope but reports overall_status=FAIL or a required native command FAIL.",
+    "HOLD_NO_RECEIPT": "No admissible receipt has been provided for the source family.",
+    "HOLD_INCOMPLETE": "Receipt is structurally admissible but required execution results are SKIP/incomplete.",
+    "REJECT_INVALID_RECEIPT": "Identity, pin, disclosure, mutation, authority, scope, command coverage, or result consistency check fails.",
+    "REJECT_NON_EXECUTION_EVIDENCE": "Receipt is synthetic/schema-test/source-reported evidence rather than a direct runner execution receipt.",
+    "REJECT_CONFLICT": "A second receipt conflicts with an already admitted receipt for the same source family and exact source commit."
+  },
+  "invariants": [
+    "NO_RECEIPT != FAIL",
+    "SCHEMA_VALID != EXECUTION_EVIDENCE",
+    "PASS_RECEIPT_REQUIRES_EXACT_PIN",
+    "PASS_RECEIPT_REQUIRES_ALL_REQUIRED_COMMANDS_PASS",
+    "SYNTHETIC_RECEIPT_CANNOT_PROMOTE",
+    "FAMILY_PROMOTION_IS_INDEPENDENT",
+    "RECEIPT_INGESTION != AUTHORITY_PROMOTION",
+    "RECEIPT_INGESTION != RELEASE_ELIGIBILITY"
+  ],
+  "authority_delta": "NONE",
+  "release_eligible": false
+}
