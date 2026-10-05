@@ -138,3 +138,8 @@ jobs:
           name: codexstation-omega-runner-v0.8h
           path: build/runner08h/codexstation-omega-runner-v0.8h.zip
           if-no-files-found: error
+
+      - name: Cybernetic control plane 09A validation
+        run: |
+          python tools/validate_cybernetic09a.py
+          python -m unittest -v tests.test_cybernetic09a
