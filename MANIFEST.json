@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "MOUNT_KERNEL_LATTICE_08A_IMPLEMENTED_PENDING_CI",
+  "registry_state": "MOUNT_KERNEL_LATTICE_08A_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_PROJECT_MOUNT_KERNEL_LATTICE_SLICE_08A",
+  "current_target": "OMEGA_TIER_A_KERNEL_PIN_AND_BIND_SLICE_08B",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -109,12 +109,16 @@
     "project_mount_skill": "skills/codexstation-omega-project-mount/SKILL.md",
     "validator": "tools/validate_mount_lattice08a.py",
     "previous_composite_semantic_fingerprint": "daa85b0bf47e392c4a310b2dc11f8074dee2480b5b7dd34c3bde917981bd4c7d",
-    "status": "IMPLEMENTED_PENDING_CI"
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+    "slice_fingerprint": "ea077212fa34edd670c687ea66603405a8faddf9f9c94c9ad978707debc33593",
+    "composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c"
   },
   "packaging08a": {
     "chatgpt_plugin": "packaging08a/chatgpt-plugin/PACKAGING.json",
     "gemini_notebook": "packaging08a/gemini-notebook/PACKAGING.json",
     "packager": "tools/build_packages08a.py",
-    "status": "IMPLEMENTED_PENDING_CI"
+    "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+    "slice_fingerprint": "ea077212fa34edd670c687ea66603405a8faddf9f9c94c9ad978707debc33593",
+    "composite_semantic_fingerprint": "d0c0881da6c03dc797fea53a0c4c22caf9913c7de4c52ff018265fca9dbd3d4c"
   }
 }
