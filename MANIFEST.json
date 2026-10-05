@@ -1,5 +1,5 @@
 {
-  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9e",
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-MANIFEST/0.9f",
   "repository": "Ivan-Pasev/CodexStation.Omega.Public",
   "status": "PUBLICATION_STAGING",
   "release_eligible": false,
@@ -8,7 +8,7 @@
   "machine_registry": "registry/OMEGA_REGISTRY.json",
   "metabolization_index": "registry/metabolization03/INDEX.json",
   "metabolization_sources": "registry/metabolization03/SOURCES.json",
-  "registry_state": "CYBERNETIC_POLICY_GOVERNOR_09E_PASS_CANDIDATE",
+  "registry_state": "CYBERNETIC_MULTI_HOST_POLICY_09F_PASS_CANDIDATE",
   "logical_carriers": [
     "canon/OMEGA_CORE.md",
     "canon/OMEGA_CRYSTAL.md",
@@ -53,7 +53,7 @@
     "theorem_dependencies": "registry/objectization04/THEOREM_DEPENDENCIES.json",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE"
   },
-  "current_target": "OMEGA_CYBERNETIC_MULTI_HOST_REPLAY_AND_POLICY_DISTRIBUTION_SLICE_09F",
+  "current_target": "OMEGA_CYBERNETIC_HOST_WITNESS_AND_CONFORMANCE_GATE_SLICE_09G",
   "distribution05": {
     "semantic_parent": "distribution05/SEMANTIC_PARENT.json",
     "compiled_semantics": "distribution05/COMPILED_SEMANTICS.json",
@@ -264,7 +264,7 @@
   },
   "parallel_frontiers": {
     "evidence": "OMEGA_TIER_A_RESTRICTED_EXECUTION_RECEIPTS_SLICE_08I",
-    "capability": "OMEGA_CYBERNETIC_POLICY_PROMOTION_AND_REPLAY_GOVERNOR_SLICE_09E"
+    "capability": "OMEGA_CYBERNETIC_MULTI_HOST_REPLAY_AND_POLICY_DISTRIBUTION_SLICE_09F"
   },
   "cybernetic09a": {
     "capability_lattice": "cybernetic09a/CAPABILITY_LATTICE.json",
@@ -374,5 +374,20 @@
       "3.12": "success",
       "3.13": "success"
     }
+  },
+  "cybernetic09f": {
+    "host_profiles": "cybernetic09f/HOST_PROFILES.json",
+    "distribution_contract": "cybernetic09f/DISTRIBUTION_CONTRACT.json",
+    "distributor": "cybernetic09f/distributor.py",
+    "validator": "tools/validate_cybernetic09f.py",
+    "tests": "tests/test_cybernetic09f.py",
+    "status": "MULTI_HOST_SEMANTIC_PARITY_PASS_CANDIDATE",
+    "active_policy_version": 1,
+    "active_policy_digest": "2c1cff5173ed8cb36a037c34ba030416af14c5c084ddccf47d9ee6241e9b0ea7",
+    "live_host_execution_claimed": false,
+    "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+    "predecessor_composite_semantic_fingerprint": "aa247cd65a8505bab2ec11b9bc470a1d42fb6d19c6c79c1ef4b05c890effe8f2",
+    "authority_delta": "NONE",
+    "receipt": "publication/SLICE_09F_RECEIPT.json"
   }
 }
