@@ -1,0 +1,33 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-TIER-A-KERNEL-BINDINGS/0.8b",
+  "authority_delta": "NONE",
+  "bindings": [
+    {
+      "kernel_id": "cs.kernel::transition-admission-invariant::v0.8a",
+      "source_binding": "cs.binding::digital-fabrica-core::2026-10-05",
+      "status": "PINNED"
+    },
+    {
+      "kernel_id": "cs.kernel::law-effect::v0.8a",
+      "source_binding": "cs.binding::dfpl::2026-10-05",
+      "status": "PINNED"
+    },
+    {
+      "kernel_id": "cs.kernel::identity-authority-recovery::v0.8a",
+      "source_binding": "cs.binding::highestone::2026-10-05",
+      "status": "PINNED"
+    },
+    {
+      "kernel_id": "cs.kernel::station-continuity::v0.8a",
+      "source_binding": "cs.binding::gilc-codexstation::2026-10-05",
+      "status": "PINNED"
+    },
+    {
+      "kernel_id": "cs.kernel::conflict-reconciliation-closure::v0.8a",
+      "source_binding": "cs.binding::neural-lattice::2026-10-05",
+      "status": "PINNED"
+    }
+  ],
+  "shared_abi": "cs.abi::constitutional-core::v0.8b",
+  "status": "TIER_A_PINNED_ABI_CANDIDATE"
+}
