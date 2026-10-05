@@ -190,6 +190,8 @@
     "previous_composite_semantic_fingerprint": "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_08D_RECEIPT.json"
+    "receipt": "publication/SLICE_08D_RECEIPT.json",
+    "slice_fingerprint": "16114b528cd956eba3c4ffa1425e3d56c2c066be90abcfd23ca1bfc8c52f164f",
+    "composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7"
   }
 }
