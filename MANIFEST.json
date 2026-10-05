@@ -249,6 +249,17 @@
     "status": "RUNNER_PACK_IMPLEMENTED_EXECUTION_PENDING",
     "predecessor_composite_semantic_fingerprint": "f557bd38c1cfa705ea37a1d97168b7ff218e85e9abdd8086e5aa23cd97795488",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_08H_RECEIPT.json"
+    "receipt": "publication/SLICE_08H_RECEIPT.json",
+    "slice_fingerprint": "8eeecb50554691d1fadbda26eef679f53bc47413614f550be88a85b628d6ee47",
+    "composite_semantic_fingerprint": "39db2bcb7652a6ee31bb796d2c8c37c3c93bd9a50c891693d23362c431bf49cb",
+    "validation_run": 37287811957,
+    "artifact": {
+      "name": "codexstation-omega-runner-v0.8h",
+      "artifact_id": 11335495471,
+      "inner_zip_sha256": "5599dbeb03187b1183bf296f79aee9b40a35cfb516ad657b939806eeb5eb1a1a",
+      "uploaded_artifact_sha256": "c9fbe9d543db64f966cfcb2dc6d2529dce93379e7a33c1863a4ef7f72fab214e",
+      "file_count": 9,
+      "contains_restricted_source": false
+    }
   }
 }
