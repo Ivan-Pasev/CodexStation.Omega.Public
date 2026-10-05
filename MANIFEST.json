@@ -504,6 +504,14 @@
     "live_multi_host_conformance_closed": false,
     "predecessor_composite_semantic_fingerprint": "9bd7fef32e64225e378674c36ebf60487c04f6a683caeb438ceec66a90b07358",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_09J_RECEIPT.json"
+    "receipt": "publication/SLICE_09J_RECEIPT.json",
+    "slice_fingerprint": "4e989c83e3fa9580a8029da4b11eb1f991d44c4fce1f5ac890b63ece14c7acb6",
+    "composite_semantic_fingerprint": "0be842a754cdcbdeccb08bda090f719cb5c3d03d1e50b1100a323625abe4f2da",
+    "validation_run": 37314721586,
+    "ci_python": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    }
   }
 }
