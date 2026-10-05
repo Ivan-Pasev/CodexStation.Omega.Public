@@ -1030,6 +1030,8 @@
     "harness": "integration08d/harness.py",
     "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_08D_RECEIPT.json"
+    "receipt": "publication/SLICE_08D_RECEIPT.json",
+    "slice_fingerprint": "16114b528cd956eba3c4ffa1425e3d56c2c066be90abcfd23ca1bfc8c52f164f",
+    "composite_semantic_fingerprint": "d024fa3295770ac0db04cb7c7ed946bf42e6cf17130f9eee059dee3cf7770df7"
   }
 }
