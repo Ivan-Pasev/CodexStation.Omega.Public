@@ -1,0 +1,13 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-SLICE-RECEIPT/0.9c",
+  "slice": "OMEGA_CYBERNETIC_SKILL_BINDER_AND_RECOVERY_ORCHESTRATOR_SLICE_09C",
+  "repository": "Ivan-Pasev/CodexStation.Omega.Public",
+  "branch": "omega-09c-skill-recovery-orchestrator",
+  "predecessor": "OMEGA_CYBERNETIC_MISSION_COMPILER_AND_EFFECT_GATE_SLICE_09B",
+  "previous_composite_semantic_fingerprint": "bda8728a88b61a89781c6f0ae070ddfccb57bfc463a2191bcb3f8a2acb314501",
+  "status": "SKILL_ORCHESTRATION_RECOVERY_PASS_CANDIDATE",
+  "evidence_frontier_08i": "HELD_EXTERNAL_RECEIPTS",
+  "authority_delta": "NONE",
+  "release_eligible": false,
+  "next_target": "OMEGA_CYBERNETIC_ADAPTIVE_POLICY_AND_TELEMETRY_CRYSTALLIZATION_SLICE_09D"
+}
