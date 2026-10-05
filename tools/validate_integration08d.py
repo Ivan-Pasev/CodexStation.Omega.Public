@@ -3,11 +3,14 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from pathlib import Path
 
-from integration08d.harness import run_all
-
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from integration08d.harness import run_all
 PREVIOUS = "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64"
 FILES = [
     "integration08d/SOURCE_FIXTURES.json",
