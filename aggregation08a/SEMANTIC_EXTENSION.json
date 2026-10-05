@@ -1,0 +1,60 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-PUBLIC-SEMANTIC-EXTENSION/0.8a",
+  "extension_id": "cs.semantic-extension::project-mount-kernel-lattice::v0.8a",
+  "previous_composite_semantic_fingerprint": "daa85b0bf47e392c4a310b2dc11f8074dee2480b5b7dd34c3bde917981bd4c7d",
+  "object_types": [
+    "ProjectMount",
+    "HarvestSession",
+    "KnowledgeQuantum",
+    "LatticeAdmission",
+    "FeedbackPacket",
+    "KernelLatticeEntry"
+  ],
+  "skill_ids": [
+    "cs.skill::project-mount::v0.8a"
+  ],
+  "kernel_ids": [
+    "cs.kernel::identity-digest::v0.8a",
+    "cs.kernel::transition-admission-invariant::v0.8a",
+    "cs.kernel::law-effect::v0.8a",
+    "cs.kernel::identity-authority-recovery::v0.8a",
+    "cs.kernel::station-continuity::v0.8a",
+    "cs.kernel::conflict-reconciliation-closure::v0.8a",
+    "cs.kernel::isolated-execution::v0.8a",
+    "cs.kernel::action-correspondence::v0.8a",
+    "cs.kernel::governed-state-rollback::v0.8a",
+    "cs.kernel::projection-federation::v0.8a",
+    "cs.kernel::delegation-witness::v0.8a",
+    "cs.kernel::mission-compute-fabric::v0.8a",
+    "cs.kernel::formal-replay-qualification::v0.8a",
+    "cs.kernel::scientific-execution-quarantine::v0.8a",
+    "cs.kernel::project-mount::v0.8a",
+    "cs.kernel::harvest-quantize-lattice::v0.8a",
+    "cs.kernel::holotope-plate-compiler::v0.8a",
+    "cs.kernel::deterministic-dual-provider-release::v0.8a"
+  ],
+  "relation_types": [
+    "MOUNTS",
+    "HARVESTS",
+    "QUANTIZES",
+    "ADMITS",
+    "FEEDS_BACK_TO",
+    "COMPOSES_WITH"
+  ],
+  "laws": [
+    "SOURCE_PROJECT_CANON != OMEGA_AGGREGATE_VIEW",
+    "MOUNT != OWNERSHIP_TRANSFER",
+    "READ_ACCESS != WRITE_AUTHORITY",
+    "BLACK_HOLE != SOURCE_ERASURE",
+    "COMPRESSION != AUTHORITY_PROMOTION",
+    "GLOBAL_FEEDBACK != AUTOMATIC_SOURCE_MUTATION",
+    "KERNEL_CENTRALITY != AUTHORITY"
+  ],
+  "parallel_open_gates": [
+    "NB00_LIVE_CONFORMANCE_01",
+    "RGT-04_BUNDLED_FALLBACK_CLEAN_CHAT",
+    "LICENSE_IP_REVIEW"
+  ],
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}
