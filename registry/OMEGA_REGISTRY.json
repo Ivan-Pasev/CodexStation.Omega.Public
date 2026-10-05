@@ -1076,6 +1076,10 @@
     "builder": "tools/build_runner_pack08h.py",
     "status": "RUNNER_PACK_IMPLEMENTED_EXECUTION_PENDING",
     "authority_delta": "NONE",
-    "receipt": "publication/SLICE_08H_RECEIPT.json"
+    "receipt": "publication/SLICE_08H_RECEIPT.json",
+    "slice_fingerprint": "8eeecb50554691d1fadbda26eef679f53bc47413614f550be88a85b628d6ee47",
+    "composite_semantic_fingerprint": "39db2bcb7652a6ee31bb796d2c8c37c3c93bd9a50c891693d23362c431bf49cb",
+    "validation_run": 37287811957,
+    "artifact_id": 11335495471
   }
 }
