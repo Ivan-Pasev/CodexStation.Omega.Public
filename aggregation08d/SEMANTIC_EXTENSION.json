@@ -1,0 +1,25 @@
+{
+  "schema": "GILC/CODEXSTATION/OMEGA-INTEGRATION-SEMANTIC-EXTENSION/0.8d",
+  "previous_composite_semantic_fingerprint": "f2a0eba01d21d652720b46a74664da5d5b6f5cd0fcc7c6170da7ab8f4b38ab64",
+  "extends": [
+    "aggregation08b/SOURCE_BINDINGS.json",
+    "aggregation08b/ADAPTER_MAP.json",
+    "runtime08c/RUNTIME_PROFILE.json"
+  ],
+  "adds": [
+    "source-derived fixture layer",
+    "explicit native-to-adapter normalization ledger",
+    "cross-family runtime correspondence observations",
+    "machine-readable residual/loss ledger"
+  ],
+  "invariants": [
+    "SOURCE_PROJECT_CANON != OMEGA_AGGREGATE_VIEW",
+    "SOURCE_FIXTURE != SOURCE_RUNTIME_EXECUTION",
+    "NORMALIZATION != SEMANTIC_IDENTITY",
+    "ADAPTER != AUTHORITY_PROMOTION",
+    "UNKNOWN_OUTCOME_IS_PRESERVED_AS_UNKNOWN"
+  ],
+  "status": "IMPLEMENTATION_EVIDENCE_PASS_CANDIDATE",
+  "release_eligible": false,
+  "authority_delta": "NONE"
+}
