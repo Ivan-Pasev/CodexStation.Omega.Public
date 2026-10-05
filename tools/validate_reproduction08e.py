@@ -16,59 +16,80 @@ FILES = [
 ]
 
 def fingerprint():
-    h=hashlib.sha256()
+    h = hashlib.sha256()
     for rel in FILES:
-        raw=(ROOT/rel).read_bytes()
-        h.update(rel.encode()); h.update(b"\0"); h.update(raw); h.update(b"\0")
-    s=h.hexdigest()
-    return s, hashlib.sha256((PREVIOUS+"|"+s).encode()).hexdigest()
+        raw = (ROOT / rel).read_bytes()
+        h.update(rel.encode())
+        h.update(b"\0")
+        h.update(raw)
+        h.update(b"\0")
+    slice_fp = h.hexdigest()
+    composite = hashlib.sha256((PREVIOUS + "|" + slice_fp).encode()).hexdigest()
+    return slice_fp, composite
 
 def main():
-    errors=[]
-    p=json.loads((ROOT/"reproduction08e/REPRODUCTION_PROFILE.json").read_text())
-    l=json.loads((ROOT/"reproduction08e/REPRODUCTION_LEDGER.json").read_text())
-    if p.get("previous_composite_semantic_fingerprint") != PREVIOUS:
+    errors = []
+    profile = json.loads((ROOT / "reproduction08e/REPRODUCTION_PROFILE.json").read_text())
+    ledger = json.loads((ROOT / "reproduction08e/REPRODUCTION_LEDGER.json").read_text())
+
+    if profile.get("previous_composite_semantic_fingerprint") != PREVIOUS:
         errors.append("predecessor fingerprint mismatch")
-    if p.get("authority_delta")!="NONE" or l.get("authority_delta")!="NONE":
+    if profile.get("authority_delta") != "NONE" or ledger.get("authority_delta") != "NONE":
         errors.append("authority delta must remain NONE")
-    if p.get("release_eligible") is not False or l.get("release_eligible") is not False:
+    if profile.get("release_eligible") is not False or ledger.get("release_eligible") is not False:
         errors.append("release eligibility must remain false")
-    if len(l.get("sources",[])) != 5:
+
+    sources = ledger.get("sources", [])
+    if len(sources) != 5:
         errors.append("expected five source families")
-    by={x["source_family"]:x for x in l.get("sources",[])}
-    for family in ("DIGITAL_FABRICA_CORE","HIGHESTONE","NEURAL_LATTICE"):
-        if by.get(family,{}).get("independent_reproduction")!="HOLD":
+    by = {x["source_family"]: x for x in sources}
+
+    for family in ("DIGITAL_FABRICA_CORE", "HIGHESTONE", "NEURAL_LATTICE"):
+        if by.get(family, {}).get("independent_reproduction") != "HOLD":
             errors.append(f"private family promoted: {family}")
-    if by.get("DFPL_PRIMA",{}).get("status")!="PARTIAL_SOURCE_NATIVE_REPRODUCTION_PASS":
+
+    if by.get("DFPL_PRIMA", {}).get("status") != "PARTIAL_SOURCE_NATIVE_REPRODUCTION_PASS":
         errors.append("DFPL partial reproduction witness missing")
-    if by.get("GILC_CODEXSTATION",{}).get("status")!="INDEPENDENT_CROSS_REPO_NATIVE_EXECUTION_PASS":
+    if by.get("GILC_CODEXSTATION", {}).get("status") != "INDEPENDENT_CROSS_REPO_NATIVE_EXECUTION_PASS":
         errors.append("GILC independent reproduction witness missing")
-    if by.get("DFPL_PRIMA",{}).get("independent_reproduction",{}).get("workflow_run_id") != 37280622913:\n        errors.append("DFPL reproduction run mismatch")\n    if by.get("GILC_CODEXSTATION",{}).get("independent_reproduction",{}).get("workflow_run_id") != 37280622913:\n        errors.append("GILC reproduction run mismatch")\n    if by.get("HIGHESTONE",{}).get("lineage_check",{}).get("relevant_formal_tree_changed") is not False:
+    if by.get("DFPL_PRIMA", {}).get("independent_reproduction", {}).get("workflow_run_id") != 37280622913:
+        errors.append("DFPL reproduction run mismatch")
+    if by.get("GILC_CODEXSTATION", {}).get("independent_reproduction", {}).get("workflow_run_id") != 37280622913:
+        errors.append("GILC reproduction run mismatch")
+    if by.get("HIGHESTONE", {}).get("lineage_check", {}).get("relevant_formal_tree_changed") is not False:
         errors.append("HighestOne formal lineage not preserved")
-    required={
+
+    required = {
         "SOURCE_REPORTED_PASS != LOCALLY_REPRODUCED_PASS",
         "SOURCE_NATIVE_RUN != INDEPENDENT_CROSS_REPO_REPRODUCTION",
         "UNCHANGED_RELEVANT_TREE != NEW_EXECUTION",
         "PARTIAL_NATIVE_TEST != FULL_SEMANTIC_CORRESPONDENCE",
         "HOLD != FAIL",
     }
-    if not required.issubset(set(p.get("invariants",[]))):
+    if not required.issubset(set(profile.get("invariants", []))):
         errors.append("required evidence invariants missing")
-    sf,cf=fingerprint()
-    report={
-        "result":"PASS" if not errors else "FAIL",
-        "reproduction_id":p["reproduction_id"],
-        "source_families":5,
-        "independent_targets":["DFPL_PRIMA:PARTIAL","GILC_CODEXSTATION:FULL_NATIVE_TEST_SUITE"],
-        "private_holds":["DIGITAL_FABRICA_CORE","HIGHESTONE","NEURAL_LATTICE"],
-        "slice_fingerprint":sf,
-        "composite_semantic_fingerprint":cf,
-        "authority_delta":"NONE",
-        "release_eligible":False,
-        "errors":errors,
+
+    if ledger.get("aggregate_status") != "BOUNDED_REPRODUCTION_PASS_WITH_HOLDS":
+        errors.append("aggregate reproduction status mismatch")
+
+    slice_fp, composite = fingerprint()
+    report = {
+        "result": "PASS" if not errors else "FAIL",
+        "reproduction_id": profile["reproduction_id"],
+        "source_families": 5,
+        "independent_results": {
+            "DFPL_PRIMA": "PARTIAL_SOURCE_NATIVE_REPRODUCTION_PASS",
+            "GILC_CODEXSTATION": "INDEPENDENT_CROSS_REPO_NATIVE_EXECUTION_PASS",
+        },
+        "private_holds": ["DIGITAL_FABRICA_CORE", "HIGHESTONE", "NEURAL_LATTICE"],
+        "slice_fingerprint": slice_fp,
+        "composite_semantic_fingerprint": composite,
+        "authority_delta": "NONE",
+        "release_eligible": False,
+        "errors": errors,
     }
-    print(json.dumps(report,indent=2))
+    print(json.dumps(report, indent=2))
     return 0 if not errors else 1
 
-if __name__=="__main__":
+if __name__ == "__main__":
     raise SystemExit(main())
