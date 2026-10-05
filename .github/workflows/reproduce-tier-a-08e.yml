@@ -1,0 +1,89 @@
+name: tier-a-independent-reproduction-08e
+
+on:
+  push:
+    paths:
+      - ".github/workflows/reproduce-tier-a-08e.yml"
+      - "reproduction08e/**"
+      - "aggregation08e/**"
+      - "tools/validate_reproduction08e.py"
+      - "tests/test_reproduction08e.py"
+      - "publication/SLICE_08E_RECEIPT.json"
+      - "MANIFEST.json"
+      - "registry/OMEGA_REGISTRY.json"
+  pull_request:
+    paths:
+      - ".github/workflows/reproduce-tier-a-08e.yml"
+      - "reproduction08e/**"
+      - "aggregation08e/**"
+      - "tools/validate_reproduction08e.py"
+      - "tests/test_reproduction08e.py"
+      - "publication/SLICE_08E_RECEIPT.json"
+      - "MANIFEST.json"
+      - "registry/OMEGA_REGISTRY.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dfpl-public-sentinel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: Ivan-Pasev/DFPL
+          ref: 5602b083dcb8fad2ef8522bc4c93fe2734806bc3
+          path: source
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify exact DFPL pin
+        working-directory: source
+        run: test "$(git rev-parse HEAD)" = "5602b083dcb8fad2ef8522bc4c93fe2734806bc3"
+      - name: Execute source-native public sentinel
+        working-directory: source
+        run: python -m unittest -v tests.test_encoder_b
+      - name: State evidence boundary
+        run: |
+          echo "DFPL public sentinel reproduced."
+          echo "PRIMA authorization/effect runtime is not present as an executable public harness at this pin."
+          echo "RESULT=PARTIAL_SOURCE_NATIVE_REPRODUCTION"
+
+  gilc-codexstation-native:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: Ivan-Pasev/GILC.CodexStation
+          ref: dae8c25c721b688da76fc5589aa8440ee810d7dd
+          path: source
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify exact GILC CodexStation pin
+        working-directory: source
+        run: test "$(git rev-parse HEAD)" = "dae8c25c721b688da76fc5589aa8440ee810d7dd"
+      - name: Install source-native test environment
+        working-directory: source
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Execute source-native test suite
+        working-directory: source
+        run: pytest
+
+  omega-ledger-validation:
+    needs: [dfpl-public-sentinel, gilc-codexstation-native]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate 08E evidence contract
+        run: python tools/validate_reproduction08e.py
