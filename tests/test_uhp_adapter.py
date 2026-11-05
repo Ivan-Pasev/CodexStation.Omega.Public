@@ -16,9 +16,12 @@ def caps():
             "environments": True}
 
 def resp():
-    return {"id": "resp:test", "status": "completed", "model": "model:approved",
-            "metadata": {"harness_id": "chrn:test", "ignored_fields": []},
-            "output": []}
+    return {"id": "resp_test", "object": "response", "created_at": 1793860000,
+            "status": "completed", "model": "model:approved",
+            "store": False, "error": None, "incomplete_details": None,
+            "previous_response_id": None, "usage": None,
+            "metadata": {"harness_id": "chrn:test", "session_id": "hsess_test",
+                         "ignored_fields": []}, "output": []}
 
 class UHPAdapterTests(unittest.TestCase):
     def test_compilation_no_authority(self):
@@ -144,6 +147,104 @@ class UHPAdapterTests(unittest.TestCase):
         before = copy.deepcopy(r)
         normalize_response(c, r)
         self.assertEqual(r, before)
+
+
+    def test_static_discovery_non_authorizing(self):
+        from runtime08c.uhp_adapter import analyze_discovery
+        discovery = {"object": "uhp.discovery", "protocol": "uhp",
+                     "versions": ["2026-10-19"], "default_version": "2026-10-19",
+                     "conformance_class": "core", "capabilities": {"sessions": True}}
+        report = analyze_discovery(discovery)
+        self.assertEqual(report["syntactic_compatibility"], "PASS")
+        self.assertFalse(report["server_identity_attested"])
+        self.assertFalse(report["dispatch_authorized"])
+
+    def test_static_discovery_rejects_wrong_type_or_version(self):
+        from runtime08c.uhp_adapter import analyze_discovery
+        for changed in ({"object": "something-else"},
+                        {"versions": ["2026-10-04"]},
+                        {"capabilities": {"sessions": "true"}},
+                        {"conformance_class": "extended"}):
+            d = {"object": "uhp.discovery", "protocol": "uhp",
+                 "versions": ["2026-10-19"], "default_version": "2026-10-19",
+                 "conformance_class": "core", "capabilities": {"sessions": True}}
+            d.update(changed)
+            self.assertEqual(analyze_discovery(d)["syntactic_compatibility"], "HOLD")
+
+    def test_response_envelope_must_have_required_fields(self):
+        _, c = compile_task(work(), caps())
+        cases = (("object", "not-response"), ("created_at", True),
+                 ("output", None), ("usage", "0"), ("previous_response_id", []),
+                 ("store", True))
+        for key, value in cases:
+            with self.subTest(key=key):
+                r = resp()
+                r[key] = value
+                self.assertEqual(normalize_response(c, r)["verdict"], "HOLD")
+
+    def test_missing_response_fields_cannot_complete(self):
+        _, c = compile_task(work(), caps())
+        for field in ("object", "created_at", "output", "usage", "error",
+                      "incomplete_details", "previous_response_id", "store"):
+            with self.subTest(field=field):
+                r = resp()
+                del r[field]
+                self.assertEqual(normalize_response(c, r)["verdict"], "HOLD")
+
+    def test_missing_session_id_holds(self):
+        _, c = compile_task(work(), caps())
+        r = resp()
+        del r["metadata"]["session_id"]
+        self.assertEqual(normalize_response(c, r)["verdict"], "HOLD")
+
+    def test_failed_and_incomplete_require_coherent_details(self):
+        _, c = compile_task(work(), caps())
+        failed = resp()
+        failed["status"] = "failed"
+        self.assertEqual(normalize_response(c, failed)["verdict"], "HOLD")
+        failed["error"] = {"code": "test_error", "message": "synthetic"}
+        self.assertEqual(normalize_response(c, failed)["verdict"], "FAILED_NO_PROMOTION")
+        incomplete = resp()
+        incomplete["status"] = "incomplete"
+        self.assertEqual(normalize_response(c, incomplete)["verdict"], "HOLD")
+        incomplete["incomplete_details"] = {"reason": "timeout"}
+        self.assertEqual(normalize_response(c, incomplete)["verdict"],
+                         "INCOMPLETE_NO_PROMOTION")
+
+    def test_ignored_input_or_stream_holds(self):
+        _, c = compile_task(work(), caps())
+        for field in ("input", "stream"):
+            r = resp()
+            r["metadata"]["ignored_fields"] = [field]
+            self.assertEqual(normalize_response(c, r)["verdict"], "HOLD")
+
+    def test_requested_model_metadata_mismatch_holds(self):
+        _, c = compile_task(work(), caps())
+        r = resp()
+        r["metadata"]["requested_model"] = "different"
+        self.assertIn("MODEL_SUBSTITUTION",
+                      normalize_response(c, r)["hold_reasons"])
+
+    def test_non_json_object_cannot_create_positive_observation(self):
+        _, c = compile_task(work(), caps())
+        r = resp()
+        r["output"] = [set(["untrusted"])]
+        self.assertEqual(normalize_response(c, r)["verdict"], "HOLD")
+        self.assertIsNone(normalize_response(c, r)["response_sha256"])
+
+    def test_oversized_envelope_holds(self):
+        _, c = compile_task(work(), caps())
+        r = resp()
+        r["output"] = ["z" * 270000]
+        self.assertEqual(normalize_response(c, r)["verdict"], "HOLD")
+
+    def test_read_only_label_is_not_technical_enforcement(self):
+        _, c = compile_task(work(), caps())
+        report = normalize_response(c, resp())
+        self.assertEqual(report["read_only_enforcement"], "NOT_ATTESTED")
+        self.assertFalse(report["source_content_verified"])
+        self.assertFalse(report["server_identity_attested"])
+        self.assertFalse(report["promotion_authorized"])
 
 if __name__ == "__main__":
     unittest.main()

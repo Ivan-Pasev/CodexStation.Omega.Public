@@ -35,6 +35,12 @@ python -m unittest discover -s tests -v
 
 No real network, provider credentials, host installation, environment build, actual model execution, tool enforcement qualification, Omnius dispatch, or release has been performed by this candidate.
 
+## Slice 02 security corrections
+
+The earlier synthetic response fixture omitted protocol-required response fields. The 02 candidate now checks object identity, timestamp, output, usage, session binding, previous response link, requested persistence, error/incomplete consistency, critical ignored request fields, model substitution and bounded JSON envelope. An incomplete or inconsistent envelope holds rather than claiming task completion.
+
+Pure analyze_discovery() examines a supplied GET /v1/uhp document's shape but cannot authenticate a server. UHP discovery is intentionally unauthenticated; actual principal-scoped harness inventory must be independently established. A syntactically correct source hash is not proof of source contents, and READ_ONLY is intent, never tool containment. No real dispatch may be enabled from these source checks.
+
 ## Next gate
 
 Independent review; hosted CI across Python 3.11-3.13; exact server version/capability attestation; non-privileged disposable-harness live conformance; then a separately authorized execution membrane.
