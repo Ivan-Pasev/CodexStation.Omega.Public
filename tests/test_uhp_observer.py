@@ -138,7 +138,8 @@ class ObserverTrustTests(unittest.TestCase):
     def test_string_key_rejected(self):
         a = anchor()
         a["mac_key"] = "notbytes"
-        with self.assertRaises(UHPContractError): verify(a=a)
+        with self.assertRaises(UHPContractError):
+            verify(a=a, e=sign(claim()))
 
     def test_extra_anchor_field_rejected(self):
         a = anchor()
