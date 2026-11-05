@@ -219,3 +219,25 @@ jobs:
         run: |
           python tools/validate_cybernetic09n.py
           python -m unittest -v tests.test_cybernetic09n
+
+  uhp-single-runner-smoke:
+    name: UHP08 disposable single-runner containment (non-authorizing)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Record runner tools
+        run: |
+          go version
+          docker version
+          python --version
+      - name: Execute fixed synthetic negative probes
+        run: bash ops/uhp08/run_ci_probe.sh
+      - name: Upload non-authorizing synthetic evidence receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: uhp08-single-runner-receipt
+          path: build/uhp08/receipt.json
+          if-no-files-found: warn
+          retention-days: 7
