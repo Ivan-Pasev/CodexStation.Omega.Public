@@ -1,0 +1,116 @@
+{
+  "schema": "codexstation.omega.uhp.host-qualification-matrix.v0.1",
+  "intent": "OWNER_MANUAL_RUN_ONLY",
+  "controls": [
+    {
+      "id": "C01",
+      "requirement": "Owner separately authorizes a disposable no-provider test scope; no implicit live dispatch"
+    },
+    {
+      "id": "C02",
+      "requirement": "Observer and executor run under externally established distinct principals"
+    },
+    {
+      "id": "C03",
+      "requirement": "Observer and executor use independently controlled host trust boundaries"
+    },
+    {
+      "id": "C04",
+      "requirement": "Agent source mounted technically read only, with independent pre/post capture"
+    },
+    {
+      "id": "C05",
+      "requirement": "No provider keys or connected-app credentials exposed to executor"
+    },
+    {
+      "id": "C06",
+      "requirement": "No network egress from disposable executor and no writable privileged sockets"
+    },
+    {
+      "id": "C07",
+      "requirement": "Reduced Linux capabilities, no-new-privileges, read-only root filesystem, bounded resources"
+    },
+    {
+      "id": "C08",
+      "requirement": "Exact source commit and content digest independently verified; immutable image digest pinned"
+    },
+    {
+      "id": "C09",
+      "requirement": "Observer key independently provisioned; verifier registry and revocation governance"
+    },
+    {
+      "id": "C10",
+      "requirement": "Replay and idempotency journal atomic and durable; clock provenance independently checked"
+    },
+    {
+      "id": "C11",
+      "requirement": "Capture artifacts hashed outside executor with signed provenance and evidence custody"
+    },
+    {
+      "id": "C12",
+      "requirement": "No canonical release approval from host report alone; inherited Omega 09M gates retained"
+    }
+  ],
+  "negative_probes": [
+    {
+      "id": "N01",
+      "purpose": "Executor writes protected source directory",
+      "expected": "DENIED"
+    },
+    {
+      "id": "N02",
+      "purpose": "Executor modifies observer-only evidence store",
+      "expected": "DENIED"
+    },
+    {
+      "id": "N03",
+      "purpose": "Executor initiates external network request",
+      "expected": "DENIED"
+    },
+    {
+      "id": "N04",
+      "purpose": "Executor reads a synthetic credential canary outside allowed mounts",
+      "expected": "DENIED"
+    },
+    {
+      "id": "N05",
+      "purpose": "Executor escapes source root through symlink or parent traversal",
+      "expected": "DENIED"
+    },
+    {
+      "id": "N06",
+      "purpose": "Executor attempts privilege escalation or privileged socket access",
+      "expected": "DENIED"
+    },
+    {
+      "id": "N07",
+      "purpose": "Executor attempts cross-principal artifact retrieval",
+      "expected": "DENIED"
+    },
+    {
+      "id": "N08",
+      "purpose": "Observer rejects corrupted artifact digest",
+      "expected": "REJECTED"
+    },
+    {
+      "id": "N09",
+      "purpose": "Observer rejects replay nonce or duplicated attestation",
+      "expected": "REJECTED"
+    },
+    {
+      "id": "N10",
+      "purpose": "Verifier rejects mismatched immutable source commit",
+      "expected": "REJECTED"
+    },
+    {
+      "id": "N11",
+      "purpose": "Lost or ambiguous task response cannot trigger automatic retry",
+      "expected": "NO_AUTO_RETRY"
+    },
+    {
+      "id": "N12",
+      "purpose": "Independent before/after source snapshot digests remain unchanged",
+      "expected": "MATCH"
+    }
+  ]
+}
