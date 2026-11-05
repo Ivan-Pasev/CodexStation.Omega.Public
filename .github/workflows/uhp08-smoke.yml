@@ -1,0 +1,37 @@
+name: omega-uhp08-single-runner-containment-smoke
+
+on:
+  push:
+    branches:
+      - "candidate/omega-uhp-single-runner-smoke-slice-08-20261105"
+  pull_request:
+    paths:
+      - "ops/uhp08/**"
+      - "runtime08c/uhp_ci_containment.py"
+      - "tests/test_uhp_ci_containment.py"
+      - ".github/workflows/uhp08-smoke.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  disposable-containment-smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Confirm disposable-host tools
+        run: |
+          go version
+          docker version
+          python --version
+      - name: Build scratch image and observe fixed negative probes
+        run: bash ops/uhp08/run_ci_probe.sh
+      - name: Preserve limited synthetic result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: codexstation-uhp08-single-runner-smoke
+          path: build/uhp08/receipt.json
+          if-no-files-found: warn
+          retention-days: 7
