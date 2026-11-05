@@ -15,6 +15,18 @@ PARTIAL = {
     "N06": "Docker socket read denied only; not full escalation test",
     "N12": "synthetic fixture pre/post hash equality on one runner",
 }
+RECEIPT_FIELDS = frozenset({
+    "schema", "verdict", "reasons", "source_digest_before",
+    "source_digest_after", "source_snapshot_unchanged",
+    "inspect_shape_consistent", "single_runner_probe_executed",
+    "independent_host_verified", "separate_observer_verified",
+    "technical_isolation_independently_verified",
+    "network_egress_independently_verified",
+    "source_capture_provenance_verified", "durable_replay_verified",
+    "external_effects_verified", "real_uhp_task_executed",
+    "dispatch_authorized", "retry_authorized", "promotion_authorized",
+    "canonical_authority_delta",
+})
 DENIED_AUTHORITY = (
     "dispatch_authorized", "retry_authorized", "promotion_authorized",
     "independent_host_verified", "separate_observer_verified",
@@ -60,7 +72,8 @@ def reconcile_ci_smoke(matrix: Mapping, smoke: Mapping):
     )):
         raise UHPContractError("bridge_matrix_expectations_changed")
 
-    if not isinstance(smoke, Mapping) or smoke.get("schema") != SMOKE_SCHEMA:
+    if (not isinstance(smoke, Mapping) or set(smoke) != RECEIPT_FIELDS
+            or smoke.get("schema") != SMOKE_SCHEMA):
         raise UHPContractError("bridge_smoke_schema_invalid")
     for field in DENIED_AUTHORITY:
         if smoke.get(field) is not False:

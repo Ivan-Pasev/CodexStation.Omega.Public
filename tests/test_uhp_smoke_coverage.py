@@ -133,6 +133,18 @@ class SmokeCoverageTests(unittest.TestCase):
         with self.assertRaises(UHPContractError):
             bridge(r=r)
 
+    def test_live_host_label_smuggling_rejected(self):
+        r=smoke()
+        r["witness_origin"]="LIVE_HOST"
+        with self.assertRaises(UHPContractError):
+            bridge(r=r)
+
+    def test_missing_receipt_field_rejected(self):
+        r=smoke()
+        del r["inspect_shape_consistent"]
+        with self.assertRaises(UHPContractError):
+            bridge(r=r)
+
     def test_all_input_preserved(self):
         m,r=matrix(),smoke()
         prev=copy.deepcopy((m,r))
